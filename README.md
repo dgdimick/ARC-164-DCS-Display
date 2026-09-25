@@ -1,5 +1,11 @@
 # ARC-164 Radio Panel for DCS
 
+<p align="center">
+  <img src="images/ARC-164_uhf_panel.jpg" width="500" alt="ARC-164 UHF radio panel reference photo">
+</p>
+
+*Panel reference photo: PC Flights.*
+
 ## My next project
 
 Once I have completed the [ARC-210 radio panel](https://github.com/dgdimick/ARC-210-DCS-Display), the **AN/ARC-164 UHF radio panel** will be my next project.
