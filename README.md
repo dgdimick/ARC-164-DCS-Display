@@ -16,6 +16,16 @@ This repository is a placeholder for now. I am exploring display options and the
 
 As development progresses, I will add build notes, hardware details, firmware, and photos here.
 
+## Exploring a shared controller for both radios
+
+I am looking into using the Teensy inside the ARC-164 to also run a separate [COMM-VHF radio panel](https://pcflights.com/a-10c-thunderbolt-warthog-comm-vhf-panel/). The idea is to connect the VHF panel to the ARC-164 with a plug-in cable, with the ARC-164's Teensy handling both panels through DCS-BIOS.
+
+My aim is to make completing your radios more affordable by sharing one controller and USB connection. This is still being investigated: the wiring, connector, display drivers, and combined input/output requirements have not been finalized, and any cost savings remain to be confirmed.
+
+I also plan to offer a **standalone VHF version with its own controller and USB connection**, so you can build the VHF radio without having to build the ARC-164.
+
+Both options are proposed designs, not available hardware or firmware yet. I will document the supported arrangements and parts as development progresses.
+
 ## PC Flights affiliation
 
 I am not affiliated with PC Flights in any way. I simply chose to use their panels for my own cockpit projects.
