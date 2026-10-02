@@ -28,4 +28,4 @@ Both options are proposed designs, not available hardware or firmware yet. I wil
 
 ## PC Flights affiliation
 
-I am not affiliated with PC Flights in any way. I simply chose to use their panels for my own cockpit projects.
+I am not affiliated with [PC Flights](https://pcflights.com/) in any way. I simply chose to use their panels for my own cockpit projects.
