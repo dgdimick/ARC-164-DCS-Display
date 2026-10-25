@@ -38,6 +38,10 @@ Both options are proposed designs, not available hardware or firmware yet. I wil
 
 Follow the [ARC-186 COMM-VHF radio panel project](https://github.com/dgdimick/ARC-186-DCS-Display) for its build plans, including the proposed shared ARC-164 controller and standalone options.
 
+## Questions and community builds
+
+Visit [GitHub Discussions](https://github.com/dgdimick/ARC-164-DCS-Display/discussions) to ask questions, share ideas, and post photos of your build. Whether you’re planning your panel or already working on it, you’re welcome to join in!
+
 ## PC Flights affiliation
 
 I am not affiliated with [PC Flights](https://pcflights.com/) in any way. I simply chose to use their panels for my own cockpit projects.
