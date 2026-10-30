@@ -1,5 +1,8 @@
 # ARC-164 Radio Panel for DCS
 
+**Last updated: October 30, 2026 at 2:54 AM MDT (America/Denver)**
+<!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
+
 <p align="center">
   <img src="images/ARC-164_uhf_panel.jpg" width="500" alt="ARC-164 UHF radio panel reference photo">
 </p>
