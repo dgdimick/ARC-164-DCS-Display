@@ -26,7 +26,7 @@ As development progresses, I will add build notes, hardware details, firmware, a
 
 ## Controller choice — Teensy 4.1
 
-I’m staying with the **Teensy 4.1** for the ARC-164. Its compact size makes it easier to fit behind the faceplate, it offers 42 readily accessible I/O pins, and it keeps the controller consistent with the ARC-210 project. The final pin allocation and any shared ARC-186 arrangement still need to be verified.
+I’m staying with the **Teensy 4.1** for the ARC-164. Its compact size makes it easier to fit behind the faceplate, it offers 42 readily accessible I/O pins, and it keeps the controller consistent with the ARC-210 project. The final ARC-164 pin allocation still needs to be verified.
 
 I considered the Arduino Due, but it is physically larger and would not save money at the prices checked on **October 30, 2026**: a genuine Due with headers was listed at **$49.40** at [DigiKey](https://www.digikey.com/en/products/detail/arduino/A000062/3712582), compared with **$31.50** for a Teensy 4.1 or **$35.95** with headers at [SparkFun](https://www.sparkfun.com/development-boards/microcontrollers/teensy/teensy-boards.html), before shipping and tax. These are reference prices, not fixed build costs.
 
@@ -36,19 +36,15 @@ Ethernet is not required for the planned USB DCS-BIOS connection. The Teensy 4.1
 
 The ARC-164 will need a **new encoder PCB**, because its frequency-encoder positions do not line up with the ARC-210 encoder PCB. The plan is to mount **all five frequency encoders and the preset-channel encoder on one PCB**, assuming there is enough room and clearance behind the faceplate. The final board outline and encoder placement will be confirmed during the mechanical layout.
 
-## Exploring a shared controller for both radios
+## Separate controllers for each radio
 
-I am looking into using the Teensy inside the ARC-164 to also run a separate [COMM-VHF radio panel](https://pcflights.com/a-10c-thunderbolt-warthog-comm-vhf-panel/). The idea is to connect the VHF panel to the ARC-164 with a plug-in cable, with the ARC-164's Teensy handling both panels through DCS-BIOS.
+The **ARC-164 and ARC-186 will each use their own Teensy 4.1**, with a separate USB connection to DCS-BIOS for each panel. Either radio can be built and operated independently. Dedicated controllers keep each panel's wiring and firmware separate and leave room for future additions.
 
-My aim is to make completing your radios more affordable by sharing one controller and USB connection. This is still being investigated: the wiring, connector, display drivers, and combined input/output requirements have not been finalized, and any cost savings remain to be confirmed.
-
-I also plan to offer a **standalone VHF version with its own controller and USB connection**, so you can build the VHF radio without having to build the ARC-164.
-
-Both options are proposed designs, not available hardware or firmware yet. I will document the supported arrangements and parts as development progresses.
+The ARC-164 controller will operate the ARC-164 only; the [ARC-186 COMM-VHF panel](https://github.com/dgdimick/ARC-186-DCS-Display) will have its own controller. Hardware, pin assignments, and firmware remain under development.
 
 ## Related radio project
 
-Follow the [ARC-186 COMM-VHF radio panel project](https://github.com/dgdimick/ARC-186-DCS-Display) for its build plans, including the proposed shared ARC-164 controller and standalone options.
+Follow the [ARC-186 COMM-VHF radio panel project](https://github.com/dgdimick/ARC-186-DCS-Display) for its build plans using a dedicated Teensy 4.1 and its own USB connection.
 
 ## Questions and community builds
 
