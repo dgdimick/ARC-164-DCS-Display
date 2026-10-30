@@ -24,6 +24,10 @@ This repository is a placeholder for now. I am exploring display options and the
 
 As development progresses, I will add build notes, hardware details, firmware, and photos here.
 
+## Encoder PCB plan
+
+The ARC-164 will need a **new encoder PCB**, because its frequency-encoder positions do not line up with the ARC-210 encoder PCB. The plan is to mount **all five frequency encoders and the preset-channel encoder on one PCB**, assuming there is enough room and clearance behind the faceplate. The final board outline and encoder placement will be confirmed during the mechanical layout.
+
 ## Exploring a shared controller for both radios
 
 I am looking into using the Teensy inside the ARC-164 to also run a separate [COMM-VHF radio panel](https://pcflights.com/a-10c-thunderbolt-warthog-comm-vhf-panel/). The idea is to connect the VHF panel to the ARC-164 with a plug-in cable, with the ARC-164's Teensy handling both panels through DCS-BIOS.
