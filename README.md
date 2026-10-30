@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: October 30, 2026 at 4:04 AM MDT (America/Denver)**
+**Last updated: October 30, 2026 at 4:05 AM MDT (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -55,24 +55,20 @@ The **ARC-164 and ARC-186 will each use their own Teensy 4.1**, with a separate 
 
 The ARC-164 controller will operate the ARC-164 only; the [ARC-186 COMM-VHF panel](https://github.com/dgdimick/ARC-186-DCS-Display) will have its own controller. Hardware, pin assignments, and firmware remain under development.
 
-## Other DCS aircraft using these radios
+## Physical radio panels and possible future support
 
-Beyond the A-10C and A-10C II, the following DCS aircraft use these radio types. This is a starting list for investigating future support, **not a list of aircraft currently supported by this project**.
+Future support will focus on aircraft with a **physical radio control panel** that this hardware can reasonably represent. Having an ARC-164 transceiver controlled only through integrated avionics is not enough. The A-10C/A-10C II remain the intended targets; the candidates below are **not currently supported**.
 
-| DCS aircraft | ARC-164 | ARC-186 |
-| --- | :---: | :---: |
-| F-16C Viper | Yes | — |
-| F-5E Tiger II | Yes | — |
-| F-4E Phantom II | Yes | — |
-| C-101EB | Yes | — |
-| AH-64D Apache | Yes | Yes |
-| CH-47F Chinook | Yes | Yes |
+| Aircraft | Physical panel | Future-support assessment |
+| --- | --- | --- |
+| F-16C Viper | ARC-164 UHF backup control panel | **Strongest next candidate.** The PC Flights faceplate used here reproduces this panel. Operation requires the aircraft's C&I selector in BACKUP. |
+| F-5E Tiger II | Dedicated ARC-164 control panel | **Worth investigating.** Compare control positions, functions, and display behavior before committing to support. |
+| C-101EB | Dedicated ARC-164 control panel | **Worth investigating.** Its layout and available functions differ, so hardware and firmware compatibility must be checked. |
+| F-4E Phantom II | Dedicated UHF radio controls | **Lower priority; panel comparison required.** Its control arrangement differs substantially, so the presence of the radio alone does not establish a useful match for this build. |
 
-Sources: [F-16C manual](https://www.digitalcombatsimulator.com/upload/iblock/3dc/5p9ejw7gi488n9zd15csrxxs8os2dflk/DCS_F-16C_Early_Access_Guide_EN.pdf), [F-5E manual](https://www.digitalcombatsimulator.com/upload/iblock/528/DCS%20F-5%D0%95-3%20Flight%20Manual_ENG.pdf), [F-4E DCS-BIOS device list](https://github.com/DCS-Skunkworks/dcs-bios/issues/584), [C-101EB manual](https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/316966/manuals/DCS_C-101EB_Flight_Manual_EN.pdf?t=1727212356), [AH-64D manual](https://www.digitalcombatsimulator.ru/upload/iblock/c22/hyhtbs5kqjyjauapanut3az7bbs3p3b1/DCS_AH-64D_Quick_Start_Manual_EN.pdf), and [ED’s CH-47F explanation](https://forum.dcs.world/topic/358422-missing-radio/).
+References: [F-16C manual](https://www.digitalcombatsimulator.com/upload/iblock/3dc/5p9ejw7gi488n9zd15csrxxs8os2dflk/DCS_F-16C_Early_Access_Guide_EN.pdf), [F-5E manual](https://www.digitalcombatsimulator.com/upload/iblock/528/DCS%20F-5%D0%95-3%20Flight%20Manual_ENG.pdf), [C-101 cockpit guide](https://assets.chucksguides.com/pdf/DCS%20C-101CC%20Guide.pdf), and [F-4E cockpit guide](https://assets.chucksguides.com/aircraft/dcs/f-4e/0221930c6152572a4cc36908ded30c59/46.page.html).
 
-**Support for each additional aircraft would require separate DCS-BIOS mappings, firmware integration, and testing.** Using the same radio model does not make the A-10 mappings compatible with another aircraft. Available inputs, display outputs, control behavior, and DCS-BIOS coverage must be checked for each module.
-
-The AH-64D controls these radios through its integrated avionics. The CH-47F controls its ARC-164 through the CDU/MFDs and has an ARC-186 backup control head, so its cockpit interface differs from the A-10-style panels. No additional-aircraft support or release date is promised.
+**Each additional aircraft would need separate DCS-BIOS mappings, firmware integration, and testing.** Control inputs, display outputs, operating modes, and DCS-BIOS coverage must be checked for that module. These are investigation priorities, not compatibility claims or release commitments.
 
 ## Related radio project
 
