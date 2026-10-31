@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: October 30, 2026 at 8:48 PM MDT (America/Denver)**
+**Last updated: October 30, 2026 at 8:53 PM MDT (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -61,7 +61,7 @@ The ARC-164 controller will operate the ARC-164 only; the [ARC-186 COMM-VHF pane
 
 ## DCS-BIOS
 
-[Read my DCS-BIOS setup and connection guide](https://github.com/dgdimick/ARC-210-DCS-Display/blob/master/Docs/DCS-BIOS.md) for the DCS-Skunkworks project, TekConnect—the app I use to manage my connections—and the ARC-210 export changes.
+[Read my step-by-step DCS-BIOS setup guide](https://github.com/dgdimick/ARC-210-DCS-Display/blob/master/Docs/DCS-BIOS.md) for installation, the required `Export.lua` and ARC-210 `A-10C.lua` file changes, firmware loading, and TekConnect—the app I use to manage my USB serial connections. It also covers testing and troubleshooting. The ARC-210-specific edits do not add support for this planned radio.
 
 ## Physical radio panels and possible future support
 
