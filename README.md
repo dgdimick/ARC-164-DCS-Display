@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: October 31, 2026 at 5:30 PM MDT (America/Denver)**
+**Last updated: October 31, 2026 at 5:47 PM MDT (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -75,6 +75,10 @@ Ethernet is not required for the planned USB DCS-BIOS connection. The Teensy 4.1
 [Read why I keep using Teensy 4.1s](https://github.com/dgdimick/ARC-210-DCS-Display/blob/master/Docs/Why-I-Keep-Using-Teensy-4.1s.md) for the consistency, processing speed, available pins, and cost comparison behind the controller choice.
 
 ## Encoder PCB plan
+
+<a href="images/ARC-164-Encoder-PCB.png"><img src="images/ARC-164-Encoder-PCB.png" width="350" alt="ARC-164 Encoder PCB shown in KiCad with all six encoders"></a>
+
+*ARC-164 Encoder PCB — KiCad 3D view. Click to enlarge. Clearance checks and test fitting are still pending.*
 
 I’m keeping the plan to mount **all five frequency encoders and the preset-channel encoder on one new PCB**. Their positions do not line up with the ARC-210 encoder PCB, so I’ll design a board specifically for this panel.
 
