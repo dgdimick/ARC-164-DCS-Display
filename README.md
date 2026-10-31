@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: October 30, 2026 at 10:30 PM MDT (America/Denver)**
+**Last updated: October 30, 2026 at 11:14 PM MDT (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -23,7 +23,7 @@ Once I have completed the [ARC-210 radio panel](https://github.com/dgdimick/ARC-
 
 The plan is to build a physical ARC-164 panel for my DCS A-10C II cockpit, with working controls and a display linked to DCS through DCS-BIOS.
 
-This repository is a placeholder for now. I am exploring display options and the panel layout, but the ARC-210 remains my priority. There is no firmware or finished hardware design available here yet, and I have not set a release date.
+I’m using this page to share my plans as the project develops. I’m exploring display options and the panel layout while I finish the ARC-210. Firmware and the hardware design are still to come, and I’ll share a release date when I have one.
 
 As development progresses, I will add build notes, hardware details, firmware, and photos here.
 
@@ -91,7 +91,7 @@ Follow the guide before replacing files. The ARC-210 patch does not add support 
 
 ## Physical radio panels and possible future support
 
-Future support will focus on aircraft with a **physical radio control panel** that this hardware can reasonably represent. Having an ARC-164 transceiver controlled only through integrated avionics is not enough. The A-10C/A-10C II remain the intended targets; the candidates below are **not currently supported**.
+I’m focusing future support on aircraft with a **physical radio control panel** that matches my hardware, so the panel will be useful to builders flying those aircraft. I’ll compare the controls and displays as well as the radio model. The A-10C/A-10C II remain my intended targets; the candidates below still need their own mappings and testing before I can support them.
 
 | Aircraft | Physical panel | Future-support assessment |
 | --- | --- | --- |
@@ -112,9 +112,7 @@ Follow the [ARC-186 COMM-VHF radio panel project](https://github.com/dgdimick/AR
 
 ## Questions and community builds
 
-**Planning a build?** Tell me which panel you’re interested in—even if you haven’t started yet. You’re welcome to post in [Discussions](https://github.com/dgdimick/ARC-164-DCS-Display/discussions).
-
-Visit [GitHub Discussions](https://github.com/dgdimick/ARC-164-DCS-Display/discussions) to ask questions, share ideas, and post photos of your build. Whether you’re planning your panel or already working on it, you’re welcome to join in!
+**Planning a build, already working on one, or just looking around?** Tell me which panel interests you and what you fly in [GitHub Discussions](https://github.com/dgdimick/ARC-164-DCS-Display/discussions). Questions, ideas, and progress photos are welcome—even if you haven’t started yet. If you get stuck, ask away—I’m happy to help where I can.
 
 ## PC Flights affiliation
 
