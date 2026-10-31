@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: October 30, 2026 at 9:48:47 PM MDT (America/Denver)**
+**Last updated: October 30, 2026 at 10:30 PM MDT (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -26,6 +26,10 @@ The plan is to build a physical ARC-164 panel for my DCS A-10C II cockpit, with 
 This repository is a placeholder for now. I am exploring display options and the panel layout, but the ARC-210 remains my priority. There is no firmware or finished hardware design available here yet, and I have not set a release date.
 
 As development progresses, I will add build notes, hardware details, firmware, and photos here.
+
+## Through-hole components
+
+While I could use surface-mount (SMD) parts to make the boards smaller, I plan to use through-hole components to make the project easier for everyone to build and solder with basic tools, following the same approach as my ARC-210 project.
 
 ## Things that need to be completed
 
