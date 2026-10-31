@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: October 30, 2026 at 11:19 PM MDT (America/Denver)**
+**Last updated: October 31, 2026 at 12:23 AM MDT (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -19,13 +19,19 @@ I have almost completed the [ARC-210 project](https://github.com/dgdimick/ARC-21
 
 ## My next project
 
-Once I have completed the [ARC-210 radio panel](https://github.com/dgdimick/ARC-210-DCS-Display), the **AN/ARC-164 UHF radio panel** will be my next project.
+My current plan is to work on the **AN/ARC-164 UHF radio panel** after completing the [A-10C2 ARC-210 implementation](https://github.com/dgdimick/ARC-210-DCS-Display). I may adjust that order based on user feedback and interest.
 
 The plan is to build a physical ARC-164 panel for my DCS A-10C II cockpit, with working controls and a display linked to DCS through DCS-BIOS.
 
 I’m using this page to share my plans as the project develops. I’m exploring display options and the panel layout while I finish the ARC-210. Firmware and the hardware design are still to come, and I’ll share a release date when I have one.
 
 As development progresses, I will add build notes, hardware details, firmware, and photos here.
+
+## Current development order
+
+My current plan is to finish the **A-10C II (A-10C2) ARC-210 implementation**, then build and test the **ARC-164**, followed by the **ARC-186**. After those projects, I’ll return to additional aircraft support, starting with the **ARC-210 and C-130J**. I’m focusing on aircraft with a matching physical radio panel.
+
+**This order may change based on user feedback and interest.** These are my current priorities, not fixed release dates.
 
 ## Through-hole components
 
