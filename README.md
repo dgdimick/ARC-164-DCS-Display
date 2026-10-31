@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: October 31, 2026 at 1:52 AM MDT (America/Denver)**
+**Last updated: October 31, 2026 at 4:17 PM MDT (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -76,7 +76,15 @@ Ethernet is not required for the planned USB DCS-BIOS connection. The Teensy 4.1
 
 ## Encoder PCB plan
 
-The ARC-164 will need a **new encoder PCB**, because its frequency-encoder positions do not line up with the ARC-210 encoder PCB. The plan is to mount **all five frequency encoders and the preset-channel encoder on one PCB**, assuming there is enough room and clearance behind the faceplate. The final board outline and encoder placement will be confirmed during the mechanical layout.
+I’m keeping the plan to mount **all five frequency encoders and the preset-channel encoder on one new PCB**. Their positions do not line up with the ARC-210 encoder PCB, so I’ll design a board specifically for this panel.
+
+My initial check of the supplied faceplate DXF suggests that a single **L-shaped PCB** is feasible: one section across the five frequency encoders, with an extension up the right side to the channel encoder. Assuming the drawing is in millimeters:
+
+- The faceplate measures **146 × 123.8 mm**.
+- The five frequency encoders are spaced **26 mm center to center**.
+- The channel encoder is approximately **53.6 mm above** the frequency row and almost aligned with the rightmost frequency encoder.
+
+**I still need to check the clearances** for the encoder bodies and solder pins, the nearby switch beside the vertical section, display hardware, connectors, and PCB mounting points. The vertical section may need a notch or a narrower connecting strip. The DXF does not declare its units, so I also need to confirm its scale against the actual faceplate before finalizing the design or ordering boards.
 
 ## Separate controllers for each radio
 
