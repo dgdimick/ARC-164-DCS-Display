@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: October 31, 2026 at 4:17 PM MDT (America/Denver)**
+**Last updated: October 31, 2026 at 5:28 PM MDT (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -85,6 +85,8 @@ My initial check of the supplied faceplate DXF suggests that a single **L-shaped
 - The channel encoder is approximately **53.6 mm above** the frequency row and almost aligned with the rightmost frequency encoder.
 
 **I still need to check the clearances** for the encoder bodies and solder pins, the nearby switch beside the vertical section, display hardware, connectors, and PCB mounting points. The vertical section may need a notch or a narrower connecting strip. The DXF does not declare its units, so I also need to confirm its scale against the actual faceplate before finalizing the design or ordering boards.
+
+I’ve published the [encoder PCB and schematic](PCBs/Rotary%20Encoders/) as a **v0.1 draft**, based on my ARC-210 encoder design. All six encoders are placed on one board, and the latest saved layout is routed with a GND pour. Fresh electrical checks reported zero violations, zero unconnected items, and zero schematic/PCB parity issues under the saved project settings. **Clearance checks and physical fit are still pending; this is not a manufacturing release.** The faceplate drawing and its reference geometry are not included.
 
 ## Separate controllers for each radio
 
