@@ -4,6 +4,7 @@
 	(generator_version "10.0")
 	(uuid "7f93f02e-0611-4ac1-8244-1d76dd1ce7df")
 	(paper "A4")
+	(title_block (title "ARC-164 Encoder PCB") (rev "1.0"))
 	(lib_symbols
 		(symbol "ARC210_Encoders:RotaryEncoder_Switch_Grounded"
 			(pin_names

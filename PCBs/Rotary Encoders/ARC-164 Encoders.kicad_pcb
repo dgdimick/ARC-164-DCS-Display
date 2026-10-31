@@ -8,8 +8,8 @@
 	)
 	(paper "A4")
 	(title_block
-		(title "ARC-164 Six-Encoder PCB - Placement Draft")
-		(rev "0.1 DRAFT")
+		(title "ARC-164 Six-Encoder PCB")
+		(rev "1.0")
 	)
 	(layers
 		(0 "F.Cu" signal)
@@ -447,7 +447,7 @@
 		(embedded_fonts no)
 		(model "${KIPRJMOD}/PEC11H-4220F-S0024.stp"
 			(offset
-				(xyz 2.5 7.49 1.23)
+				(xyz 2.5 7.49 0.73)
 			)
 			(scale
 				(xyz 1 1 1)
@@ -2759,7 +2759,7 @@
 			)
 		)
 	)
-	(gr_text "ARC-164 ENCODERS v0.1 DRAFT"
+	(gr_text "ARC-164 ENCODERS v1.0"
 		(at 82 115 0)
 		(layer "F.SilkS")
 		(uuid "ce4cb426-3771-47da-a347-5cf3789ee3a4")
@@ -2836,7 +2836,7 @@
 			)
 		)
 	)
-	(gr_text "UNROUTED PLACEMENT DRAFT - NOT FOR MANUFACTURE"
+	(gr_text "ARC-164 ENCODER PCB v1.0 - PHYSICAL FIT CHECK PENDING"
 		(at 123 41 0)
 		(layer "Cmts.User")
 		(uuid "52455e66-04dc-4846-97ae-ab93394ca15f")
