@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 1, 2026 at 1:16 AM MST (America/Denver)**
+**Last updated: November 1, 2026 at 1:35 AM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 > **Disclaimer:** This hobby flight-simulation project is provided without warranty, subject to its licenses. Read the [full disclaimer](#disclaimer) before building or using it.
@@ -94,6 +94,21 @@ I plan to use two [PC Flights 1-pole, 8-position rotary switches (RSW-SP8T)](htt
 I’ll set each stop ring before mounting the switch and check that it stops at the first and last labeled positions. The listed price on **November 1, 2026** was **US $8.99 each**, or **US $17.98 for both**, before shipping and other applicable fees. Prices and availability may change.
 
 PC Flights lists a **6.35 mm flatted shaft**, **38 mm shaft length**, **9.80 mm panel cutout**, and **14.48 mm depth behind the panel**. I still need to check the mounting-hole fit, clearance, and knob fit; the shafts may need shortening. These switches have not yet been test fitted.
+
+## Frequency display plan — 2.08-inch OLED
+
+I plan to use the [EastRising / BuyDisplay 2.08-inch, 256 × 64 OLED module](https://www.buydisplay.com/i2c-white-2-08-inch-oled-display-module-256x64-arduino-raspberry-pi) for the frequency display. My planned choice is the **assembled white OLED module, ER-OLEDM2.08-2W-SPI-I2C**, with its breakout board, rather than the bare display panel. It uses an SH1122 controller and a 3.3 V supply; I plan to use SPI with the Teensy 4.1 and draw all six frequency digits and the decimal point in software.
+
+| Part | Width × height |
+| --- | --- |
+| Measured faceplate frequency window | **53.5 × 17.5 mm** |
+| OLED illuminated area | **51.18 × 12.78 mm** |
+| OLED glass panel | **60.5 × 19 mm** |
+| Complete module PCB | **72.5 × 27.24 mm** |
+
+The illuminated area fits inside the measured window, leaving approximately **1.16 mm on each side** and **2.36 mm above and below** when centered. The glass and PCB can extend behind the faceplate, but I still need to check their clearance against the controls and encoder PCB. I’ll align the illuminated area with the window, since it is offset within the module.
+
+**I still need to test this white OLED behind the faceplate’s red filter** to check the resulting color, brightness, contrast, and readability. I may need a thin matte-black mask around the illuminated area if the surrounding glass or backing is visible. This is my planned display, not a tested or finalized choice; mounting, pinout, and firmware integration still need checking.
 
 ## Separate controllers for each radio
 
