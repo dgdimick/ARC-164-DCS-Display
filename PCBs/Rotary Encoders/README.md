@@ -1,8 +1,8 @@
 # ARC-164 Rotary Encoder PCB and schematic
 
-**Last updated: October 31, 2026 at 5:54 PM MDT (America/Denver)**
+**Last updated: October 31, 2026 at 6:01 PM MDT (America/Denver)**
 
-I used my ARC-210 encoder PCB as the starting point for this **ARC-164 encoder PCB v1.0**. All five frequency encoders and the preset-channel encoder are on one board. The current saved layout is routed and includes a front-copper GND pour, but **mechanical clearances and physical fit still need checking before I order boards**.
+I used my ARC-210 encoder PCB as the starting point for this **ARC-164 encoder PCB v1.1**. All five frequency encoders and the preset-channel encoder are on one board. The current saved layout is routed and includes a front-copper GND pour, but **mechanical clearances and physical fit still need checking before I order boards**.
 
 <a href="../../images/ARC-164-Encoder-PCB.png"><img src="../../images/ARC-164-Encoder-PCB.png" width="350" alt="ARC-164 Encoder PCB shown in KiCad with all six encoders"></a>
 
@@ -41,7 +41,7 @@ All six encoders use Bourns PEC11H-4220F-S0024 footprints. Their C contacts, mou
 
 ## Validation and remaining checks
 
-Fresh KiCad checks for v1.0 on October 31, 2026 reported **zero ERC violations, zero non-excluded DRC violations, zero unconnected items, and zero schematic/PCB parity issues** under the project's saved settings. The copper zone was refilled before the PCB check. Reports are in [Checks](Checks/). Passing these electrical checks does not establish mechanical fit or a manufacturing-ready design.
+Fresh KiCad checks for v1.1 on October 31, 2026 reported **zero ERC violations, zero non-excluded DRC violations, zero unconnected items, and zero schematic/PCB parity issues** under the project's saved settings. The copper zone was refilled before the PCB check. Reports are in [Checks](Checks/). Passing these electrical checks does not establish mechanical fit or a manufacturing-ready design.
 
 I still need to check the actual faceplate dimensions, encoder shaft height and spacers, switch bodies and terminals beside the narrow board section, display hardware, connector and cable access, PCB mounting/support, and 3D model alignment. I will review the layout and run fresh checks again before generating manufacturing files. Gerbers are not included with this version.
 
@@ -50,3 +50,7 @@ I still need to check the actual faceplate dimensions, encoder shaft height and 
 ## Version 1.0 — October 31, 2026
 
 I rechecked the routed board and schematic and updated their revision markings to **1.0**, including the PCB silkscreen. All six encoder models now use the same height offset. The fresh reports above passed under the saved settings, with no individual DRC exclusions. Some checks remain disabled, including missing courtyards and footprint-type/filter checks. **Faceplate clearance checks, test fitting, and assembled-board testing are still pending.** The restricted faceplate geometry and test-print STLs are not included in this publication.
+
+## Version 1.1 — October 31, 2026
+
+I removed an extra front-copper zone that had no net assigned and was overriding the existing GND pour, causing an isolated-copper violation. I retained and refilled the GND zone, then updated the PCB silkscreen and PCB/schematic revisions to **1.1**. Fresh ERC and DRC checks reported zero violations, zero unconnected items, and zero schematic parity issues under the saved project settings. **Mechanical clearance checks, test fitting, and assembled-board testing remain pending.**
