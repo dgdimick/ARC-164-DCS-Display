@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 1, 2026 at 1:47 AM MST (America/Denver)**
+**Last updated: November 1, 2026 at 2:29 AM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 > **Disclaimer:** This hobby flight-simulation project is provided without warranty, subject to its licenses. Read the [full disclaimer](#disclaimer) before building or using it.
@@ -123,6 +123,12 @@ I plan to use the [EastRising / BuyDisplay 0.96-inch white OLED module, ER-OLEDM
 The illuminated area fits inside the measured window, but leaves only approximately **0.13 mm on each side** when centered, so alignment will be important. I can draw the digits slightly inward to leave more margin around the numbers. The PCB extends behind the faceplate; **I still need to check clearance** for the board, pin header, mounting hardware, nearby controls, and encoder PCB.
 
 **Both the frequency and preset-channel displays have red filters in front of them.** I still need to test both white OLEDs behind their filters for color, brightness, contrast, and readability. The preset-channel OLED is a planned choice, not a tested or finalized design.
+
+## Display clearance checks — button mockups
+
+I’m printing mockups of the **TEST DISPLAY and STATUS buttons** so I can get better measurements and check clearance behind the faceplate. Before deciding whether to use **one 2.8-inch TFT for both the frequency and preset-channel displays**, I’ll check its placement against the button bodies, terminals and wiring, the encoder PCB, and the mounting hardware. I’ll also check the display’s ribbon-cable clearance and test readability through both red filters.
+
+The single-TFT arrangement is still under consideration. I would draw the numbers within the parts of the screen visible through each window. **I haven’t finalized the display choice**; the separate OLED plans above remain candidates while I check the mechanical fit.
 
 ## Separate controllers for each radio
 
