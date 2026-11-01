@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: October 31, 2026 at 6:05 PM MDT (America/Denver)**
+**Last updated: October 31, 2026 at 6:07 PM MDT (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 > **Disclaimer:** This hobby flight-simulation project is provided without warranty, subject to its licenses. Read the [full disclaimer](#disclaimer) before building or using it.
@@ -15,25 +15,19 @@
 
 I’ve purchased and checked the [PC Flights F-16C Viper UHF panel](https://pcflights.com/f-16c-viper-uhf-radio-control-home-cockpit-panel/) and confirmed it suits this A-10C II ARC-164 build. F-16C DCS-BIOS firmware support is a separate task.
 
-## October 10, 2026 — Project update
+## About this project
 
-I have almost completed the [ARC-210 project](https://github.com/dgdimick/ARC-210-DCS-Display), and I have ordered the **ARC-164 and ARC-184 faceplates**. Once the ARC-210 is finished and the new faceplates arrive, I can take a closer look at the next builds.
+I’m building an **AN/ARC-164 UHF radio panel** for my DCS A-10C II cockpit, with working controls and displays linked to DCS through DCS-BIOS.
 
-## My next project
+The [encoder PCB and schematic v1.1](PCBs/Rotary%20Encoders/) are published. Clearance checks and test fitting are still pending, and the remaining hardware and firmware are under development. I haven’t set a release date.
 
-My current plan is to work on the **AN/ARC-164 UHF radio panel** after completing the [A-10C2 ARC-210 implementation](https://github.com/dgdimick/ARC-210-DCS-Display). I may adjust that order based on user feedback and interest.
-
-The plan is to build a physical ARC-164 panel for my DCS A-10C II cockpit, with working controls and a display linked to DCS through DCS-BIOS.
-
-I’m using this page to share my plans as the project develops. I’m exploring display options and the panel layout while I finish the ARC-210. Firmware and the hardware design are still to come, and I’ll share a release date when I have one.
-
-As development progresses, I will add build notes, hardware details, firmware, and photos here.
+I’ll add build notes, hardware details, firmware, and photos as the project develops. **I’m not offering PCB sets at this time.**
 
 ## Current development order
 
-My current plan is to finish the **A-10C II (A-10C2) ARC-210 implementation**, then build and test the **ARC-164**, followed by the **ARC-186**. After those projects, I’ll return to additional aircraft support, starting with the **ARC-210 and C-130J**. I’m focusing on aircraft with a matching physical radio panel.
+For these two radio panels, I plan to build and test the **ARC-164**, followed by the **ARC-186**, then investigate additional aircraft support with matching physical radio panels.
 
-**This order may change based on user feedback and interest.** These are my current priorities, not fixed release dates.
+**This order may change based on user feedback and interest.** These are plans, not fixed release dates.
 
 ## Other SIMPIT panels
 
@@ -41,11 +35,11 @@ Once I’ve finished the radio panels, I plan to build other panels for my SIMPI
 
 ## Through-hole components
 
-While I could use surface-mount (SMD) parts to make the boards smaller, I plan to use through-hole components to make the project easier for everyone to build and solder with basic tools, following the same approach as my ARC-210 project.
+While I could use surface-mount (SMD) parts to make the boards smaller, I plan to use through-hole components to make the project easier for everyone to build and solder with basic tools.
 
 ## Things that need to be completed
 
-**Last updated: October 31, 2026 at 6:02 PM MDT (America/Denver)**
+**Last updated: October 31, 2026 at 6:07 PM MDT (America/Denver)**
 <!-- Refresh this section timestamp whenever the work list changes, using the actual America/Denver time and MST/MDT. -->
 
 This is my current work list. Hardware and firmware are still under development, and I haven’t set a release date.
@@ -53,28 +47,24 @@ This is my current work list. Hardware and firmware are still under development,
 1. **Panel layout and parts:** Confirm dimensions, mounting clearances, controls, display choices, and the complete parts list.
 2. **PCB and schematic design:** I’ve published the [encoder PCB and schematic v1.1](PCBs/Rotary%20Encoders/) with all five frequency encoders and the preset-channel encoder on one routed board. Version 1.1 fixes the copper-pour issue by removing an extra unassigned copper zone and refilling the GND pour. I still need to check clearances and test-fit it behind the faceplate before ordering boards. Design the remaining controller and display circuitry, finalize Teensy pin assignments, and check the complete electrical design.
 3. **Printed parts:** Design and test-fit the required knobs, brackets, and spacers with the selected hardware.
-4. **DCS-BIOS mappings and any needed changes:** Check which inputs and display outputs are already available for this radio. Identify missing data, make any necessary export changes, and document them. Check the correct ARC-164 radio instance for each intended A-10 variant. The ARC-210 changes do not automatically apply to this panel.
+4. **DCS-BIOS mappings and any needed changes:** Check which inputs and display outputs are already available for this radio. Identify missing data, make any necessary export changes, and document them. Check the correct ARC-164 radio instance for each intended A-10 variant.
 5. **Firmware:** Write the control and display firmware and verify USB communication with DCS-BIOS.
 6. **DCS bridge testing support:** Modify the DCS bridge to allow each panel to be tested independently.
 7. **Bench and board testing:** Test the controls, displays, and power requirements together, then assemble and electrically test the manufactured boards.
 8. **Testing in DCS:** Check control operation, display updates, startup behavior, reconnection, and extended reliability with the intended aircraft and the other radio panels connected.
-9. **Documentation:** Publish assembly instructions, wiring diagrams, final parts and print quantities, PCB ordering files, firmware loading steps, DCS-BIOS setup requirements, and troubleshooting notes. Link to the shared [DCS-BIOS guide](https://github.com/dgdimick/ARC-210-DCS-Display/blob/master/Docs/DCS-BIOS.md) where the instructions already apply.
+9. **Documentation:** Publish assembly instructions, wiring diagrams, final parts and print quantities, PCB ordering files, firmware loading steps, DCS-BIOS setup requirements, and troubleshooting notes.
 10. **Assembly pictures:** When my PCBs arrive and I start building, take clear pictures of component placement, soldering, wiring, and mounting, including both sides of each PCB with the silkscreen markings visible. Add the pictures to the assembly instructions so other builders can follow along.
 
 
 ## Controller choice — Teensy 4.1
 
-I’m staying with the **Teensy 4.1** for the ARC-164. Its compact size makes it easier to fit behind the faceplate, it offers 42 readily accessible I/O pins, and it keeps the controller consistent with the ARC-210 project. The final ARC-164 pin allocation still needs to be verified.
+I’m staying with the **Teensy 4.1** for the ARC-164. Its compact size makes it easier to fit behind the faceplate, it offers 42 readily accessible I/O pins. The final ARC-164 pin allocation still needs to be verified.
 
-The **Teensy 4.1 runs at 600 MHz**, compared with **16 MHz for the classic Arduino Uno R3, Mega 2560, and ATmega328P Nano** — **37.5 times the CPU clock frequency**. This provides processing headroom for display updates and controls; it is not a measured 37.5-times improvement in display refresh speed. See the [Teensy specifications](https://www.pjrc.com/store/teensy41.html) and [classic Arduino board comparison](https://github.com/dgdimick/ARC-210-DCS-Display/blob/master/Docs/Why-Teensy.md).
+The **Teensy 4.1 runs at 600 MHz**, compared with **16 MHz for the classic Arduino Uno R3, Mega 2560, and ATmega328P Nano** — **37.5 times the CPU clock frequency**. This provides processing headroom for display updates and controls; it is not a measured 37.5-times improvement in display refresh speed. See the [Teensy specifications](https://www.pjrc.com/store/teensy41.html).
 
 I considered the Arduino Due, but it is physically larger and would not save money at the prices checked on **October 30, 2026**: a genuine Due with headers was listed at **$49.40** at [DigiKey](https://www.digikey.com/en/products/detail/arduino/A000062/3712582), compared with **$31.50** for a Teensy 4.1 or **$35.95** with headers at [SparkFun](https://www.sparkfun.com/development-boards/microcontrollers/teensy/teensy-boards.html), before shipping and tax. These are reference prices, not fixed build costs.
 
 Ethernet is not required for the planned USB DCS-BIOS connection. The Teensy 4.1 version without Ethernet is also an option; its listed price was **$29.60** at the same price check. Teensy 4.1 uses **3.3 V logic**, and its inputs are not 5 V tolerant, so display-driver connections must be designed accordingly. See the [PJRC specifications](https://www.pjrc.com/store/teensy41.html).
-
-## Why I keep using Teensy 4.1s
-
-[Read why I keep using Teensy 4.1s](https://github.com/dgdimick/ARC-210-DCS-Display/blob/master/Docs/Why-I-Keep-Using-Teensy-4.1s.md) for the consistency, processing speed, available pins, and cost comparison behind the controller choice.
 
 ## Encoder PCB plan
 
@@ -82,7 +72,7 @@ Ethernet is not required for the planned USB DCS-BIOS connection. The Teensy 4.1
 
 *ARC-164 Encoder PCB — KiCad 3D view. Click to enlarge. Clearance checks and test fitting are still pending.*
 
-I’m keeping the plan to mount **all five frequency encoders and the preset-channel encoder on one new PCB**. Their positions do not line up with the ARC-210 encoder PCB, so I’ll design a board specifically for this panel.
+I’ve placed **all five frequency encoders and the preset-channel encoder on one PCB** designed for this faceplate.
 
 My initial check of the supplied faceplate DXF suggests that a single **L-shaped PCB** is feasible: one section across the five frequency encoders, with an extension up the right side to the channel encoder. Assuming the drawing is in millimeters:
 
@@ -92,7 +82,7 @@ My initial check of the supplied faceplate DXF suggests that a single **L-shaped
 
 **I still need to check the clearances** for the encoder bodies and solder pins, the nearby switch beside the vertical section, display hardware, connectors, and PCB mounting points. The vertical section may need a notch or a narrower connecting strip. The DXF does not declare its units, so I also need to confirm its scale against the actual faceplate before finalizing the design or ordering boards.
 
-I’ve published the [encoder PCB and schematic v1.1](PCBs/Rotary%20Encoders/), based on my ARC-210 encoder design. All six encoders are placed on one board, and the latest saved layout is routed with a GND pour. **Version 1.1 fixes the isolated-copper issue:** I removed an extra unassigned copper zone that was overriding the GND pour, then refilled it. Fresh electrical checks reported zero violations, zero unconnected items, and zero schematic/PCB parity issues under the saved project settings. **I still need to check clearances and test-fit the board behind the faceplate; this is not a manufacturing release.** The faceplate drawing and its reference geometry are not included.
+I’ve published the [encoder PCB and schematic v1.1](PCBs/Rotary%20Encoders/). All six encoders are placed on one board, and the latest saved layout is routed with a GND pour. **Version 1.1 fixes the isolated-copper issue:** I removed an extra unassigned copper zone that was overriding the GND pour, then refilled it. Fresh electrical checks reported zero violations, zero unconnected items, and zero schematic/PCB parity issues under the saved project settings. **I still need to check clearances and test-fit the board behind the faceplate; this is not a manufacturing release.** The faceplate drawing and its reference geometry are not included.
 
 ## Separate controllers for each radio
 
@@ -100,22 +90,15 @@ The **ARC-164 and ARC-186 will each use their own Teensy 4.1**, with a separate 
 
 The ARC-164 controller will operate the ARC-164 only; the [ARC-186 COMM-VHF panel](https://github.com/dgdimick/ARC-186-DCS-Display) will have its own controller. Hardware, pin assignments, and firmware remain under development.
 
-## My SIMPIT and test computer
-
-[View my SIMPIT and test computer](https://github.com/dgdimick/ARC-210-DCS-Display/blob/master/Docs/My-SIMPIT-and-Test-Computer.md) for my computer configuration, monitors, and current USB setup. **This describes my own development and flight-simulation setup, not minimum requirements for the radio panels.**
-
 ## USB connections and powered hubs
 
-[Read about the USB connection plan and purchased powered hubs](https://github.com/dgdimick/ARC-210-DCS-Display/blob/master/Docs/USB-Connections-and-Powered-Hubs.md) for why I am using USB instead of RS-485, GPIO availability, sharing a Teensy across smaller panels, and expansion using my existing cockpit USB setup.
+I plan to connect the ARC-164 directly by USB through powered hubs. I already use USB for my other SIMPIT equipment and have run 12 devices through one hub without issues. Each radio will have its own Teensy and USB connection.
 
 ## DCS-BIOS
 
-[My step-by-step setup guide](https://github.com/dgdimick/ARC-210-DCS-Display/blob/master/Docs/DCS-BIOS.md) covers installation, file changes, and TekConnect—the app I use to manage my connections.
+I use [DCS-Skunkworks DCS-BIOS](https://github.com/DCS-Skunkworks/dcs-bios) to exchange control and display information with DCS, and [TekConnect](https://github.com/tekcreations/TekConnect) to manage my USB connections.
 
-- [Patched A-10C.lua](https://raw.githubusercontent.com/dgdimick/ARC-210-DCS-Display/master/Docs/DCS-BIOS/A-10C.lua) — ARC-210 changes included; for **DCS-BIOS v0.11.8**.
-- [DCS-BIOS-only Export.lua](https://raw.githubusercontent.com/dgdimick/ARC-210-DCS-Display/master/Docs/DCS-BIOS/DCS-BIOS-only/Export.lua) — for setups without WWT or SRS.
-
-Follow the guide before replacing files. The ARC-210 patch does not add support for this planned radio.
+ARC-164 firmware, radio mappings, setup instructions, and any required export changes still need to be developed and tested. I’ll document the steps here as they become available.
 
 ## Physical radio panels and possible future support
 
@@ -134,25 +117,18 @@ References: [F-16C manual](https://www.digitalcombatsimulator.com/upload/iblock/
 
 ## Related radio projects
 
-- [C-130J ARC-210 support in the main ARC-210 project](https://github.com/dgdimick/ARC-210-DCS-Display/blob/master/Docs/C-130J-Support.md) — planned reuse of my existing ARC-210 hardware with C-130J firmware, DCS-BIOS mappings, and menus. The same panel hardware should work with both the A-10C II and C-130J using the appropriate firmware and mappings; C-130J testing is pending.
-
-Follow the [ARC-186 COMM-VHF radio panel project](https://github.com/dgdimick/ARC-186-DCS-Display) for its build plans using a dedicated Teensy 4.1 and its own USB connection.
-
-## Parts offers for the ARC-210
-
-See my [ARC-210 PCB and printed-parts offers](https://github.com/dgdimick/ARC-210-DCS-Display/blob/master/Docs/ARC-210-Parts-Offers.md) for current prices, what’s included, materials, availability, shipping, VAT, and import-charge details.
-
-**These offers are for the ARC-210 only. I don’t currently offer PCB or printed-parts sets for the ARC-164 or ARC-186; their designs and testing are still to come.**
+- [ARC-210 radio panel](https://github.com/dgdimick/ARC-210-DCS-Display) — my other radio panel project.
+- [ARC-186 COMM-VHF radio panel](https://github.com/dgdimick/ARC-186-DCS-Display) — my planned VHF panel with its own Teensy 4.1 and USB connection.
 
 ## A central directory for SIMPIT builders
 
 I’d love to see a central GitHub directory linking to projects from SIMPIT builders like me—a place to find panels, code, PCB designs, printable parts, and build guides for SIMPITs of every size. It could link back to each builder’s own repository so the files, updates, and credit stay with the original project. This is an idea I’d like to see happen, rather than a project I’ve committed to building myself.
 
-[Read more about the directory idea](https://github.com/dgdimick/ARC-210-DCS-Display/blob/master/Docs/Future-Thoughts.md#a-central-directory-for-simpit-builders). If you know of one or would like to discuss it, let me know in [Discussions](https://github.com/dgdimick/ARC-164-DCS-Display/discussions).
+If you know of one or would like to discuss it, let me know in [Discussions](https://github.com/dgdimick/ARC-164-DCS-Display/discussions).
 
 ## Sharing code and improvements
 
-I plan to share this panel’s main firmware source under the **MIT License**, following the same approach as my ARC-210 project, and I’m happy to provide my available code to anyone who asks. This panel’s firmware is still being developed; the [published ARC-210 source](https://github.com/dgdimick/ARC-210-DCS-Display/tree/master/Firmware/Source/Master_Program) is available now under its [MIT License](https://github.com/dgdimick/ARC-210-DCS-Display/blob/master/Docs/LICENSE-MIT.txt).
+I plan to share this panel’s main firmware source under the [MIT License](Docs/LICENSE-MIT.txt). The firmware is still being developed, and I’m happy to share available work with anyone who asks.
 
 If you adapt my code or add improvements, I’d love to work with you and bring useful changes back into the project so other builders—and my other panel projects—can benefit too. Please share your changes through a pull request or get in touch in [Discussions](https://github.com/dgdimick/ARC-164-DCS-Display/discussions). Contributing changes back is welcome, but it isn’t an extra condition of the MIT License. Third-party code keeps its own license.
 
