@@ -1,8 +1,8 @@
 # ARC-164 Rotary Encoder PCB and schematic
 
-**Last updated: October 31, 2026 at 6:01 PM MDT (America/Denver)**
+**Last updated: October 31, 2026 at 6:03 PM MDT (America/Denver)**
 
-I used my ARC-210 encoder PCB as the starting point for this **ARC-164 encoder PCB v1.1**. All five frequency encoders and the preset-channel encoder are on one board. The current saved layout is routed and includes a front-copper GND pour, but **mechanical clearances and physical fit still need checking before I order boards**.
+The **ARC-164 encoder PCB v1.1** combines all five frequency encoders and the preset-channel encoder on one board. The layout is routed and includes a front-copper GND pour. **I still need to check mechanical clearances and test-fit the board before ordering PCBs.**
 
 <a href="../../images/ARC-164-Encoder-PCB.png"><img src="../../images/ARC-164-Encoder-PCB.png" width="350" alt="ARC-164 Encoder PCB shown in KiCad with all six encoders"></a>
 
