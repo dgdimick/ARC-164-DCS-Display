@@ -1,6 +1,6 @@
 # ARC-164 Rotary Encoder PCB and schematic
 
-**Last updated: October 31, 2026 at 6:16 PM MDT (America/Denver)**
+**Last updated: October 31, 2026 at 6:17 PM MDT (America/Denver)**
 
 The **ARC-164 encoder PCB v1.1** combines all five frequency encoders and the preset-channel encoder on one board. The layout is routed and includes a front-copper GND pour. **I still need to check mechanical clearances and test-fit the board before ordering PCBs.**
 
@@ -60,11 +60,3 @@ I rechecked the routed board and schematic and updated their revision markings t
 This is a hobby flight-simulation project, not equipment intended for use in real aircraft. Software, firmware, PCB designs, wiring information, and printable parts are provided "as is," without warranty, subject to their respective licenses.
 
 Users are responsible for verifying compatibility, wiring, supply voltages, assembly, and safe operation before use. To the maximum extent permitted by applicable law, the authors and contributors disclaim liability for injury, equipment damage, data loss, or other losses arising from use of this project.
-
-## Licensing
-
-- **PCBs:** [CERN Open Hardware Licence Version 2 – Permissive (CERN-OHL-P-2.0)](https://github.com/dgdimick/ARC-164-DCS-Display/blob/main/Docs/LICENSE-CERN-OHL-P-2.0.txt)
-- **Teensy firmware:** [MIT License](https://github.com/dgdimick/ARC-164-DCS-Display/blob/main/Docs/LICENSE-MIT.txt)
-- **STL files:** [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://github.com/dgdimick/ARC-164-DCS-Display/blob/main/Docs/LICENSE-CC-BY-4.0.txt)
-
-Copies of the applicable licenses are included in the [Docs directory](https://github.com/dgdimick/ARC-164-DCS-Display/tree/main/Docs). Firmware and printable parts are still under development; these license terms do not mean those files have been released. Third-party code, libraries, and models retain their own licenses.
