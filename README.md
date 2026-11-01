@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 1, 2026 at 1:09 AM MDT (America/Denver)**
+**Last updated: November 1, 2026 at 1:16 AM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 > **Disclaimer:** This hobby flight-simulation project is provided without warranty, subject to its licenses. Read the [full disclaimer](#disclaimer) before building or using it.
@@ -81,6 +81,19 @@ My initial check of the supplied faceplate DXF suggests that a single **L-shaped
 **I still need to check the clearances** for the encoder bodies and solder pins, the nearby switch beside the vertical section, display hardware, connectors, and PCB mounting points. The vertical section may need a notch or a narrower connecting strip. The DXF does not declare its units, so I also need to confirm its scale against the actual faceplate before finalizing the design or ordering boards.
 
 I’ve published the [encoder PCB and schematic v1.1](PCBs/Rotary%20Encoders/). All six encoders are placed on one board, and the latest saved layout is routed with a GND pour. **Version 1.1 fixes the isolated-copper issue:** I removed an extra unassigned copper zone that was overriding the GND pour, then refilled it. Fresh electrical checks reported zero violations, zero unconnected items, and zero schematic/PCB parity issues under the saved project settings. **I still need to check clearances and test-fit the board behind the faceplate; this is not a manufacturing release.** The faceplate drawing and its reference geometry are not included.
+
+## MAIN and PRESET rotary switches
+
+I plan to use two [PC Flights 1-pole, 8-position rotary switches (RSW-SP8T)](https://pcflights.com/rotary-switch-1-pole-8-positions/). They have **45° spacing** and a **position stop ring adjustable from 2 to 8 positions**, so I can use the same switch for both controls.
+
+| Control | Stop-ring setting | Total travel |
+| --- | --- | --- |
+| MAIN: OFF–MAIN–BOTH–ADF | Limit the switch to **4 positions** | **135°** |
+| PRESET: MNL–PRESET–GRD | Limit the switch to **3 positions** | **90°** |
+
+I’ll set each stop ring before mounting the switch and check that it stops at the first and last labeled positions. The listed price on **November 1, 2026** was **US $8.99 each**, or **US $17.98 for both**, before shipping and other applicable fees. Prices and availability may change.
+
+PC Flights lists a **6.35 mm flatted shaft**, **38 mm shaft length**, **9.80 mm panel cutout**, and **14.48 mm depth behind the panel**. I still need to check the mounting-hole fit, clearance, and knob fit; the shafts may need shortening. These switches have not yet been test fitted.
 
 ## Separate controllers for each radio
 
