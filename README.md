@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 1, 2026 at 4:23 AM MST (America/Denver)**
+**Last updated: November 1, 2026 at 4:28 AM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 > **Disclaimer:** This hobby flight-simulation project is provided without warranty, subject to its licenses. Read the [full disclaimer](#disclaimer) before building or using it.
@@ -93,41 +93,6 @@ I plan to use two [PC Flights 1-pole, 8-position rotary switches (RSW-SP8T)](htt
 I’ll set each stop ring before mounting the switch and check that it stops at the first and last labeled positions. The listed price on **November 1, 2026** was **US $8.99 each**, or **US $17.98 for both**, before shipping and other applicable fees. Prices and availability may change.
 
 PC Flights lists a **6.35 mm flatted shaft**, **38 mm shaft length**, **9.80 mm panel cutout**, and **14.48 mm depth behind the panel**. I still need to check the mounting-hole fit, clearance, and knob fit; the shafts may need shortening. These switches have not yet been test fitted.
-
-## Frequency display plan — 2.08-inch OLED
-
-I plan to use the [EastRising / BuyDisplay 2.08-inch, 256 × 64 OLED module](https://www.buydisplay.com/i2c-white-2-08-inch-oled-display-module-256x64-arduino-raspberry-pi) for the frequency display. My planned choice is the **assembled white OLED module, ER-OLEDM2.08-2W-SPI-I2C**, with a pin header for the connections. It uses an SH1122 controller and a 3.3 V supply; I plan to use SPI with the Teensy 4.1 and draw all six frequency digits and the decimal point in software.
-
-| Part | Width × height |
-| --- | --- |
-| Measured faceplate frequency window | **53.5 × 17.5 mm** |
-| OLED illuminated area | **51.18 × 12.78 mm** |
-| OLED glass panel | **60.5 × 19 mm** |
-| Complete module PCB | **72.5 × 27.24 mm** |
-
-The illuminated area fits inside the measured window, leaving approximately **1.16 mm on each side** and **2.36 mm above and below** when centered. The glass and PCB can extend behind the faceplate, but I still need to check their clearance against the controls and encoder PCB. I’ll align the illuminated area with the window, since it is offset within the module.
-
-**I still need to test this white OLED behind the faceplate’s red filter** to check the resulting color, brightness, contrast, and readability. I may need a thin matte-black mask around the illuminated area if the surrounding glass or backing is visible. This is my planned display, not a tested or finalized choice; mounting, pinout, and firmware integration still need checking.
-
-## Preset-channel display plan — 0.96-inch OLED
-
-I plan to use the [EastRising / BuyDisplay 0.96-inch white OLED module, ER-OLEDM0.96-1W-I2C](https://www.buydisplay.com/i2c-white-0-96-inch-oled-display-module-128x64-arduino-raspberry-pi) for preset channels **01–20**. It has a **128 × 64 pixel** display, an **SSD1306 controller**, **I²C pin-header connections**, and a **3.3 V supply**. I plan to draw the channel numbers in the same font style as the frequency display.
-
-| Part | Width × height |
-| --- | --- |
-| Measured faceplate channel window | **22 × 17.5 mm** |
-| OLED illuminated area | **21.74 × 10.86 mm** |
-| Complete module PCB | **27.3 × 27.8 mm** |
-
-The illuminated area fits inside the measured window, but leaves only approximately **0.13 mm on each side** when centered, so alignment will be important. I can draw the digits slightly inward to leave more margin around the numbers. The PCB extends behind the faceplate; **I still need to check clearance** for the board, pin header, mounting hardware, nearby controls, and encoder PCB.
-
-**Both the frequency and preset-channel displays have red filters in front of them.** I still need to test both white OLEDs behind their filters for color, brightness, contrast, and readability. The preset-channel OLED is a planned choice, not a tested or finalized design.
-
-## Display clearance checks — button mockups
-
-I’m printing mockups of the **TEST DISPLAY and STATUS buttons** so I can get better measurements and check clearance behind the faceplate. Before deciding whether to use **one 2.8-inch TFT for both the frequency and preset-channel displays**, I’ll check its placement against the button bodies, terminals and wiring, the encoder PCB, and the mounting hardware. I’ll also check the display’s ribbon-cable clearance and test readability through both red filters.
-
-The single-TFT arrangement is still under consideration. I would draw the numbers within the parts of the screen visible through each window. **I haven’t finalized the display choice**; the separate OLED plans above remain candidates while I check the mechanical fit.
 
 ## Separate controllers for each radio
 
