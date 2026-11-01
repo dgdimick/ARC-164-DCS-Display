@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 1, 2026 at 1:35 AM MST (America/Denver)**
+**Last updated: November 1, 2026 at 1:45 AM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 > **Disclaimer:** This hobby flight-simulation project is provided without warranty, subject to its licenses. Read the [full disclaimer](#disclaimer) before building or using it.
@@ -97,7 +97,7 @@ PC Flights lists a **6.35 mm flatted shaft**, **38 mm shaft length**, **9.80 mm 
 
 ## Frequency display plan — 2.08-inch OLED
 
-I plan to use the [EastRising / BuyDisplay 2.08-inch, 256 × 64 OLED module](https://www.buydisplay.com/i2c-white-2-08-inch-oled-display-module-256x64-arduino-raspberry-pi) for the frequency display. My planned choice is the **assembled white OLED module, ER-OLEDM2.08-2W-SPI-I2C**, with its breakout board, rather than the bare display panel. It uses an SH1122 controller and a 3.3 V supply; I plan to use SPI with the Teensy 4.1 and draw all six frequency digits and the decimal point in software.
+I plan to use the [EastRising / BuyDisplay 2.08-inch, 256 × 64 OLED module](https://www.buydisplay.com/i2c-white-2-08-inch-oled-display-module-256x64-arduino-raspberry-pi) for the frequency display. My planned choice is the **assembled white OLED module, ER-OLEDM2.08-2W-SPI-I2C**, with a pin header for the connections. It uses an SH1122 controller and a 3.3 V supply; I plan to use SPI with the Teensy 4.1 and draw all six frequency digits and the decimal point in software.
 
 | Part | Width × height |
 | --- | --- |
