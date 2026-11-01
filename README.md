@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: October 31, 2026 at 9:57 PM MDT (America/Denver)**
+**Last updated: October 31, 2026 at 10:00 PM MDT (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 > **Disclaimer:** This hobby flight-simulation project is provided without warranty, subject to its licenses. Read the [full disclaimer](#disclaimer) before building or using it.
@@ -13,7 +13,7 @@
 
 ## Project update — October 31, 2026
 
-I’m waiting for the PCBs for my ARC-210 project, and I’ll finish that project when they arrive. In the meantime, **the ARC-164 is now an active project**, and I’m working on its hardware and firmware.
+**The ARC-164 is now an active project**, and I’m working on its hardware and firmware.
 
 ## Current development order
 
@@ -31,7 +31,7 @@ While I could use surface-mount (SMD) parts to make the boards smaller, I plan t
 
 ## Things that need to be completed
 
-**Last updated: October 31, 2026 at 6:07 PM MDT (America/Denver)**
+**Last updated: October 31, 2026 at 10:00 PM MDT (America/Denver)**
 <!-- Refresh this section timestamp whenever the work list changes, using the actual America/Denver time and MST/MDT. -->
 
 This is my current work list. Hardware and firmware are still under development, and I haven’t set a release date.
@@ -45,7 +45,7 @@ This is my current work list. Hardware and firmware are still under development,
 7. **Bench and board testing:** Test the controls, displays, and power requirements together, then assemble and electrically test the manufactured boards.
 8. **Testing in DCS:** Check control operation, display updates, startup behavior, reconnection, and extended reliability with the intended aircraft and the other radio panels connected.
 9. **Documentation:** Publish assembly instructions, wiring diagrams, final parts and print quantities, PCB ordering files, firmware loading steps, DCS-BIOS setup requirements, and troubleshooting notes.
-10. **Assembly pictures:** When my PCBs arrive and I start building, take clear pictures of component placement, soldering, wiring, and mounting, including both sides of each PCB with the silkscreen markings visible. Add the pictures to the assembly instructions so other builders can follow along.
+10. **Assembly pictures:** During assembly, take clear pictures of component placement, soldering, wiring, and mounting, including both sides of each PCB with the silkscreen markings visible. Add the pictures to the assembly instructions so other builders can follow along.
 
 
 ## Controller choice — Teensy 4.1
