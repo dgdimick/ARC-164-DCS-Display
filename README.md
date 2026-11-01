@@ -1,7 +1,9 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: October 31, 2026 at 6:03 PM MDT (America/Denver)**
+**Last updated: October 31, 2026 at 6:05 PM MDT (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
+
+> **Disclaimer:** This hobby flight-simulation project is provided without warranty, subject to its licenses. Read the [full disclaimer](#disclaimer) before building or using it.
 
 <p align="center">
   <img src="images/ARC-164_uhf_panel.jpg" width="500" alt="ARC-164 UHF radio panel reference photo">
@@ -165,3 +167,17 @@ I welcome bug reports from anyone using the project—**even tiny bugs are worth
 ## PC Flights affiliation
 
 I am not affiliated with [PC Flights](https://pcflights.com/) in any way. I simply chose to use their panels for my own cockpit projects.
+
+## Disclaimer
+
+This is a hobby flight-simulation project, not equipment intended for use in real aircraft. Software, firmware, PCB designs, wiring information, and printable parts are provided "as is," without warranty, subject to their respective licenses.
+
+Users are responsible for verifying compatibility, wiring, supply voltages, assembly, and safe operation before use. To the maximum extent permitted by applicable law, the authors and contributors disclaim liability for injury, equipment damage, data loss, or other losses arising from use of this project.
+
+## Licensing
+
+- **PCBs:** [CERN Open Hardware Licence Version 2 – Permissive (CERN-OHL-P-2.0)](Docs/LICENSE-CERN-OHL-P-2.0.txt)
+- **Teensy firmware:** [MIT License](Docs/LICENSE-MIT.txt)
+- **STL files:** [Creative Commons Attribution 4.0 International (CC BY 4.0)](Docs/LICENSE-CC-BY-4.0.txt)
+
+Copies of the applicable licenses are included in the [Docs directory](Docs/). Firmware and printable parts are still under development; these license terms do not mean those files have been released. Third-party code, libraries, and models retain their own licenses.
