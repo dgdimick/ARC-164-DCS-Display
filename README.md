@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: October 31, 2026 at 6:29 PM MDT (America/Denver)**
+**Last updated: October 31, 2026 at 9:51 PM MDT (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 > **Disclaimer:** This hobby flight-simulation project is provided without warranty, subject to its licenses. Read the [full disclaimer](#disclaimer) before building or using it.
@@ -16,6 +16,8 @@
 I’ve purchased and checked the [PC Flights F-16C Viper UHF panel](https://pcflights.com/f-16c-viper-uhf-radio-control-home-cockpit-panel/) and confirmed it suits this A-10C II ARC-164 build. F-16C DCS-BIOS firmware support is a separate task.
 
 ## About this project
+
+**This is an active project under development.**
 
 I’m building an **AN/ARC-164 UHF radio panel** for my DCS A-10C II cockpit, with working controls and displays linked to DCS through DCS-BIOS.
 
