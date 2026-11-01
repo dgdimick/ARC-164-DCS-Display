@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 1, 2026 at 1:45 AM MST (America/Denver)**
+**Last updated: November 1, 2026 at 1:47 AM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 > **Disclaimer:** This hobby flight-simulation project is provided without warranty, subject to its licenses. Read the [full disclaimer](#disclaimer) before building or using it.
@@ -109,6 +109,20 @@ I plan to use the [EastRising / BuyDisplay 2.08-inch, 256 × 64 OLED module](htt
 The illuminated area fits inside the measured window, leaving approximately **1.16 mm on each side** and **2.36 mm above and below** when centered. The glass and PCB can extend behind the faceplate, but I still need to check their clearance against the controls and encoder PCB. I’ll align the illuminated area with the window, since it is offset within the module.
 
 **I still need to test this white OLED behind the faceplate’s red filter** to check the resulting color, brightness, contrast, and readability. I may need a thin matte-black mask around the illuminated area if the surrounding glass or backing is visible. This is my planned display, not a tested or finalized choice; mounting, pinout, and firmware integration still need checking.
+
+## Preset-channel display plan — 0.96-inch OLED
+
+I plan to use the [EastRising / BuyDisplay 0.96-inch white OLED module, ER-OLEDM0.96-1W-I2C](https://www.buydisplay.com/i2c-white-0-96-inch-oled-display-module-128x64-arduino-raspberry-pi) for preset channels **01–20**. It has a **128 × 64 pixel** display, an **SSD1306 controller**, **I²C pin-header connections**, and a **3.3 V supply**. I plan to draw the channel numbers in the same font style as the frequency display.
+
+| Part | Width × height |
+| --- | --- |
+| Measured faceplate channel window | **22 × 17.5 mm** |
+| OLED illuminated area | **21.74 × 10.86 mm** |
+| Complete module PCB | **27.3 × 27.8 mm** |
+
+The illuminated area fits inside the measured window, but leaves only approximately **0.13 mm on each side** when centered, so alignment will be important. I can draw the digits slightly inward to leave more margin around the numbers. The PCB extends behind the faceplate; **I still need to check clearance** for the board, pin header, mounting hardware, nearby controls, and encoder PCB.
+
+**Both the frequency and preset-channel displays have red filters in front of them.** I still need to test both white OLEDs behind their filters for color, brightness, contrast, and readability. The preset-channel OLED is a planned choice, not a tested or finalized design.
 
 ## Separate controllers for each radio
 
