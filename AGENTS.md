@@ -6,4 +6,4 @@ Keep the work list in the main README while the page remains manageable. Write p
 
 # Version history order
 
-PCB READMEs list only the current PCB version. Remove superseded version entries when publishing a new version; do not maintain older release entries in those READMEs. Any version history kept elsewhere should show the newest entry first.
+The PCBs/README.md overview lists only the current published PCB versions. Do not remove version history from the individual PCB subdirectory READMEs when updating that overview. Version-history entries in individual PCB READMEs remain newest first.
