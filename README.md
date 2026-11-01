@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: October 31, 2026 at 6:01 PM MDT (America/Denver)**
+**Last updated: October 31, 2026 at 6:02 PM MDT (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -43,13 +43,13 @@ While I could use surface-mount (SMD) parts to make the boards smaller, I plan t
 
 ## Things that need to be completed
 
-**Last updated: October 31, 2026 at 6:01 PM MDT (America/Denver)**
+**Last updated: October 31, 2026 at 6:02 PM MDT (America/Denver)**
 <!-- Refresh this section timestamp whenever the work list changes, using the actual America/Denver time and MST/MDT. -->
 
 This is my current work list. Hardware and firmware are still under development, and I haven’t set a release date.
 
 1. **Panel layout and parts:** Confirm dimensions, mounting clearances, controls, display choices, and the complete parts list.
-2. **PCB and schematic design:** I’ve published the [encoder PCB and schematic v1.1](PCBs/Rotary%20Encoders/) with all five frequency encoders and the preset-channel encoder on one routed board. I still need to check clearances and test-fit it behind the faceplate before ordering boards. Design the remaining controller and display circuitry, finalize Teensy pin assignments, and check the complete electrical design.
+2. **PCB and schematic design:** I’ve published the [encoder PCB and schematic v1.1](PCBs/Rotary%20Encoders/) with all five frequency encoders and the preset-channel encoder on one routed board. Version 1.1 fixes the copper-pour issue by removing an extra unassigned copper zone and refilling the GND pour. I still need to check clearances and test-fit it behind the faceplate before ordering boards. Design the remaining controller and display circuitry, finalize Teensy pin assignments, and check the complete electrical design.
 3. **Printed parts:** Design and test-fit the required knobs, brackets, and spacers with the selected hardware.
 4. **DCS-BIOS mappings and any needed changes:** Check which inputs and display outputs are already available for this radio. Identify missing data, make any necessary export changes, and document them. Check the correct ARC-164 radio instance for each intended A-10 variant. The ARC-210 changes do not automatically apply to this panel.
 5. **Firmware:** Write the control and display firmware and verify USB communication with DCS-BIOS.
@@ -90,7 +90,7 @@ My initial check of the supplied faceplate DXF suggests that a single **L-shaped
 
 **I still need to check the clearances** for the encoder bodies and solder pins, the nearby switch beside the vertical section, display hardware, connectors, and PCB mounting points. The vertical section may need a notch or a narrower connecting strip. The DXF does not declare its units, so I also need to confirm its scale against the actual faceplate before finalizing the design or ordering boards.
 
-I’ve published the [encoder PCB and schematic v1.1](PCBs/Rotary%20Encoders/), based on my ARC-210 encoder design. All six encoders are placed on one board, and the latest saved layout is routed with a GND pour. Fresh electrical checks reported zero violations, zero unconnected items, and zero schematic/PCB parity issues under the saved project settings. **I still need to check clearances and test-fit the board behind the faceplate; this is not a manufacturing release.** The faceplate drawing and its reference geometry are not included.
+I’ve published the [encoder PCB and schematic v1.1](PCBs/Rotary%20Encoders/), based on my ARC-210 encoder design. All six encoders are placed on one board, and the latest saved layout is routed with a GND pour. **Version 1.1 fixes the isolated-copper issue:** I removed an extra unassigned copper zone that was overriding the GND pour, then refilled it. Fresh electrical checks reported zero violations, zero unconnected items, and zero schematic/PCB parity issues under the saved project settings. **I still need to check clearances and test-fit the board behind the faceplate; this is not a manufacturing release.** The faceplate drawing and its reference geometry are not included.
 
 ## Separate controllers for each radio
 
