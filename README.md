@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: October 31, 2026 at 9:55 PM MDT (America/Denver)**
+**Last updated: October 31, 2026 at 9:57 PM MDT (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 > **Disclaimer:** This hobby flight-simulation project is provided without warranty, subject to its licenses. Read the [full disclaimer](#disclaimer) before building or using it.
@@ -10,6 +10,10 @@
 </p>
 
 *Panel reference photo: PC Flights.*
+
+## Project update — October 31, 2026
+
+I’m waiting for the PCBs for my ARC-210 project, and I’ll finish that project when they arrive. In the meantime, **the ARC-164 is now an active project**, and I’m working on its hardware and firmware.
 
 ## Current development order
 
