@@ -1,6 +1,6 @@
 # ARC-164 Rotary Encoder PCB and schematic
 
-**Last updated: October 31, 2026 at 6:17 PM MDT (America/Denver)**
+**Last updated: October 31, 2026 at 6:18 PM MDT (America/Denver)**
 
 The **ARC-164 encoder PCB v1.1** combines all five frequency encoders and the preset-channel encoder on one board. The layout is routed and includes a front-copper GND pour. **I still need to check mechanical clearances and test-fit the board before ordering PCBs.**
 
@@ -54,9 +54,3 @@ I removed an extra front-copper zone that had no net assigned and was overriding
 ## Version 1.0 — October 31, 2026
 
 I rechecked the routed board and schematic and updated their revision markings to **1.0**, including the PCB silkscreen. All six encoder models now use the same height offset. The fresh reports above passed under the saved settings, with no individual DRC exclusions. Some checks remain disabled, including missing courtyards and footprint-type/filter checks. **Faceplate clearance checks, test fitting, and assembled-board testing are still pending.** The restricted faceplate geometry and test-print STLs are not included in this publication.
-
-## Disclaimer
-
-This is a hobby flight-simulation project, not equipment intended for use in real aircraft. Software, firmware, PCB designs, wiring information, and printable parts are provided "as is," without warranty, subject to their respective licenses.
-
-Users are responsible for verifying compatibility, wiring, supply voltages, assembly, and safe operation before use. To the maximum extent permitted by applicable law, the authors and contributors disclaim liability for injury, equipment damage, data loss, or other losses arising from use of this project.
