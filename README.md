@@ -1,9 +1,7 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 1, 2026 at 6:49 PM MST (America/Denver)**
+**Last updated: November 1, 2026 at 7:07 PM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
-
-> **Disclaimer:** This hobby flight-simulation project is provided without warranty, subject to its licenses. Read the [full disclaimer](#disclaimer) before building or using it.
 
 <p align="center">
   <img src="images/ARC-164_uhf_panel.jpg" width="500" alt="ARC-164 UHF radio panel reference photo">
@@ -23,7 +21,7 @@ For these two radio panels, I plan to build and test the **ARC-164**, followed b
 
 ## Other SIMPIT panels
 
-Once I’ve finished the radio panels, I plan to build other panels for my SIMPIT, including the **SAS and emergency trim panels**. I’ll share those projects as they develop. These are future plans, and my priorities may change based on user feedback and interest.
+Once I’ve finished the radio panels, I plan to build other panels for my SIMPIT, including the **SAS and emergency trim panels**. I’ll share those projects as they develop. These are future plans.
 
 ## Through-hole components
 
@@ -33,13 +31,13 @@ I chose the listed component suppliers because I’m aiming for better-quality p
 
 ## Things that need to be completed
 
-**Last updated: November 1, 2026 at 4:23 AM MST (America/Denver)**
+**Last updated: November 1, 2026 at 7:07 PM MST (America/Denver)**
 <!-- Refresh this section timestamp whenever the work list changes, using the actual America/Denver time and MST/MDT. -->
 
-This is my current work list. Hardware and firmware are still under development, and I haven’t set a release date.
+This is my current work list for the hardware, firmware, testing, and build instructions.
 
 1. **Panel layout and parts:** Confirm dimensions, mounting clearances, controls, display choices, and the complete parts list.
-2. **PCB and schematic design:** I’ve published the [encoder PCB and schematic v1.1](PCBs/Rotary%20Encoders/) with all five frequency encoders and the preset-channel encoder on one routed board. Version 1.1 fixes the copper-pour issue by removing an extra unassigned copper zone and refilling the GND pour. I still need to check clearances and test-fit it behind the faceplate before ordering boards. Design the remaining controller and display circuitry, finalize Teensy pin assignments, and check the complete electrical design.
+2. **PCB and schematic design:** Check clearances and test-fit the [published encoder PCB v1.1](#encoder-pcb-plan) before ordering boards. Design the remaining controller and display circuitry, finalize Teensy pin assignments, and check the complete electrical design.
 3. **Printed parts:** Design and test-fit the required knobs, brackets, and spacers with the selected hardware.
 4. **DCS-BIOS mappings and any needed changes:** Check which inputs and display outputs are already available for this radio. Identify missing data, make any necessary export changes, and document them. Check the correct ARC-164 radio instance for each intended A-10 variant.
 5. **Firmware:** Write the control and display firmware and verify USB communication with DCS-BIOS.
@@ -69,9 +67,7 @@ Ethernet is not required for the planned USB DCS-BIOS connection. The Teensy 4.1
 
 *ARC-164 Encoder PCB — KiCad 3D view. Click to enlarge. Clearance checks and test fitting are still pending.*
 
-I’ve placed **all five frequency encoders and the preset-channel encoder on one PCB** designed for this faceplate.
-
-I’m using a **rotary encoder to select preset channels 1–20** because rotary switches suitable for this job are extremely expensive. The continuous-rotation eight-position switch I checked costs over US$50, so I chose the encoder to keep the project cost down. The firmware will map encoder movement to the channel selection. **The current encoder PCB will stay as designed**, with all six encoders on one board. Clearance checks and test fitting are still pending.
+I’m using a **rotary encoder to select preset channels 1–20** because rotary switches suitable for this job are extremely expensive. The continuous-rotation eight-position switch I checked costs over US$50, so I chose the encoder to keep the project cost down. The firmware will map encoder movement to the channel selection. **The current encoder PCB will stay as designed**, with all six encoders on one board.
 
 My initial check of the supplied faceplate DXF suggests that a single **L-shaped PCB** is feasible: one section across the five frequency encoders, with an extension up the right side to the channel encoder. Assuming the drawing is in millimeters:
 
@@ -98,13 +94,11 @@ PC Flights lists a **6.35 mm flatted shaft**, **38 mm shaft length**, **9.80 mm 
 
 ## Separate controllers for each radio
 
-The **ARC-164 and ARC-186 will each use their own Teensy 4.1**, with a separate USB connection to DCS-BIOS for each panel. Either radio can be built and operated independently. Dedicated controllers keep each panel's wiring and firmware separate and leave room for future additions.
-
-The ARC-164 controller will operate the ARC-164 only; the [ARC-186 COMM-VHF panel](https://github.com/dgdimick/ARC-186-DCS-Display) will have its own controller. Hardware, pin assignments, and firmware remain under development.
+The **ARC-164 and ARC-186 will each use their own Teensy 4.1 and USB connection to DCS-BIOS**, so either panel can be built and operated independently. This keeps the wiring and firmware separate and leaves room for future additions. Hardware, pin assignments, and firmware remain under development.
 
 ## USB connections and powered hubs
 
-I plan to connect the ARC-164 directly by USB through powered hubs. I already use USB for my other SIMPIT equipment and have run 12 devices through one hub without issues. Each radio will have its own Teensy and USB connection.
+I plan to connect the ARC-164 directly by USB through powered hubs. I already use USB for my other SIMPIT equipment and have run 12 devices through one hub without issues.
 
 ## DCS-BIOS
 
@@ -134,9 +128,9 @@ References: [F-16C manual](https://www.digitalcombatsimulator.com/upload/iblock/
 
 ## A central directory for SIMPIT builders
 
-I’d love to see a central GitHub directory linking to projects from SIMPIT builders like me—a place to find panels, code, PCB designs, printable parts, and build guides for SIMPITs of every size. It could link back to each builder’s own repository so the files, updates, and credit stay with the original project. This is an idea I’d like to see happen, rather than a project I’ve committed to building myself.
+I’d love to see a central GitHub directory linking to other SIMPIT builders’ projects, with files and credit staying with each builder. This is an idea, not a project I’ve committed to building.
 
-If you know of one or would like to discuss it, let me know in [Discussions](https://github.com/dgdimick/ARC-164-DCS-Display/discussions).
+[Read more about the directory idea](https://github.com/dgdimick/ARC-210-DCS-Display/blob/master/Docs/Future-Thoughts.md#a-central-directory-for-simpit-builders). If you know of one or would like to discuss it, let me know in [Discussions](https://github.com/dgdimick/ARC-164-DCS-Display/discussions).
 
 ## Sharing code and improvements
 
