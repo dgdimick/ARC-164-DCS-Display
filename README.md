@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 2, 2026 at 3:15 AM MST (America/Denver)**
+**Last updated: November 2, 2026 at 3:17 AM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -31,14 +31,14 @@ I chose the listed component suppliers because I’m aiming for better-quality p
 
 ## Things that need to be completed
 
-**Last updated: November 2, 2026 at 2:52 AM MST (America/Denver)**
+**Last updated: November 2, 2026 at 3:17 AM MST (America/Denver)**
 <!-- Refresh this section timestamp whenever the work list changes, using the actual America/Denver time and MST/MDT. -->
 
 This is my current work list for the hardware, firmware, testing, and build instructions.
 
 1. **Panel layout and parts:** Confirm dimensions, mounting clearances, controls, and the complete parts list. Measure and test-fit the proposed [three-block LED display arrangement](#seven-segment-display-plan), including digit visibility and brightness behind the smoked cover. **Frequency-knob travel in DCS:** I’ll check whether each 0–9 selector wraps from 9 to 0 or stops, whether the final-digit selector wraps from 75 to 00 or stops, and the order and end stops of 2/3/A. I’ll use those results to decide which frequency controls should use rotary switches or encoders before finalizing the PCB revision. This checks DCS behavior; it does not establish the real radio’s mechanical travel.
 2. **PCB and schematic design:** Revise the [published encoder PCB v1.1](#encoder-pcb-plan) for **four frequency encoders and the channel encoder**, making room for the reused ARC-210 rotary-switch PCB at 2/3/A. I’ve checked that arrangement with printed mockups; the revised PCB still needs clearance checks and test fitting before ordering boards. Design the Main PCB with the two A12515RNCQ switches and their resistor ladders mounted directly on it, along with the controller and display circuitry. Finalize Teensy pin assignments and check the complete electrical design.
-3. **Printed parts:** Design and test-fit the required knobs, brackets, and spacers with the selected hardware.
+3. **Printed parts:** Design and test-fit the required knobs, brackets, and spacers with the selected hardware. Design and test the shaft guides for the staggered frequency-switch arrangement, with separate hole sizes for the 6 mm and 6.35 mm shafts and enough clearance for free rotation.
 4. **DCS-BIOS mappings and any needed changes:** Check which inputs and display outputs are already available for this radio. Identify missing data, make any necessary export changes, and document them. Check the correct ARC-164 radio instance for each intended A-10 variant.
 5. **Firmware:** Write the control and display firmware and verify USB communication with DCS-BIOS.
 6. **Bench and board testing:** Test the controls, displays, and power requirements together, then assemble and electrically test the manufactured boards.
@@ -116,6 +116,12 @@ This is the proposed layout if I replace the remaining frequency encoders with s
 The C&K **38.1 mm shaft option is 6.35 mm in diameter**, while the **42 mm option is 6 mm**, so I’ll need **different shaft holes in the knobs**. I’ll **set the spacing between the two PCB levels first, then measure and cut the shorter 38.1 mm shafts on the upper PCB so all the knobs line up at the front of the panel**. Keeping the 42 mm shafts longer will let those switches sit farther back, so the stagger is not limited to the original 3.9 mm difference in shaft lengths. I still need to check whether the complete mounting stack provides enough clearance for the switch bodies, PCB edges, resistor leads, solder joints, connectors, and wiring. I’ll also check shaft projection, knob alignment, and mechanical support so the mounting hardware does not strain the soldered pins. See the [C&K shaft options](https://www.ckswitches.com/media/1349/arotary.pdf).
 
 The final switch models, contact counts, PCB footprints, and resistor ladders still need checking. The existing ARC-210 rotary-switch PCB only provides seven readable positions, so the ten-position frequency controls would need a revised circuit and PCB. I’ll check the frequency-selector travel in DCS before deciding which remaining encoders to replace.
+
+## 3D-printed shaft guides
+
+I plan to design **3D-printed shaft guides** to keep the frequency-switch shafts centered through the faceplate in the staggered mounting arrangement. I’ll use **different guide-hole sizes for the 6 mm shafts on the 42 mm switches and the 6.35 mm shafts on the 38.1 mm switches**, allowing enough clearance for the shafts to turn freely. The final printed hole dimensions will depend on test fitting, rather than matching the shaft diameters exactly.
+
+**These guides still need to be designed, printed, and tested.** I’ll check alignment, free rotation, wear, and clearance with the complete mounting stack. The switch bodies will still need secure mounts to resist knob-turning force; the guides will support and locate the shafts.
 
 ## TONE, SQL, and STATUS controls
 
