@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 1, 2026 at 7:09 PM MST (America/Denver)**
+**Last updated: November 1, 2026 at 7:32 PM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -123,6 +123,7 @@ References: [F-16C manual](https://www.digitalcombatsimulator.com/upload/iblock/
 
 ## Related radio projects
 
+- [A-10-Sim repository](https://github.com/dgdimick/A-10-Sim) — my collection of A-10C II cockpit panel projects.
 - [ARC-210 radio panel](https://github.com/dgdimick/ARC-210-DCS-Display) — my other radio panel project.
 - [ARC-186 COMM-VHF radio panel](https://github.com/dgdimick/ARC-186-DCS-Display) — my planned VHF panel with its own Teensy 4.1 and USB connection.
 
