@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 2, 2026 at 3:06 AM MST (America/Denver)**
+**Last updated: November 2, 2026 at 3:09 AM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -101,7 +101,7 @@ I’ll reuse the [ARC-210 rotary-switch PCB](https://github.com/dgdimick/ARC-210
 
 If I use rotary switches for more of the frequency controls, I plan to try **two PCB levels with staggered switch mounting**, using **38.1 mm shafts for the PCB-mounted switches** and **42 mm shafts for the switches secured at the other depth with their mounting nuts**. The aim is to clear the adjacent switch boards and bodies while keeping the knobs aligned at the front of the panel. This is a proposed mounting arrangement, not a completed design.
 
-The C&K **38.1 mm shaft option is 6.35 mm in diameter**, while the **42 mm option is 6 mm**, so I’ll need **different shaft holes in the knobs**. The shaft-length difference is only **3.9 mm**; I still need to check whether the complete mounting stack provides enough clearance for the switch bodies, PCB edges, resistor leads, solder joints, connectors, and wiring. I’ll also check shaft projection, knob alignment, and mechanical support so the mounting hardware does not strain the soldered pins. See the [C&K shaft options](https://www.ckswitches.com/media/1349/arotary.pdf).
+The C&K **38.1 mm shaft option is 6.35 mm in diameter**, while the **42 mm option is 6 mm**, so I’ll need **different shaft holes in the knobs**. I’ll **set the staggered PCB mounting depths first, then measure and cut the 38.1 mm shafts so all the knobs line up at the front of the panel**. Keeping the 42 mm shafts longer will let those switches sit farther back, so the stagger is not limited to the original 3.9 mm difference in shaft lengths. I still need to check whether the complete mounting stack provides enough clearance for the switch bodies, PCB edges, resistor leads, solder joints, connectors, and wiring. I’ll also check shaft projection, knob alignment, and mechanical support so the mounting hardware does not strain the soldered pins. See the [C&K shaft options](https://www.ckswitches.com/media/1349/arotary.pdf).
 
 The final switch models, contact counts, PCB footprints, and resistor ladders still need checking. The existing ARC-210 rotary-switch PCB only provides seven readable positions, so the ten-position frequency controls would need a revised circuit and PCB. I’ll check the frequency-selector travel in DCS before deciding which remaining encoders to replace.
 
