@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 1, 2026 at 9:45 PM MST (America/Denver)**
+**Last updated: November 1, 2026 at 10:22 PM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -31,13 +31,13 @@ I chose the listed component suppliers because I’m aiming for better-quality p
 
 ## Things that need to be completed
 
-**Last updated: November 1, 2026 at 9:45 PM MST (America/Denver)**
+**Last updated: November 1, 2026 at 10:22 PM MST (America/Denver)**
 <!-- Refresh this section timestamp whenever the work list changes, using the actual America/Denver time and MST/MDT. -->
 
 This is my current work list for the hardware, firmware, testing, and build instructions.
 
 1. **Panel layout and parts:** Confirm dimensions, mounting clearances, controls, and the complete parts list. Measure and test-fit the proposed [three-block LED display arrangement](#seven-segment-display-plan), including digit visibility and brightness behind the smoked cover.
-2. **PCB and schematic design:** Check clearances and test-fit the [published encoder PCB v1.1](#encoder-pcb-plan) before ordering boards. Design the remaining controller and display circuitry, finalize Teensy pin assignments, and check the complete electrical design.
+2. **PCB and schematic design:** Check clearances and test-fit the [published encoder PCB v1.1](#encoder-pcb-plan) before ordering boards. Design the Main PCB with the two A12515RNCQ switches and their resistor ladders mounted directly on it, along with the controller and display circuitry. Finalize Teensy pin assignments and check the complete electrical design.
 3. **Printed parts:** Design and test-fit the required knobs, brackets, and spacers with the selected hardware.
 4. **DCS-BIOS mappings and any needed changes:** Check which inputs and display outputs are already available for this radio. Identify missing data, make any necessary export changes, and document them. Check the correct ARC-164 radio instance for each intended A-10 variant.
 5. **Firmware:** Write the control and display firmware and verify USB communication with DCS-BIOS.
@@ -93,16 +93,18 @@ My preliminary fit check assumes the common **30 × 14 mm four-digit package**. 
 
 ## MAIN and PRESET rotary switches
 
-I plan to use two [PC Flights 1-pole, 8-position rotary switches (RSW-SP8T)](https://pcflights.com/rotary-switch-1-pole-8-positions/). They have **45° spacing** and a **position stop ring adjustable from 2 to 8 positions**, so I can use the same switch for both controls.
+I plan to use **two C&K A12515RNCQ rotary switches**, one for MAIN and one for PRESET. These have the longer **38.1 mm (1.5-inch) flatted shaft**, **PCB through-hole terminals**, and **45° indexing**. See the [C&K A Series datasheet](https://www.ckswitches.com/media/1349/arotary.pdf).
+
+I plan to mount **both switches directly on the Main PCB, with their resistor ladders on the same board**. This will avoid separate rotary-switch PCBs and the wiring between those boards and the Main PCB. I’ll use the ARC-210 switch circuit and footprint as a starting point, then check the pin assignments, component placement, and analog readings for this layout.
 
 | Control | Stop-ring setting | Total travel |
 | --- | --- | --- |
 | MAIN: OFF–MAIN–BOTH–ADF | Limit the switch to **4 positions** | **135°** |
 | PRESET: MNL–PRESET–GRD | Limit the switch to **3 positions** | **90°** |
 
-I’ll set each stop ring before mounting the switch and check that it stops at the first and last labeled positions. The listed price on **November 1, 2026** was **US $8.99 each**, or **US $17.98 for both**, before shipping and other applicable fees. Prices and availability may change.
+I’ll set each stop ring before mounting the switch and check that it stops at the first and last labeled positions. The channel control will remain a rotary encoder on the encoder PCB.
 
-PC Flights lists a **6.35 mm flatted shaft**, **38 mm shaft length**, **9.80 mm panel cutout**, and **14.48 mm depth behind the panel**. I still need to check the mounting-hole fit, clearance, and knob fit; the shafts may need shortening. These switches have not yet been test fitted.
+**This mounting arrangement still needs design and test fitting.** I need to confirm the PCB footprint and orientation, mounting-hole and locating-tab fit, board spacing, shaft projection through the faceplate, knob fit, and clearance from the display blocks and encoder PCB. The longer shafts may need trimming after I check the complete assembly. I haven’t confirmed a purchase price for the A12515RNCQ yet.
 
 ## Separate controllers for each radio
 
