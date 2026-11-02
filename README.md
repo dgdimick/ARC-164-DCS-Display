@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 2, 2026 at 2:26 AM MST (America/Denver)**
+**Last updated: November 2, 2026 at 2:30 AM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -91,9 +91,11 @@ My preliminary fit check assumes the common **30 × 14 mm four-digit package**. 
 
 **I still need to confirm the actual package dimensions, digit spacing, pinout, and mounting depth, then check clearance from the switches, encoder PCB, connectors, panel edge, and mounting hardware.** I also need to test brightness through the smoked cover and confirm the driver wiring and suitable 3.3 V-to-5 V logic buffering for the Teensy. This is a proposed layout, not a completed or test-fitted display design.
 
-## TONE and SQL toggle switches
+## TONE, SQL, and STATUS controls
 
 I plan to use a **spring-loaded momentary toggle for TONE**: hold it to activate the tone, then release it to return to OFF. For **SQL (SQUELCH)**, I plan to use a **normal maintained ON/OFF toggle** that stays in the selected position, with no spring return.
+
+For **STATUS**, I plan to use a **normally open momentary pushbutton, not a light**. The contacts close while the button is pressed and open again when it is released.
 
 ## MAIN and PRESET rotary switches
 
