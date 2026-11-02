@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 2, 2026 at 3:14 AM MST (America/Denver)**
+**Last updated: November 2, 2026 at 3:15 AM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -93,13 +93,25 @@ My preliminary fit check assumes the common **30 × 14 mm four-digit package**. 
 
 ## 2/3/A rotary switch
 
-I’ve checked that the **C&K A12515RNCQ** will fit at the 2/3/A control, so I plan to use it instead of an encoder. I’ll set the stop ring to **three positions for 2, 3, and A**, with **45° indexing and 90° total travel**. Using the same part as MAIN and PRESET gives all three switches the same **38.1 mm (1.5-inch) shaft length**. See the [C&K datasheet](https://www.ckswitches.com/media/1349/arotary.pdf).
+I’ve checked the C&K A Series switch fit at the 2/3/A control with printed mockups, so I plan to use a rotary switch instead of an encoder. I’ll set the stop ring to **three positions for 2, 3, and A**, with **45° indexing and 90° total travel**. For the staggered frequency-switch layout, I now plan to use a **42 mm shaft at 2/3/A**, rather than the previously proposed 38.1 mm A12515RNCQ. The exact 42 mm switch model and footprint still need checking. MAIN and PRESET remain planned with 38.1 mm shafts. See the [C&K datasheet](https://www.ckswitches.com/media/1349/arotary.pdf).
 
 I’ll reuse the [ARC-210 rotary-switch PCB](https://github.com/dgdimick/ARC-210-DCS-Display/tree/master/PCBs/Rotary%20Switches) for 2/3/A. **I’ve checked the fit with printed mockups**, including clearance beside the next encoder. I’ll revise the ARC-164 encoder PCB for **four frequency encoders and the channel encoder**, making room for the separate switch PCB. Its resistor ladder will let one Teensy analog input read the selected position. The revised PCB, wiring, knob alignment, and complete assembly still need testing. The published encoder PCB v1.1 has not been revised for this change yet.
 
 ## Staggered frequency-switch mounting plan
 
 If I use rotary switches for more of the frequency controls, I plan to try **two PCB levels with staggered switch mounting**, with the **42 mm shafts on the lower PCB, farther from the faceplate**, and the **38.1 mm shafts on the upper PCB, closer to the faceplate**. I’ll use the mounting nuts to secure the switches as needed. The aim is to clear the adjacent switch boards and bodies while keeping the knobs aligned at the front of the panel. This is a proposed mounting arrangement, not a completed design.
+
+I plan to alternate the frequency switches from left to right so **only two shafts need trimming**:
+
+| Frequency control | Shaft length | PCB level |
+| --- | --- | --- |
+| 2/3/A — first | **42 mm** | Lower, farther from the faceplate |
+| 10 MHz — second | **38.1 mm** | Upper, closer to the faceplate; trim after setting spacing |
+| 1 MHz — middle | **42 mm** | Lower, farther from the faceplate |
+| 0.1 MHz — fourth | **38.1 mm** | Upper, closer to the faceplate; trim after setting spacing |
+| Final digits — far right | **42 mm** | Lower, farther from the faceplate |
+
+This is the proposed layout if I replace the remaining frequency encoders with switches. I’ll confirm the switch travel, exact models, and clearances before finalizing it.
 
 The C&K **38.1 mm shaft option is 6.35 mm in diameter**, while the **42 mm option is 6 mm**, so I’ll need **different shaft holes in the knobs**. I’ll **set the spacing between the two PCB levels first, then measure and cut the shorter 38.1 mm shafts on the upper PCB so all the knobs line up at the front of the panel**. Keeping the 42 mm shafts longer will let those switches sit farther back, so the stagger is not limited to the original 3.9 mm difference in shaft lengths. I still need to check whether the complete mounting stack provides enough clearance for the switch bodies, PCB edges, resistor leads, solder joints, connectors, and wiring. I’ll also check shaft projection, knob alignment, and mechanical support so the mounting hardware does not strain the soldered pins. See the [C&K shaft options](https://www.ckswitches.com/media/1349/arotary.pdf).
 
