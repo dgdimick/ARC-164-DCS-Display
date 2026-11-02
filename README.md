@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 2, 2026 at 3:18 AM MST (America/Denver)**
+**Last updated: November 2, 2026 at 3:20 AM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -98,6 +98,13 @@ I’ve checked the C&K A Series switch fit at the 2/3/A control with printed moc
 I’ll reuse the [ARC-210 rotary-switch PCB](https://github.com/dgdimick/ARC-210-DCS-Display/tree/master/PCBs/Rotary%20Switches) for 2/3/A. **I’ve checked the fit with printed mockups**, including clearance beside the next encoder. I’ll revise the ARC-164 encoder PCB for **four frequency encoders and the channel encoder**, making room for the separate switch PCB. Its resistor ladder will let one Teensy analog input read the selected position. The revised PCB, wiring, knob alignment, and complete assembly still need testing. The published encoder PCB v1.1 has not been revised for this change yet.
 
 ## Staggered frequency-switch mounting plan
+
+<a href="images/ARC-164_Staggered_PCB_Mount_Concept.png"><img src="images/ARC-164_Staggered_PCB_Mount_Concept.png" width="450" alt="Concept side view of alternating long and short frequency-switch shafts mounted on two PCB levels"></a>
+
+*Click the drawing to enlarge. This is a concept drawing, not to scale; the PCB shapes, mounts, spacing, and clearances still need design and testing.*
+
+**The upper PCB will need clearance holes for the three longer shafts passing through from the lower PCB.** I’ll size and position these openings so the shafts can turn freely without touching the board.
+
 
 If I use rotary switches for more of the frequency controls, I plan to try **two PCB levels with staggered switch mounting**, with the **42 mm shafts on the lower PCB, farther from the faceplate**, and the **38.1 mm shafts on the upper PCB, closer to the faceplate**. I’ll use the mounting nuts to secure the switches as needed. The aim is to clear the adjacent switch boards and bodies while keeping the knobs aligned at the front of the panel. This is a proposed mounting arrangement, not a completed design.
 
