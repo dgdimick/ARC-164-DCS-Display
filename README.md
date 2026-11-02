@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 2, 2026 at 2:30 AM MST (America/Denver)**
+**Last updated: November 2, 2026 at 2:48 AM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -68,7 +68,7 @@ Ethernet is not required for the planned USB DCS-BIOS connection. The Teensy 4.1
 
 *ARC-164 Encoder PCB — KiCad 3D view. Click to enlarge. Clearance checks and test fitting are still pending.*
 
-I’m using a **rotary encoder to select preset channels 1–20** because rotary switches suitable for this job are extremely expensive. The continuous-rotation eight-position switch I checked costs over US$50, so I chose the encoder to keep the project cost down. The firmware will map encoder movement to the channel selection. **The current encoder PCB will stay as designed**, with all six encoders on one board.
+I’m using a **rotary encoder to select preset channels 1–20** because rotary switches suitable for this job are extremely expensive. The continuous-rotation eight-position switch I checked costs over US$50, so I chose the encoder to keep the project cost down. The firmware will map encoder movement to the channel selection. The channel control will remain an encoder, but I plan to replace the **2/3/A frequency encoder with a three-position rotary switch**. The encoder PCB will need a revision for this change.
 
 My initial check of the supplied faceplate DXF suggests that a single **L-shaped PCB** is feasible: one section across the five frequency encoders, with an extension up the right side to the channel encoder. Assuming the drawing is in millimeters:
 
@@ -78,7 +78,7 @@ My initial check of the supplied faceplate DXF suggests that a single **L-shaped
 
 **I still need to check the clearances** for the encoder bodies and solder pins, the nearby switch beside the vertical section, display hardware, connectors, and PCB mounting points. The vertical section may need a notch or a narrower connecting strip. The DXF does not declare its units, so I also need to confirm its scale against the actual faceplate before finalizing the design or ordering boards.
 
-I’ve published the [encoder PCB and schematic v1.1](PCBs/Rotary%20Encoders/). All six encoders are placed on one board, and the latest saved layout is routed with a GND pour. **Version 1.1 fixes the isolated-copper issue:** I removed an extra unassigned copper zone that was overriding the GND pour, then refilled it. Fresh electrical checks reported zero violations, zero unconnected items, and zero schematic/PCB parity issues under the saved project settings. **I still need to check clearances and test-fit the board behind the faceplate; this is not a manufacturing release.** The faceplate drawing and its reference geometry are not included.
+I’ve published the [encoder PCB and schematic v1.1](PCBs/Rotary%20Encoders/). The published v1.1 design still has all six encoders on one board and does not include the planned 2/3/A switch change. Its saved layout is routed with a GND pour. **Version 1.1 fixes the isolated-copper issue:** I removed an extra unassigned copper zone that was overriding the GND pour, then refilled it. Fresh electrical checks reported zero violations, zero unconnected items, and zero schematic/PCB parity issues under the saved project settings. **I still need to check clearances and test-fit the board behind the faceplate; this is not a manufacturing release.** The faceplate drawing and its reference geometry are not included.
 
 ## Seven-segment display plan
 
@@ -90,6 +90,12 @@ I plan to use **three four-digit seven-segment LED blocks** behind the smoked di
 My preliminary fit check assumes the common **30 × 14 mm four-digit package**. Two bodies would span about 60 mm behind the **53.5 × 17.5 mm frequency window**, and one would span 30 mm behind the **22 × 17.5 mm channel window**. The bodies can extend beyond the openings while the active digits remain visible. These are planning dimensions, not verified measurements of the Amazon parts.
 
 **I still need to confirm the actual package dimensions, digit spacing, pinout, and mounting depth, then check clearance from the switches, encoder PCB, connectors, panel edge, and mounting hardware.** I also need to test brightness through the smoked cover and confirm the driver wiring and suitable 3.3 V-to-5 V logic buffering for the Teensy. This is a proposed layout, not a completed or test-fitted display design.
+
+## 2/3/A rotary switch
+
+I’ve checked that the **C&K A12515RNCQ** will fit at the 2/3/A control, so I plan to use it instead of an encoder. I’ll set the stop ring to **three positions for 2, 3, and A**, with **45° indexing and 90° total travel**. Using the same part as MAIN and PRESET gives all three switches the same **38.1 mm (1.5-inch) shaft length**. See the [C&K datasheet](https://www.ckswitches.com/media/1349/arotary.pdf).
+
+I plan to read its position through a resistor ladder using one Teensy analog input. The PCB arrangement, wiring, knob alignment, and complete assembly still need testing. The published encoder PCB v1.1 has not been revised for this change yet.
 
 ## TONE, SQL, and STATUS controls
 
