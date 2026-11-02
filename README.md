@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 2, 2026 at 2:48 AM MST (America/Denver)**
+**Last updated: November 2, 2026 at 2:51 AM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -31,13 +31,13 @@ I chose the listed component suppliers because I’m aiming for better-quality p
 
 ## Things that need to be completed
 
-**Last updated: November 1, 2026 at 10:22 PM MST (America/Denver)**
+**Last updated: November 2, 2026 at 2:51 AM MST (America/Denver)**
 <!-- Refresh this section timestamp whenever the work list changes, using the actual America/Denver time and MST/MDT. -->
 
 This is my current work list for the hardware, firmware, testing, and build instructions.
 
 1. **Panel layout and parts:** Confirm dimensions, mounting clearances, controls, and the complete parts list. Measure and test-fit the proposed [three-block LED display arrangement](#seven-segment-display-plan), including digit visibility and brightness behind the smoked cover.
-2. **PCB and schematic design:** Check clearances and test-fit the [published encoder PCB v1.1](#encoder-pcb-plan) before ordering boards. Design the Main PCB with the two A12515RNCQ switches and their resistor ladders mounted directly on it, along with the controller and display circuitry. Finalize Teensy pin assignments and check the complete electrical design.
+2. **PCB and schematic design:** Revise the [published encoder PCB v1.1](#encoder-pcb-plan) for **four frequency encoders and the channel encoder**, making room for the reused ARC-210 rotary-switch PCB at 2/3/A. I’ve checked that arrangement with printed mockups; the revised PCB still needs clearance checks and test fitting before ordering boards. Design the Main PCB with the two A12515RNCQ switches and their resistor ladders mounted directly on it, along with the controller and display circuitry. Finalize Teensy pin assignments and check the complete electrical design.
 3. **Printed parts:** Design and test-fit the required knobs, brackets, and spacers with the selected hardware.
 4. **DCS-BIOS mappings and any needed changes:** Check which inputs and display outputs are already available for this radio. Identify missing data, make any necessary export changes, and document them. Check the correct ARC-164 radio instance for each intended A-10 variant.
 5. **Firmware:** Write the control and display firmware and verify USB communication with DCS-BIOS.
@@ -66,14 +66,14 @@ Ethernet is not required for the planned USB DCS-BIOS connection. The Teensy 4.1
 
 <a href="images/ARC-164-Encoder-PCB.png"><img src="images/ARC-164-Encoder-PCB.png" width="350" alt="ARC-164 Encoder PCB shown in KiCad with all six encoders"></a>
 
-*ARC-164 Encoder PCB — KiCad 3D view. Click to enlarge. Clearance checks and test fitting are still pending.*
+*Published ARC-164 Encoder PCB v1.1 with six encoders — KiCad 3D view. Click to enlarge. This image predates the planned change to four frequency encoders and the channel encoder.*
 
-I’m using a **rotary encoder to select preset channels 1–20** because rotary switches suitable for this job are extremely expensive. The continuous-rotation eight-position switch I checked costs over US$50, so I chose the encoder to keep the project cost down. The firmware will map encoder movement to the channel selection. The channel control will remain an encoder, but I plan to replace the **2/3/A frequency encoder with a three-position rotary switch**. The encoder PCB will need a revision for this change.
+I’m using a **rotary encoder to select preset channels 1–20** because rotary switches suitable for this job are extremely expensive. The continuous-rotation eight-position switch I checked costs over US$50, so I chose the encoder to keep the project cost down. The firmware will map encoder movement to the channel selection. The channel control will remain an encoder, but I plan to replace the **2/3/A frequency encoder with a three-position rotary switch**. I’ll reuse the ARC-210 rotary-switch PCB for 2/3/A and revise the encoder PCB to carry **four frequency encoders and the channel encoder**.
 
-My initial check of the supplied faceplate DXF suggests that a single **L-shaped PCB** is feasible: one section across the five frequency encoders, with an extension up the right side to the channel encoder. Assuming the drawing is in millimeters:
+My initial check of the supplied faceplate DXF suggests that a single **L-shaped PCB** is feasible: one section across the frequency controls, with an extension up the right side to the channel encoder. The revised encoder PCB will carry four frequency encoders and the channel encoder, with space for the separate 2/3/A switch PCB. Assuming the drawing is in millimeters:
 
 - The faceplate measures **146 × 123.8 mm**.
-- The five frequency encoders are spaced **26 mm center to center**.
+- The five frequency-control shaft positions are spaced **26 mm center to center**.
 - The channel encoder is approximately **53.6 mm above** the frequency row and almost aligned with the rightmost frequency encoder.
 
 **I still need to check the clearances** for the encoder bodies and solder pins, the nearby switch beside the vertical section, display hardware, connectors, and PCB mounting points. The vertical section may need a notch or a narrower connecting strip. The DXF does not declare its units, so I also need to confirm its scale against the actual faceplate before finalizing the design or ordering boards.
@@ -95,7 +95,7 @@ My preliminary fit check assumes the common **30 × 14 mm four-digit package**. 
 
 I’ve checked that the **C&K A12515RNCQ** will fit at the 2/3/A control, so I plan to use it instead of an encoder. I’ll set the stop ring to **three positions for 2, 3, and A**, with **45° indexing and 90° total travel**. Using the same part as MAIN and PRESET gives all three switches the same **38.1 mm (1.5-inch) shaft length**. See the [C&K datasheet](https://www.ckswitches.com/media/1349/arotary.pdf).
 
-I plan to read its position through a resistor ladder using one Teensy analog input. The PCB arrangement, wiring, knob alignment, and complete assembly still need testing. The published encoder PCB v1.1 has not been revised for this change yet.
+I’ll reuse the [ARC-210 rotary-switch PCB](https://github.com/dgdimick/ARC-210-DCS-Display/tree/master/PCBs/Rotary%20Switches) for 2/3/A. **I’ve checked the fit with printed mockups**, including clearance beside the next encoder. I’ll revise the ARC-164 encoder PCB for **four frequency encoders and the channel encoder**, making room for the separate switch PCB. Its resistor ladder will let one Teensy analog input read the selected position. The revised PCB, wiring, knob alignment, and complete assembly still need testing. The published encoder PCB v1.1 has not been revised for this change yet.
 
 ## TONE, SQL, and STATUS controls
 
