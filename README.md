@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 1, 2026 at 7:07 PM MST (America/Denver)**
+**Last updated: November 1, 2026 at 7:09 PM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -98,7 +98,7 @@ The **ARC-164 and ARC-186 will each use their own Teensy 4.1 and USB connection 
 
 ## USB connections and powered hubs
 
-I plan to connect the ARC-164 directly by USB through powered hubs. I already use USB for my other SIMPIT equipment and have run 12 devices through one hub without issues.
+[Read about the USB connection plan and purchased powered hubs](https://github.com/dgdimick/ARC-210-DCS-Display/blob/master/Docs/USB-Connections-and-Powered-Hubs.md) for why I am using USB instead of RS-485.
 
 ## DCS-BIOS
 
