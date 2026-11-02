@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 1, 2026 at 4:28 AM MST (America/Denver)**
+**Last updated: November 1, 2026 at 6:45 PM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 > **Disclaimer:** This hobby flight-simulation project is provided without warranty, subject to its licenses. Read the [full disclaimer](#disclaimer) before building or using it.
@@ -69,7 +69,7 @@ Ethernet is not required for the planned USB DCS-BIOS connection. The Teensy 4.1
 
 I’ve placed **all five frequency encoders and the preset-channel encoder on one PCB** designed for this faceplate.
 
-I’m using a **rotary encoder to select preset channels 1–20** because a suitable 20-position rotary switch costs too much for this project. The firmware will map encoder movement to the channel selection. **The current encoder PCB will stay as designed**, with all six encoders on one board. Clearance checks and test fitting are still pending.
+I’m using a **rotary encoder to select preset channels 1–20** because rotary switches suitable for this job are extremely expensive. The continuous-rotation eight-position switch I checked costs over US$50, so I chose the encoder to keep the project cost down. The firmware will map encoder movement to the channel selection. **The current encoder PCB will stay as designed**, with all six encoders on one board. Clearance checks and test fitting are still pending.
 
 My initial check of the supplied faceplate DXF suggests that a single **L-shaped PCB** is feasible: one section across the five frequency encoders, with an extension up the right side to the channel encoder. Assuming the drawing is in millimeters:
 
