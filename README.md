@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 3, 2026 at 8:03 AM MST (America/Denver)**
+**Last updated: November 3, 2026 at 8:41 AM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -68,6 +68,16 @@ All seven encoders have **30 mm shafts**. MAIN and PRESET use the **same A12505R
 Prices use the quantity-five encoder tier, quantity-one switch tier, and quantity-ten LED tier. Prices can change; shipping, tax, and tariffs are excluded. This estimate is separate from my recorded purchases.
 
 **This is not the complete build BOM.** TONE, SQL, STATUS, display drivers, other display components, resistors, capacitors, connectors, PCBs, and other remaining parts are excluded.
+
+### Additional item for my Mouser order — emergency trim panel
+
+I’ll add this part to the same Mouser order as the ARC-164 encoders. It is for my **A-10 emergency pitch/roll trim panel**, not the ARC-164 radio.
+
+| Quantity | Use | Manufacturer part number | Mouser order number | Estimated cost (USD) |
+| ---: | --- | --- | --- | --- |
+| 1 | Emergency pitch/roll trim directional switch | Alps Alpine RKJXM1015004 | [688-RKJXM1015004](https://www.mouser.com/en/ProductDetail/Alps-Alpine/RKJXM1015004?qs=w%2Fv1CP2dgqqXHSoAYYJYDQ%3D%3D) | Confirm USD price in cart |
+
+This is an eight-direction switch with a center pushbutton. I plan to use its four main directions for emergency pitch and roll trim. Physical mounting, knob fit, and operating feel still need checking. Its cost is **not included in the $58.74 ARC-164 subtotal** above.
 
 ## Things that need to be completed
 
