@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 2, 2026 at 10:52 PM MST (America/Denver)**
+**Last updated: November 2, 2026 at 11:04 PM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -93,7 +93,7 @@ My preliminary fit check assumes the common **30 × 14 mm four-digit package**. 
 
 ## 2/3/A rotary switch
 
-I’ve checked the C&K A Series switch fit at the 2/3/A control with printed mockups, so I plan to use a rotary switch instead of an encoder. I’ll set the stop ring to **three positions for 2, 3, and A**, with **45° indexing and 90° total travel**. My current plan is a **38.1 mm shaft for 2/3/A and the other rotary switches**, including MAIN and PRESET, with trimming after the mounting depths are set. SQL has a separate requested 42 mm length, with its final hardware still unresolved. See the [C&K datasheet](https://www.ckswitches.com/media/1349/arotary.pdf).
+I’ve checked the C&K A Series switch fit at the 2/3/A control with printed mockups, so I plan to use a rotary switch instead of an encoder. I’ll set the stop ring to **three positions for 2, 3, and A**, with **45° indexing and 90° total travel**. My current plan uses **38.1 mm shafts for FREQ 1, 3, and 5**, **42 mm shafts for FREQ 2 and 4**, and a **30 mm shaft for VOL**. MAIN and PRESET use **38.1 mm shafts**. See the [C&K datasheet](https://www.ckswitches.com/media/1349/arotary.pdf).
 
 I’ll reuse the [ARC-210 rotary-switch PCB](https://github.com/dgdimick/ARC-210-DCS-Display/tree/master/PCBs/Rotary%20Switches) for 2/3/A. **I’ve checked the fit with printed mockups**, including clearance beside the next encoder. I’ll revise the ARC-164 encoder PCB for **four frequency encoders and the channel encoder**, making room for the separate switch PCB. Its resistor ladder will let one Teensy analog input read the selected position. The revised PCB, wiring, knob alignment, and complete assembly still need testing. The published encoder PCB v1.1 has not been revised for this change yet.
 
@@ -103,25 +103,25 @@ My current ARC-164 hardware plan is:
 
 | Control | Planned shaft length |
 | --- | --- |
-| FREQ1–FREQ5 rotary switches | **38.1 mm**, trimmed as needed after setting mounting depths |
+| FREQ 1, 3, and 5 rotary switches | **38.1 mm** |
+| FREQ 2 and 4 rotary switches | **42 mm** |
 | MAIN and PRESET rotary switches | **38.1 mm** |
-| SQL | **42 mm requested; exact switch type and part number still need resolving** |
 | VOL encoder — PEC11R-4230F-S0024 | **30 mm** |
 
-This supersedes the earlier 42 mm/38.1 mm alternating frequency-shaft plan. The local fit-check PCB still uses a mixture of short- and long-shaft reference models; those models are not the final purchasing list. FREQ2, FREQ3, and FREQ4 each need **ten positions (0–9)**, so the eight-position A125 reference models cannot serve as their final electrical switches. The shaft-length plan does not change those contact-count requirements.
+I won’t use 12.7 mm shafts; they’re too short for this build. The local fit-check PCB still uses a mixture of short- and long-shaft reference models; those models are not the final purchasing list. FREQ2, FREQ3, and FREQ4 each need **ten positions (0–9)**, so the eight-position A125 reference models cannot serve as their final electrical switches. The shaft-length plan does not change those contact-count requirements.
 
 ## Staggered frequency-switch mounting plan
 
 <a href="images/ARC-164_Staggered_PCB_Mount_Concept.png"><img src="images/ARC-164_Staggered_PCB_Mount_Concept.png" width="450" alt="Concept side view of alternating long and short frequency-switch shafts mounted on two PCB levels"></a>
 
-*Click the drawing to enlarge. This earlier concept drawing shows the superseded 42 mm/38.1 mm frequency-shaft combination. The current plan uses 38.1 mm rotary-switch shafts, trimmed after setting the staggered mounting depths. The PCB shapes, mounts, spacing, and clearances still need design and testing.*
+*Click the drawing to enlarge. This earlier concept drawing is a mounting reference, not the current shaft assignment. The current plan uses 38.1 mm shafts for FREQ 1, 3, and 5, and 42 mm shafts for FREQ 2 and 4. The PCB shapes, mounts, spacing, and clearances still need design and testing.*
 
-**The upper PCB will need clearance holes for the three longer shafts passing through from the lower PCB.** I’ll size and position these openings so the shafts can turn freely without touching the board.
+**The upper PCB will need clearance holes for the longer shafts passing through from the lower PCB.** I’ll size and position these openings so the shafts can turn freely without touching the board.
 
 
-I plan to try **two PCB levels with staggered switch mounting**, starting with **38.1 mm shafts for the rotary switches**. I’ll set the mounting depths and PCB spacing first, then trim the shafts as needed so the knobs line up at the front of the panel. The mounting nuts will secure the switches as needed. This is a proposed arrangement, not a completed design.
+I plan to try **two PCB levels with staggered switch mounting**, using **38.1 mm shafts for FREQ 1, 3, and 5**, and **42 mm shafts for FREQ 2 and 4**. I’ll set the mounting depths and PCB spacing first, then trim the shafts as needed so the knobs line up at the front of the panel. The mounting nuts will secure the switches as needed. This is a proposed arrangement, not a completed design.
 
-I still need to check clearance for the switch bodies, PCB edges, resistor leads, solder joints, connectors, wiring, and shaft guides. I’ll also check shaft projection, knob fit, and mechanical support so the mounting hardware does not strain the soldered pins. SQL’s requested 42 mm length remains separate from this frequency-switch arrangement. See the [C&K shaft options](https://www.ckswitches.com/media/1349/arotary.pdf).
+I still need to check clearance for the switch bodies, PCB edges, resistor leads, solder joints, connectors, wiring, and shaft guides. I’ll also check shaft projection, knob fit, and mechanical support so the mounting hardware does not strain the soldered pins. See the [C&K shaft options](https://www.ckswitches.com/media/1349/arotary.pdf).
 
 The final switch models, contact counts, PCB footprints, and resistor ladders still need checking. The existing ARC-210 rotary-switch PCB only provides seven readable positions, so the ten-position frequency controls would need a revised circuit and PCB. I’ll check the frequency-selector travel in DCS before deciding which remaining encoders to replace.
 
@@ -141,9 +141,9 @@ I’ve selected the **Bourns PEC11R-4230F-S0024** for the **VOL rotary encoder**
 
 This replaces the previously considered 20 mm PEC11H-4220F-S0024 for VOL. The PEC11R is a different series, so I still need to verify its footprint, pin assignments, mounting height, shaft reach, knob fit, and clearances before updating the production PCB. The fit-check PCB’s existing PEC11H model is not the correct model for this newly selected part.
 
-## TONE, SQL, and STATUS controls
+## TONE and STATUS controls
 
-I plan to use a **spring-loaded momentary toggle for TONE**: hold it to activate the tone, then release it to return to OFF. My earlier **SQL (SQUELCH)** plan called for a **maintained ON/OFF toggle**. I’ve now requested a **42 mm shaft length for SQL**; I still need to resolve that requirement with the earlier toggle choice and select the exact hardware. I haven’t finalized a 42 mm SQL switch.
+I plan to use a **spring-loaded momentary toggle for TONE**: hold it to activate the tone, then release it to return to OFF.
 
 For **STATUS**, I plan to use a **normally open momentary pushbutton, not a light**. The contacts close while the button is pressed and open again when it is released.
 
