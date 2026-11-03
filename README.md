@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 3, 2026 at 2:22 AM MST (America/Denver)**
+**Last updated: November 3, 2026 at 2:46 AM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -29,12 +29,12 @@ I chose the listed component suppliers because I’m aiming for better-quality p
 
 ## Things that need to be completed
 
-**Last updated: November 3, 2026 at 2:22 AM MST (America/Denver)**
+**Last updated: November 3, 2026 at 2:46 AM MST (America/Denver)**
 <!-- Refresh this section timestamp whenever the work list changes, using the actual America/Denver time and MST/MDT. -->
 
 This is my current work list for the hardware, firmware, testing, and build instructions.
 
-1. **Panel layout and parts:** Confirm dimensions, mounting clearances, controls, and the complete parts list. **TONE and SQL switches:** Select the exact parts and verify their mounting dimensions, required operation and travel, and clearances before finalizing the PCB. Test the displays due to arrive on **November 3, 2026**, checking their dimensions, fit behind both windows, digit visibility, and brightness through the smoked cover. Compare the results with the [PC Flights six-digit alternative](#another-frequency-display-option), then choose the final frequency and preset-channel display setup. **Frequency-knob travel in DCS:** I’ll check whether each 0–9 selector wraps from 9 to 0 or stops, whether the final-digit selector wraps from 75 to 00 or stops, and the order and end stops of 2/3/A. I’ll use those results to verify the frequency-switch operation before finalizing the PCB design. This checks DCS behavior; it does not establish the real radio’s mechanical travel.
+1. **Panel layout and parts:** Confirm dimensions, mounting clearances, controls, and the complete parts list. **TONE and SQL switches:** Select the exact parts and verify their mounting dimensions, required operation and travel, and clearances before finalizing the PCB. Test-fit the selected [PC Flights six-digit frequency display](#frequency-display), including digit visibility and brightness through the smoked cover. **Choose the preset-channel display** for the 22 × 17.5 mm window, then check its dimensions, pinout, mounting height, and clearance. **Frequency-knob travel in DCS:** I’ll check whether each 0–9 selector wraps from 9 to 0 or stops, whether the final-digit selector wraps from 75 to 00 or stops, and the order and end stops of 2/3/A. I’ll use those results to verify the frequency-switch operation before finalizing the PCB design. This checks DCS behavior; it does not establish the real radio’s mechanical travel.
 2. **PCB and schematic design:** Design the Main PCB with the selected rotary switches, resistor ladders, controller, and display circuitry. Design the small display PCB and its standoff mounting, with the display soldered directly to the board; set the height after checking it against the faceplate. Finalize Teensy pin assignments, check the complete electrical design, and verify clearances and test fitting before ordering boards.
 3. **Printed parts:** Design and test-fit the required knobs, brackets, and spacers with the selected hardware, including the longer FREQ 2 and 4 knob stems with set screws near the bottom. Verify shaft engagement, screw retention, and clearance through the upper PCB. Design and test the shaft guides for the staggered frequency-switch arrangement, with separate hole sizes for the 6 mm and 6.35 mm shafts and enough clearance for free rotation. Design and test a tube-style shaft cutting guide; set its length after checking the PCB spacing and knob position.
 4. **DCS-BIOS mappings and any needed changes:** Check which inputs and display outputs are already available for this radio. Identify missing data, make any necessary export changes, and document them. Check the correct ARC-164 radio instance for each intended A-10 variant.
@@ -54,28 +54,23 @@ I’ll use USB for DCS-BIOS; Ethernet isn’t needed. The Teensy uses **3.3 V lo
 
 ## Seven-segment display plan
 
-I plan to use **three four-digit seven-segment LED blocks** behind the smoked display cover: **two blocks for frequency** and **one for the preset channel**. The [Yuuhseel MAX7219 modules on Amazon](https://www.amazon.com/dp/B0FX9Q4PG6) are my current candidate for test fitting. I would remove the display blocks from their module PCBs and mount them to suit the faceplate; the driver circuitry can be positioned separately.
+### Frequency display
 
-- **Frequency:** Use the middle six digits across two adjacent blocks, leaving the outermost digit at each end blank and hidden behind the faceplate.
-- **Preset channel:** Use the middle two digits of one block for channels 1–20, leaving the outer two blank and hidden behind the faceplate.
-
-My preliminary fit check assumes the common **30 × 14 mm four-digit package**. Two bodies would span about 60 mm behind the **53.5 × 17.5 mm frequency window**, and one would span 30 mm behind the **22 × 17.5 mm channel window**. The bodies can extend beyond the openings while the active digits remain visible. These are planning dimensions, not verified measurements of the Amazon parts.
-
-**I still need to confirm the actual package dimensions, digit spacing, pinout, and mounting depth, then check clearance from the switches, PCB, connectors, panel edge, and mounting hardware.** I also need to test brightness through the smoked cover and confirm the driver wiring and suitable 3.3 V-to-5 V logic buffering for the Teensy. This is a proposed layout, not a completed or test-fitted display design.
-
-### Display mounting
-
-I plan to use a **small display PCB mounted on standoffs**, with the **display soldered directly to it**. I’ll choose the standoff height during test fitting so the display sits at the correct height behind the faceplate window, with clearance from the switches and other boards. The driver circuitry can be connected by wires if it needs to sit elsewhere. The display PCB, mounting points, and final standoff height still need to be designed and tested after I choose the displays.
-
-### Another frequency-display option
-
-The [PC Flights six-digit 0.3-inch amber seven-segment display](https://pcflights.com/6-digits-7-segment-led-display-03-amber/) is another option for the frequency display. Its drawing shows a **41 × 11 mm body, 5.8 mm thick**, with approximately **7.7 mm-tall digits**. It is **common cathode**, with a decimal point on every digit, so it can show a frequency such as **251.000**. The body fits within the **53.5 × 17.5 mm frequency window**, but I still need to check the mounting, driver wiring, brightness through the smoked cover, and clearance behind the faceplate.
+I’ve chosen the [PC Flights six-digit 0.3-inch amber seven-segment display](https://pcflights.com/6-digits-7-segment-led-display-03-amber/) for frequency. Its drawing shows a **41 × 11 mm body, 5.8 mm thick**, with approximately **7.7 mm-tall digits**. It is **common cathode**, with a decimal point on every digit, so it can show a frequency such as **251.000**. The body fits within the **53.5 × 17.5 mm frequency window**. I still need to test brightness through the smoked cover and check the mounting, pinout, driver wiring, and clearance behind the faceplate.
 
 <a href="images/PC-Flights-Six-Digit-Amber-Display-Drawing.png"><img src="images/PC-Flights-Six-Digit-Amber-Display-Drawing.png" width="350" alt="PC Flights six-digit amber display dimensions and common-cathode pinout drawing"></a>
 
 *PC Flights display drawing. Click to enlarge the dimensions and pinout.*
 
-**The displays I’ve already bought are due to arrive tomorrow, November 3, 2026. I’ll measure and test-fit those first, including how they look through the smoked cover, before deciding which displays to use.** I haven’t selected the PC Flights display as the final choice.
+### Display mounting
+
+I’ll use a **small frequency-display PCB mounted on standoffs**, with the **display soldered directly to it**. I’ll set the standoff height during test fitting so the display sits at the correct height behind the faceplate window, with clearance from the switches and other boards. The driver circuitry can be connected by wires if it needs to sit elsewhere. The display PCB, mounting points, and final standoff height still need to be designed and tested.
+
+### Preset-channel display — selection pending
+
+**I still need to choose the two-digit channel display** for channels 1–20 behind the **22 × 17.5 mm window**. PC Flights offers [single-digit amber displays](https://pcflights.com/7-segment-led-display-03-amber/) and a [three-digit amber display](https://pcflights.com/3-digits-7-segment-led-display-03-amber/). I’ll check whether two single-digit displays fit side by side, or whether a three-digit package could show two digits with the unused digit left blank and hidden behind the faceplate. Neither arrangement is selected yet; package dimensions, pinout, digit alignment, mounting height, and brightness still need checking.
+
+The earlier three-four-digit-block arrangement is no longer my display plan. I’ll finalize the channel display and driver arrangement before completing the display PCB and suitable 3.3 V-to-5 V logic buffering for the Teensy.
 
 ## Current shaft-length plan
 
