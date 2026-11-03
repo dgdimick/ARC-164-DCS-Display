@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 2, 2026 at 11:23 PM MST (America/Denver)**
+**Last updated: November 2, 2026 at 11:46 PM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -62,6 +62,12 @@ I plan to use **three four-digit seven-segment LED blocks** behind the smoked di
 My preliminary fit check assumes the common **30 × 14 mm four-digit package**. Two bodies would span about 60 mm behind the **53.5 × 17.5 mm frequency window**, and one would span 30 mm behind the **22 × 17.5 mm channel window**. The bodies can extend beyond the openings while the active digits remain visible. These are planning dimensions, not verified measurements of the Amazon parts.
 
 **I still need to confirm the actual package dimensions, digit spacing, pinout, and mounting depth, then check clearance from the switches, PCB, connectors, panel edge, and mounting hardware.** I also need to test brightness through the smoked cover and confirm the driver wiring and suitable 3.3 V-to-5 V logic buffering for the Teensy. This is a proposed layout, not a completed or test-fitted display design.
+
+### Another frequency-display option
+
+The [PC Flights six-digit 0.3-inch amber seven-segment display](https://pcflights.com/6-digits-7-segment-led-display-03-amber/) is another option for the frequency display. Its drawing shows a **41 × 11 mm body, 5.8 mm thick**, with approximately **7.7 mm-tall digits**. It is **common cathode**, with a decimal point on every digit, so it can show a frequency such as **251.000**. The body fits within the **53.5 × 17.5 mm frequency window**, but I still need to check the mounting, driver wiring, brightness through the smoked cover, and clearance behind the faceplate.
+
+**The displays I’ve already bought are due to arrive tomorrow, November 3, 2026. I’ll measure and test-fit those first, including how they look through the smoked cover, before deciding which displays to use.** I haven’t selected the PC Flights display as the final choice.
 
 ## Current shaft-length plan
 
