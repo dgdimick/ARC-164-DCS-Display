@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 3, 2026 at 4:55 AM MST (America/Denver)**
+**Last updated: November 3, 2026 at 6:30 AM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -125,12 +125,14 @@ I plan to use **two C&K A12515RNCQ rotary switches**, one for MAIN and one for P
 
 I plan to mount **both switches directly on the Main PCB, with their resistor ladders on the same board**. I’ll secure MAIN and PRESET mechanically using their **threaded bushings, mounting nuts, and anti-rotation alignment holes**. The **PCB pins will provide the electrical connections**, rather than serving as the primary mechanical support. I’ll check the mounting stack and board spacing so tightening the nuts does not strain the pins or bend the Main PCB. This will avoid separate rotary-switch PCBs and the wiring between those boards and the Main PCB. I’ll use the ARC-210 switch circuit and footprint as a starting point, then check the pin assignments, component placement, and analog readings for this layout.
 
-| Control | Stop-ring setting | Total travel |
-| --- | --- | --- |
-| MAIN: OFF–MAIN–BOTH–ADF | Limit the switch to **4 positions** | **135°** |
-| PRESET: MNL–PRESET–GRD | Limit the switch to **3 positions** | **90°** |
+| Control | Part number | Stop-ring setting | Total travel |
+| --- | --- | --- | --- |
+| MAIN: OFF–MAIN–BOTH–ADF | **C&K A12515RNCQ** | Limit the switch to **4 positions** | **135°** |
+| PRESET: MNL–PRESET–GRD | **C&K A12515RNCQ** | Limit the switch to **3 positions** | **90°** |
 
-I’ll set each stop ring before mounting the switch and check that it stops at the first and last labeled positions.
+I’ll set each stop ring before mounting the switch and check that it stops at the first and last labeled positions. Each click is **45°**.
+
+**Trim both shafts to a final height of 38.1 mm from the component-side PCB surface to the shaft tip.** Measure with each switch seated in its intended PCB mounting position. The stock switch’s **38.1 mm actuator-length specification is not its overall PCB-to-tip height**, so the stock shafts need shortening to meet this target. Check the faceplate, mounting hardware, and knob engagement before cutting, then recheck the finished height.
 
 My A12515RNCQ purchase is recorded in the [component costs](#recorded-component-costs) above. Only two are needed for the current MAIN and PRESET plan.
 
