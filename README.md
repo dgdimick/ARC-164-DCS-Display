@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 2, 2026 at 10:36 PM MST (America/Denver)**
+**Last updated: November 2, 2026 at 10:42 PM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -151,6 +151,10 @@ This replaces the previously considered 20 mm PEC11H-4220F-S0024 for VOL. The PE
 I plan to use a **spring-loaded momentary toggle for TONE**: hold it to activate the tone, then release it to return to OFF. For **SQL (SQUELCH)**, I plan to use a **normal maintained ON/OFF toggle** that stays in the selected position, with no spring return.
 
 For **STATUS**, I plan to use a **normally open momentary pushbutton, not a light**. The contacts close while the button is pressed and open again when it is released.
+
+## Assembly tool note
+
+I’ll use a **13 mm deep socket** to tighten the **rotary-switch shaft mounting nuts**. The deep socket provides clearance over the shafts while reaching the nuts.
 
 ## MAIN and PRESET rotary switches
 
