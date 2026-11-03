@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 2, 2026 at 10:34 PM MST (America/Denver)**
+**Last updated: November 2, 2026 at 10:36 PM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -96,6 +96,12 @@ My preliminary fit check assumes the common **30 × 14 mm four-digit package**. 
 I’ve checked the C&K A Series switch fit at the 2/3/A control with printed mockups, so I plan to use a rotary switch instead of an encoder. I’ll set the stop ring to **three positions for 2, 3, and A**, with **45° indexing and 90° total travel**. For the staggered frequency-switch layout, I now plan to use a **42 mm shaft at 2/3/A**, rather than the previously proposed 38.1 mm A12515RNCQ. The exact 42 mm switch model and footprint still need checking. MAIN and PRESET remain planned with 38.1 mm shafts. See the [C&K datasheet](https://www.ckswitches.com/media/1349/arotary.pdf).
 
 I’ll reuse the [ARC-210 rotary-switch PCB](https://github.com/dgdimick/ARC-210-DCS-Display/tree/master/PCBs/Rotary%20Switches) for 2/3/A. **I’ve checked the fit with printed mockups**, including clearance beside the next encoder. I’ll revise the ARC-164 encoder PCB for **four frequency encoders and the channel encoder**, making room for the separate switch PCB. Its resistor ladder will let one Teensy analog input read the selected position. The revised PCB, wiring, knob alignment, and complete assembly still need testing. The published encoder PCB v1.1 has not been revised for this change yet.
+
+## Current frequency-switch fit-check selection
+
+My current fit-check choice for **FREQ1 (2/3/A), FREQ3 (1 MHz), and FREQ5 (00/25/50/75)** is the **C&K A12505RNCQ**, with its **12.7 mm long, 6.35 mm diameter shaft**. These are the short-shaft models now used in the local fit-check PCB, superseding the earlier long-shaft arrangement described below for those positions.
+
+**This is a mechanical fit-check selection, not a finalized electrical parts list.** The A12505RNCQ has eight positions with 45° indexing and adjustable stops, so it can be limited to three positions for FREQ1 or four for FREQ5. **FREQ3 needs ten positions (0–9), so the A12505RNCQ cannot provide all of its settings; I still need to choose a suitable ten-position switch and check its footprint and travel.** See the [C&K A Series datasheet](https://www.ckswitches.com/media/1349/arotary.pdf).
 
 ## Staggered frequency-switch mounting plan
 
