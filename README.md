@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 3, 2026 at 6:09 AM MST (America/Denver)**
+**Last updated: November 3, 2026 at 4:55 AM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -118,14 +118,6 @@ For **STATUS**, I plan to use a **normally open momentary pushbutton, not a ligh
 ## Assembly tool note
 
 I use **10 mm and 13 mm deep-well sockets** to tighten the **mounting nuts on the rotary switches and encoders**. Use whichever socket fits each nut; the deep well provides clearance over the shaft.
-
-## MAIN and PRESET shaft-height preview
-
-![MAIN and PRESET shaft tips matched to FREQ3 in the combined-layout reference](images/ARC-164-MAIN-PRESET-height-preview.png)
-
-I’ve updated the MAIN and PRESET sizing models to match FREQ3’s shaft-tip height above the PCB in my local combined-layout reference. This comparison uses the A12515RNCQ-style body with an adjusted shaft and FREQ3’s A11015RNCQ model as the height reference. The match is within 0.002 mm in the model coordinates with identical vertical placement and rotation. It is a sizing visualization, not a verified installed dimension or an unmodified manufacturer model. Actual shaft height, knob engagement, and faceplate clearance still need physical checking.
-
-The image includes the earlier frequency-switch layout for comparison; my current design continues to use frequency encoders as explained above. The local changes affect MAIN/PRESET 3D model references and placement only; electrical connections and PCB routing are unchanged. This preview does not release fabrication files.
 
 ## MAIN and PRESET rotary switches
 
