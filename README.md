@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 3, 2026 at 7:10 AM MST (America/Denver)**
+**Last updated: November 3, 2026 at 7:29 AM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -48,9 +48,25 @@ These are my recorded purchases so far, in **US dollars**. The total includes ro
 
 My Teensy 4.1 cost **$37.95 including shipping**, and my faceplate cost **$70.59 including shipping**. The rotary switches and LEDs came to **$108.16**, or **$135.29 including tax and tariffs**. Those charges are already included in the running total. I bought two spare LED digits and one spare A12515RNCQ switch because the quantity price breaks saved me money compared with buying only the quantities I originally planned to use. I still need to verify the selected toggle switches’ fit and operation.
 
-**The VOL encoder isn’t included in the total yet.** I’ve asked DigiKey to add the **PEC11R-4230F-S0024** to my order. I’ll add its cost once they confirm the order change.
+**The VOL encoder isn’t included in the total yet.** I previously asked DigiKey to add a PEC11R-4230F-S0024, but I’ve since chosen the **PEC11H-4220F-S0024**, matching the FREQ encoders. I’ll confirm the order details before adding its actual cost to this purchase history.
 
 **This total is before PCBs, display drivers, resistors, connectors, and the other remaining parts. It is not the complete build cost.** I’ll update the total as I buy the remaining parts. Additional shipping or fees not listed above are also excluded.
+
+## DigiKey order sheet — rotary controls
+
+This is my order sheet for the rotary controls for **one ARC-164 panel**, prepared **November 3, 2026**. It lists the full quantities needed; I’ll deduct any parts I already have before ordering.
+
+| Quantity | Use | Manufacturer part number | DigiKey part number | Estimated unit price (USD) | Estimated total (USD) |
+| ---: | --- | --- | --- | ---: | ---: |
+| 7 | Five FREQ encoders, channel encoder, and VOL | [Bourns PEC11H-4220F-S0024](https://www.digikey.com/en/products/detail/bourns-inc/PEC11H-4220F-S0024/12349532) | 118-PEC11H-4220F-S0024-ND | $4.088 | $28.62 |
+| 2 | MAIN and PRESET rotary switches | [C&K A12505RNCQ](https://www.digikey.com/en/products/detail/c-k/A12505RNCQ/2043159) | CKN10203-ND | $13.41 | $26.82 |
+| | **Estimated subtotal** | | | | **$55.44** |
+
+All seven encoders in this order sheet have **20 mm shafts**. MAIN and PRESET use the **same A12505RNCQ switch**, with the stop ring set to **4 positions for MAIN** and **3 positions for PRESET**; both index at **45° per position**.
+
+These are estimated DigiKey prices, using the quantity-five price tier for seven encoders and the quantity-one tier for two switches. Prices can change; shipping, tax, and tariffs are excluded. This is an order-planning estimate, separate from my recorded purchases above.
+
+**This is not the complete build BOM.** TONE, SQL, STATUS, display components, resistors, capacitors, connectors, PCBs, and the other remaining parts are not included in this sheet.
 
 ## Things that need to be completed
 
@@ -103,11 +119,13 @@ The earlier three-four-digit-block arrangement is no longer my display plan. I�
 
 I originally planned to use frequency rotary switches, but I’ve restored my original ARC-164 encoder KiCad project and will check its fit, clearances, and wiring before continuing the design. I’ll keep the frequency rotary switches I bought for **ARC-210 Version 2**.
 
-MAIN and PRESET use **C&K A12505RNCQ rotary switches with 12.7 mm actuators**. VOL uses the **30 mm shaft** encoder listed below, and the channel control remains a rotary encoder. The final knob fit and mounting clearances still need testing.
+MAIN and PRESET use **C&K A12505RNCQ rotary switches with 12.7 mm actuators**. VOL uses the same **PEC11H-4220F-S0024 with a 20 mm shaft** as the FREQ encoders, and the channel control remains a rotary encoder. The final knob fit and mounting clearances still need testing.
 
 ## VOL rotary encoder selection
 
-I’ve selected the **Bourns PEC11R-4230F-S0024** for the **VOL rotary encoder**, using its **30 mm long, 6 mm diameter flatted shaft**. It has **24 detents, 24 pulses per revolution, PCB terminals, and a momentary push switch**. See the [Mouser listing](https://www.mouser.com/en/ProductDetail/Bourns/PEC11R-4230F-S0024?qs=Zq5ylnUbLm6MC5h%2FLr6Brg%3D%3D).
+I’ve selected the **Bourns PEC11H-4220F-S0024** for VOL, matching the FREQ encoders. It has a **20 mm long, 6 mm diameter flatted shaft**, **24 detents, 24 pulses per revolution, PCB terminals, and a momentary push switch**. See the [DigiKey listing](https://www.digikey.com/en/products/detail/bourns-inc/PEC11H-4220F-S0024/12349532).
+
+I plan to make the VOL knob with a sleeve that extends through the **10 mm panel hole** to reach the encoder shaft, with clearance so it turns freely. Knob engagement and the mounting arrangement still need physical test fitting.
 
 ## TONE, SQL, and STATUS controls
 
