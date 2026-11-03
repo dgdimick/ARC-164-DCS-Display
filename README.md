@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 2, 2026 at 11:13 PM MST (America/Denver)**
+**Last updated: November 2, 2026 at 11:16 PM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -112,8 +112,6 @@ I also plan to make a **3D-printed tube-style cutting guide** that slips over th
 ## VOL rotary encoder selection
 
 I’ve selected the **Bourns PEC11R-4230F-S0024** for the **VOL rotary encoder**, using its **30 mm long, 6 mm diameter flatted shaft**. It has **24 detents, 24 pulses per revolution, PCB terminals, and a momentary push switch**. See the [Mouser listing](https://www.mouser.com/en/ProductDetail/Bourns/PEC11R-4230F-S0024?qs=Zq5ylnUbLm6MC5h%2FLr6Brg%3D%3D).
-
-This replaces the previously considered 20 mm PEC11H-4220F-S0024 for VOL. The PEC11R is a different series, so I still need to verify its footprint, pin assignments, mounting height, shaft reach, knob fit, and clearances before updating the production PCB. The fit-check PCB’s existing PEC11H model is not the correct model for this newly selected part.
 
 ## TONE and STATUS controls
 
