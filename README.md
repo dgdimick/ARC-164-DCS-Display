@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 2, 2026 at 11:11 PM MST (America/Denver)**
+**Last updated: November 2, 2026 at 11:12 PM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -90,12 +90,6 @@ I plan to use **three four-digit seven-segment LED blocks** behind the smoked di
 My preliminary fit check assumes the common **30 × 14 mm four-digit package**. Two bodies would span about 60 mm behind the **53.5 × 17.5 mm frequency window**, and one would span 30 mm behind the **22 × 17.5 mm channel window**. The bodies can extend beyond the openings while the active digits remain visible. These are planning dimensions, not verified measurements of the Amazon parts.
 
 **I still need to confirm the actual package dimensions, digit spacing, pinout, and mounting depth, then check clearance from the switches, encoder PCB, connectors, panel edge, and mounting hardware.** I also need to test brightness through the smoked cover and confirm the driver wiring and suitable 3.3 V-to-5 V logic buffering for the Teensy. This is a proposed layout, not a completed or test-fitted display design.
-
-## 2/3/A rotary switch
-
-I’ve checked the C&K A Series switch fit at the 2/3/A control with printed mockups, so I plan to use a rotary switch instead of an encoder. I’ll set the stop ring to **three positions for 2, 3, and A**, with **45° indexing and 90° total travel**. My current plan uses **38.1 mm shafts for FREQ 1, 3, and 5**, **44 mm shafts for FREQ 2 and 4**, and a **30 mm shaft for VOL**. MAIN and PRESET use **38.1 mm shafts**. See the [C&K datasheet](https://www.ckswitches.com/media/1349/arotary.pdf).
-
-I’ll reuse the [ARC-210 rotary-switch PCB](https://github.com/dgdimick/ARC-210-DCS-Display/tree/master/PCBs/Rotary%20Switches) for 2/3/A. **I’ve checked the fit with printed mockups**, including clearance beside the next encoder. I’ll revise the ARC-164 encoder PCB for **four frequency encoders and the channel encoder**, making room for the separate switch PCB. Its resistor ladder will let one Teensy analog input read the selected position. The revised PCB, wiring, knob alignment, and complete assembly still need testing. The published encoder PCB v1.1 has not been revised for this change yet.
 
 ## Current shaft-length plan
 
