@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 3, 2026 at 7:50 AM MST (America/Denver)**
+**Last updated: November 3, 2026 at 8:03 AM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -48,36 +48,36 @@ These are my recorded purchases so far, in **US dollars**. The total includes ro
 
 My Teensy 4.1 cost **$37.95 including shipping**, and my faceplate cost **$70.59 including shipping**. The rotary switches and LEDs came to **$108.16**, or **$135.29 including tax and tariffs**. Those charges are already included in the running total. I bought two spare LED digits and one spare A12515RNCQ switch because the quantity price breaks saved me money compared with buying only the quantities I originally planned to use. I still need to verify the selected toggle switches’ fit and operation.
 
-**The VOL encoder isn’t included in the total yet.** I previously asked DigiKey to add a PEC11R-4230F-S0024, but I’ve since chosen the **PEC11H-4220F-S0024**, matching the FREQ encoders. I’ll confirm the order details before adding its actual cost to this purchase history.
+**The VOL encoder isn’t included in the total yet.** My current selection for VOL, FREQ, and channel is **PEC11R-4230F-S0024 with a 30 mm shaft**, sourced from Mouser. I’ll add actual encoder costs to this purchase history once the order is confirmed.
 
 **This total is before PCBs, display drivers, resistors, connectors, and the other remaining parts. It is not the complete build cost.** I’ll update the total as I buy the remaining parts. Additional shipping or fees not listed above are also excluded.
 
-## DigiKey order sheet — rotary controls and LED digits
+## Order sheet — rotary controls and LED digits
 
-This is my order sheet for the rotary controls and LED digits for **one ARC-164 panel**, prepared **November 3, 2026**. It lists the full quantities needed; I’ll deduct any parts I already have before ordering.
+This is my order sheet for **one ARC-164 panel**, updated **November 3, 2026**. I’ll buy the **30 mm encoders from Mouser**. The switches and LED digits remain on the DigiKey list. These are full build quantities; I’ll deduct parts I already have before ordering.
 
-| Quantity | Use | Manufacturer part number | DigiKey part number | Estimated unit price (USD) | Estimated total (USD) |
+| Quantity | Use | Manufacturer part number | Supplier / order number | Estimated unit price (USD) | Estimated total (USD) |
 | ---: | --- | --- | --- | ---: | ---: |
-| 7 | Five FREQ encoders, channel encoder, and VOL | [Bourns PEC11H-4220F-S0024](https://www.digikey.com/en/products/detail/bourns-inc/PEC11H-4220F-S0024/12349532) | 118-PEC11H-4220F-S0024-ND | $4.088 | $28.62 |
-| 2 | MAIN and PRESET rotary switches | [C&K A12505RNCQ](https://www.digikey.com/en/products/detail/c-k/A12505RNCQ/2043159) | CKN10203-ND | $13.41 | $26.82 |
-| 10 | White 0.3-inch common-cathode seven-segment LED digits | [QT Brightek QBSLDIW301GR](https://www.digikey.com/en/products/detail/qt-brightek-qtb/QBSLDIW301GR/22077720) | 1516-QBSLDIW301GR-ND | $1.743 | $17.43 |
-| | **Estimated subtotal** | | | | **$72.87** |
+| 7 | Five FREQ encoders, channel encoder, and VOL | PEC11R-4230F-S0024 | [Mouser: 652-PEC11R-4230F-S24](https://www.mouser.com/en/ProductDetail/Bourns/PEC11R-4230F-S0024?qs=Zq5ylnUbLm6MC5h%2FLr6Brg%3D%3D) | $2.07 | $14.49 |
+| 2 | MAIN and PRESET rotary switches | A12505RNCQ | [DigiKey: CKN10203-ND](https://www.digikey.com/en/products/detail/c-k/A12505RNCQ/2043159) | $13.41 | $26.82 |
+| 10 | White 0.3-inch common-cathode seven-segment LED digits | QBSLDIW301GR | [DigiKey: 1516-QBSLDIW301GR-ND](https://www.digikey.com/en/products/detail/qt-brightek-qtb/QBSLDIW301GR/22077720) | $1.743 | $17.43 |
+| | **Estimated subtotal** | | | | **$58.74** |
 
-All seven encoders in this order sheet have **20 mm shafts**. MAIN and PRESET use the **same A12505RNCQ switch**, with the stop ring set to **4 positions for MAIN** and **3 positions for PRESET**; both index at **45° per position**.
+All seven encoders have **30 mm shafts**. MAIN and PRESET use the **same A12505RNCQ switch**, with the stop ring set to **4 positions for MAIN** and **3 positions for PRESET**; both index at **45° per position**.
 
-These are estimated DigiKey prices, using the quantity-five price tier for seven encoders the quantity-one tier for two switches, and the quantity-ten tier for ten LED digits. Prices can change; shipping, tax, and tariffs are excluded. This is an order-planning estimate, separate from my recorded purchases above.
+Prices use the quantity-five encoder tier, quantity-one switch tier, and quantity-ten LED tier. Prices can change; shipping, tax, and tariffs are excluded. This estimate is separate from my recorded purchases.
 
-**This is not the complete build BOM.** TONE, SQL, STATUS, display drivers, other display components, resistors, capacitors, connectors, PCBs, and the other remaining parts are not included in this sheet.
+**This is not the complete build BOM.** TONE, SQL, STATUS, display drivers, other display components, resistors, capacitors, connectors, PCBs, and other remaining parts are excluded.
 
 ## Things that need to be completed
 
-**Last updated: November 3, 2026 at 7:50 AM MST (America/Denver)**
+**Last updated: November 3, 2026 at 8:03 AM MST (America/Denver)**
 <!-- Refresh this section timestamp whenever the work list changes, using the actual America/Denver time and MST/MDT. -->
 
 This is my current work list for the hardware, firmware, testing, and build instructions.
 
 1. **Panel layout and parts:** Confirm dimensions, mounting clearances, controls, and the complete parts list. **TONE and SQL switches:** Select the exact parts and verify their mounting dimensions, required operation and travel, and clearances before finalizing the PCB. Test-fit the selected [PC Flights six-digit frequency display](#frequency-display), including digit visibility and brightness through the smoked cover. **Choose the preset-channel display** for the 22 × 17.5 mm window, then check its dimensions, pinout, mounting height, and clearance.
-2. **PCB, schematic, and rotary-encoder design:** Use rotary encoders for all five frequency controls, with no frequency-switch resistor ladders. Design the Main PCB with the MAIN and PRESET rotary switches, their resistor ladders, controller, and display circuitry. Update the rotary-encoder schematic, PCB footprints, and 3D models for the **PEC11R-4225F-S0024 encoders with 25 mm shafts**, including the FREQ, channel, and VOL controls. Place and connect VOL, reroute the encoder PCB, and check its connections to the Main PCB. Design the small display PCB and its standoff mounting, with the display soldered directly to the board; set the height after checking it against the faceplate. Finalize Teensy pin assignments, check the complete electrical design, and verify clearances and test fitting before ordering boards.
+2. **PCB, schematic, and rotary-encoder design:** Use rotary encoders for all five frequency controls, with no frequency-switch resistor ladders. Design the Main PCB with the MAIN and PRESET rotary switches, their resistor ladders, controller, and display circuitry. Update the rotary-encoder schematic, PCB footprints, and 3D models for the **PEC11R-4230F-S0024 encoders with 30 mm shafts**, including the FREQ, channel, and VOL controls. Place and connect VOL, reroute the encoder PCB, and check its connections to the Main PCB. Design the small display PCB and its standoff mounting, with the display soldered directly to the board; set the height after checking it against the faceplate. Finalize Teensy pin assignments, check the complete electrical design, and verify clearances and test fitting before ordering boards.
 3. **Printed parts:** Design and test-fit the required knobs, brackets, and spacers with the selected hardware. Verify shaft engagement, knob retention, mounting height, and clearance behind the faceplate.
 4. **DCS-BIOS mappings and any needed changes:** Check which inputs and display outputs are already available for this radio. Identify missing data, make any necessary export changes, and document them. Check the correct ARC-164 radio instance for each intended A-10 variant.
 5. **Firmware:** Write the control and display firmware and verify USB communication with DCS-BIOS.
@@ -120,11 +120,11 @@ The earlier three-four-digit-block arrangement is no longer my display plan. I�
 
 I originally planned to use frequency rotary switches, but I’ve restored my original ARC-164 encoder KiCad project and will check its fit, clearances, and wiring before continuing the design. The **A11015RNCQ switches were the wrong parts for the ARC-164**. I’ve requested cancellation from DigiKey; **if the order is not canceled, I’ll keep them as parts for ARC-210 V2**.
 
-MAIN and PRESET use **C&K A12505RNCQ rotary switches with 12.7 mm actuators**. VOL uses the same **PEC11H-4220F-S0024 with a 20 mm shaft** as the FREQ encoders, and the channel control remains a rotary encoder. The final knob fit and mounting clearances still need testing.
+MAIN and PRESET use **C&K A12505RNCQ rotary switches with 12.7 mm actuators**. VOL uses the same **PEC11R-4230F-S0024 with a 30 mm shaft** as the FREQ encoders, and the channel control remains a rotary encoder. The final knob fit and mounting clearances still need testing.
 
 ## VOL rotary encoder selection
 
-I’ve selected the **Bourns PEC11H-4220F-S0024** for VOL, matching the FREQ encoders. It has a **20 mm long, 6 mm diameter flatted shaft**, **24 detents, 24 pulses per revolution, PCB terminals, and a momentary push switch**. See the [DigiKey listing](https://www.digikey.com/en/products/detail/bourns-inc/PEC11H-4220F-S0024/12349532).
+I’ve selected the **Bourns PEC11R-4230F-S0024** for VOL, matching the FREQ and channel encoders. It has a **30 mm long, 6 mm diameter flatted shaft**, **24 detents, 24 pulses per revolution, PCB terminals, and a momentary push switch**. I’ll buy these from [Mouser, part 652-PEC11R-4230F-S24](https://www.mouser.com/en/ProductDetail/Bourns/PEC11R-4230F-S0024?qs=Zq5ylnUbLm6MC5h%2FLr6Brg%3D%3D).
 
 I plan to make the VOL knob with a sleeve that extends through the **10 mm panel hole** to reach the encoder shaft, with clearance so it turns freely. Knob engagement and the mounting arrangement still need physical test fitting.
 
