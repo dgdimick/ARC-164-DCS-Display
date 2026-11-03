@@ -52,21 +52,22 @@ My Teensy 4.1 cost **$37.95 including shipping**, and my faceplate cost **$70.59
 
 **This total is before PCBs, display drivers, resistors, connectors, and the other remaining parts. It is not the complete build cost.** I’ll update the total as I buy the remaining parts. Additional shipping or fees not listed above are also excluded.
 
-## DigiKey order sheet — rotary controls
+## DigiKey order sheet — rotary controls and LED digits
 
-This is my order sheet for the rotary controls for **one ARC-164 panel**, prepared **November 3, 2026**. It lists the full quantities needed; I’ll deduct any parts I already have before ordering.
+This is my order sheet for the rotary controls and LED digits for **one ARC-164 panel**, prepared **November 3, 2026**. It lists the full quantities needed; I’ll deduct any parts I already have before ordering.
 
 | Quantity | Use | Manufacturer part number | DigiKey part number | Estimated unit price (USD) | Estimated total (USD) |
 | ---: | --- | --- | --- | ---: | ---: |
 | 7 | Five FREQ encoders, channel encoder, and VOL | [Bourns PEC11H-4220F-S0024](https://www.digikey.com/en/products/detail/bourns-inc/PEC11H-4220F-S0024/12349532) | 118-PEC11H-4220F-S0024-ND | $4.088 | $28.62 |
 | 2 | MAIN and PRESET rotary switches | [C&K A12505RNCQ](https://www.digikey.com/en/products/detail/c-k/A12505RNCQ/2043159) | CKN10203-ND | $13.41 | $26.82 |
-| | **Estimated subtotal** | | | | **$55.44** |
+| 10 | White 0.3-inch common-cathode seven-segment LED digits | [QT Brightek QBSLDIW301GR](https://www.digikey.com/en/products/detail/qt-brightek-qtb/QBSLDIW301GR/22077720) | 1516-QBSLDIW301GR-ND | $1.743 | $17.43 |
+| | **Estimated subtotal** | | | | **$72.87** |
 
 All seven encoders in this order sheet have **20 mm shafts**. MAIN and PRESET use the **same A12505RNCQ switch**, with the stop ring set to **4 positions for MAIN** and **3 positions for PRESET**; both index at **45° per position**.
 
-These are estimated DigiKey prices, using the quantity-five price tier for seven encoders and the quantity-one tier for two switches. Prices can change; shipping, tax, and tariffs are excluded. This is an order-planning estimate, separate from my recorded purchases above.
+These are estimated DigiKey prices, using the quantity-five price tier for seven encoders the quantity-one tier for two switches, and the quantity-ten tier for ten LED digits. Prices can change; shipping, tax, and tariffs are excluded. This is an order-planning estimate, separate from my recorded purchases above.
 
-**This is not the complete build BOM.** TONE, SQL, STATUS, display components, resistors, capacitors, connectors, PCBs, and the other remaining parts are not included in this sheet.
+**This is not the complete build BOM.** TONE, SQL, STATUS, display drivers, other display components, resistors, capacitors, connectors, PCBs, and the other remaining parts are not included in this sheet.
 
 ## Things that need to be completed
 
