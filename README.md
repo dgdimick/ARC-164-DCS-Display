@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 3, 2026 at 6:32 AM MST (America/Denver)**
+**Last updated: November 3, 2026 at 6:34 AM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -34,7 +34,7 @@ These are my recorded purchases so far, in **US dollars**. The total includes ro
 | Item | Quantity | Cost (USD) |
 |---|---:|---:|
 | QBSLDIW301GR white seven-segment LED digits | 10 | $17.43 |
-| A12515RNCQ rotary switches — two for MAIN/PRESET; remaining switches reserved for ARC-210 V2 | 5 | $55.66 |
+| A12515RNCQ rotary switches — earlier long-shaft selection; no longer the current MAIN/PRESET choice | 5 | $55.66 |
 | A11015RNCQ rotary switches — reserved for ARC-210 V2 | 3 | $35.07 |
 | Tax and tariffs on the rotary-switch and LED order | — | $27.13 |
 | Toggle-switch purchase | — | $13.51 |
@@ -103,7 +103,7 @@ The earlier three-four-digit-block arrangement is no longer my display plan. I�
 
 I originally planned to use frequency rotary switches, but I’ve restored my original ARC-164 encoder KiCad project and will check its fit, clearances, and wiring before continuing the design. I’ll keep the frequency rotary switches I bought for **ARC-210 Version 2**.
 
-MAIN and PRESET remain rotary switches with **38.1 mm shafts**. VOL uses the **30 mm shaft** encoder listed below, and the channel control remains a rotary encoder. The final knob fit and mounting clearances still need testing.
+MAIN and PRESET use **C&K A12505RNCQ rotary switches with 12.7 mm actuators**. VOL uses the **30 mm shaft** encoder listed below, and the channel control remains a rotary encoder. The final knob fit and mounting clearances still need testing.
 
 ## VOL rotary encoder selection
 
@@ -121,20 +121,20 @@ I use **10 mm and 13 mm deep-well sockets** to tighten the **mounting nuts on th
 
 ## MAIN and PRESET rotary switches
 
-I plan to use **two C&K A12515RNCQ rotary switches**, one for MAIN and one for PRESET. These have the longer **38.1 mm (1.5-inch) flatted shaft**, **PCB through-hole terminals**, and **45° indexing**. See the [C&K A Series datasheet](https://www.ckswitches.com/media/1349/arotary.pdf).
+I plan to use **two C&K A12505RNCQ rotary switches**, one for MAIN and one for PRESET. These are eight-position switches with the shorter **12.7 mm (0.5-inch) flatted actuator**, **PCB through-hole terminals**, and **45° indexing**. See the [C&K A Series datasheet](https://www.ckswitches.com/media/1349/arotary.pdf).
 
 I plan to mount **both switches directly on the Main PCB, with their resistor ladders on the same board**. I’ll secure MAIN and PRESET mechanically using their **threaded bushings, mounting nuts, and anti-rotation alignment holes**. The **PCB pins will provide the electrical connections**, rather than serving as the primary mechanical support. I’ll check the mounting stack and board spacing so tightening the nuts does not strain the pins or bend the Main PCB. This will avoid separate rotary-switch PCBs and the wiring between those boards and the Main PCB. I’ll use the ARC-210 switch circuit and footprint as a starting point, then check the pin assignments, component placement, and analog readings for this layout.
 
 | Control | Part number | Stop-ring setting | Total travel |
 | --- | --- | --- | --- |
-| MAIN: OFF–MAIN–BOTH–ADF | **C&K A12515RNCQ** | Limit the switch to **4 positions** | **135°** |
-| PRESET: MNL–PRESET–GRD | **C&K A12515RNCQ** | Limit the switch to **3 positions** | **90°** |
+| MAIN: OFF–MAIN–BOTH–ADF | **C&K A12505RNCQ** | Limit the switch to **4 positions** | **135°** |
+| PRESET: MNL–PRESET–GRD | **C&K A12505RNCQ** | Limit the switch to **3 positions** | **90°** |
 
 I’ll set each stop ring before mounting the switch and check that it stops at the first and last labeled positions. Each click is **45°**.
 
-**Trim both shafts to a final height of 38.1 mm from the component-side PCB surface to the shaft tip.** Measure with each switch seated in its intended PCB mounting position. The stock switch’s **38.1 mm actuator-length specification is not its overall PCB-to-tip height**, so the stock shafts need shortening to meet this target. Check the faceplate, mounting hardware, and knob engagement before cutting, then recheck the finished height.
+**Shaft-height check:** The A12505RNCQ’s 12.7 mm actuator specification is not its complete PCB-to-tip height. This shorter switch does not meet the earlier 38.1 mm PCB-to-tip target in the proposed mounting arrangement; do not trim it to that target. I’ll test-fit the stock switches with the PCB, faceplate, mounting hardware, and knobs and confirm the required board spacing and shaft engagement before final assembly.
 
-My A12515RNCQ purchase is recorded in the [component costs](#recorded-component-costs) above. Only two are needed for the current MAIN and PRESET plan.
+Two A12505RNCQ switches are needed for MAIN and PRESET. The [recorded component costs](#recorded-component-costs) retain my earlier A12515RNCQ purchase as purchase history; they do not record a purchase of these shorter replacements.
 
 ## Channel control
 
