@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 3, 2026 at 4:54 AM MST (America/Denver)**
+**Last updated: November 3, 2026 at 4:55 AM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -99,9 +99,9 @@ The earlier three-four-digit-block arrangement is no longer my display plan. I�
 
 ## Frequency controls
 
-I originally planned to use rotary switches for the frequency controls, but the frequency-control holes in my PC Flights clear underpanel are too small for the mounting bushings on the switches I selected. I’m going back to **rotary encoders for all five frequency controls**. I’ve restored my original ARC-164 encoder KiCad project and will check its fit, clearances, and wiring before continuing the design. I’ll keep the frequency rotary switches I bought for **ARC-210 Version 2**.
+**I’m keeping rotary encoders for all five frequency controls, including future ARC-164 versions.** Fitting frequency rotary switches would require enlarging the holes and cutting anti-rotation alignment slots in the clear underpanel, so I won’t offer a frequency rotary-switch version.
 
-**I won’t offer an ARC-164 version with frequency rotary switches.** Fitting them would require cutting or enlarging the holes in the clear underpanel and cutting anti-rotation alignment slots for the switches, so I’ll keep rotary encoders for the frequency controls in future versions too.
+I originally planned to use frequency rotary switches, but I’ve restored my original ARC-164 encoder KiCad project and will check its fit, clearances, and wiring before continuing the design. I’ll keep the frequency rotary switches I bought for **ARC-210 Version 2**.
 
 MAIN and PRESET remain rotary switches with **38.1 mm shafts**. VOL uses the **30 mm shaft** encoder listed below, and the channel control remains a rotary encoder. The final knob fit and mounting clearances still need testing.
 
