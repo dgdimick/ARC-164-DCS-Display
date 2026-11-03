@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 3, 2026 at 2:46 AM MST (America/Denver)**
+**Last updated: November 3, 2026 at 3:47 AM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -27,9 +27,13 @@ While I could use surface-mount (SMD) parts to make the boards smaller, I plan t
 
 I chose the listed component suppliers because I’m aiming for better-quality parts than I generally expect from generic Amazon listings, even if they cost a little more. Parts from Amazon may work, and I use some myself, but substitutes may have different dimensions or pin spacing and may not fit the PCBs I designed for this project. Please compare the exact part specifications and PCB footprint before buying a substitute.
 
+## Recorded component costs
+
+I’ve added **US$13.51** and **US$10.76** for the toggle switches, a combined cost of **US$24.27**. These amounts are for the two switch listings, not a complete panel build total. I still need to verify the selected switches’ fit and operation.
+
 ## Things that need to be completed
 
-**Last updated: November 3, 2026 at 2:46 AM MST (America/Denver)**
+**Last updated: November 3, 2026 at 3:47 AM MST (America/Denver)**
 <!-- Refresh this section timestamp whenever the work list changes, using the actual America/Denver time and MST/MDT. -->
 
 This is my current work list for the hardware, firmware, testing, and build instructions.
