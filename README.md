@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 3, 2026 at 4:47 AM MST (America/Denver)**
+**Last updated: November 3, 2026 at 4:50 AM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -29,13 +29,13 @@ I chose the listed component suppliers because I’m aiming for better-quality p
 
 ## Recorded component costs
 
-These are my recorded costs so far, in **US dollars**.
+These are my recorded purchases so far, in **US dollars**. The total includes rotary switches bought before I returned to frequency encoders; it is not a shopping list for the current design. I’m keeping the unused frequency switches for ARC-210 Version 2.
 
 | Item | Quantity | Cost (USD) |
 |---|---:|---:|
 | QBSLDIW301GR white seven-segment LED digits | 10 | $17.43 |
-| A12515RNCQ rotary switches | 5 | $55.66 |
-| A11015RNCQ rotary switches | 3 | $35.07 |
+| A12515RNCQ rotary switches — two for MAIN/PRESET; remaining switches reserved for ARC-210 V2 | 5 | $55.66 |
+| A11015RNCQ rotary switches — reserved for ARC-210 V2 | 3 | $35.07 |
 | Tax and tariffs on the rotary-switch and LED order | — | $27.13 |
 | Toggle-switch purchase | — | $13.51 |
 | Toggle-switch purchase | — | $10.76 |
@@ -46,7 +46,7 @@ These are my recorded costs so far, in **US dollars**.
 | Teensy shipping | — | $8.35 |
 | **Running total** | | **$276.09** |
 
-My Teensy 4.1 cost **$37.95 including shipping**, and my faceplate cost **$70.59 including shipping**. The rotary switches and LEDs came to **$108.16**, or **$135.29 including tax and tariffs**. Those charges are already included in the running total. I bought two spare LED digits and one spare A12515RNCQ switch because the quantity price breaks saved me money overall compared with buying only the quantities needed for one panel. I still need to verify the selected toggle switches’ fit and operation.
+My Teensy 4.1 cost **$37.95 including shipping**, and my faceplate cost **$70.59 including shipping**. The rotary switches and LEDs came to **$108.16**, or **$135.29 including tax and tariffs**. Those charges are already included in the running total. I bought two spare LED digits and one spare A12515RNCQ switch because the quantity price breaks saved me money compared with buying only the quantities I originally planned to use. I still need to verify the selected toggle switches’ fit and operation.
 
 **The VOL encoder isn’t included in the total yet.** I’ve asked DigiKey to add the **PEC11R-4230F-S0024** to my order. I’ll add its cost once they confirm the order change.
 
@@ -54,13 +54,13 @@ My Teensy 4.1 cost **$37.95 including shipping**, and my faceplate cost **$70.59
 
 ## Things that need to be completed
 
-**Last updated: November 3, 2026 at 4:45 AM MST (America/Denver)**
+**Last updated: November 3, 2026 at 4:50 AM MST (America/Denver)**
 <!-- Refresh this section timestamp whenever the work list changes, using the actual America/Denver time and MST/MDT. -->
 
 This is my current work list for the hardware, firmware, testing, and build instructions.
 
 1. **Panel layout and parts:** Confirm dimensions, mounting clearances, controls, and the complete parts list. **TONE and SQL switches:** Select the exact parts and verify their mounting dimensions, required operation and travel, and clearances before finalizing the PCB. Test-fit the selected [PC Flights six-digit frequency display](#frequency-display), including digit visibility and brightness through the smoked cover. **Choose the preset-channel display** for the 22 × 17.5 mm window, then check its dimensions, pinout, mounting height, and clearance. **Frequency-knob travel in DCS:** I’ll check whether each 0–9 selector wraps from 9 to 0 or stops, whether the final-digit selector wraps from 75 to 00 or stops, and the order and end stops of 2/3/A. I’ll use those results to verify the frequency-encoder behavior in the firmware. This checks DCS behavior; it does not establish the real radio’s mechanical travel.
-2. **PCB and schematic design:** Design the Main PCB with the MAIN and PRESET rotary switches, their resistor ladders, controller, and display circuitry. Check the restored frequency-encoder PCB and its connections to the Main PCB. Design the small display PCB and its standoff mounting, with the display soldered directly to the board; set the height after checking it against the faceplate. Finalize Teensy pin assignments, check the complete electrical design, and verify clearances and test fitting before ordering boards.
+2. **PCB and schematic design:** Use rotary encoders for all five frequency controls, with no frequency-switch resistor ladders. Design the Main PCB with the MAIN and PRESET rotary switches, their resistor ladders, controller, and display circuitry. Check the restored frequency-encoder PCB and its connections to the Main PCB. Design the small display PCB and its standoff mounting, with the display soldered directly to the board; set the height after checking it against the faceplate. Finalize Teensy pin assignments, check the complete electrical design, and verify clearances and test fitting before ordering boards.
 3. **Printed parts:** Design and test-fit the required knobs, brackets, and spacers with the selected hardware. Verify shaft engagement, knob retention, mounting height, and clearance behind the faceplate.
 4. **DCS-BIOS mappings and any needed changes:** Check which inputs and display outputs are already available for this radio. Identify missing data, make any necessary export changes, and document them. Check the correct ARC-164 radio instance for each intended A-10 variant.
 5. **Firmware:** Write the control and display firmware and verify USB communication with DCS-BIOS.
@@ -130,7 +130,7 @@ I plan to mount **both switches directly on the Main PCB, with their resistor la
 
 I’ll set each stop ring before mounting the switch and check that it stops at the first and last labeled positions.
 
-I haven’t confirmed a purchase price for the A12515RNCQ yet.
+My A12515RNCQ purchase is recorded in the [component costs](#recorded-component-costs) above. Only two are needed for the current MAIN and PRESET plan.
 
 ## Channel control
 
