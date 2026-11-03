@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 2, 2026 at 11:08 PM MST (America/Denver)**
+**Last updated: November 2, 2026 at 11:10 PM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -112,9 +112,9 @@ I won’t use 12.7 mm shafts; they’re too short for this build. The local fit-
 
 ## Staggered frequency-switch mounting plan
 
-<a href="images/ARC-164_Staggered_PCB_Mount_Concept.png"><img src="images/ARC-164_Staggered_PCB_Mount_Concept.png" width="450" alt="Concept side view of alternating long and short frequency-switch shafts mounted on two PCB levels"></a>
+<a href="images/ARC-164_Switch_PCB_Fit_Check.png"><img src="images/ARC-164_Switch_PCB_Fit_Check.png" width="450" alt="KiCad 3D view of the ARC-164 switch and encoder fit-check layout"></a>
 
-*Click the drawing to enlarge. This earlier concept drawing is a mounting reference, not the current shaft assignment. The current plan uses 38.1 mm shafts for FREQ 1, 3, and 5, and 44 mm shafts for FREQ 2 and 4. The PCB shapes, mounts, spacing, and clearances still need design and testing.*
+*Click the picture to enlarge. This is my current KiCad 3D fit-check layout. The planned shaft lengths are 38.1 mm for FREQ 1, 3, and 5, 44 mm for FREQ 2 and 4, and 30 mm for VOL. Mechanical clearances, mounting, and test fitting still need checking.*
 
 **The upper PCB will need clearance holes for the longer shafts passing through from the lower PCB.** I’ll size and position these openings so the shafts can turn freely without touching the board.
 
