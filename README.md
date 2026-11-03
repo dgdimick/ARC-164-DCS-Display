@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 3, 2026 at 4:23 AM MST (America/Denver)**
+**Last updated: November 3, 2026 at 4:45 AM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -54,14 +54,14 @@ My Teensy 4.1 cost **$37.95 including shipping**, and my faceplate cost **$70.59
 
 ## Things that need to be completed
 
-**Last updated: November 3, 2026 at 3:47 AM MST (America/Denver)**
+**Last updated: November 3, 2026 at 4:45 AM MST (America/Denver)**
 <!-- Refresh this section timestamp whenever the work list changes, using the actual America/Denver time and MST/MDT. -->
 
 This is my current work list for the hardware, firmware, testing, and build instructions.
 
-1. **Panel layout and parts:** Confirm dimensions, mounting clearances, controls, and the complete parts list. **TONE and SQL switches:** Select the exact parts and verify their mounting dimensions, required operation and travel, and clearances before finalizing the PCB. Test-fit the selected [PC Flights six-digit frequency display](#frequency-display), including digit visibility and brightness through the smoked cover. **Choose the preset-channel display** for the 22 × 17.5 mm window, then check its dimensions, pinout, mounting height, and clearance. **Frequency-knob travel in DCS:** I’ll check whether each 0–9 selector wraps from 9 to 0 or stops, whether the final-digit selector wraps from 75 to 00 or stops, and the order and end stops of 2/3/A. I’ll use those results to verify the frequency-switch operation before finalizing the PCB design. This checks DCS behavior; it does not establish the real radio’s mechanical travel.
-2. **PCB and schematic design:** Design the Main PCB with the selected rotary switches, resistor ladders, controller, and display circuitry. Design the small display PCB and its standoff mounting, with the display soldered directly to the board; set the height after checking it against the faceplate. Finalize Teensy pin assignments, check the complete electrical design, and verify clearances and test fitting before ordering boards.
-3. **Printed parts:** Design and test-fit the required knobs, brackets, and spacers with the selected hardware, including the longer FREQ 2 and 4 knob stems with set screws near the bottom. Verify shaft engagement, screw retention, and clearance through the upper PCB. Design and test the shaft guides for the staggered frequency-switch arrangement, with separate hole sizes for the 6 mm and 6.35 mm shafts and enough clearance for free rotation. Design and test a tube-style shaft cutting guide; set its length after checking the PCB spacing and knob position.
+1. **Panel layout and parts:** Confirm dimensions, mounting clearances, controls, and the complete parts list. **TONE and SQL switches:** Select the exact parts and verify their mounting dimensions, required operation and travel, and clearances before finalizing the PCB. Test-fit the selected [PC Flights six-digit frequency display](#frequency-display), including digit visibility and brightness through the smoked cover. **Choose the preset-channel display** for the 22 × 17.5 mm window, then check its dimensions, pinout, mounting height, and clearance. **Frequency-knob travel in DCS:** I’ll check whether each 0–9 selector wraps from 9 to 0 or stops, whether the final-digit selector wraps from 75 to 00 or stops, and the order and end stops of 2/3/A. I’ll use those results to verify the frequency-encoder behavior in the firmware. This checks DCS behavior; it does not establish the real radio’s mechanical travel.
+2. **PCB and schematic design:** Design the Main PCB with the MAIN and PRESET rotary switches, their resistor ladders, controller, and display circuitry. Check the restored frequency-encoder PCB and its connections to the Main PCB. Design the small display PCB and its standoff mounting, with the display soldered directly to the board; set the height after checking it against the faceplate. Finalize Teensy pin assignments, check the complete electrical design, and verify clearances and test fitting before ordering boards.
+3. **Printed parts:** Design and test-fit the required knobs, brackets, and spacers with the selected hardware. Verify shaft engagement, knob retention, mounting height, and clearance behind the faceplate.
 4. **DCS-BIOS mappings and any needed changes:** Check which inputs and display outputs are already available for this radio. Identify missing data, make any necessary export changes, and document them. Check the correct ARC-164 radio instance for each intended A-10 variant.
 5. **Firmware:** Write the control and display firmware and verify USB communication with DCS-BIOS.
 6. **Bench and board testing:** Test the controls, displays, and power requirements together, then assemble and electrically test the manufactured boards.
@@ -97,47 +97,11 @@ I’ll use a **small frequency-display PCB mounted on standoffs**, with the **di
 
 The earlier three-four-digit-block arrangement is no longer my display plan. I’ll finalize the channel display and driver arrangement before completing the display PCB and suitable 3.3 V-to-5 V logic buffering for the Teensy.
 
-## Current shaft-length plan
+## Frequency controls
 
-My current ARC-164 hardware plan is:
+I’m going back to **rotary encoders for all five frequency controls**. I’ve restored my original ARC-164 encoder KiCad project and will check its fit, clearances, and wiring before continuing the design. I’ll keep the frequency rotary switches I bought for **ARC-210 Version 2**.
 
-| Control | Planned shaft length |
-| --- | --- |
-| FREQ 1 and 5 rotary switches | **38.1 mm** |
-| FREQ 2, 3, and 4 — A11015RNCQ ten-position rotary switches | **38.1 mm**; extended knobs for FREQ 2 and 4 |
-| MAIN and PRESET rotary switches | **38.1 mm** |
-| VOL encoder — PEC11R-4230F-S0024 | **30 mm** |
-
-## Frequency switches and extended knobs
-
-I’ll use the **C&K A11015RNCQ** for **FREQ 2, 3, and 4**. It has **ten positions, 30° indexing, PCB-pin terminals, and a 38.1 mm-long, 6.35 mm-diameter D-shaped shaft**. See the [DigiKey listing](https://www.digikey.com/en/products/detail/c-k/A11015RNCQ/3751827) and [C&K datasheet](https://www.ckswitches.com/media/1349/arotary.pdf).
-
-For **FREQ 2 and 4**, I’ll design **longer 3D-printed knob stems with the shaft extension built in**. Each will have a **set screw near the bottom of the stem**, where it grips the switch shaft, to keep the knob secured. The D-shaped socket will transmit the turning force. I’ll set the extension length after checking the PCB spacing and final knob position, then print and test the fit and screw retention. This replaces the earlier plan to buy longer shafts for FREQ 2 and 4.
-
-## Staggered frequency-switch mounting plan
-
-<a href="images/ARC-164_Switch_PCB_Fit_Check.png"><img src="images/ARC-164_Switch_PCB_Fit_Check.png" width="450" alt="KiCad 3D view of the ARC-164 switch and encoder fit-check layout"></a>
-
-*Click the picture to enlarge. This is my current KiCad 3D fit-check layout.*
-
-**The upper PCB will need clearance holes for the shafts and extended knob stems passing through from the lower PCB.** I’ll size and position these openings so they can turn freely without touching the board.
-
-
-I plan to try **two PCB levels with staggered switch mounting**, using the lengths in the table above. I’ll set the mounting depths and PCB spacing first, then trim the shafts as needed so the knobs line up at the front of the panel. The mounting nuts will secure the switches as needed. This is a proposed arrangement, not a completed design.
-
-Before ordering boards, I’ll test-fit the complete mounting stack, including MAIN and PRESET and the printed shaft guides. I’ll check switch-body and display clearance, PCB edges, resistor leads, solder joints, connectors, wiring, footprint orientation, mounting holes, locating tabs, shaft projection, and knob fit. I’ll also check that the shafts turn freely and that the mounting hardware supports the switches without straining their soldered pins or bending the boards. See the [C&K shaft options](https://www.ckswitches.com/media/1349/arotary.pdf).
-
-I still need to verify the final switch models, contact counts, PCB footprints, and resistor ladders, and check frequency-selector travel in DCS.
-
-## 3D-printed shaft guides
-
-I plan to design **3D-printed shaft guides** to keep the frequency-switch shafts centered through the faceplate in the staggered mounting arrangement. I’ll use **guide holes for the 6.35 mm shafts on the planned 38.1 mm rotary switches, with separate 6 mm holes where the selected hardware requires them**, allowing enough clearance for the shafts to turn freely. The final printed hole dimensions will depend on test fitting, rather than matching the shaft diameters exactly.
-
-The guides will support and locate the shafts; the switch bodies will have separate secure mounts to resist knob-turning force. I’ll check the printed guides for wear during testing.
-
-## 3D-printed shaft cutting guide
-
-I also plan to make a **3D-printed tube-style cutting guide** that slips over the **6.35 mm shafts** to provide a repeatable cutting reference for the frequency-switch shafts that need trimming. **I’ll set the guide’s length after checking the PCB spacing and knob position**, so the finished shafts place all the knobs at the same height.
+MAIN and PRESET remain rotary switches with **38.1 mm shafts**. VOL uses the **30 mm shaft** encoder listed below, and the channel control remains a rotary encoder. The final knob fit and mounting clearances still need testing.
 
 ## VOL rotary encoder selection
 
