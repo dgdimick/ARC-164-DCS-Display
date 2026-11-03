@@ -1,7 +1,5 @@
 # ARC-164 PCBs
 
-**Last updated: October 31, 2026 at 6:20 PM MDT (America/Denver)**
+**Last updated: November 2, 2026 at 11:13 PM MST (America/Denver)**
 
-| PCB | Current version |
-| --- | --- |
-| [Encoder PCB and schematic](Rotary%20Encoders/) | **v1.1** |
+I’m developing the current PCB designs. No PCB design files are currently published.
