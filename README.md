@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 2, 2026 at 11:17 PM MST (America/Denver)**
+**Last updated: November 2, 2026 at 11:23 PM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -9,9 +9,7 @@
 
 *Panel reference photo: PC Flights.*
 
-## Project update — October 31, 2026
-
-**The ARC-164 is now an active project**, and I’m working on its hardware and firmware.
+I’m developing the hardware and firmware for my ARC-164 radio panel.
 
 ## Current development order
 
@@ -50,17 +48,9 @@ This is my current work list for the hardware, firmware, testing, and build inst
 
 ## Controller choice — Teensy 4.1
 
-I’m staying with the **Teensy 4.1** for the ARC-164. Its compact size makes it easier to fit behind the faceplate, it offers 42 readily accessible I/O pins. The final ARC-164 pin allocation still needs to be verified.
+I’m using the **Teensy 4.1** for its compact size and room for the panel’s controls and displays. It runs at **600 MHz**, compared with **16 MHz for the classic Arduino Uno R3, Mega 2560, and ATmega328P Nano**. I still need to finalize the pin assignments. See the [Teensy specifications](https://www.pjrc.com/store/teensy41.html).
 
-The **Teensy 4.1 runs at 600 MHz**, compared with **16 MHz for the classic Arduino Uno R3, Mega 2560, and ATmega328P Nano** — **37.5 times the CPU clock frequency**. This provides processing headroom for display updates and controls; it is not a measured 37.5-times improvement in display refresh speed. See the [Teensy specifications](https://www.pjrc.com/store/teensy41.html).
-
-I considered the Arduino Due, but it is physically larger and would not save money at the prices checked on **October 30, 2026**: a genuine Due with headers was listed at **$49.40** at [DigiKey](https://www.digikey.com/en/products/detail/arduino/A000062/3712582), compared with **$31.50** for a Teensy 4.1 or **$35.95** with headers at [SparkFun](https://www.sparkfun.com/development-boards/microcontrollers/teensy/teensy-boards.html), before shipping and tax. These are reference prices, not fixed build costs.
-
-Ethernet is not required for the planned USB DCS-BIOS connection. The Teensy 4.1 version without Ethernet is also an option; its listed price was **$29.60** at the same price check. Teensy 4.1 uses **3.3 V logic**, and its inputs are not 5 V tolerant, so display-driver connections must be designed accordingly. See the [PJRC specifications](https://www.pjrc.com/store/teensy41.html).
-
-## Current PCBs
-
-[View the current PCB versions and design files](PCBs/README.md).
+I’ll use USB for DCS-BIOS; Ethernet isn’t needed. The Teensy uses **3.3 V logic**, and its inputs are **not 5 V tolerant**, so I’ll design the display-driver connections accordingly.
 
 ## Seven-segment display plan
 
@@ -88,26 +78,26 @@ My current ARC-164 hardware plan is:
 
 <a href="images/ARC-164_Switch_PCB_Fit_Check.png"><img src="images/ARC-164_Switch_PCB_Fit_Check.png" width="450" alt="KiCad 3D view of the ARC-164 switch and encoder fit-check layout"></a>
 
-*Click the picture to enlarge. This is my current KiCad 3D fit-check layout. The planned shaft lengths are 38.1 mm for FREQ 1, 3, and 5, 44 mm for FREQ 2 and 4, and 30 mm for VOL. Mechanical clearances, mounting, and test fitting still need checking.*
+*Click the picture to enlarge. This is my current KiCad 3D fit-check layout.*
 
 **The upper PCB will need clearance holes for the longer shafts passing through from the lower PCB.** I’ll size and position these openings so the shafts can turn freely without touching the board.
 
 
-I plan to try **two PCB levels with staggered switch mounting**, using **38.1 mm shafts for FREQ 1, 3, and 5**, and **44 mm shafts for FREQ 2 and 4**. I’ll set the mounting depths and PCB spacing first, then trim the shafts as needed so the knobs line up at the front of the panel. The mounting nuts will secure the switches as needed. This is a proposed arrangement, not a completed design.
+I plan to try **two PCB levels with staggered switch mounting**, using the lengths in the table above. I’ll set the mounting depths and PCB spacing first, then trim the shafts as needed so the knobs line up at the front of the panel. The mounting nuts will secure the switches as needed. This is a proposed arrangement, not a completed design.
 
-I still need to check clearance for the switch bodies, PCB edges, resistor leads, solder joints, connectors, wiring, and shaft guides. I’ll also check shaft projection, knob fit, and mechanical support so the mounting hardware does not strain the soldered pins. See the [C&K shaft options](https://www.ckswitches.com/media/1349/arotary.pdf).
+Before ordering boards, I’ll test-fit the complete mounting stack, including MAIN and PRESET and the printed shaft guides. I’ll check switch-body and display clearance, PCB edges, resistor leads, solder joints, connectors, wiring, footprint orientation, mounting holes, locating tabs, shaft projection, and knob fit. I’ll also check that the shafts turn freely and that the mounting hardware supports the switches without straining their soldered pins or bending the boards. See the [C&K shaft options](https://www.ckswitches.com/media/1349/arotary.pdf).
 
-The final switch models, contact counts, PCB footprints, and resistor ladders still need checking. The existing ARC-210 rotary-switch PCB only provides seven readable positions, so the ten-position frequency controls would need a revised circuit and PCB. I’ll check the frequency-selector travel in DCS before finalizing the switch design.
+I still need to verify the final switch models, contact counts, PCB footprints, and resistor ladders, and check frequency-selector travel in DCS.
 
 ## 3D-printed shaft guides
 
 I plan to design **3D-printed shaft guides** to keep the frequency-switch shafts centered through the faceplate in the staggered mounting arrangement. I’ll use **guide holes for the 6.35 mm shafts on the planned 38.1 mm rotary switches, with separate 6 mm holes where the selected hardware requires them**, allowing enough clearance for the shafts to turn freely. The final printed hole dimensions will depend on test fitting, rather than matching the shaft diameters exactly.
 
-**These guides still need to be designed, printed, and tested.** I’ll check alignment, free rotation, wear, and clearance with the complete mounting stack. The switch bodies will still need secure mounts to resist knob-turning force; the guides will support and locate the shafts.
+The guides will support and locate the shafts; the switch bodies will have separate secure mounts to resist knob-turning force. I’ll check the printed guides for wear during testing.
 
 ## 3D-printed shaft cutting guide
 
-I also plan to make a **3D-printed tube-style cutting guide** that slips over the **6.35 mm shafts** to provide a repeatable cutting reference for the frequency-switch shafts that need trimming. **I’ll set the guide’s length after checking the PCB spacing and knob position**, so the finished shafts place all the knobs at the same height. The guide still needs to be designed, printed, and tested before use.
+I also plan to make a **3D-printed tube-style cutting guide** that slips over the **6.35 mm shafts** to provide a repeatable cutting reference for the frequency-switch shafts that need trimming. **I’ll set the guide’s length after checking the PCB spacing and knob position**, so the finished shafts place all the knobs at the same height.
 
 ## VOL rotary encoder selection
 
@@ -134,9 +124,13 @@ I plan to mount **both switches directly on the Main PCB, with their resistor la
 | MAIN: OFF–MAIN–BOTH–ADF | Limit the switch to **4 positions** | **135°** |
 | PRESET: MNL–PRESET–GRD | Limit the switch to **3 positions** | **90°** |
 
-I’ll set each stop ring before mounting the switch and check that it stops at the first and last labeled positions. The channel control will remain a rotary encoder; its mounting still needs design and testing.
+I’ll set each stop ring before mounting the switch and check that it stops at the first and last labeled positions.
 
-**This mounting arrangement still needs design and test fitting.** I need to confirm the PCB footprint and orientation, mounting-hole and locating-tab fit, board spacing, shaft projection through the faceplate, knob fit, and clearance from the display blocks and PCB. The longer shafts may need trimming after I check the complete assembly. I haven’t confirmed a purchase price for the A12515RNCQ yet.
+I haven’t confirmed a purchase price for the A12515RNCQ yet.
+
+## Channel control
+
+I’ll use a rotary encoder for the channel control. Its mounting still needs design and testing.
 
 ## USB connections and powered hubs
 
