@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 2, 2026 at 11:04 PM MST (America/Denver)**
+**Last updated: November 2, 2026 at 11:06 PM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -149,7 +149,7 @@ For **STATUS**, I plan to use a **normally open momentary pushbutton, not a ligh
 
 ## Assembly tool note
 
-I’ll use a **13 mm deep socket** to tighten the **rotary-switch shaft mounting nuts**. The deep socket provides clearance over the shafts while reaching the nuts.
+I use **10 mm and 13 mm deep-well sockets** to tighten the **mounting nuts on the rotary switches and encoders**. Use whichever socket fits each nut; the deep well provides clearance over the shaft.
 
 ## MAIN and PRESET rotary switches
 
