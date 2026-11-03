@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 3, 2026 at 7:08 AM MST (America/Denver)**
+**Last updated: November 3, 2026 at 7:10 AM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -131,6 +131,8 @@ I plan to mount **both switches directly on the Main PCB, with their resistor la
 | --- | --- | --- | --- |
 | MAIN: OFF–MAIN–BOTH–ADF | **C&K A12505RNCQ** | Limit the switch to **4 positions** | **135°** |
 | PRESET: MNL–PRESET–GRD | **C&K A12505RNCQ** | Limit the switch to **3 positions** | **90°** |
+
+**MAIN and PRESET use the same switch: C&K A12505RNCQ. Only the stop-ring setting differs: 4 positions for MAIN and 3 positions for PRESET.**
 
 I’ll set each stop ring before mounting the switch and check that it stops at the first and last labeled positions. Each click is **45°**.
 
