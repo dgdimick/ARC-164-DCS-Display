@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 2, 2026 at 11:16 PM MST (America/Denver)**
+**Last updated: November 2, 2026 at 11:17 PM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -137,10 +137,6 @@ I plan to mount **both switches directly on the Main PCB, with their resistor la
 I’ll set each stop ring before mounting the switch and check that it stops at the first and last labeled positions. The channel control will remain a rotary encoder; its mounting still needs design and testing.
 
 **This mounting arrangement still needs design and test fitting.** I need to confirm the PCB footprint and orientation, mounting-hole and locating-tab fit, board spacing, shaft projection through the faceplate, knob fit, and clearance from the display blocks and PCB. The longer shafts may need trimming after I check the complete assembly. I haven’t confirmed a purchase price for the A12515RNCQ yet.
-
-## Separate controllers for each radio
-
-The **ARC-164 and ARC-186 will each use their own Teensy 4.1 and USB connection to DCS-BIOS**, so either panel can be built and operated independently. This keeps the wiring and firmware separate and leaves room for future additions. Hardware, pin assignments, and firmware remain under development.
 
 ## USB connections and powered hubs
 
