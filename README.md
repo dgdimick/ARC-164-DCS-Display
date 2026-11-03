@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 3, 2026 at 7:33 AM MST (America/Denver)**
+**Last updated: November 3, 2026 at 7:34 AM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -29,13 +29,13 @@ I chose the listed component suppliers because I’m aiming for better-quality p
 
 ## Recorded component costs
 
-These are my recorded purchases so far, in **US dollars**. The total includes rotary switches bought before I returned to frequency encoders; it is not a shopping list for the current design. The **A11015RNCQ switches were the wrong parts ordered**: they are **10-position switches** and are not suitable for my intended use. I’ve requested cancellation from DigiKey; I’ll only have these unwanted switches if DigiKey does not cancel the order.
+These are my recorded purchases so far, in **US dollars**. The total includes rotary switches bought before I returned to frequency encoders; it is not a shopping list for the current design. The **A11015RNCQ switches are 10-position switches** and were the wrong parts for the ARC-164. I’ve requested cancellation from DigiKey; **if the order is not canceled, I’ll keep them as parts for ARC-210 V2**.
 
 | Item | Quantity | Cost (USD) |
 |---|---:|---:|
 | QBSLDIW301GR white seven-segment LED digits | 10 | $17.43 |
 | A12515RNCQ rotary switches — earlier long-shaft selection; no longer the current MAIN/PRESET choice | 5 | $55.66 |
-| A11015RNCQ rotary switches — wrong parts ordered (10 positions); cancellation requested | 3 | $35.07 |
+| A11015RNCQ rotary switches — 10 positions; for ARC-210 V2 if DigiKey does not cancel the order | 3 | $35.07 |
 | Tax and tariffs on the rotary-switch and LED order | — | $27.13 |
 | Toggle-switch purchase | — | $13.51 |
 | Toggle-switch purchase | — | $10.76 |
@@ -118,7 +118,7 @@ The earlier three-four-digit-block arrangement is no longer my display plan. I�
 
 **I’m keeping rotary encoders for all five frequency controls, including future ARC-164 versions.** Fitting frequency rotary switches would require enlarging the holes and cutting anti-rotation alignment slots in the clear underpanel, so I won’t offer a frequency rotary-switch version.
 
-I originally planned to use frequency rotary switches, but I’ve restored my original ARC-164 encoder KiCad project and will check its fit, clearances, and wiring before continuing the design. The **A11015RNCQ switches were the wrong parts ordered**. Cancellation has been requested from DigiKey; if the order is not canceled, these will be unwanted switches. They are not reserved for ARC-210 V2.
+I originally planned to use frequency rotary switches, but I’ve restored my original ARC-164 encoder KiCad project and will check its fit, clearances, and wiring before continuing the design. The **A11015RNCQ switches were the wrong parts for the ARC-164**. I’ve requested cancellation from DigiKey; **if the order is not canceled, I’ll keep them as parts for ARC-210 V2**.
 
 MAIN and PRESET use **C&K A12505RNCQ rotary switches with 12.7 mm actuators**. VOL uses the same **PEC11H-4220F-S0024 with a 20 mm shaft** as the FREQ encoders, and the channel control remains a rotary encoder. The final knob fit and mounting clearances still need testing.
 
