@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 2, 2026 at 11:10 PM MST (America/Denver)**
+**Last updated: November 2, 2026 at 11:11 PM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -107,8 +107,6 @@ My current ARC-164 hardware plan is:
 | FREQ 2 and 4 rotary switches | **44 mm** |
 | MAIN and PRESET rotary switches | **38.1 mm** |
 | VOL encoder — PEC11R-4230F-S0024 | **30 mm** |
-
-I won’t use 12.7 mm shafts; they’re too short for this build. The local fit-check PCB still uses a mixture of short- and long-shaft reference models; those models are not the final purchasing list. FREQ2, FREQ3, and FREQ4 each need **ten positions (0–9)**, so the eight-position A125 reference models cannot serve as their final electrical switches. The shaft-length plan does not change those contact-count requirements.
 
 ## Staggered frequency-switch mounting plan
 
