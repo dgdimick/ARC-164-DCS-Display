@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 3, 2026 at 3:47 AM MST (America/Denver)**
+**Last updated: November 3, 2026 at 3:55 AM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -29,7 +29,23 @@ I chose the listed component suppliers because I’m aiming for better-quality p
 
 ## Recorded component costs
 
-I’ve added **US$13.51** and **US$10.76** for the toggle switches, a combined cost of **US$24.27**. These amounts are for the two switch listings, not a complete panel build total. I still need to verify the selected switches’ fit and operation.
+These are my recorded costs so far, in **US dollars**.
+
+| Item | Quantity | Cost (USD) |
+|---|---:|---:|
+| QBSLDIW301GR white seven-segment LED digits | 10 | $17.43 |
+| A12515RNCQ rotary switches | 5 | $55.66 |
+| A11015RNCQ rotary switches | 3 | $35.07 |
+| Tax and tariffs on the rotary-switch and LED order | — | $27.13 |
+| Toggle-switch purchase | — | $13.51 |
+| Toggle-switch purchase | — | $10.76 |
+| Faceplate | 1 | $57.00 |
+| Pushbutton switches | — | $7.99 |
+| **Running total** | | **$224.55** |
+
+The rotary switches and LEDs came to **$108.16**, or **$135.29 including tax and tariffs**. Those charges are already included in the running total. I bought two spare LED digits and one spare A12515RNCQ switch. I still need to verify the selected toggle switches’ fit and operation.
+
+This is a running total of the costs listed above, not a complete build estimate. It does not include unlisted components, PCBs, or any additional shipping or fees.
 
 ## Things that need to be completed
 
