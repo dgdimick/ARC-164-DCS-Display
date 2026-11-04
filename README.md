@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 4, 2026 at 8:37 AM MST (America/Denver)**
+**Last updated: November 4, 2026 at 8:41 AM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -20,6 +20,8 @@ I also requested **anti-rotation slots in the clear backing panel** and supplied
 This would let me revisit frequency rotary switches using the [earlier staggered mounting concept](https://github.com/dgdimick/ARC-164-DCS-Display/blob/394ed3a46d2bc5caa23bab62e20b150761d81306/images/ARC-164_Staggered_PCB_Mount_Concept.png): **two PCBs total for the frequency controls, one carrying the two-switch group and the other carrying the three-switch group**. The picture is historical; its shaft-length labels are not final production dimensions.
 
 **I’m waiting for PC Flights’ reply. In the meantime, I’ll continue working on the LED display and its sub-board.** Availability, pricing, final dimensions, and mechanical fit are unconfirmed. The current frequency-encoder design remains the working baseline while I investigate this option.
+
+**I’m holding off on ordering parts until I hear back from PC Flights about the modified panel. If they can enlarge the FREQ holes as requested, I’ll return to rotary switches for the frequency controls and order the switches for that design.** Until then, the frequency-encoder quantities below are provisional, and I’ll keep working on the LED display.
 
 ## Current development order
 
@@ -63,6 +65,8 @@ My Teensy 4.1 cost **$37.95 including shipping**, and my faceplate cost **$70.59
 **This total is before PCBs, display drivers, resistors, connectors, and the other remaining parts. It is not the complete build cost.** I’ll update the total as I buy the remaining parts. Additional shipping or fees not listed above are also excluded.
 
 ## Order sheet — rotary controls and LED digits
+
+**Ordering on hold:** I’m waiting for PC Flights’ reply about the enlarged panel holes before ordering parts. If they can make the requested changes, I’ll use frequency rotary switches and revise this order sheet before purchasing them. The current frequency-encoder selection and quantities are provisional.
 
 This is my order sheet for **one ARC-164 panel**, updated **November 4, 2026**. I’ll buy the **30 mm encoders and SC36-11SURKWA LED digits from Mouser**. The MAIN and PRESET switches remain on the DigiKey list. These are full build quantities; I’ll deduct parts I already have before ordering.
 
