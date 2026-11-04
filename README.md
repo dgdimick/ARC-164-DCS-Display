@@ -19,7 +19,7 @@ I also requested **anti-rotation slots in the clear backing panel** and supplied
 
 This would let me revisit frequency rotary switches using the [earlier staggered mounting concept](https://github.com/dgdimick/ARC-164-DCS-Display/blob/394ed3a46d2bc5caa23bab62e20b150761d81306/images/ARC-164_Staggered_PCB_Mount_Concept.png): **two PCBs total for the frequency controls, one carrying the two-switch group and the other carrying the three-switch group**. The picture is historical; its shaft-length labels are not final production dimensions.
 
-**I’m waiting for PC Flights’ reply.** Availability, pricing, final dimensions, and mechanical fit are unconfirmed. The current frequency-encoder design remains the working baseline while I investigate this option.
+**I’m waiting for PC Flights’ reply. In the meantime, I’ll continue working on the LED display and its sub-board.** Availability, pricing, final dimensions, and mechanical fit are unconfirmed. The current frequency-encoder design remains the working baseline while I investigate this option.
 
 ## Current development order
 
