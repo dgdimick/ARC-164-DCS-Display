@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 4, 2026 at 2:41 AM MST (America/Denver)**
+**Last updated: November 4, 2026 at 2:43 AM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -33,7 +33,7 @@ These are my recorded purchases so far, in **US dollars**. The total includes ro
 
 | Item | Quantity | Cost (USD) |
 |---|---:|---:|
-| QBSLDIW301GR white seven-segment LED digits | 10 | $17.43 |
+| QBSLDIW301GR white seven-segment LED digits — earlier purchase; superseded by SC36-11SURKWA in the current build plan | 10 | $17.43 |
 | A12515RNCQ rotary switches — earlier long-shaft selection; no longer the current MAIN/PRESET choice | 5 | $55.66 |
 | A11015RNCQ rotary switches — 10 positions; DigiKey order not canceled, retained for ARC-210 V2 | 3 | $35.07 |
 | Tax and tariffs on the rotary-switch and LED order | — | $27.13 |
@@ -81,12 +81,12 @@ This is a **four-direction switch with a center pushbutton and rotary encoder**.
 
 ## Things that need to be completed
 
-**Last updated: November 3, 2026 at 8:03 AM MST (America/Denver)**
+**Last updated: November 4, 2026 at 2:43 AM MST (America/Denver)**
 <!-- Refresh this section timestamp whenever the work list changes, using the actual America/Denver time and MST/MDT. -->
 
 This is my current work list for the hardware, firmware, testing, and build instructions.
 
-1. **Panel layout and parts:** Confirm dimensions, mounting clearances, controls, and the complete parts list. **TONE and SQL switches:** Select the exact parts and verify their mounting dimensions, required operation and travel, and clearances before finalizing the PCB. Test-fit the selected [PC Flights six-digit frequency display](#frequency-display), including digit visibility and brightness through the smoked cover. **Choose the preset-channel display** for the 22 × 17.5 mm window, then check its dimensions, pinout, mounting height, and clearance.
+1. **Panel layout and parts:** Confirm dimensions, mounting clearances, controls, and the complete parts list. **TONE and SQL switches:** Select the exact parts and verify their mounting dimensions, required operation and travel, and clearances before finalizing the PCB. Test-fit **six SC36-11SURKWA digits for frequency and two for preset**, using [Mouser part 604-SC36-11SURKWA](https://www.mouser.com/en/ProductDetail/Kingbright/SC36-11SURKWA?qs=FRBiz4Wv1YMkVf5BvlPtDA%3D%3D). Check digit visibility and brightness through the smoked covers, pinout, mounting height, spacing, and clearance within the 53.5 × 17.5 mm frequency window and 22 × 17.5 mm preset window.
 2. **PCB, schematic, and rotary-encoder design:** Use rotary encoders for all five frequency controls, with no frequency-switch resistor ladders. Design the Main PCB with the MAIN and PRESET rotary switches, their resistor ladders, controller, and display circuitry. Update the rotary-encoder schematic, PCB footprints, and 3D models for the **PEC11R-4230F-S0024 encoders with 30 mm shafts**, including the FREQ, channel, and VOL controls. Place and connect VOL, reroute the encoder PCB, and check its connections to the Main PCB. Design the small display PCB and its standoff mounting, with the display soldered directly to the board; set the height after checking it against the faceplate. Finalize Teensy pin assignments, check the complete electrical design, and verify clearances and test fitting before ordering boards.
 3. **Printed parts:** Design and test-fit the required knobs, brackets, and spacers with the selected hardware. Verify shaft engagement, knob retention, mounting height, and clearance behind the faceplate.
 4. **DCS-BIOS mappings and any needed changes:** Check which inputs and display outputs are already available for this radio. Identify missing data, make any necessary export changes, and document them. Check the correct ARC-164 radio instance for each intended A-10 variant.
@@ -106,23 +106,23 @@ I’ll use USB for DCS-BIOS; Ethernet isn’t needed. The Teensy uses **3.3 V lo
 
 ## Seven-segment display plan
 
+I’ve selected **Kingbright SC36-11SURKWA** red, common-cathode, single-digit seven-segment displays for both frequency and preset. I’ll order **10 from [Mouser, part 604-SC36-11SURKWA](https://www.mouser.com/en/ProductDetail/Kingbright/SC36-11SURKWA?qs=FRBiz4Wv1YMkVf5BvlPtDA%3D%3D)**: **six for frequency, two for preset, and two spares**. These replace the earlier PC Flights amber display plan and the QBSLDIW301GR selection; the earlier purchases remain in the cost history.
+
+Each display has a **7.5 × 14 × 8.5 mm body**, **9.14 mm (0.36-inch) digits**, and a right-hand decimal point. Common cathodes are on **pins 1 and 6**. I’ll use the SC36-11SURKWA footprint and pinout when designing the display boards. See the [Kingbright datasheet](https://www.kingbrightusa.com/images/catalog/SPEC/SC36-11SURKWA.pdf).
+
 ### Frequency display
 
-I’ve chosen the [PC Flights six-digit 0.3-inch amber seven-segment display](https://pcflights.com/6-digits-7-segment-led-display-03-amber/) for frequency. Its drawing shows a **41 × 11 mm body, 5.8 mm thick**, with approximately **7.7 mm-tall digits**. It is **common cathode**, with a decimal point on every digit, so it can show a frequency such as **251.000**. The body fits within the **53.5 × 17.5 mm frequency window**. I still need to test brightness through the smoked cover and check the mounting, pinout, driver wiring, and clearance behind the faceplate.
-
-<a href="images/PC-Flights-Six-Digit-Amber-Display-Drawing.png"><img src="images/PC-Flights-Six-Digit-Amber-Display-Drawing.png" width="350" alt="PC Flights six-digit amber display dimensions and common-cathode pinout drawing"></a>
-
-*PC Flights display drawing. Click to enlarge the dimensions and pinout.*
+I’ll use **six SC36-11SURKWA digits** to show a frequency such as **251.000**. Six bodies side by side occupy **45 × 14 mm before spacing**, within the **53.5 × 17.5 mm frequency window**. Final spacing, alignment, brightness through the smoked cover, and clearance behind the faceplate still need physical testing.
 
 ### Display mounting
 
-I’ll use a **small frequency-display PCB mounted on standoffs**, with the **display soldered directly to it**. I’ll set the standoff height during test fitting so the display sits at the correct height behind the faceplate window, with clearance from the switches and other boards. The driver circuitry can be connected by wires if it needs to sit elsewhere. The display PCB, mounting points, and final standoff height still need to be designed and tested.
+I’ll solder the digits directly to display PCBs mounted on standoffs. I’ll set the standoff height during test fitting so the digits sit at the correct height behind the windows, with clearance from the switches and other boards. The display boards, mounting points, final standoff heights, and driver wiring still need designing and testing.
 
-### Preset-channel display — selection pending
+### Preset-channel display
 
-**I still need to choose the two-digit channel display** for channels 1–20 behind the **22 × 17.5 mm window**. PC Flights offers [single-digit amber displays](https://pcflights.com/7-segment-led-display-03-amber/) and a [three-digit amber display](https://pcflights.com/3-digits-7-segment-led-display-03-amber/). I’ll check whether two single-digit displays fit side by side, or whether a three-digit package could show two digits with the unused digit left blank and hidden behind the faceplate. Neither arrangement is selected yet; package dimensions, pinout, digit alignment, mounting height, and brightness still need checking.
+I’ll use **two SC36-11SURKWA digits** for channels 1–20. Two bodies occupy **15 × 14 mm before spacing**, within the **22 × 17.5 mm preset window**. Package dimensions establish a preliminary fit; I still need to check digit alignment, brightness through the smoked cover, mounting height, and physical clearances.
 
-The earlier three-four-digit-block arrangement is no longer my display plan. I’ll finalize the channel display and driver arrangement before completing the display PCB and suitable 3.3 V-to-5 V logic buffering for the Teensy.
+I’ll finalize the display-driver arrangement and suitable 3.3 V-to-5 V logic buffering for the Teensy before completing the display PCB design.
 
 ## Frequency controls
 
