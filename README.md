@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 4, 2026 at 6:48 AM MST (America/Denver)**
+**Last updated: November 4, 2026 at 6:50 AM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -73,13 +73,15 @@ Prices use the quantity-five encoder tier, quantity-one switch tier, and Mouser�
 
 I’ve selected **Kingbright WP710A10SGD**, a **3 mm through-hole green LED with a diffused lens**, for the ARC-164 and ARC-210 panel-backlighting plan. See [Mouser part 604-WP710A10SGD](https://www.mouser.com/ProductDetail/Kingbright/WP710A10SGD?qs=jBF9H7RTBaS5vBvRdVQZww%3D%3D) and the [Kingbright datasheet](https://www.kingbrightusa.com/images/catalog/spec/wp710a10sgd.pdf). Final brightness, light spread, and mounting fit behind the lettering still need testing.
 
-| Quantity | Allocation | Manufacturer part number | Mouser order number |
-| ---: | --- | --- | --- |
-| 24 | ARC-164 backlighting — allows for the planned 20–24 LEDs | WP710A10SGD | 604-WP710A10SGD |
-| 38 | ARC-210 backlighting | WP710A10SGD | 604-WP710A10SGD |
-| **62 total** | **Combined order quantity, excluding spares** | **WP710A10SGD** | **604-WP710A10SGD** |
+**Backlight LED quantities are still being decided.** The figures below are provisional planning estimates, not finalized purchase quantities. I’ll confirm them after laying out the LEDs behind the lettering and testing light coverage.
 
-These LEDs require **one current-limiting resistor per LED branch** on the regulated 5 V supply. I’ll start brightness testing with **330 Ω resistors**, approximately **8.5 mA per LED** at the datasheet’s typical 2.2 V forward voltage; actual current and brightness will vary. At that nominal current, 62 LEDs draw approximately 0.53 A at full duty, excluding the displays and controllers. The final resistor selection and power budget remain subject to testing.
+| Provisional quantity | Allocation | Manufacturer part number | Mouser order number |
+| ---: | --- | --- | --- |
+| 24 | ARC-164 backlighting — initial estimate of 20–24 LEDs | WP710A10SGD | 604-WP710A10SGD |
+| 38 | ARC-210 backlighting | WP710A10SGD | 604-WP710A10SGD |
+| **62 total** | **Planning total only; final quantity TBD, excluding spares** | **WP710A10SGD** | **604-WP710A10SGD** |
+
+These LEDs require **one current-limiting resistor per LED branch** on the regulated 5 V supply. I’ll start brightness testing with **330 Ω resistors**, approximately **8.5 mA per LED** at the datasheet’s typical 2.2 V forward voltage; actual current and brightness will vary. For the provisional 62-LED estimate, that nominal current would draw approximately 0.53 A at full duty, excluding the displays and controllers. The final resistor selection and power budget remain subject to testing.
 
 The LEDs will sit behind the lettering, with opaque shielding around display windows. They will use the panel-backlighting driver, not the MAX7219 segment outputs. **Confirm price and availability in the Mouser cart; these additional LEDs and their resistors are not included in the $55.81 ARC-164 subtotal above.**
 
