@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 4, 2026 at 5:29 AM MST (America/Denver)**
+**Last updated: November 4, 2026 at 6:37 AM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -81,7 +81,7 @@ This is a **four-direction switch with a center pushbutton and rotary encoder**.
 
 ## Things that need to be completed
 
-**Last updated: November 4, 2026 at 2:43 AM MST (America/Denver)**
+**Last updated: November 4, 2026 at 6:37 AM MST (America/Denver)**
 <!-- Refresh this section timestamp whenever the work list changes, using the actual America/Denver time and MST/MDT. -->
 
 This is my current work list for the hardware, firmware, testing, and build instructions.
@@ -90,7 +90,7 @@ This is my current work list for the hardware, firmware, testing, and build inst
 2. **PCB, schematic, and rotary-encoder design:** Use rotary encoders for all five frequency controls, with no frequency-switch resistor ladders. Design the Main PCB with the MAIN and PRESET rotary switches, their resistor ladders, controller, and display circuitry. Update the rotary-encoder schematic, PCB footprints, and 3D models for the **PEC11R-4230F-S0024 encoders with 30 mm shafts**, including the FREQ, channel, and VOL controls. Place and connect VOL, reroute the encoder PCB, and check its connections to the Main PCB. Design the small display PCB and its standoff mounting, with the display soldered directly to the board; set the height after checking it against the faceplate. Finalize Teensy pin assignments, check the complete electrical design, and verify clearances and test fitting before ordering boards.
 3. **Printed parts:** Design and test-fit the required knobs, brackets, and spacers with the selected hardware. Verify shaft engagement, knob retention, mounting height, and clearance behind the faceplate.
 4. **DCS-BIOS mappings and any needed changes:** Check which inputs and display outputs are already available for this radio. Identify missing data, make any necessary export changes, and document them. Check the correct ARC-164 radio instance for each intended A-10 variant.
-5. **Firmware:** Write the control and display firmware and verify USB communication with DCS-BIOS.
+5. **Firmware:** Write the control and display firmware and verify USB communication with DCS-BIOS. Implement DCS-BIOS-controlled MAX7219 display brightness and PWM panel backlighting, with separate brightness curves and off-state handling; see the [lighting design plan](#dcs-bios-display-brightness-and-panel-backlighting).
 6. **Bench and board testing:** Test the controls, displays, and power requirements together, then assemble and electrically test the manufactured boards.
 7. **Dual ARC-164 support:** Integrate support for aircraft with two ARC-164 radios, such as the A-10C. I plan to use a single jumper on the Main PCB to select whether each panel operates as **Radio 1 or Radio 2**. Design the jumper input and firmware selection, verify the DCS-BIOS mappings for both radio instances, and test both panels together.
 8. **Testing in DCS:** Check control operation, display updates, startup behavior, reconnection, and extended reliability with the intended aircraft and the other radio panels connected.
@@ -123,6 +123,18 @@ I’ll solder the digits directly to display PCBs mounted on standoffs. I’ll s
 I’ll use **two SC36-11SURKWA digits** for channels 1–20. Two bodies occupy **15 × 14 mm before spacing**, within the **22 × 17.5 mm preset window**. Package dimensions establish a preliminary fit; I still need to check digit alignment, brightness through the smoked cover, mounting height, and physical clearances.
 
 I’ll finalize the display-driver arrangement and suitable 3.3 V-to-5 V logic buffering for the Teensy before completing the display PCB design.
+
+### DCS-BIOS display brightness and panel backlighting
+
+I’ll have **DCS-BIOS control both the seven-segment display brightness and the panel backlighting**. For the A-10C/A-10C II, the initial mapping is the exported **`INT_CONSOLE_L_BRIGHT` (Console Light Brightness)** value from the [DCS-BIOS A-10C module](https://github.com/DCS-Skunkworks/dcs-bios/blob/main/Scripts/DCS-BIOS/lib/modules/aircraft_modules/A-10C.lua). I still need to verify its behavior in DCS, including aircraft electrical power and lighting-off conditions.
+
+- **Display brightness:** The Teensy will set the intensity registers on both MAX7219 drivers. Each driver has 16 intensity levels; firmware will use shutdown for a fully dark display. Both display windows will follow the cockpit lighting level, with a separately adjustable display brightness curve.
+- **Panel backlighting:** I’ll reserve one PWM-capable Teensy GPIO for a low-side N-channel MOSFET driver. The MOSFET must be specified for operation at a 3.3 V gate drive, with a gate resistor and gate-to-ground pull-down. The 5 V LED branches will have suitable current-limiting resistors. LED current will come from the external supply, not from a Teensy GPIO. Firmware will use a separate backlight brightness curve.
+- **Power and connections:** A reusable distribution board will accept user-supplied regulated 5 V DC and distribute it to the panels. The panel’s MOSFET circuit will control its own backlighting; the distribution board will not regulate voltage or control brightness. Grounds will be shared, and external 5 V must not backfeed USB/VUSB. The display sub-board will carry both MAX7219 drivers, their current-setting and decoupling parts, and suitable 3.3 V-to-5 V logic buffering.
+- **Light shielding:** I’ll design a 3D-printed opaque light shield around the display windows to prevent panel-backlight spill from washing out the seven-segment displays.
+- **Startup and testing:** Firmware will start with both lighting outputs off until initialized. I still need to finalize the GPIO, MOSFET, LED quantities, resistor values, connectors, power budget, DCS mapping, and connection-loss behavior, then test dimming, flicker, heat, and light leakage.
+
+This is an approved design requirement; the lighting schematic, PCB layout, and firmware are still to be implemented and tested.
 
 ## Frequency controls
 
