@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 3, 2026 at 8:47 AM MST (America/Denver)**
+**Last updated: November 4, 2026 at 2:41 AM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -29,13 +29,13 @@ I chose the listed component suppliers because I’m aiming for better-quality p
 
 ## Recorded component costs
 
-These are my recorded purchases so far, in **US dollars**. The total includes rotary switches bought before I returned to frequency encoders; it is not a shopping list for the current design. The **A11015RNCQ switches are 10-position switches** and were the wrong parts for the ARC-164. I’ve requested cancellation from DigiKey; **if the order is not canceled, I’ll keep them as parts for ARC-210 V2**.
+These are my recorded purchases so far, in **US dollars**. The total includes rotary switches bought before I returned to frequency encoders; it is not a shopping list for the current design. The **A11015RNCQ switches are 10-position switches** and were the wrong parts for the ARC-164. **DigiKey did not cancel my order, so I’ll keep the A11015RNCQ switches as parts for ARC-210 V2**.
 
 | Item | Quantity | Cost (USD) |
 |---|---:|---:|
 | QBSLDIW301GR white seven-segment LED digits | 10 | $17.43 |
 | A12515RNCQ rotary switches — earlier long-shaft selection; no longer the current MAIN/PRESET choice | 5 | $55.66 |
-| A11015RNCQ rotary switches — 10 positions; for ARC-210 V2 if DigiKey does not cancel the order | 3 | $35.07 |
+| A11015RNCQ rotary switches — 10 positions; DigiKey order not canceled, retained for ARC-210 V2 | 3 | $35.07 |
 | Tax and tariffs on the rotary-switch and LED order | — | $27.13 |
 | Toggle-switch purchase | — | $13.51 |
 | Toggle-switch purchase | — | $10.76 |
@@ -54,18 +54,18 @@ My Teensy 4.1 cost **$37.95 including shipping**, and my faceplate cost **$70.59
 
 ## Order sheet — rotary controls and LED digits
 
-This is my order sheet for **one ARC-164 panel**, updated **November 3, 2026**. I’ll buy the **30 mm encoders from Mouser**. The switches and LED digits remain on the DigiKey list. These are full build quantities; I’ll deduct parts I already have before ordering.
+This is my order sheet for **one ARC-164 panel**, updated **November 4, 2026**. I’ll buy the **30 mm encoders and SC36-11SURKWA LED digits from Mouser**. The MAIN and PRESET switches remain on the DigiKey list. These are full build quantities; I’ll deduct parts I already have before ordering.
 
 | Quantity | Use | Manufacturer part number | Supplier / order number | Estimated unit price (USD) | Estimated total (USD) |
 | ---: | --- | --- | --- | ---: | ---: |
 | 7 | Five FREQ encoders, channel encoder, and VOL | PEC11R-4230F-S0024 | [Mouser: 652-PEC11R-4230F-S24](https://www.mouser.com/en/ProductDetail/Bourns/PEC11R-4230F-S0024?qs=Zq5ylnUbLm6MC5h%2FLr6Brg%3D%3D) | $2.07 | $14.49 |
 | 2 | MAIN and PRESET rotary switches | A12505RNCQ | [DigiKey: CKN10203-ND](https://www.digikey.com/en/products/detail/c-k/A12505RNCQ/2043159) | $13.41 | $26.82 |
-| 10 | White 0.3-inch common-cathode seven-segment LED digits | QBSLDIW301GR | [DigiKey: 1516-QBSLDIW301GR-ND](https://www.digikey.com/en/products/detail/qt-brightek-qtb/QBSLDIW301GR/22077720) | $1.743 | $17.43 |
-| | **Estimated subtotal** | | | | **$58.74** |
+| 10 | Red 0.36-inch common-cathode seven-segment LED digits | SC36-11SURKWA | [Mouser: 604-SC36-11SURKWA](https://www.mouser.com/en/ProductDetail/Kingbright/SC36-11SURKWA?qs=FRBiz4Wv1YMkVf5BvlPtDA%3D%3D) | $1.45 | $14.50 |
+| | **Estimated subtotal** | | | | **$55.81** |
 
 All seven encoders have **30 mm shafts**. MAIN and PRESET use the **same A12505RNCQ switch**, with the stop ring set to **4 positions for MAIN** and **3 positions for PRESET**; both index at **45° per position**.
 
-Prices use the quantity-five encoder tier, quantity-one switch tier, and quantity-ten LED tier. Prices can change; shipping, tax, and tariffs are excluded. This estimate is separate from my recorded purchases.
+Prices use the quantity-five encoder tier, quantity-one switch tier, and Mouser’s quantity-ten SC36-11SURKWA LED tier. The LED price is $1.45 each ($14.50 for ten), checked November 4, 2026. Prices can change; shipping, tax, and tariffs are excluded. This estimate is separate from my recorded purchases.
 
 **This is not the complete build BOM.** TONE, SQL, STATUS, display drivers, other display components, resistors, capacitors, connectors, PCBs, and other remaining parts are excluded.
 
@@ -77,7 +77,7 @@ I’ll add this part to the same Mouser order as the ARC-164 encoders. It is for
 | ---: | --- | --- | --- | --- |
 | 1 | Emergency pitch/roll trim directional switch | Alps Alpine RKJXT1F42001 | [688-RKJXT1F42001](https://www.mouser.com/en/ProductDetail/Alps-Alpine/RKJXT1F42001?qs=6EGMNY9ZYDTsBzSTrhiL0w%3D%3D) | Confirm USD price in cart |
 
-This is a **four-direction switch with a center pushbutton and rotary encoder**. I plan to use its four directions for emergency pitch and roll trim; the center pushbutton and rotary encoder will remain unused. Physical mounting, knob fit, and operating feel still need checking. Its cost is **not included in the $58.74 ARC-164 subtotal** above.
+This is a **four-direction switch with a center pushbutton and rotary encoder**. I plan to use its four directions for emergency pitch and roll trim; the center pushbutton and rotary encoder will remain unused. Physical mounting, knob fit, and operating feel still need checking. Its cost is **not included in the $55.81 ARC-164 subtotal** above.
 
 ## Things that need to be completed
 
