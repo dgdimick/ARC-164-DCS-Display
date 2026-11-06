@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 6, 2026 at 1:41 PM MST (America/Denver)**
+**Last updated: November 6, 2026 at 4:13 PM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -10,6 +10,12 @@
 *Panel reference photo: PC Flights.*
 
 I’m developing the hardware and firmware for my ARC-164 radio panel.
+
+## Physical mockup — November 6, 2026
+
+[![ARC-164 physical mockup showing the faceplate, control shafts, display covers, and printed board assembly](images/ARC-164_Mockup.jpg)](images/ARC-164_Mockup.jpg)
+
+Here’s my current ARC-164 mockup, showing the faceplate, control shafts, and display covers together with the 3D-printed board assembly. I’m using this to check the mechanical layout and clearances as I continue building the encoder version. This is a physical mockup, not a completed or electrically tested panel. Click the photo to see it full size.
 
 ## Development update — November 6, 2026
 
