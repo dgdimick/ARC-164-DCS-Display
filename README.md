@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 6, 2026 at 1:30 PM MST (America/Denver)**
+**Last updated: November 6, 2026 at 1:32 PM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -15,7 +15,7 @@ I’m developing the hardware and firmware for my ARC-164 radio panel.
 
 **PC Flights confirmed they can make the modified ARC-164 panel for US$57 plus a US$20 custom-order fee—US$77 total before any shipping or other charges.** This is their quote for the requested panel changes; I haven’t placed the custom order yet.
 
-I’ve asked whether they would make the modified panel a **stocked option for other builders**, so people following this project could buy it without arranging a special order. I’d be happy to buy one and build with it. **A stocked option has not been confirmed; I’m waiting for their reply.** In the meantime, I’ll keep working on the LED display and its sub-board.
+I’ve asked whether they would make the modified panel a **stocked option for other builders**, so people following this project could buy it without arranging a special order. I’d be happy to buy one and build with it. **A stocked option has not been confirmed; I’m waiting for their reply.** **While I wait for their reply, I’ll continue building the rotary-encoder version of the ARC-164. I’ll revisit the rotary-switch version later, after completing the ARC-186 and ARC-210 v2.0 projects.**
 
 ## Development update — November 4, 2026
 
@@ -27,7 +27,7 @@ This would let me revisit frequency rotary switches using the [earlier staggered
 
 **November 6 follow-up:** PC Flights has confirmed they can make the requested changes and supplied the quote above. Stocked availability, final dimensions, and mechanical fit still need confirmation. The current frequency-encoder design remains the working baseline while I investigate this option.
 
-**I’m holding off on ordering the alternative frequency-control parts while I follow up with PC Flights about the modified panel and a possible stocked option. I plan to return to rotary switches for the frequency controls if I proceed with that panel, and I’ll revise the design and parts list before ordering.** Until then, the frequency-encoder quantities below are provisional, and I’ll keep working on the LED display.
+**The rotary-switch alternative is deferred until after the ARC-186 and ARC-210 v2.0 projects. I’ll continue building the frequency-encoder version now, including its LED display.** I’ll revisit the modified panel, switch selection, and parts list when I return to the rotary-switch version.
 
 ## Current development order
 
@@ -72,7 +72,7 @@ My Teensy 4.1 cost **$37.95 including shipping**, and my faceplate cost **$70.59
 
 ## Order sheet — rotary controls and LED digits
 
-**Ordering on hold:** PC Flights can make the requested panel changes; I’m following up about a stocked option before proceeding. If I proceed with the modified panel, I’ll use frequency rotary switches and revise this order sheet before purchasing them. The current frequency-encoder selection and quantities are provisional.
+**Current build: rotary encoders.** I’ll continue building the encoder version while waiting for PC Flights’ reply about a stocked modified panel. The rotary-switch alternative is deferred until after the ARC-186 and ARC-210 v2.0 projects. The order sheet below is for the encoder version; quantities and fit still need final checks before purchasing.
 
 This is my order sheet for **one ARC-164 panel**, updated **November 4, 2026**. I’ll buy the **30 mm encoders and SC36-11SURKWA LED digits from Mouser**. The MAIN and PRESET switches remain on the DigiKey list. These are full build quantities; I’ll deduct parts I already have before ordering.
 
@@ -123,7 +123,7 @@ This is a **four-direction switch with a center pushbutton and rotary encoder**.
 This is my current work list for the hardware, firmware, testing, and build instructions.
 
 1. **Panel layout and parts:** Confirm dimensions, mounting clearances, controls, and the complete parts list. **TONE and SQL switches:** Select the exact parts and verify their mounting dimensions, required operation and travel, and clearances before finalizing the PCB. Test-fit **six SC36-11SURKWA digits for frequency and two for preset**, using [Mouser part 604-SC36-11SURKWA](https://www.mouser.com/en/ProductDetail/Kingbright/SC36-11SURKWA?qs=FRBiz4Wv1YMkVf5BvlPtDA%3D%3D). Check digit visibility and brightness through the smoked covers, pinout, mounting height, spacing, and clearance within the 53.5 × 17.5 mm frequency window and 22 × 17.5 mm preset window.
-2. **PCB, schematic, and rotary-encoder design:** Continue the current five-frequency-encoder design, with no frequency-switch resistor ladders, while following up with PC Flights about stocking the modified panel and assessing the alternative staggered rotary-switch arrangement. Design the Main PCB with the MAIN and PRESET rotary switches, their resistor ladders, controller, and display circuitry. Update the rotary-encoder schematic, PCB footprints, and 3D models for the **PEC11R-4230F-S0024 encoders with 30 mm shafts**, including the FREQ, channel, and VOL controls. Place and connect VOL, reroute the encoder PCB, and check its connections to the Main PCB. Design the small display PCB and its standoff mounting, with the display soldered directly to the board; set the height after checking it against the faceplate. Finalize Teensy pin assignments, check the complete electrical design, and verify clearances and test fitting before ordering boards.
+2. **PCB, schematic, and rotary-encoder design:** Continue the current five-frequency-encoder design, with no frequency-switch resistor ladders, while following up with PC Flights about stocking the modified panel. Revisit the alternative staggered rotary-switch arrangement after completing the ARC-186 and ARC-210 v2.0 projects. Design the Main PCB with the MAIN and PRESET rotary switches, their resistor ladders, controller, and display circuitry. Update the rotary-encoder schematic, PCB footprints, and 3D models for the **PEC11R-4230F-S0024 encoders with 30 mm shafts**, including the FREQ, channel, and VOL controls. Place and connect VOL, reroute the encoder PCB, and check its connections to the Main PCB. Design the small display PCB and its standoff mounting, with the display soldered directly to the board; set the height after checking it against the faceplate. Finalize Teensy pin assignments, check the complete electrical design, and verify clearances and test fitting before ordering boards.
 3. **Printed parts:** Design and test-fit the required knobs, brackets, and spacers with the selected hardware. Verify shaft engagement, knob retention, mounting height, and clearance behind the faceplate.
 4. **DCS-BIOS mappings and any needed changes:** Check which inputs and display outputs are already available for this radio. Identify missing data, make any necessary export changes, and document them. Check the correct ARC-164 radio instance for each intended A-10 variant.
 5. **Firmware:** Write the control and display firmware and verify USB communication with DCS-BIOS. Implement DCS-BIOS-controlled MAX7219 display brightness and PWM panel backlighting, with separate brightness curves and off-state handling; see the [lighting design plan](#dcs-bios-display-brightness-and-panel-backlighting).
@@ -174,7 +174,7 @@ This is an approved design requirement; the lighting schematic, PCB layout, and 
 
 ## Frequency controls
 
-**The current design uses rotary encoders for all five frequency controls.** I’m also investigating a rotary-switch alternative after asking PC Flights about enlarged FREQ holes in both panel layers and anti-rotation slots in the clear backing panel. See the [November 6 development update](#development-update--november-6-2026) for PC Flights’ quote and my request for a stocked option. A rotary-switch version still needs further mechanical and electrical design and testing.
+**The current design uses rotary encoders for all five frequency controls.** I’m also investigating a rotary-switch alternative after asking PC Flights about enlarged FREQ holes in both panel layers and anti-rotation slots in the clear backing panel. See the [November 6 development update](#development-update--november-6-2026) for PC Flights’ quote and my request for a stocked option. **I’ll revisit the rotary-switch version after completing the ARC-186 and ARC-210 v2.0 projects.** It will still need further mechanical and electrical design and testing.
 
 I originally planned to use frequency rotary switches, but I’ve restored my original ARC-164 encoder KiCad project and will check its fit, clearances, and wiring before continuing the design. The **A11015RNCQ switches were the wrong parts for the ARC-164**. I’ve requested cancellation from DigiKey; **if the order is not canceled, I’ll keep them as parts for ARC-210 V2**.
 
