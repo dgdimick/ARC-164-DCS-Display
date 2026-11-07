@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 7, 2026 at 11:06 AM MST (America/Denver)**
+**Last updated: November 7, 2026 at 11:12 AM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -105,11 +105,12 @@ Prices use the quantity-five encoder tier, quantity-one switch tier, and Mouserâ
 
 | Quantity | Use | Manufacturer part number | Supplier / order number |
 | ---: | --- | --- | --- |
+| 1 | J11 edge-mounted, right-angle, through-hole barrel power jack | Same Sky PJ-102AH | [Mouser: 490-PJ-102AH](https://www.mouser.com/en/ProductDetail/Same-Sky/PJ-102AH?qs=WyjlAZoYn50Yq4CrVLCXLw%3D%3D) |
 | 1 | Regulated 5 V, 4 A supply for the displays and panel backlighting | MEAN WELL GST25A05-P1J | [Mouser: 709-GST25A05-P1J](https://www.mouser.com/en/ProductDetail/MEAN-WELL/GST25A05-P1J?mgh=1&qs=drgMNd%252BkGPOX8brSXUPVtQ%3D%3D) |
 
 **You can use another power supply, but it must provide well-regulated 5 V DC**, with a voltage tolerance of **Â±5% or better**, enough current for the connected panels, and a **5.5 mm outer / 2.1 mm inner, center-positive barrel plug** to fit J11. The recommended supply provides 4 A; the circuit draws only the current it needs. The Power Driver Board does not reduce a higher input voltage to 5 V.
 
-The GST25A05-P1J requires a separate **IEC C13 mains cord** (the standard desktop-computer type). See the [MEAN WELL datasheet](https://www.meanwell.com/Upload/PDF/GST25A/GST25A-SPEC.PDF). The Teensy remains powered through USB; the external supply powers the display and backlight circuits. The supply and mains cord are **not included in the rotary-control and LED subtotal above**; check current supplier pricing.
+The GST25A05-P1J requires a separate **IEC C13 mains cord** (the standard desktop-computer type). See the [MEAN WELL datasheet](https://www.meanwell.com/Upload/PDF/GST25A/GST25A-SPEC.PDF). The Teensy remains powered through USB; the external supply powers the display and backlight circuits. The jack, supply, and mains cord are **not included in the rotary-control and LED subtotal above**; check current supplier pricing.
 
 ### USB adapter cable
 
