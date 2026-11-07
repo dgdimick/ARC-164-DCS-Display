@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 7, 2026 at 11:17 AM MST (America/Denver)**
+**Last updated: November 7, 2026 at 11:26 AM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -17,11 +17,25 @@ The **Power Driver Board now has a PCB-mounted PJ-102AH barrel power jack at J11
 
 The recommended supply is the **MEAN WELL GST25A05-P1J (5 V, 4 A)**. Other supplies are welcome, but they must provide **well-regulated 5 V DC**, sufficient current, and the correct plug and polarity. See the [power-supply parts-list section](#external-regulated-5-v-power-supply) for the Mouser link, specifications, and mains-cord requirement. The board does not convert a higher input voltage to 5 V.
 
+I’ve also added [recommended IC sockets and Teensy headers](#recommended-ic-sockets-and-teensy-headers) to the parts list, with Mouser links: **two 24-pin sockets for U11/U12, one 14-pin socket for U13, and two pairs of 24-pin male headers and female sockets for the Teensy**. I normally recommend these to reduce the risk of overheating the ICs during soldering and to make replacement easier. Solder the empty IC sockets first, let the board cool, and then install the chips. The Teensy’s male headers still need soldering unless its pins are already fitted.
+
 ## Physical mockup — November 6, 2026
 
 [![ARC-164 physical mockup showing the faceplate, control shafts, display covers, and printed board assembly](images/ARC-164_Mockup.jpg)](images/ARC-164_Mockup.jpg)
 
 Here’s my current ARC-164 mockup, showing the faceplate, control shafts, and display covers together with the 3D-printed board assembly. I’m using this to check the mechanical layout and clearances as I continue building the encoder version. This is a physical mockup, not a completed or electrically tested panel. Click the photo to see it full size.
+
+## PCB Sub-Board images
+
+### Front of the PCB Sub-Board
+
+[![Front of the PCB Sub-Board — KiCad 3D view](images/ARC-164_PCB_Sub-Board_Front.png)](images/ARC-164_PCB_Sub-Board_Front.png)
+
+### Back of the PCB Sub-Board
+
+[![Back of the PCB Sub-Board — KiCad 3D view](images/ARC-164_PCB_Sub-Board_Back.png)](images/ARC-164_PCB_Sub-Board_Back.png)
+
+Click either image to view it full size.
 
 ## Development update — November 6, 2026
 
