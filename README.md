@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 6, 2026 at 4:13 PM MST (America/Denver)**
+**Last updated: November 7, 2026 at 11:06 AM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -10,6 +10,12 @@
 *Panel reference photo: PC Flights.*
 
 I’m developing the hardware and firmware for my ARC-164 radio panel.
+
+## Development update — November 7, 2026
+
+The **Power Driver Board now has a PCB-mounted PJ-102AH barrel power jack at J11**, replacing the two-pin power-input header. The jack sits at the right-hand board edge with its opening facing outward for easy access. It accepts **regulated 5 V DC through a 5.5 × 2.1 mm center-positive plug**.
+
+The recommended supply is the **MEAN WELL GST25A05-P1J (5 V, 4 A)**. Other supplies are welcome, but they must provide **well-regulated 5 V DC**, sufficient current, and the correct plug and polarity. See the [power-supply parts-list section](#external-regulated-5-v-power-supply) for the Mouser link, specifications, and mains-cord requirement. The board does not convert a higher input voltage to 5 V.
 
 ## Physical mockup — November 6, 2026
 
