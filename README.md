@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 7, 2026 at 12:32 PM MST (America/Denver)**
+**Last updated: November 7, 2026 at 1:35 PM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -383,7 +383,7 @@ I welcome bug reports from anyone using the project—**even tiny bugs are worth
 
 ## PC Flights affiliation
 
-I am not affiliated with [PC Flights](https://pcflights.com/) in any way. I simply chose to use their panels for my own cockpit projects. PC Flights has supplied me with a drawing file to assist with the Button PCB layout.
+I am not affiliated with [PC Flights](https://pcflights.com/) in any way. I simply chose to use their panels for my own cockpit projects. PC Flights supplied me with a panel drawing file to help lay out the ARC-164 PCBs, and I appreciate their help. I have also requested a panel layout file for the [ARC-186 project](https://github.com/dgdimick/ARC-186-DCS-Display) so I can plan its PCBs and check the control, display, and mounting-hole locations. I am waiting for their reply to that request.
 
 ## Disclaimer
 
