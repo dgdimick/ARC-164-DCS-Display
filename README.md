@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 7, 2026 at 11:35 AM MST (America/Denver)**
+**Last updated: November 7, 2026 at 11:36 AM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -273,6 +273,8 @@ I plan to use a **spring-loaded momentary toggle for TONE**: hold it to activate
 For **STATUS**, I plan to use a **normally open momentary pushbutton, not a light**. The contacts close while the button is pressed and open again when it is released.
 
 ## Assembly instructions
+
+**General assembly tip:** It’s usually best to solder the shortest components first, then work up to the taller parts. This makes it easier to keep components seated against the PCB while soldering. Follow the board-specific order below.
 
 ### Main Board
 
