@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 7, 2026 at 11:40 AM MST (America/Denver)**
+**Last updated: November 7, 2026 at 11:43 AM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -80,6 +80,10 @@ This would let me revisit frequency rotary switches using the [earlier staggered
 For these two radio panels, I plan to build and test the **ARC-164**, followed by the **ARC-186**, then investigate additional aircraft support with matching physical radio panels.
 
 **This order may change based on user feedback and interest.** These are plans, not fixed release dates.
+
+### Future versions and upgrades
+
+**Future upgrades:** It may be as long as **two years** before I return to this project with upgrades or a new version. Please treat future-version ideas as long-term plans, with no promised release date.
 
 ## Other SIMPIT panels
 
