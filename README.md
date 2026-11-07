@@ -95,6 +95,16 @@ Prices use the quantity-five encoder tier, quantity-one switch tier, and Mouser�
 
 **This is not the complete build BOM.** TONE, SQL, STATUS, display drivers, other display components, resistors, capacitors, connectors, PCBs, and other remaining parts are excluded.
 
+### External regulated 5 V power supply
+
+| Quantity | Use | Manufacturer part number | Supplier / order number |
+| ---: | --- | --- | --- |
+| 1 | Regulated 5 V, 4 A supply for the displays and panel backlighting | MEAN WELL GST25A05-P1J | [Mouser: 709-GST25A05-P1J](https://www.mouser.com/en/ProductDetail/MEAN-WELL/GST25A05-P1J?mgh=1&qs=drgMNd%252BkGPOX8brSXUPVtQ%3D%3D) |
+
+**You can use another power supply, but it must provide well-regulated 5 V DC**, with a voltage tolerance of **±5% or better**, enough current for the connected panels, and a **5.5 mm outer / 2.1 mm inner, center-positive barrel plug** to fit J11. The recommended supply provides 4 A; the circuit draws only the current it needs. The Power Driver Board does not reduce a higher input voltage to 5 V.
+
+The GST25A05-P1J requires a separate **IEC C13 mains cord** (the standard desktop-computer type). See the [MEAN WELL datasheet](https://www.meanwell.com/Upload/PDF/GST25A/GST25A-SPEC.PDF). The Teensy remains powered through USB; the external supply powers the display and backlight circuits. The supply and mains cord are **not included in the rotary-control and LED subtotal above**; check current supplier pricing.
+
 ### USB adapter cable
 
 Use **one USB-C-to-Micro-B data cable per panel** to connect the Teensy 4.1’s Micro-B device port to a computer or hub with a USB-C port. The linked option is a **1 ft (30.5 cm), male-to-male cable carrying both data and power**:
