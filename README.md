@@ -274,6 +274,8 @@ For **STATUS**, I plan to use a **normally open momentary pushbutton, not a ligh
 
 ## Assembly instructions
 
+I’ll post pictures of my build to help you follow the assembly steps.
+
 **General assembly tip:** It’s usually best to solder the shortest components first, then work up to the taller parts. This makes it easier to keep components seated against the PCB while soldering. Follow the board-specific order below.
 
 ### Main Board
