@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 7, 2026 at 12:12 PM MST (America/Denver)**
+**Last updated: November 7, 2026 at 12:21 PM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -9,17 +9,19 @@
 
 *Panel reference photo: PC Flights.*
 
-I’m developing the hardware and firmware for my ARC-164 radio panel.
+I’m building an ARC-164 radio panel for my SIMPIT and sharing the files and what I learn along the way. I hope you’ll enjoy building one too, and perhaps help me make it better.
 
 ## Development update — November 7, 2026
 
-**Version 1.0 PCB prototypes are now available for all three boards: the Main Board, Power Driver Board, and LED Sub-Board.** [Download the complete prototype package](https://github.com/dgdimick/ARC-164-DCS-Display/releases/download/pcb-v1.0-prototype/ARC-164-PCBs-v1.0-Prototype.zip) or see the [PCB download overview](PCBs/README.md) for individual board files and fabrication ZIPs. The package includes editable KiCad projects, libraries and 3D models, schematic PDFs, BOMs, Gerbers, drill files, previews, and [current three-board wiring instructions](PCBs/v1.0-Prototype/Docs/Wiring.md).
+**I’ve published the Version 1.0 PCB prototypes for all three boards: the Main Board, Power Driver Board, and LED Sub-Board.** [Download the complete prototype package](https://github.com/dgdimick/ARC-164-DCS-Display/releases/download/pcb-v1.0-prototype/ARC-164-PCBs-v1.0-Prototype.zip) or see the [PCB download overview](PCBs/README.md) for individual board files and fabrication ZIPs. The package includes editable KiCad projects, libraries and 3D models, schematic PDFs, BOMs, Gerbers, drill files, previews, and [current three-board wiring instructions](PCBs/v1.0-Prototype/Docs/Wiring.md).
 
-**All three boards pass DRC and ERC, with zero unconnected items and no schematic/PCB mismatches.** The inter-board cable pinouts and all 19 backlight LED/resistor branches have also been checked. These are **untested prototypes**: assembled-board electrical tests, socket/stack clearance, actual cables, and firmware integration still need testing.
+I’ve checked the designs in KiCad, and **all three boards pass the design-rule and schematic electrical checks**, with no unconnected items or differences between the schematics and PCBs. The cable pinouts and all 19 backlight LED/resistor connections have been checked too.
 
-The **Power Driver Board now has a PCB-mounted PJ-102AH barrel power jack at J11**, replacing the two-pin power-input header. The jack sits at the right-hand board edge with its opening facing outward for easy access. It accepts **regulated 5 V DC through a 5.5 × 2.1 mm center-positive plug**.
+**I haven’t assembled and electrically tested these boards yet, so please treat them as prototypes.** I still need to check the complete stack, sockets, cables, and firmware together. I’ll share pictures and what I find as I work through my build. If you give them a try, I’d love to see your build and hear how it goes in [Discussions](https://github.com/dgdimick/ARC-164-DCS-Display/discussions).
 
-The recommended supply is the **MEAN WELL GST25A05-P1J (5 V, 4 A)**. Other supplies are welcome, but they must provide **well-regulated 5 V DC**, sufficient current, and the correct plug and polarity. See the [power-supply parts-list section](#external-regulated-5-v-power-supply) for the Mouser link, specifications, and mains-cord requirement. The board does not convert a higher input voltage to 5 V.
+I’ve replaced the two-pin power-input header with a **PCB-mounted PJ-102AH barrel power jack at J11 on the Power Driver Board**. The jack sits at the right-hand board edge with its opening facing outward for easy access. It accepts **regulated 5 V DC through a 5.5 × 2.1 mm center-positive plug**.
+
+My recommended supply is the **MEAN WELL GST25A05-P1J (5 V, 4 A)**. You’re welcome to use another supply; just make sure it provides **well-regulated 5 V DC**, enough current, and the correct plug and polarity. See the [power-supply parts-list section](#external-regulated-5-v-power-supply) for the Mouser link, specifications, and mains-cord requirement. The board does not convert a higher input voltage to 5 V.
 
 I’ve also added [recommended IC sockets and Teensy headers](#recommended-ic-sockets-and-teensy-headers) to the parts list, with Mouser links: **two 24-pin sockets for U11/U12, one 14-pin socket for U13, and two pairs of 24-pin male headers and female sockets for the Teensy**. I normally recommend these to reduce the risk of overheating the ICs during soldering and to make replacement easier. Solder the empty IC sockets first, let the board cool, and then install the chips. The Teensy’s male headers still need soldering unless its pins are already fitted.
 
@@ -97,7 +99,7 @@ Once I’ve finished the radio panels, I plan to build other panels for my SIMPI
 
 While I could use surface-mount (SMD) parts to make the boards smaller, I plan to use through-hole components to make the project easier for everyone to build and solder with basic tools.
 
-I chose the listed component suppliers because I’m aiming for better-quality parts than I generally expect from generic Amazon listings, even if they cost a little more. Parts from Amazon may work, and I use some myself, but substitutes may have different dimensions or pin spacing and may not fit the PCBs I designed for this project. Please compare the exact part specifications and PCB footprint before buying a substitute.
+I’ve linked the parts I’m designing around so you can find the same sizes and pin spacing without having to hunt through listings. You’re welcome to use other suppliers—I buy some parts from Amazon myself. Just compare the dimensions and pin spacing before ordering a substitute so it will fit the PCB.
 
 ## Recorded component costs
 
@@ -326,7 +328,7 @@ Two A12505RNCQ switches are needed for MAIN and PRESET. The [recorded component 
 
 ## Channel control
 
-I’ll use a rotary encoder for the channel control. Its mounting still needs design and testing.
+I’ve included the Channel rotary encoder on the Main Board. I still need to check its mounting, knob fit, and operation during assembly.
 
 ## USB connections and powered hubs
 
@@ -351,7 +353,7 @@ I’m focusing future support on aircraft with a **physical radio control panel*
 
 References: [F-16C manual](https://www.digitalcombatsimulator.com/en/downloads/documentation/filter/aircraft-is-f-16c/apply/), [F-5E manual](https://www.digitalcombatsimulator.com/upload/iblock/528/DCS%20F-5%D0%95-3%20Flight%20Manual_ENG.pdf), [C-101 cockpit guide](https://assets.chucksguides.com/pdf/DCS%20C-101CC%20Guide.pdf), and [F-4E cockpit guide](https://assets.chucksguides.com/aircraft/dcs/f-4e/0221930c6152572a4cc36908ded30c59/46.page.html).
 
-**Each additional aircraft would need separate DCS-BIOS mappings, firmware integration, and testing.** Control inputs, display outputs, operating modes, and DCS-BIOS coverage must be checked for that module. These are investigation priorities, not compatibility claims or release commitments.
+I’ll need to check the DCS-BIOS controls, displays, and operating modes for each aircraft, then write and test its firmware support. These are aircraft I’d like to investigate; I haven’t confirmed compatibility or set release dates for them yet. If you fly one and would like to help, let me know.
 
 ## Related radio projects
 
