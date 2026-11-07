@@ -1,0 +1,78 @@
+{
+  "checks": [
+    {
+      "check": "main PCB pads versus schematic",
+      "pads": 198,
+      "passed": true
+    },
+    {
+      "check": "power PCB pads versus schematic",
+      "pads": 244,
+      "passed": true
+    },
+    {
+      "check": "led PCB pads versus schematic",
+      "pads": 120,
+      "passed": true
+    },
+    {
+      "check": "J10 main to power",
+      "pins": 40,
+      "passed": true
+    },
+    {
+      "check": "J20 power to led",
+      "pins": 40,
+      "passed": true
+    },
+    {
+      "check": "J21 main to power",
+      "pins": 3,
+      "passed": true
+    },
+    {
+      "check": "Documented J10 pinout versus PCB",
+      "passed": true
+    },
+    {
+      "check": "Documented J20 pinout versus PCB",
+      "passed": true
+    },
+    {
+      "check": "Teensy GPIO assignment map",
+      "passed": true
+    },
+    {
+      "check": "Eight displays: segment pins, both common cathodes and digit banks",
+      "passed": true
+    },
+    {
+      "check": "Display drivers, 5V buffering, MOSFET and supply input mapping",
+      "passed": true
+    },
+    {
+      "check": "External LED 5V isolated from Teensy VIN/VUSB",
+      "passed": true
+    },
+    {
+      "check": "19 individual backlight resistor/LED branches",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "connector_contacts_checked": 83,
+  "source_boards": {
+    "main": {
+      "path": "outputs\\ARC-164-PCBs-v1.0-Prototype\\Main-Board\\Project\\Main Board.kicad_pcb",
+      "sha256": "16c3959ebd20febcd8a49b4cbbba698c1181a982c52cc7b29c676e4f49b2c410"
+    },
+    "power": {
+      "path": "outputs\\ARC-164-PCBs-v1.0-Prototype\\Power-Driver-Board\\Project\\Power Driver Board.kicad_pcb",
+      "sha256": "c90c77e5baee55da5c53fc292bb662279f26ec508360e1001a61e05585a178e4"
+    },
+    "led": {
+      "path": "outputs\\ARC-164-PCBs-v1.0-Prototype\\LED-Subboard\\Project\\LED Subboard.kicad_pcb",
+      "sha256": "d116f9618c907f09600854ca1237567e8551486c86ce785f460bceed582f7b7a"
+    }
+  }
+}

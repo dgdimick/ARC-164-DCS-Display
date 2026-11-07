@@ -1,0 +1,153 @@
+{
+  "description": "LED Subboard mounts directly to the active Main PCB. Keep matching mounting-hole centers aligned when either board is edited.",
+  "coordinate_system": "KiCad board coordinates in millimeters",
+  "registration": "Face-up assembly: Main X = LED Subboard X + main_offset_mm[0]; Main Y = LED Subboard Y + main_offset_mm[1]. Translation only; no reflection or rotation. Both component sides face the panel.",
+  "main_offset_mm": [
+    -24.75,
+    -23.68
+  ],
+  "holes": [
+    {
+      "subboard_center_mm": [
+        92.05,
+        105.8
+      ],
+      "main_board_center_mm": [
+        67.3,
+        82.12
+      ],
+      "diameter_mm": 3.5,
+      "subboard_shape_uuid": "d3a5fc8d-8433-40c6-84f4-fd0acab96e18",
+      "id": "M1"
+    },
+    {
+      "subboard_center_mm": [
+        94.95,
+        58.625
+      ],
+      "main_board_center_mm": [
+        70.2,
+        34.945
+      ],
+      "diameter_mm": 3.5,
+      "subboard_shape_uuid": "146e2f08-608c-45de-b9b9-ade88ca3bdfb",
+      "id": "M2"
+    },
+    {
+      "subboard_center_mm": [
+        156.5,
+        105.78
+      ],
+      "main_board_center_mm": [
+        131.75,
+        82.1
+      ],
+      "diameter_mm": 3.5,
+      "subboard_shape_uuid": "869300c8-16e0-4a9f-b9e3-682051fb02c0",
+      "id": "M3"
+    },
+    {
+      "subboard_center_mm": [
+        154.3,
+        56.625
+      ],
+      "main_board_center_mm": [
+        129.55,
+        32.945
+      ],
+      "diameter_mm": 3.5,
+      "subboard_shape_uuid": "e3a228a3-f035-45ce-9b99-12f3c4627e8f",
+      "id": "M5"
+    }
+  ],
+  "mounting_gap": {
+    "faceplate_rear_to_main_panel_facing_surface_mm": 15.0,
+    "status": "User-specified 15 mm Main Board standoffs",
+    "reference_planes": "Back surface of faceplate to the panel-facing surface of the Main PCB"
+  },
+  "main_board_standoffs": {
+    "height_mm": 15.0,
+    "mounting": "Faceplate to Main PCB",
+    "status": "User specified"
+  },
+  "retired_hole_ids": [
+    "M4"
+  ],
+  "active_projects": {
+    "main_project": "Main Board/Main Board.kicad_pro",
+    "main_pcb": "Main Board/Main Board.kicad_pcb",
+    "main_schematic": "Main Board/Main Board.kicad_sch",
+    "subboard_project": "LED Subboard/LED Subboard.kicad_pro",
+    "subboard_pcb": "LED Subboard/LED Subboard.kicad_pcb",
+    "power_driver_project": "Power Driver Board/Power Driver Board.kicad_pro",
+    "power_driver_pcb": "Power Driver Board/Power Driver Board.kicad_pcb",
+    "power_driver_schematic": "Power Driver Board/Power Driver Board.kicad_sch"
+  },
+  "main_panel_control_openings": [
+    {
+      "stl_center": [
+        64.68172817365345,
+        103.88334033841487
+      ],
+      "center": [
+        51.619796,
+        54.571219
+      ],
+      "diameter_mm": 7.4,
+      "name": "LOAD"
+    },
+    {
+      "stl_center": [
+        70.68136662441383,
+        84.42877056246479
+      ],
+      "center": [
+        57.619435,
+        74.025789
+      ],
+      "diameter_mm": 7.4,
+      "name": "TEST DISPLAY"
+    },
+    {
+      "stl_center": [
+        152.01999664306626,
+        84.42877056246591
+      ],
+      "center": [
+        138.958065,
+        74.025789
+      ],
+      "diameter_mm": 7.4,
+      "name": "STATUS"
+    }
+  ],
+  "master_outline": {
+    "source_stl": "C:\\Users\\dgdim\\DCS Radios\\ARC-164\\ARC-164 Face Plate -3 - Left Anti-Rotation Slots.stl",
+    "source_sha256": "708445c05e0c97c8321e4bd9275f9a70f6850170ba38f0654dc8fd6adfb071f8",
+    "width_mm": 141,
+    "height_mm": 117.8,
+    "outside_corner_radius_mm": 4,
+    "scope": "All master STL geometry: outer perimeter, all 28 master openings, plus four additional aligned subboard mounting holes.",
+    "main_coordinate_transform": {
+      "x_offset_mm": -13.061931697130987,
+      "y_reversed_offset_mm": 158.45455960449078
+    }
+  },
+  "main_project_state": "Controls and future panel backlights; power, Teensy and display-driver circuitry moved to Power Driver Board. Unrouted draft.",
+  "subboard_standoffs": {
+    "height_mm": 7.0,
+    "mounting": "Main PCB to LED Subboard",
+    "status": "User specified"
+  },
+  "board_interconnect": "J10 controls cable Main-to-Power Driver; J20 display cable Power Driver-to-LED, now 40-pin 2.54mm TSW headers and ~6in Adafruit 1988 cable, original pins 1-32 unchanged, 33-40 NC; J21 backlight power. Plain headers use cable labels and pin-1/key-side markings, not mechanical anti-swap keying.",
+  "power_driver_mounting": "Below Main Board; retains existing mounting holes and wire pass-through cutout. Spacing to be determined.",
+  "face_up_mounting": {
+    "reflected": false,
+    "offset_mm": [
+      -24.75,
+      -23.68
+    ],
+    "subboard_standoff_mm": 7,
+    "status": "Corrected from mirrored pattern after physical 3D assembly check."
+  }
+}

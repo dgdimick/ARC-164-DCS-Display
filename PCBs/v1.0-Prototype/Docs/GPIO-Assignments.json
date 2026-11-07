@@ -1,0 +1,152 @@
+[
+  {
+    "gpio": 0,
+    "kicad_pin": "2",
+    "signal": "FREQ1_A"
+  },
+  {
+    "gpio": 1,
+    "kicad_pin": "3",
+    "signal": "FREQ1_B"
+  },
+  {
+    "gpio": 2,
+    "kicad_pin": "4",
+    "signal": "FREQ2_A"
+  },
+  {
+    "gpio": 3,
+    "kicad_pin": "5",
+    "signal": "FREQ2_B"
+  },
+  {
+    "gpio": 4,
+    "kicad_pin": "6",
+    "signal": "FREQ3_A"
+  },
+  {
+    "gpio": 5,
+    "kicad_pin": "7",
+    "signal": "FREQ3_B"
+  },
+  {
+    "gpio": 6,
+    "kicad_pin": "8",
+    "signal": "FREQ4_A"
+  },
+  {
+    "gpio": 7,
+    "kicad_pin": "9",
+    "signal": "FREQ4_B"
+  },
+  {
+    "gpio": 8,
+    "kicad_pin": "10",
+    "signal": "FREQ5_A"
+  },
+  {
+    "gpio": 9,
+    "kicad_pin": "11",
+    "signal": "BACKLIGHT_PWM_3V3"
+  },
+  {
+    "gpio": 10,
+    "kicad_pin": "12",
+    "signal": "DISP_LOAD_3V3"
+  },
+  {
+    "gpio": 11,
+    "kicad_pin": "13",
+    "signal": "DISP_DATA_3V3"
+  },
+  {
+    "gpio": 12,
+    "kicad_pin": "14",
+    "signal": "FREQ5_B"
+  },
+  {
+    "gpio": 13,
+    "kicad_pin": "35",
+    "signal": "DISP_CLK_3V3"
+  },
+  {
+    "gpio": 14,
+    "kicad_pin": "36",
+    "signal": "CHANNEL_A"
+  },
+  {
+    "gpio": 15,
+    "kicad_pin": "37",
+    "signal": "CHANNEL_B"
+  },
+  {
+    "gpio": 16,
+    "kicad_pin": "38",
+    "signal": "VOL_A"
+  },
+  {
+    "gpio": 17,
+    "kicad_pin": "39",
+    "signal": "VOL_B"
+  },
+  {
+    "gpio": 18,
+    "kicad_pin": "40",
+    "signal": "MAIN_POS1"
+  },
+  {
+    "gpio": 19,
+    "kicad_pin": "41",
+    "signal": "MAIN_POS2"
+  },
+  {
+    "gpio": 20,
+    "kicad_pin": "42",
+    "signal": "MAIN_POS3"
+  },
+  {
+    "gpio": 21,
+    "kicad_pin": "43",
+    "signal": "MAIN_POS4"
+  },
+  {
+    "gpio": 22,
+    "kicad_pin": "44",
+    "signal": "PRESET_POS1"
+  },
+  {
+    "gpio": 23,
+    "kicad_pin": "45",
+    "signal": "PRESET_POS2"
+  },
+  {
+    "gpio": 24,
+    "kicad_pin": "16",
+    "signal": "PRESET_POS3"
+  },
+  {
+    "gpio": 25,
+    "kicad_pin": "17",
+    "signal": "TONE"
+  },
+  {
+    "gpio": 26,
+    "kicad_pin": "18",
+    "signal": "SQL"
+  },
+  {
+    "gpio": 27,
+    "kicad_pin": "19",
+    "signal": "LOAD"
+  },
+  {
+    "gpio": 28,
+    "kicad_pin": "20",
+    "signal": "TEST_DISPLAY"
+  },
+  {
+    "gpio": 29,
+    "kicad_pin": "21",
+    "signal": "STATUS"
+  }
+]

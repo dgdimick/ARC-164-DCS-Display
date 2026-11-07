@@ -1,0 +1,24 @@
+[
+  {
+    "board": "Main Board",
+    "all_component_positions_orientations_and_pad_geometry_unchanged": true,
+    "all_outline_and_hole_geometry_unchanged": true,
+    "all_routing_unchanged": false,
+    "source_sha256": "3d413eefbcd51fb9d7e27ea5c89ea7242145843014928b69e336a8782cdc49a1",
+    "routing_rebuilt_after_user_D17_move": true
+  },
+  {
+    "board": "Power Driver Board",
+    "all_component_positions_orientations_and_pad_geometry_unchanged": true,
+    "all_outline_and_hole_geometry_unchanged": true,
+    "all_routing_unchanged": true,
+    "source_sha256": "23bf219f2b3414c7a00c4325969e3c159c3c0b7160f009344d1227464169dbda"
+  },
+  {
+    "board": "LED Subboard",
+    "all_component_positions_orientations_and_pad_geometry_unchanged": true,
+    "all_outline_and_hole_geometry_unchanged": true,
+    "all_routing_unchanged": true,
+    "source_sha256": "b108cfe19809deb1a6537f3da0588da9ecbef3f68dec085a3a51d10c60aa7b25"
+  }
+]

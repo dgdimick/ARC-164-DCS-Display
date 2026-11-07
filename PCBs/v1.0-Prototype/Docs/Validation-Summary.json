@@ -1,0 +1,59 @@
+{
+  "Main-Board": {
+    "DRC_violations": 0,
+    "unconnected": 0,
+    "parity_issues": 0,
+    "ERC_violations": 0,
+    "manufacturing_files": [
+      "Drill-Report.txt",
+      "Main Board-B_Cu.gbl",
+      "Main Board-B_Mask.gbs",
+      "Main Board-B_Silkscreen.gbo",
+      "Main Board-Edge_Cuts.gm1",
+      "Main Board-F_Cu.gtl",
+      "Main Board-F_Mask.gts",
+      "Main Board-F_Silkscreen.gto",
+      "Main Board-job.gbrjob",
+      "Main Board-NPTH.drl",
+      "Main Board-PTH.drl"
+    ]
+  },
+  "Power-Driver-Board": {
+    "DRC_violations": 0,
+    "unconnected": 0,
+    "parity_issues": 0,
+    "ERC_violations": 0,
+    "manufacturing_files": [
+      "Drill-Report.txt",
+      "Power Driver Board-B_Cu.gbl",
+      "Power Driver Board-B_Mask.gbs",
+      "Power Driver Board-B_Silkscreen.gbo",
+      "Power Driver Board-Edge_Cuts.gm1",
+      "Power Driver Board-F_Cu.gtl",
+      "Power Driver Board-F_Mask.gts",
+      "Power Driver Board-F_Silkscreen.gto",
+      "Power Driver Board-job.gbrjob",
+      "Power Driver Board-NPTH.drl",
+      "Power Driver Board-PTH.drl"
+    ]
+  },
+  "LED-Subboard": {
+    "DRC_violations": 0,
+    "unconnected": 0,
+    "parity_issues": 0,
+    "ERC_violations": 0,
+    "manufacturing_files": [
+      "Drill-Report.txt",
+      "LED Subboard-B_Cu.gbl",
+      "LED Subboard-B_Mask.gbs",
+      "LED Subboard-B_Silkscreen.gbo",
+      "LED Subboard-Edge_Cuts.gm1",
+      "LED Subboard-F_Cu.gtl",
+      "LED Subboard-F_Mask.gts",
+      "LED Subboard-F_Silkscreen.gto",
+      "LED Subboard-job.gbrjob",
+      "LED Subboard-NPTH.drl",
+      "LED Subboard-PTH.drl"
+    ]
+  }
+}

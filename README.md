@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 7, 2026 at 11:43 AM MST (America/Denver)**
+**Last updated: November 7, 2026 at 12:12 PM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -12,6 +12,10 @@
 I’m developing the hardware and firmware for my ARC-164 radio panel.
 
 ## Development update — November 7, 2026
+
+**Version 1.0 PCB prototypes are now available for all three boards: the Main Board, Power Driver Board, and LED Sub-Board.** [Download the complete prototype package](https://github.com/dgdimick/ARC-164-DCS-Display/releases/download/pcb-v1.0-prototype/ARC-164-PCBs-v1.0-Prototype.zip) or see the [PCB download overview](PCBs/README.md) for individual board files and fabrication ZIPs. The package includes editable KiCad projects, libraries and 3D models, schematic PDFs, BOMs, Gerbers, drill files, previews, and [current three-board wiring instructions](PCBs/v1.0-Prototype/Docs/Wiring.md).
+
+**All three boards pass DRC and ERC, with zero unconnected items and no schematic/PCB mismatches.** The inter-board cable pinouts and all 19 backlight LED/resistor branches have also been checked. These are **untested prototypes**: assembled-board electrical tests, socket/stack clearance, actual cables, and firmware integration still need testing.
 
 The **Power Driver Board now has a PCB-mounted PJ-102AH barrel power jack at J11**, replacing the two-pin power-input header. The jack sits at the right-hand board edge with its opening facing outward for easy access. It accepts **regulated 5 V DC through a 5.5 × 2.1 mm center-positive plug**.
 
@@ -181,11 +185,11 @@ I’ve selected **Kingbright WP710A10SGD**, a **3 mm through-hole green LED with
 
 | Provisional quantity | Allocation | Manufacturer part number | Mouser order number |
 | ---: | --- | --- | --- |
-| 24 | ARC-164 backlighting — initial estimate of 20–24 LEDs | WP710A10SGD | 604-WP710A10SGD |
+| 19 | ARC-164 Version 1.0 prototype backlighting | WP710A10SGD | 604-WP710A10SGD |
 | 38 | ARC-210 backlighting | WP710A10SGD | 604-WP710A10SGD |
-| **62 total** | **Planning total only; final quantity TBD, excluding spares** | **WP710A10SGD** | **604-WP710A10SGD** |
+| **57 total** | **Planning total only; final quantity TBD, excluding spares** | **WP710A10SGD** | **604-WP710A10SGD** |
 
-These LEDs require **one current-limiting resistor per LED branch** on the regulated 5 V supply. I’ll start brightness testing with **330 Ω resistors**, approximately **8.5 mA per LED** at the datasheet’s typical 2.2 V forward voltage; actual current and brightness will vary. For the provisional 62-LED estimate, that nominal current would draw approximately 0.53 A at full duty, excluding the displays and controllers. The final resistor selection and power budget remain subject to testing.
+These LEDs require **one current-limiting resistor per LED branch** on the regulated 5 V supply. I’ll start brightness testing with **330 Ω resistors**, approximately **8.5 mA per LED** at the datasheet’s typical 2.2 V forward voltage; actual current and brightness will vary. For the provisional 57-LED combined estimate, that nominal current would draw approximately 0.48 A at full duty, excluding the displays and controllers. The final resistor selection and power budget remain subject to testing.
 
 The LEDs will sit behind the lettering, with opaque shielding around display windows. They will use the panel-backlighting driver, not the MAX7219 segment outputs. **Confirm price and availability in the Mouser cart; these additional LEDs and their resistors are not included in the $55.81 ARC-164 subtotal above.**
 
@@ -201,13 +205,13 @@ This is a **four-direction switch with a center pushbutton and rotary encoder**.
 
 ## Things that need to be completed
 
-**Last updated: November 4, 2026 at 8:37 AM MST (America/Denver)**
+**Last updated: November 7, 2026 at 12:12 PM MST (America/Denver)**
 <!-- Refresh this section timestamp whenever the work list changes, using the actual America/Denver time and MST/MDT. -->
 
 This is my current work list for the hardware, firmware, testing, and build instructions.
 
 1. **Panel layout and parts:** Confirm dimensions, mounting clearances, controls, and the complete parts list. **TONE and SQL switches:** Select the exact parts and verify their mounting dimensions, required operation and travel, and clearances before finalizing the PCB. Test-fit **six SC36-11SURKWA digits for frequency and two for preset**, using [Mouser part 604-SC36-11SURKWA](https://www.mouser.com/en/ProductDetail/Kingbright/SC36-11SURKWA?qs=FRBiz4Wv1YMkVf5BvlPtDA%3D%3D). Check digit visibility and brightness through the smoked covers, pinout, mounting height, spacing, and clearance within the 53.5 × 17.5 mm frequency window and 22 × 17.5 mm preset window.
-2. **PCB, schematic, and rotary-encoder design:** Continue the current five-frequency-encoder design, with no frequency-switch resistor ladders, while following up with PC Flights about stocking the modified panel. Revisit the alternative staggered rotary-switch arrangement after completing the ARC-186 and ARC-210 v2.0 projects. Design the Main PCB with the MAIN and PRESET rotary switches, their resistor ladders, controller, and display circuitry. Update the rotary-encoder schematic, PCB footprints, and 3D models for the **PEC11R-4230F-S0024 encoders with 30 mm shafts**, including the FREQ, channel, and VOL controls. Place and connect VOL, reroute the encoder PCB, and check its connections to the Main PCB. Design the small display PCB and its standoff mounting, with the display soldered directly to the board; set the height after checking it against the faceplate. Finalize Teensy pin assignments, check the complete electrical design, and verify clearances and test fitting before ordering boards.
+2. **Prototype PCB validation:** Version 1.0 prototypes of the Main Board, Power Driver Board, and LED Sub-Board are published. Verify the manufactured boards, complete mechanical stack and sockets, connector/cable fit, control pin assignments and assembled electrical operation. The current design uses five FREQ encoders, MAIN/PRESET direct switch contacts without resistor ladders, and the documented Teensy GPIO map. Continue following up with PC Flights about the modified panel; revisit the frequency rotary-switch alternative after the ARC-186 and ARC-210 v2.0 projects.
 3. **Printed parts:** Design and test-fit the required knobs, brackets, and spacers with the selected hardware. Verify shaft engagement, knob retention, mounting height, and clearance behind the faceplate.
 4. **DCS-BIOS mappings and any needed changes:** Check which inputs and display outputs are already available for this radio. Identify missing data, make any necessary export changes, and document them. Check the correct ARC-164 radio instance for each intended A-10 variant.
 5. **Firmware:** Write the control and display firmware and verify USB communication with DCS-BIOS. Implement DCS-BIOS-controlled MAX7219 display brightness and PWM panel backlighting, with separate brightness curves and off-state handling; see the [lighting design plan](#dcs-bios-display-brightness-and-panel-backlighting).
@@ -236,21 +240,21 @@ I’ll use **six SC36-11SURKWA digits** to show a frequency such as **251.000**.
 
 ### Display mounting
 
-I’ll solder the digits directly to display PCBs mounted on standoffs. I’ll set the standoff height during test fitting so the digits sit at the correct height behind the windows, with clearance from the switches and other boards. The display boards, mounting points, final standoff heights, and driver wiring still need designing and testing.
+The Version 1.0 prototype uses one LED Sub-Board spanning both windows, with the digits soldered directly to it. The planned Main-to-Sub-Board standoffs are **7 mm**, and faceplate-to-Main-Board spacing is **15 mm**. Check the actual display height, smoked-cover visibility, and complete stack fit during assembly; Power Driver Board spacing below the Main Board still needs to account for sockets, the Teensy headers, and cables.
 
 ### Preset-channel display
 
 I’ll use **two SC36-11SURKWA digits** for channels 1–20. Two bodies occupy **15 × 14 mm before spacing**, within the **22 × 17.5 mm preset window**. Package dimensions establish a preliminary fit; I still need to check digit alignment, brightness through the smoked cover, mounting height, and physical clearances.
 
-I’ll finalize the display-driver arrangement and suitable 3.3 V-to-5 V logic buffering for the Teensy before completing the display PCB design.
+The Power Driver Board carries both MAX7219 drivers and a 74AHCT125 buffer for the Teensy’s 3.3 V control signals. The LED Sub-Board carries the eight digits and J20 cable connector.
 
 ### DCS-BIOS display brightness and panel backlighting
 
 I’ll have **DCS-BIOS control both the seven-segment display brightness and the panel backlighting**. For the A-10C/A-10C II, the initial mapping is the exported **`INT_CONSOLE_L_BRIGHT` (Console Light Brightness)** value from the [DCS-BIOS A-10C module](https://github.com/DCS-Skunkworks/dcs-bios/blob/main/Scripts/DCS-BIOS/lib/modules/aircraft_modules/A-10C.lua). I still need to verify its behavior in DCS, including aircraft electrical power and lighting-off conditions.
 
 - **Display brightness:** The Teensy will set the intensity registers on both MAX7219 drivers. Each driver has 16 intensity levels; firmware will use shutdown for a fully dark display. Both display windows will follow the cockpit lighting level, with a separately adjustable display brightness curve.
-- **Panel backlighting:** I’ll reserve one PWM-capable Teensy GPIO for a low-side N-channel MOSFET driver. The MOSFET must be specified for operation at a 3.3 V gate drive, with a gate resistor and gate-to-ground pull-down. The 5 V LED branches will have suitable current-limiting resistors. LED current will come from the external supply, not from a Teensy GPIO. Firmware will use a separate backlight brightness curve.
-- **Power and connections:** A reusable distribution board will accept user-supplied regulated 5 V DC and distribute it to the panels. The panel’s MOSFET circuit will control its own backlighting; the distribution board will not regulate voltage or control brightness. Grounds will be shared, and external 5 V must not backfeed USB/VUSB. The display sub-board will carry both MAX7219 drivers, their current-setting and decoupling parts, and suitable 3.3 V-to-5 V logic buffering.
+- **Panel backlighting:** Version 1.0 uses **Teensy GPIO 9**, buffered to 5 V through U13, to drive Q1’s gate through its resistor and pull-down circuit. Q1 switches the return for **19 green Main Board LEDs**, each with its own **330 Ω resistor**. LED current comes from the external supply; firmware will use a separate backlight brightness curve.
+- **Power and connections:** The **Power Driver Board** accepts externally regulated 5 V at J11 and carries the Teensy, MAX7219 drivers, 74AHCT125 buffer, current-setting/decoupling parts, and backlight MOSFET. **J10** connects the Main Board controls, **J20** connects the LED Sub-Board, and **J21** supplies the Main Board backlights. Grounds are shared; external 5 V is isolated from Teensy VIN/VUSB, and the Teensy remains USB powered. The board does not regulate a higher input voltage down to 5 V.
 - **Light shielding:** I’ll design a 3D-printed opaque light shield around the display windows to prevent panel-backlight spill from washing out the seven-segment displays.
 - **Startup and testing:** Firmware will start with both lighting outputs off until initialized. I still need to finalize the GPIO, MOSFET, LED quantities, resistor values, connectors, power budget, DCS mapping, and connection-loss behavior, then test dimming, flicker, heat, and light leakage.
 
@@ -305,7 +309,7 @@ I use **10 mm and 13 mm deep-well sockets** to tighten the **mounting nuts on th
 
 I plan to use **two C&K A12505RNCQ rotary switches**, one for MAIN and one for PRESET. These are eight-position switches with the shorter **12.7 mm (0.5-inch) flatted actuator**, **PCB through-hole terminals**, and **45° indexing**. See the [C&K A Series datasheet](https://www.ckswitches.com/media/1349/arotary.pdf).
 
-I plan to mount **both switches directly on the Main PCB, with their resistor ladders on the same board**. I’ll secure MAIN and PRESET mechanically using their **threaded bushings, mounting nuts, and anti-rotation alignment holes**. The **PCB pins will provide the electrical connections**, rather than serving as the primary mechanical support. I’ll check the mounting stack and board spacing so tightening the nuts does not strain the pins or bend the Main PCB. This will avoid separate rotary-switch PCBs and the wiring between those boards and the Main PCB. I’ll use the ARC-210 switch circuit and footprint as a starting point, then check the pin assignments, component placement, and analog readings for this layout.
+Version 1.0 mounts **both switches directly on the Main PCB and reads their contacts directly through J10, without resistor ladders**. I’ll secure MAIN and PRESET mechanically using their **threaded bushings, mounting nuts, and anti-rotation alignment holes**. The **PCB pins will provide the electrical connections**, rather than serving as the primary mechanical support. I’ll check the mounting stack and board spacing so tightening the nuts does not strain the pins or bend the Main PCB. This will avoid separate rotary-switch PCBs and the wiring between those boards and the Main PCB. I’ll use the ARC-210 switch circuit and footprint as a starting point, then check the pin assignments, component placement, and analog readings for this layout.
 
 | Control | Part number | Stop-ring setting | Total travel |
 | --- | --- | --- | --- |

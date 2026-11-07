@@ -1,0 +1,2 @@
+# Preserve release-package bytes so the supplied SHA-256 manifest stays valid.
+v1.0-Prototype/** -text

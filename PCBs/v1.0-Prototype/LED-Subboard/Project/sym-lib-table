@@ -1,0 +1,1 @@
+(sym_lib_table (version 7) (lib (name "ARC210_Encoders") (type "KiCad") (uri "${KIPRJMOD}/ARC210_Encoders.kicad_sym") (options "") (descr "Channel encoder")) (lib (name "Kingbright_SC36") (type "KiCad") (uri "${KIPRJMOD}/Kingbright_SC36.kicad_sym") (options "") (descr "Display digits")))

@@ -1,0 +1,42 @@
+[
+  {
+    "hole": "M1",
+    "board": "main",
+    "center_error_mm": 0.0
+  },
+  {
+    "hole": "M1",
+    "board": "led",
+    "center_error_mm": 0.0
+  },
+  {
+    "hole": "M2",
+    "board": "main",
+    "center_error_mm": 9.999999974752427e-07
+  },
+  {
+    "hole": "M2",
+    "board": "led",
+    "center_error_mm": 0.0
+  },
+  {
+    "hole": "M3",
+    "board": "main",
+    "center_error_mm": 0.0
+  },
+  {
+    "hole": "M3",
+    "board": "led",
+    "center_error_mm": 0.0
+  },
+  {
+    "hole": "M5",
+    "board": "main",
+    "center_error_mm": 0.0
+  },
+  {
+    "hole": "M5",
+    "board": "led",
+    "center_error_mm": 0.0
+  }
+]
