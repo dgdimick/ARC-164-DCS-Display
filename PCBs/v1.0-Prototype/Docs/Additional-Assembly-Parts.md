@@ -1,6 +1,6 @@
 # Additional assembly parts
 
-**Last updated: November 7, 2026 at 12:12 PM MST (America/Denver)**
+**Last updated: November 8, 2026 at 1:24 AM MST (America/Denver)**
 
 The schematic BOMs list PCB components. Add the following sockets and module headers for assembly.
 
@@ -16,6 +16,10 @@ The schematic BOMs list PCB components. Add the following sockets and module hea
 
 All of these parts are through-hole and can be hand soldered. The Teensy still needs its male headers soldered on unless you buy it with pins already fitted; use a temperature-controlled iron and avoid prolonged heating. The female sockets let you unplug the complete Teensy module from the Power Driver Board. Check the added socket/header height when setting the clearance to the board above it. Check current supplier pricing.
 
+
+## Panel mounting hardware
+
+For **18 mm total panel-to-Main-Board spacing**, I use a **3 mm-thick nut plus a 15 mm standoff** at each mounting point. The 3 mm dimension describes the nut’s thickness; match the thread size to the mounting hardware.
 
 ## Power and cables
 

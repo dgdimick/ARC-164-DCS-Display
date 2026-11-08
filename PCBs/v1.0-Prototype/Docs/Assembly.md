@@ -1,6 +1,6 @@
 # ARC-164 Version 1.0 prototype assembly
 
-**Last updated: November 7, 2026 at 12:12 PM MST (America/Denver)**
+**Last updated: November 8, 2026 at 1:24 AM MST (America/Denver)**
 
 
 I’ll post pictures of my build to help you follow the assembly steps.
@@ -14,6 +14,10 @@ I’ll post pictures of my build to help you follow the assembly steps.
 3. **Solder the backlight LEDs next.** Install the LEDs on the **front of the Main Board**, facing the panel. Check each LED’s orientation before soldering: match its **anode (+) and cathode (−)** to the PCB markings. For new, untrimmed LEDs, the longer lead is the anode; the shorter lead and flat side of the body identify the cathode. On the current footprint, **pad 1 is the cathode** and **pad 2 is the anode**.
 
 4. **Wire the switches.** For the wired TONE, SQL, LOAD, TEST DISPLAY, and STATUS switches, solder a **6-inch (approximately 15 cm) wire to each required switch contact** first. Before soldering, you may want to feed the wires through the corresponding switch holes to make routing easier. Then flip the Main Board over and solder the free ends into the matching **labeled switch solder pads**, checking the signal and GND connections. It is fine to make these switch-wire connections on the **back of the Main Board**.
+
+### Panel-to-Main-Board mounting
+
+I use **18 mm total spacing between the panel and Main Board**. At each mounting point, use a **3 mm-thick nut plus a 15 mm standoff** to make that spacing. The 3 mm measurement is the nut’s thickness. Check the complete mounting stack, control alignment, and clearances before tightening the hardware.
 
 ### LED Sub-Board
 
