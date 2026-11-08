@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 7, 2026 at 1:35 PM MST (America/Denver)**
+**Last updated: November 8, 2026 at 12:23 AM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -141,7 +141,7 @@ This is my order sheet for **one ARC-164 panel**, updated **November 4, 2026**. 
 
 All seven encoders have **30 mm shafts**. MAIN and PRESET use the **same A12505RNCQ switch**, with the stop ring set to **4 positions for MAIN** and **3 positions for PRESET**; both index at **45° per position**.
 
-Prices use the quantity-five encoder tier, quantity-one switch tier, and Mouser’s quantity-ten SC36-11SURKWA LED tier. The LED price is $1.45 each ($14.50 for ten), checked November 4, 2026. Prices can change; shipping, tax, and tariffs are excluded. This estimate is separate from my recorded purchases.
+This earlier estimate uses the quantity-five encoder tier, quantity-one switch tier, and Mouser’s quantity-ten SC36-11SURKWA LED tier; it has not yet been recalculated for my purchased white displays. The LED price is $1.45 each ($14.50 for ten), checked November 4, 2026. Prices can change; shipping, tax, and tariffs are excluded. This estimate is separate from my recorded purchases.
 
 **This is not the complete build BOM.** TONE, SQL, STATUS, display drivers, other display components, resistors, capacitors, connectors, PCBs, and other remaining parts are excluded.
 
@@ -207,12 +207,12 @@ This is a **four-direction switch with a center pushbutton and rotary encoder**.
 
 ## Things that need to be completed
 
-**Last updated: November 7, 2026 at 12:12 PM MST (America/Denver)**
+**Last updated: November 8, 2026 at 12:23 AM MST (America/Denver)**
 <!-- Refresh this section timestamp whenever the work list changes, using the actual America/Denver time and MST/MDT. -->
 
 This is my current work list for the hardware, firmware, testing, and build instructions.
 
-1. **Panel layout and parts:** Confirm dimensions, mounting clearances, controls, and the complete parts list. **TONE and SQL switches:** Select the exact parts and verify their mounting dimensions, required operation and travel, and clearances before finalizing the PCB. Test-fit **six SC36-11SURKWA digits for frequency and two for preset**, using [Mouser part 604-SC36-11SURKWA](https://www.mouser.com/en/ProductDetail/Kingbright/SC36-11SURKWA?qs=FRBiz4Wv1YMkVf5BvlPtDA%3D%3D). Check digit visibility and brightness through the smoked covers, pinout, mounting height, spacing, and clearance within the 53.5 × 17.5 mm frequency window and 22 × 17.5 mm preset window.
+1. **Panel layout and parts:** Confirm dimensions, mounting clearances, controls, and the complete parts list. **TONE and SQL switches:** Select the exact parts and verify their mounting dimensions, required operation and travel, and clearances before finalizing the PCB. Test-fit my purchased **QBSLDIW301GR white digits: six for frequency and two for channel**. The six-digit frequency assembly measures **46.5 mm wide × 13.75 mm tall**. Verify the prototype LED Sub-Board footprint and pinout against these displays before assembly. Check digit visibility and brightness through the smoked covers, pinout, mounting height, spacing, and clearance within the 53.5 × 17.5 mm frequency window and 22 × 17.5 mm preset window.
 2. **Prototype PCB validation:** Version 1.0 prototypes of the Main Board, Power Driver Board, and LED Sub-Board are published. Verify the manufactured boards, complete mechanical stack and sockets, connector/cable fit, control pin assignments and assembled electrical operation. The current design uses five FREQ encoders, MAIN/PRESET direct switch contacts without resistor ladders, and the documented Teensy GPIO map. Continue following up with PC Flights about the modified panel; revisit the frequency rotary-switch alternative after the ARC-186 and ARC-210 v2.0 projects.
 3. **Printed parts:** Design and test-fit the required knobs, brackets, and spacers with the selected hardware. Verify shaft engagement, knob retention, mounting height, and clearance behind the faceplate.
 4. **DCS-BIOS mappings and any needed changes:** Check which inputs and display outputs are already available for this radio. Identify missing data, make any necessary export changes, and document them. Check the correct ARC-164 radio instance for each intended A-10 variant.
@@ -232,13 +232,13 @@ I’ll use USB for DCS-BIOS; Ethernet isn’t needed. The Teensy uses **3.3 V lo
 
 ## Seven-segment display plan
 
-I’ve selected **Kingbright SC36-11SURKWA** red, common-cathode, single-digit seven-segment displays for both frequency and preset. I’ll order **10 from [Mouser, part 604-SC36-11SURKWA](https://www.mouser.com/en/ProductDetail/Kingbright/SC36-11SURKWA?qs=FRBiz4Wv1YMkVf5BvlPtDA%3D%3D)**: **six for frequency, two for preset, and two spares**. These replace the earlier PC Flights amber display plan and the QBSLDIW301GR selection; the earlier purchases remain in the cost history.
+My **QBSLDIW301GR white single-digit seven-segment displays** from [DigiKey, part 1516-QBSLDIW301GR-ND](https://www.digikey.com/en/products/detail/qt-brightek-qtb/QBSLDIW301GR/22077720), have arrived. I bought **10: six for frequency, two for channel, and two spares**. These are my current display selection, replacing the earlier red Kingbright and amber PC Flights plans.
 
-Each display has a **7.5 × 14 × 8.5 mm body**, **9.14 mm (0.36-inch) digits**, and a right-hand decimal point. Common cathodes are on **pins 1 and 6**. I’ll use the SC36-11SURKWA footprint and pinout when designing the display boards. See the [Kingbright datasheet](https://www.kingbrightusa.com/images/catalog/SPEC/SC36-11SURKWA.pdf).
+I measured each display body at **7.6 mm wide × 13.75 mm tall**. These are body measurements, rather than illuminated-digit dimensions. I still need to verify the prototype LED Sub-Board footprint and pinout against the actual displays before assembly.
 
 ### Frequency display
 
-I’ll use **six SC36-11SURKWA digits** to show a frequency such as **251.000**. Six bodies side by side occupy **45 × 14 mm before spacing**, within the **53.5 × 17.5 mm frequency window**. Final spacing, alignment, brightness through the smoked cover, and clearance behind the faceplate still need physical testing.
+I’ll use **six white digits** to show a frequency such as **251.000**. My measured six-digit assembly is **46.5 mm wide × 13.75 mm tall**, leaving **3.5 mm on each side** when centered in the **53.5 × 17.5 mm frequency window**. I’ll set the final digit spacing during test fitting, then check alignment, brightness through the smoked cover, and clearance behind the faceplate.
 
 ### Display mounting
 
@@ -246,7 +246,7 @@ The Version 1.0 prototype uses one LED Sub-Board spanning both windows, with the
 
 ### Preset-channel display
 
-I’ll use **two SC36-11SURKWA digits** for channels 1–20. Two bodies occupy **15 × 14 mm before spacing**, within the **22 × 17.5 mm preset window**. Package dimensions establish a preliminary fit; I still need to check digit alignment, brightness through the smoked cover, mounting height, and physical clearances.
+I’ll use **two of the same white QBSLDIW301GR digits** for channels 1–20 behind the **22 × 17.5 mm channel window**. The two bodies are **15.2 mm wide before adding any gap**, and **13.75 mm tall**. I’ll center the pair and confirm the final spacing, brightness through the smoked cover, mounting height, and physical clearances during test fitting.
 
 The Power Driver Board carries both MAX7219 drivers and a 74AHCT125 buffer for the Teensy’s 3.3 V control signals. The LED Sub-Board carries the eight digits and J20 cable connector.
 
