@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 8, 2026 at 12:23 AM MST (America/Denver)**
+**Last updated: November 8, 2026 at 12:51 AM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -207,14 +207,14 @@ This is a **four-direction switch with a center pushbutton and rotary encoder**.
 
 ## Things that need to be completed
 
-**Last updated: November 8, 2026 at 12:23 AM MST (America/Denver)**
+**Last updated: November 8, 2026 at 12:51 AM MST (America/Denver)**
 <!-- Refresh this section timestamp whenever the work list changes, using the actual America/Denver time and MST/MDT. -->
 
 This is my current work list for the hardware, firmware, testing, and build instructions.
 
 1. **Panel layout and parts:** Confirm dimensions, mounting clearances, controls, and the complete parts list. **TONE and SQL switches:** Select the exact parts and verify their mounting dimensions, required operation and travel, and clearances before finalizing the PCB. Test-fit my purchased **QBSLDIW301GR white digits: six for frequency and two for channel**. The six-digit frequency assembly measures **46.5 mm wide × 13.75 mm tall**. Verify the prototype LED Sub-Board footprint and pinout against these displays before assembly. Check digit visibility and brightness through the smoked covers, pinout, mounting height, spacing, and clearance within the 53.5 × 17.5 mm frequency window and 22 × 17.5 mm preset window.
 2. **Prototype PCB validation:** Version 1.0 prototypes of the Main Board, Power Driver Board, and LED Sub-Board are published. Verify the manufactured boards, complete mechanical stack and sockets, connector/cable fit, control pin assignments and assembled electrical operation. The current design uses five FREQ encoders, MAIN/PRESET direct switch contacts without resistor ladders, and the documented Teensy GPIO map. Continue following up with PC Flights about the modified panel; revisit the frequency rotary-switch alternative after the ARC-186 and ARC-210 v2.0 projects.
-3. **Printed parts:** Design and test-fit the required knobs, brackets, and spacers with the selected hardware. Verify shaft engagement, knob retention, mounting height, and clearance behind the faceplate.
+3. **Printed parts:** Print the new display-board mockup at **100% scale** and test it behind the faceplate. Check that all six frequency digits and both channel digits line up with their windows, and verify mounting-hole alignment, height, and clearance around the controls and other boards. **I’ll wait to publish the STL until I’ve tested the fit.** Design and test-fit the required knobs, brackets, and spacers with the selected hardware. Verify shaft engagement, knob retention, mounting height, and clearance behind the faceplate.
 4. **DCS-BIOS mappings and any needed changes:** Check which inputs and display outputs are already available for this radio. Identify missing data, make any necessary export changes, and document them. Check the correct ARC-164 radio instance for each intended A-10 variant.
 5. **Firmware:** Write the control and display firmware and verify USB communication with DCS-BIOS. Implement DCS-BIOS-controlled MAX7219 display brightness and PWM panel backlighting, with separate brightness curves and off-state handling; see the [lighting design plan](#dcs-bios-display-brightness-and-panel-backlighting).
 6. **Bench and board testing:** Test the controls, displays, and power requirements together, then assemble and electrically test the manufactured boards.
