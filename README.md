@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 8, 2026 at 2:12 AM MST (America/Denver)**
+**Last updated: November 8, 2026 at 2:38 AM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -121,6 +121,8 @@ These are my recorded purchases so far, in **US dollars**. The total includes ro
 | **Running total** | | **$276.09** |
 
 My Teensy 4.1 cost **$37.95 including shipping**, and my faceplate cost **$70.59 including shipping**. The rotary switches and LEDs came to **$108.16**, or **$135.29 including tax and tariffs**. Those charges are already included in the running total. I bought two spare LED digits and one spare A12515RNCQ switch because the quantity price breaks saved me money compared with buying only the quantities I originally planned to use. I still need to verify the selected toggle switches’ fit and operation.
+
+I’m keeping the extra displays I bought as spares, since returning them would only get me **US$2.77** back.
 
 **The VOL encoder isn’t included in the total yet.** My current selection for VOL, FREQ, and channel is **PEC11R-4230F-S0024 with a 30 mm shaft**, sourced from Mouser. I’ll add actual encoder costs to this purchase history once the order is confirmed.
 
