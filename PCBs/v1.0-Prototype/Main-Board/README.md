@@ -1,6 +1,6 @@
 # ARC-164 Main Board — Version 1.0 Prototype
 
-**Last updated: November 7, 2026 at 12:12 PM MST (America/Denver)**
+**Last updated: November 8, 2026 at 5:43 AM MST (America/Denver)**
 
 Untested prototype hardware revision; initial public revision dated November 7, 2026.
 
@@ -12,7 +12,7 @@ Untested prototype hardware revision; initial public revision dated November 7, 
 - [Current wiring](../Docs/Wiring.md), [assembly instructions](../Docs/Assembly.md), [additional sockets/headers](../Docs/Additional-Assembly-Parts.md)
 - [Known issues](../Docs/Known-Issues.md), [DRC](Checks/DRC.json), [ERC](Checks/ERC.json)
 
-DRC clean with zero unconnected items and no schematic parity issues. D17 was moved before this final reroute; physical prototype testing is still pending. All component positions, outlines, holes and routing were preserved during prototype packaging. The two 40-pin interfaces use cables, not direct stacking connectors. Review prototype limitations before ordering.
+DRC clean with zero unconnected items and no schematic parity issues. D17 was moved before this final reroute. **The 8 mm Sub-Board mounting stack passed my physical test fitting on November 8, 2026**, using a **20 mm screw, a 6 mm-thick nut and two 1 mm-thick washers at each of four mounts**. Assembled electrical testing and the remaining control, cable, and complete-stack checks still need to be completed. All component positions, outlines, holes and routing were preserved during prototype packaging. The two 40-pin interfaces use cables, not direct stacking connectors. Review prototype limitations before ordering.
 
 ## Version history
 
