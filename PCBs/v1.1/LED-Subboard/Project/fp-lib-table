@@ -1,5 +1,0 @@
-(fp_lib_table (version 7) (lib (name "ARC210_Encoders") (type "KiCad") (uri "${KIPRJMOD}/ARC210_Encoders.pretty") (options "") (descr "Channel encoder")) (lib (name "Kingbright_SC36") (type "KiCad") (uri "${KIPRJMOD}/Kingbright_SC36.pretty") (options "") (descr "Display digits"))
-(lib (name "ARC164_WhiteDisplays") (type "KiCad") (uri "${KIPRJMOD}/ARC164_WhiteDisplays.pretty") (options "") (descr "Measured white display body and verified DIP pinout"))
-
-(lib (name "Connector_PinHeader_2.54mm") (type "KiCad") (uri "${KIPRJMOD}/Libraries/Connector_PinHeader_2.54mm.pretty") (options "") (descr "Bundled header footprint"))
-)

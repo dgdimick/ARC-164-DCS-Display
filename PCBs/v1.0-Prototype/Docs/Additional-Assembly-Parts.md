@@ -1,8 +1,8 @@
 # Additional assembly parts
 
-**Last updated: November 8, 2026 at 10:44 AM MST (America/Denver)**
+**Last updated: November 8, 2026 at 12:03 PM MST (America/Denver)**
 
-**PCB ordering is on hold: the J20 cable connector does not clear the Main Board.** I need to redesign **both the Main Board and LED Sub Board** to provide enough connector and cable clearance before ordering. I’ll **keep the tested LED positions, 0.75 mm gaps and 6 mm display-body height unchanged** while revising the connector area. The LED alignment and 8 mm mounting-stack fit passed, but the complete assembly does not yet clear the cable connector. I still need to test-fit the revised boards with the actual connector and cable before ordering; assembled electrical testing also remains pending.
+**Main Board and LED Sub Board downloads are temporarily withdrawn; please don’t order these boards yet.** I’ve resized both boards to address the **J20 cable connector clearance**, keeping the tested **LED positions, 0.75 mm gaps and 6 mm display bodies unchanged**. Both new mockups are waiting on **100% print and fit testing together with the actual J20 cable connector**. I’ll provide replacement board files after checking the fit. The earlier LED alignment and **8 mm Sub Board mounting stack** passed their tests, but clearance of the resized assembly is not yet confirmed. The new Main Board and Sub Board STLs are staying off GitHub until I’ve tested them.
 
 The schematic BOMs list PCB components. Add the following sockets and module headers for assembly.
 

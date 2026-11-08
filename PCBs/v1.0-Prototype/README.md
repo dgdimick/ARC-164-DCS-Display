@@ -1,16 +1,16 @@
 # ARC-164 PCB Version 1.0 — Prototype
 
-**Last updated: November 8, 2026 at 10:44 AM MST (America/Denver)**
+**Last updated: November 8, 2026 at 12:03 PM MST (America/Denver)**
 
-**PCB ordering is on hold: the J20 cable connector does not clear the Main Board.** I need to redesign **both the Main Board and LED Sub Board** to provide enough connector and cable clearance before ordering. I’ll **keep the tested LED positions, 0.75 mm gaps and 6 mm display-body height unchanged** while revising the connector area. The LED alignment and 8 mm mounting-stack fit passed, but the complete assembly does not yet clear the cable connector. I still need to test-fit the revised boards with the actual connector and cable before ordering; assembled electrical testing also remains pending.
+**Main Board and LED Sub Board downloads are temporarily withdrawn; please don’t order these boards yet.** I’ve resized both boards to address the **J20 cable connector clearance**, keeping the tested **LED positions, 0.75 mm gaps and 6 mm display bodies unchanged**. Both new mockups are waiting on **100% print and fit testing together with the actual J20 cable connector**. I’ll provide replacement board files after checking the fit. The earlier LED alignment and **8 mm Sub Board mounting stack** passed their tests, but clearance of the resized assembly is not yet confirmed. The new Main Board and Sub Board STLs are staying off GitHub until I’ve tested them.
 
 Initial public three-board PCB prototype revision, November 7, 2026. These are untested prototypes, not assembled or production-validated hardware. [GitHub prototype release](https://github.com/dgdimick/ARC-164-DCS-Display/releases/tag/pcb-v1.0-prototype).
 
 | Board | Source | Fabrication data | Schematic | BOM |
 | --- | --- | --- | --- | --- |
-| Main Board | [KiCad project](Main-Board/Project/Main%20Board.kicad_pro) | [Gerbers and drills](Main-Board/Manufacturing/) | [PDF](Main-Board/Schematics/Main-Board-v1.0-Prototype.pdf) | [CSV](Main-Board/Assembly/BOM.csv) |
+| Main Board | Downloads withdrawn pending resized-board and J20 fit testing | — | — | — |
 | Power Driver Board | [KiCad project](Power-Driver-Board/Project/Power%20Driver%20Board.kicad_pro) | [Gerbers and drills](Power-Driver-Board/Manufacturing/) | [PDF](Power-Driver-Board/Schematics/Power-Driver-Board-v1.0-Prototype.pdf) | [CSV](Power-Driver-Board/Assembly/BOM.csv) |
-| LED Subboard | [KiCad project](LED-Subboard/Project/LED%20Subboard.kicad_pro) | [Gerbers and drills](LED-Subboard/Manufacturing/) | [PDF](LED-Subboard/Schematics/LED-Subboard-v1.0-Prototype.pdf) | [CSV](LED-Subboard/Assembly/BOM.csv) |
+| LED Subboard | Downloads withdrawn pending resized-board and J20 fit testing | — | — | — |
 
 Open the project in KiCad 10.0.7 or newer. Each project includes its used footprint libraries, custom symbols and all referenced 3D models with project-relative paths. BOMs are schematic-generated component lists; sockets, Teensy headers and cables are additional assembly items described in the documentation.
 
