@@ -1,6 +1,6 @@
 # ARC-164 three-board wiring — Version 1.0 prototype
 
-**Last updated: November 8, 2026 at 1:57 AM MST (America/Denver)**
+**Last updated: November 8, 2026 at 3:08 AM MST (America/Denver)**
 
 This supersedes the earlier two-board, 32-pin, direct-stacking and sub-board Channel-encoder instructions. These are prototype hardware files; assembled electrical operation and the complete mechanical stack have not been verified.
 
@@ -35,6 +35,8 @@ The Teensy remains USB powered. External LED_5V is not connected to Teensy VIN o
 Each Main Board backlight branch is LED_5V -> 330 ohm resistor -> LED anode (pad 2); LED cathode (pad 1) -> BACKLIGHT_RETURN. Nineteen branches draw roughly 160mA at full brightness using a typical 2.2V LED drop; measure actual current when assembled. GPIO9 drives U13’s fourth buffer then R13 and Q1’s gate for PWM dimming. MAX7219 intensity settings control seven-segment brightness separately. No external 5V signal goes directly to a Teensy GPIO.
 
 ## Mechanical stack
+
+**The display bodies extend 6 mm above the LED Sub-Board. I’m keeping 11 mm Main-Board-to-Sub-Board spacing, using a 10 mm standoff plus a 1 mm-thick washer, pending the fit test.** I’ll print the corrected 6 mm display mockup at **100% scale** and check it behind the faceplate before confirming the mounting stack or publishing the STL.
 
 Use **18 mm total spacing between the panel and Main Board**, made up of a **3 mm-thick nut plus a 15 mm standoff** at each mounting point. Use **11 mm total Main-Board-to-LED-Sub-Board spacing**, made up of a **10 mm standoff plus a 1 mm-thick washer** at each mounting point. The LED Sub-Board mounts above the Main Board: its bottom connects to the Main Board’s top. I use **four 10 mm standoffs with 1 mm-thick washers** to mount the Sub-Board, giving **11 mm spacing**. At the **two lower Sub-Board mounting positions, use nuts**; at the **two upper positions, use threaded standoffs to allow the Power Driver Board to attach**. Main-to-LED mounting-hole alignment is face-up, without mirroring. The Power Driver Board mounts below the Main Board, **components facing down**, using **10 standoffs, each longer than 20 mm**. Choose the exact length to clear IC sockets, Teensy socket/header height, jack and cables. Model placement does not establish installed socket height.
 

@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 8, 2026 at 2:38 AM MST (America/Denver)**
+**Last updated: November 8, 2026 at 3:08 AM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -209,14 +209,14 @@ This is a **four-direction switch with a center pushbutton and rotary encoder**.
 
 ## Things that need to be completed
 
-**Last updated: November 8, 2026 at 12:51 AM MST (America/Denver)**
+**Last updated: November 8, 2026 at 3:08 AM MST (America/Denver)**
 <!-- Refresh this section timestamp whenever the work list changes, using the actual America/Denver time and MST/MDT. -->
 
 This is my current work list for the hardware, firmware, testing, and build instructions.
 
-1. **Panel layout and parts:** Confirm dimensions, mounting clearances, controls, and the complete parts list. **TONE and SQL switches:** Select the exact parts and verify their mounting dimensions, required operation and travel, and clearances before finalizing the PCB. Test-fit my purchased **QBSLDIW301GR white digits: six for frequency and two for channel**. The six-digit frequency assembly measures **46.5 mm wide × 13.75 mm tall**. Verify the prototype LED Sub-Board footprint and pinout against these displays before assembly. Check digit visibility and brightness through the smoked covers, pinout, mounting height, spacing, and clearance within the 53.5 × 17.5 mm frequency window and 22 × 17.5 mm preset window.
+1. **Panel layout and parts:** Confirm dimensions, mounting clearances, controls, and the complete parts list. **TONE and SQL switches:** Select the exact parts and verify their mounting dimensions, required operation and travel, and clearances before finalizing the PCB. Test-fit my purchased **QBSLDIW301GR white digits: six for frequency and two for channel**. The six-digit frequency assembly measures **46.5 mm wide × 13.75 mm high across the front face**. Verify the prototype LED Sub-Board footprint and pinout against these displays before assembly. Check digit visibility and brightness through the smoked covers, pinout, mounting height, spacing, and clearance within the 53.5 × 17.5 mm frequency window and 22 × 17.5 mm preset window.
 2. **Prototype PCB validation:** Version 1.0 prototypes of the Main Board, Power Driver Board, and LED Sub-Board are published. Verify the manufactured boards, complete mechanical stack and sockets, connector/cable fit, control pin assignments and assembled electrical operation. The current design uses five FREQ encoders, MAIN/PRESET direct switch contacts without resistor ladders, and the documented Teensy GPIO map. Continue following up with PC Flights about the modified panel; revisit the frequency rotary-switch alternative after the ARC-186 and ARC-210 v2.0 projects.
-3. **Printed parts:** Print the new display-board mockup at **100% scale** and test it behind the faceplate. Check that all six frequency digits and both channel digits line up with their windows, and verify mounting-hole alignment, height, and clearance around the controls and other boards. **I’ll wait to publish the STL until I’ve tested the fit.** Design and test-fit the required knobs, brackets, and spacers with the selected hardware. Verify shaft engagement, knob retention, mounting height, and clearance behind the faceplate.
+3. **Printed parts:** Print the corrected mockup with **6 mm-tall display bodies** at **100% scale**, keeping the **11 mm spacing (10 mm standoff plus 1 mm washer)** pending this fit test and test it behind the faceplate. Check that all six frequency digits and both channel digits line up with their windows, and verify mounting-hole alignment, height, and clearance around the controls and other boards. **I’ll wait to publish the STL until I’ve tested the fit.** Design and test-fit the required knobs, brackets, and spacers with the selected hardware. Verify shaft engagement, knob retention, mounting height, and clearance behind the faceplate.
 4. **DCS-BIOS mappings and any needed changes:** Check which inputs and display outputs are already available for this radio. Identify missing data, make any necessary export changes, and document them. Check the correct ARC-164 radio instance for each intended A-10 variant.
 5. **Firmware:** Write the control and display firmware and verify USB communication with DCS-BIOS. Implement DCS-BIOS-controlled MAX7219 display brightness and PWM panel backlighting, with separate brightness curves and off-state handling; see the [lighting design plan](#dcs-bios-display-brightness-and-panel-backlighting).
 6. **Bench and board testing:** Test the controls, displays, and power requirements together, then assemble and electrically test the manufactured boards.
@@ -236,19 +236,21 @@ I’ll use USB for DCS-BIOS; Ethernet isn’t needed. The Teensy uses **3.3 V lo
 
 My **QBSLDIW301GR white single-digit seven-segment displays** from [DigiKey, part 1516-QBSLDIW301GR-ND](https://www.digikey.com/en/products/detail/qt-brightek-qtb/QBSLDIW301GR/22077720), have arrived. I bought **10: six for frequency, two for channel, and two spares**. These are my current display selection, replacing the earlier red Kingbright and amber PC Flights plans.
 
-I measured each display body at **7.6 mm wide × 13.75 mm tall**. These are body measurements, rather than illuminated-digit dimensions. I still need to verify the prototype LED Sub-Board footprint and pinout against the actual displays before assembly.
+I measured each display body at **7.6 mm wide × 13.75 mm high across the front face, with a 6 mm body height above the PCB**. These are body measurements, rather than illuminated-digit dimensions. I still need to verify the prototype LED Sub-Board footprint and pinout against the actual displays before assembly.
 
 ### Frequency display
 
-I’ll use **six white digits** to show a frequency such as **251.000**. My measured six-digit assembly is **46.5 mm wide × 13.75 mm tall**, leaving **3.5 mm on each side** when centered in the **53.5 × 17.5 mm frequency window**. I’ll set the final digit spacing during test fitting, then check alignment, brightness through the smoked cover, and clearance behind the faceplate.
+I’ll use **six white digits** to show a frequency such as **251.000**. My measured six-digit assembly is **46.5 mm wide × 13.75 mm high across the front face**, leaving **3.5 mm on each side** when centered in the **53.5 × 17.5 mm frequency window**. I’ll set the final digit spacing during test fitting, then check alignment, brightness through the smoked cover, and clearance behind the faceplate.
 
 ### Display mounting
+
+**The display bodies extend 6 mm above the LED Sub-Board. I’m keeping 11 mm Main-Board-to-Sub-Board spacing, using a 10 mm standoff plus a 1 mm-thick washer, pending the fit test.** I’ll print the corrected 6 mm display mockup at **100% scale** and check it behind the faceplate before confirming the mounting stack or publishing the STL.
 
 The Version 1.0 prototype uses one LED Sub-Board spanning both windows, with the digits soldered directly to it. The Main-to-LED-Sub-Board spacing is **11 mm**, using a **10 mm standoff plus a 1 mm-thick washer**, and faceplate-to-Main-Board spacing is **18 mm**, using a **3 mm-thick nut plus a 15 mm standoff**. Check the actual display height, smoked-cover visibility, and complete stack fit during assembly. The LED Sub-Board mounts above the Main Board, with its bottom connected to the Main Board’s top. I use **four 10 mm standoffs with 1 mm-thick washers** to mount the Sub-Board, giving **11 mm spacing**. At the **two lower Sub-Board mounting positions, use nuts**; at the **two upper positions, use threaded standoffs to allow the Power Driver Board to attach**. The Power Driver Board mounts below the Main Board, **components facing down**, using **10 standoffs, each longer than 20 mm**; choose the exact length to clear components, sockets, Teensy headers, and cables.
 
 ### Preset-channel display
 
-I’ll use **two of the same white QBSLDIW301GR digits** for channels 1–20 behind the **22 × 17.5 mm channel window**. The two bodies are **15.2 mm wide before adding any gap**, and **13.75 mm tall**. I’ll center the pair and confirm the final spacing, brightness through the smoked cover, mounting height, and physical clearances during test fitting.
+I’ll use **two of the same white QBSLDIW301GR digits** for channels 1–20 behind the **22 × 17.5 mm channel window**. The two bodies are **15.2 mm wide before adding any gap**, and **13.75 mm high across the front face**. I’ll center the pair and confirm the final spacing, brightness through the smoked cover, mounting height, and physical clearances during test fitting.
 
 The Power Driver Board carries both MAX7219 drivers and a 74AHCT125 buffer for the Teensy’s 3.3 V control signals. The LED Sub-Board carries the eight digits and J20 cable connector.
 

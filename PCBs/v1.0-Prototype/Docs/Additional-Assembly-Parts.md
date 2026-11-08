@@ -1,6 +1,6 @@
 # Additional assembly parts
 
-**Last updated: November 8, 2026 at 1:57 AM MST (America/Denver)**
+**Last updated: November 8, 2026 at 3:08 AM MST (America/Denver)**
 
 The schematic BOMs list PCB components. Add the following sockets and module headers for assembly.
 
@@ -18,6 +18,8 @@ All of these parts are through-hole and can be hand soldered. The Teensy still n
 
 
 ## Panel mounting hardware
+
+**The display bodies extend 6 mm above the LED Sub-Board. I’m keeping 11 mm Main-Board-to-Sub-Board spacing, using a 10 mm standoff plus a 1 mm-thick washer, pending the fit test.** I’ll print the corrected 6 mm display mockup at **100% scale** and check it behind the faceplate before confirming the mounting stack or publishing the STL.
 
 For **18 mm total panel-to-Main-Board spacing**, I use a **3 mm-thick nut plus a 15 mm standoff** at each mounting point. The 3 mm dimension describes the nut’s thickness; match the thread size to the mounting hardware.
 

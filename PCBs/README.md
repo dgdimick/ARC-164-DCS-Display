@@ -1,6 +1,6 @@
 # ARC-164 PCBs
 
-**Last updated: November 8, 2026 at 1:57 AM MST (America/Denver)**
+**Last updated: November 8, 2026 at 3:08 AM MST (America/Denver)**
 
 I’ve shared the first prototype versions of all three boards below. The downloads include the KiCad projects and the files you can send to a PCB manufacturer, along with the wiring and assembly notes I’m putting together as I build mine.
 
@@ -18,9 +18,11 @@ I’ve checked all three designs in KiCad: the board and schematic checks pass, 
 
 ## New display spacing — fit test pending
 
-I’ve adjusted my local LED Sub-Board for the **QBSLDIW301GR white displays**, with **six frequency digits spanning 46.5 mm** and **two channel digits spanning 15.3 mm**. The measured display bodies are **13.75 mm tall**. **The new LED spacing still needs to be checked behind the faceplate.**
+I’ve adjusted my local LED Sub-Board for the **QBSLDIW301GR white displays**, with **six frequency digits spanning 46.5 mm** and **two channel digits spanning 15.3 mm**. The front faces measure **13.75 mm high**, and the display bodies extend **6 mm above the PCB**. **The new LED spacing still needs to be checked behind the faceplate.**
 
 I’ll print the new display-board mockup at **100% scale** and check both windows, mounting-hole alignment, height, and clearance around the controls and other boards. **I’ll wait to publish the STL until I’ve tested the fit.** The new spacing is a local revision and is not included in the Version 1.0 prototype downloads linked above. See my [current display plan](../README.md#seven-segment-display-plan).
+
+**The display bodies extend 6 mm above the LED Sub-Board. I’m keeping 11 mm Main-Board-to-Sub-Board spacing, using a 10 mm standoff plus a 1 mm-thick washer, pending the fit test.** I’ll print the corrected 6 mm display mockup at **100% scale** and check it behind the faceplate before confirming the mounting stack or publishing the STL.
 
 ## Panel-to-Main-Board spacing
 

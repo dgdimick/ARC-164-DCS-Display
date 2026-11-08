@@ -1,6 +1,6 @@
 # ARC-164 LED Subboard — Version 1.0 Prototype
 
-**Last updated: November 8, 2026 at 2:12 AM MST (America/Denver)**
+**Last updated: November 8, 2026 at 3:08 AM MST (America/Denver)**
 
 Untested prototype hardware revision; initial public revision dated November 7, 2026.
 
@@ -15,6 +15,8 @@ Untested prototype hardware revision; initial public revision dated November 7, 
 DRC clean with zero unconnected items and no schematic parity issues. All component positions, outlines, holes and routing were preserved during prototype packaging. The two 40-pin interfaces use cables, not direct stacking connectors. Review prototype limitations before ordering.
 
 ## Mounting
+
+**The display bodies extend 6 mm above the LED Sub-Board. I’m keeping 11 mm Main-Board-to-Sub-Board spacing, using a 10 mm standoff plus a 1 mm-thick washer, pending the fit test.** I’ll print the corrected 6 mm display mockup at **100% scale** and check it behind the faceplate before confirming the mounting stack or publishing the STL.
 
 I mount the LED Sub-Board **above the Main Board**, with the **bottom of the Sub-Board facing the top of the Main Board**. Use **four 10 mm standoffs and four 1 mm-thick washers** for **11 mm separation**. Use **nuts at the two lower mounting positions** and **threaded standoffs at the two upper positions to allow Power Driver Board attachment**. See the [assembly mounting instructions](../Docs/Assembly.md#led-sub-board-mounting).
 
