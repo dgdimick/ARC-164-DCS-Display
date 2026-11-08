@@ -1,6 +1,6 @@
 # ARC-164 three-board wiring — Version 1.0 prototype
 
-**Last updated: November 8, 2026 at 1:54 AM MST (America/Denver)**
+**Last updated: November 8, 2026 at 1:57 AM MST (America/Denver)**
 
 This supersedes the earlier two-board, 32-pin, direct-stacking and sub-board Channel-encoder instructions. These are prototype hardware files; assembled electrical operation and the complete mechanical stack have not been verified.
 
@@ -36,7 +36,7 @@ Each Main Board backlight branch is LED_5V -> 330 ohm resistor -> LED anode (pad
 
 ## Mechanical stack
 
-Use **18 mm total spacing between the panel and Main Board**, made up of a **3 mm-thick nut plus a 15 mm standoff** at each mounting point. Use **11 mm total Main-Board-to-LED-Sub-Board spacing**, made up of a **10 mm standoff plus a 1 mm-thick washer** at each mounting point. The LED Sub-Board mounts above the Main Board: its bottom connects to the Main Board’s top. Main-to-LED mounting-hole alignment is face-up, without mirroring. The Power Driver Board mounts below the Main Board using **10 standoffs, each longer than 20 mm**. Choose the exact length to clear IC sockets, Teensy socket/header height, jack and cables. Model placement does not establish installed socket height.
+Use **18 mm total spacing between the panel and Main Board**, made up of a **3 mm-thick nut plus a 15 mm standoff** at each mounting point. Use **11 mm total Main-Board-to-LED-Sub-Board spacing**, made up of a **10 mm standoff plus a 1 mm-thick washer** at each mounting point. The LED Sub-Board mounts above the Main Board: its bottom connects to the Main Board’s top. I use **four 10 mm standoffs with 1 mm-thick washers** to mount the Sub-Board, giving **11 mm spacing**. At the **two lower Sub-Board mounting positions, use nuts**; at the **two upper positions, use threaded standoffs to allow the Power Driver Board to attach**. Main-to-LED mounting-hole alignment is face-up, without mirroring. The Power Driver Board mounts below the Main Board, **components facing down**, using **10 standoffs, each longer than 20 mm**. Choose the exact length to clear IC sockets, Teensy socket/header height, jack and cables. Model placement does not establish installed socket height.
 
 D17 was moved clear of the MAIN switch SW7 courtyard before the final Main Board reroute. All three boards now pass DRC with zero violations and no unconnected items. The saved component positions, outline and holes were preserved during routing. Physical assembly and complete stack-height checks are still required.
 

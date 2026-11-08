@@ -1,6 +1,6 @@
 # ARC-164 Version 1.0 prototype assembly
 
-**Last updated: November 8, 2026 at 1:54 AM MST (America/Denver)**
+**Last updated: November 8, 2026 at 1:57 AM MST (America/Denver)**
 
 
 I’ll post pictures of my build to help you follow the assembly steps.
@@ -21,7 +21,7 @@ I use **18 mm total spacing between the panel and Main Board**. At each mounting
 
 ### LED Sub-Board mounting
 
-The **LED Sub-Board mounts above the Main Board**, toward the panel. Its mounting hardware connects the **bottom of the Sub-Board to the top of the Main Board**. I use **11 mm total spacing between the Main Board and LED Sub-Board**, made up of a **10 mm standoff plus a 1 mm-thick washer** at each mounting point. Check display alignment behind both windows and clearance around the components before tightening the hardware.
+The **LED Sub-Board mounts above the Main Board**, toward the panel. Its mounting hardware connects the **bottom of the Sub-Board to the top of the Main Board**. I use **11 mm total spacing between the Main Board and LED Sub-Board**, made up of a **10 mm standoff plus a 1 mm-thick washer** at each mounting point. I use **four 10 mm standoffs with 1 mm-thick washers** to mount the Sub-Board, giving **11 mm spacing**. At the **two lower Sub-Board mounting positions, use nuts**; at the **two upper positions, use threaded standoffs to allow the Power Driver Board to attach**. Check display alignment behind both windows and clearance around the components before tightening the hardware.
 
 ### LED Sub-Board
 
@@ -35,6 +35,6 @@ Fit low components first. Solder empty 24-pin sockets for U11/U12 and the empty 
 
 ### Power Driver Board mounting
 
-I mount the **Power Driver Board below the Main Board using 10 standoffs**. **Each standoff must be longer than 20 mm**; the exact length can vary to provide clearance for components, IC sockets, Teensy headers, and cables. Check the full stack before tightening the hardware.
+I mount the **Power Driver Board below the Main Board using 10 standoffs, with its components facing down**, away from the Main Board. **Each standoff must be longer than 20 mm**; the exact length can vary to provide clearance for components, IC sockets, Teensy headers, and cables. Check the full stack before tightening the hardware.
 
 Review [Wiring.md](Wiring.md), pin-1 cable orientation and the physical stack clearances before powering.

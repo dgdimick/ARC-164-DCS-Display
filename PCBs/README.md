@@ -1,6 +1,6 @@
 # ARC-164 PCBs
 
-**Last updated: November 8, 2026 at 1:54 AM MST (America/Denver)**
+**Last updated: November 8, 2026 at 1:57 AM MST (America/Denver)**
 
 I’ve shared the first prototype versions of all three boards below. The downloads include the KiCad projects and the files you can send to a PCB manufacturer, along with the wiring and assembly notes I’m putting together as I build mine.
 
@@ -28,7 +28,9 @@ I use **18 mm total spacing between the panel and Main Board**, made up of a **3
 
 The **LED Sub-Board mounts above the Main Board**, with its bottom connected to the Main Board’s top. I use **11 mm total spacing from the Main Board**, made up of a **10 mm standoff plus a 1 mm-thick washer** at each mounting point.
 
-The **Power Driver Board mounts below the Main Board using 10 standoffs, each longer than 20 mm**. The exact length can vary to clear components, sockets, Teensy headers, and cables.
+I use **four 10 mm standoffs with 1 mm-thick washers** to mount the Sub-Board, giving **11 mm spacing**. At the **two lower Sub-Board mounting positions, use nuts**; at the **two upper positions, use threaded standoffs to allow the Power Driver Board to attach**.
+
+The **Power Driver Board mounts below the Main Board using 10 standoffs, each longer than 20 mm, with its components facing down**. The exact length can vary to clear components, sockets, Teensy headers, and cables.
 
 ## Three-board design
 

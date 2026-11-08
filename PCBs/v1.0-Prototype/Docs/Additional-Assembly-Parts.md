@@ -1,6 +1,6 @@
 # Additional assembly parts
 
-**Last updated: November 8, 2026 at 1:54 AM MST (America/Denver)**
+**Last updated: November 8, 2026 at 1:57 AM MST (America/Denver)**
 
 The schematic BOMs list PCB components. Add the following sockets and module headers for assembly.
 
@@ -25,7 +25,8 @@ The **LED Sub-Board mounts above the Main Board**, with its bottom facing the Ma
 
 | Quantity | Mounting hardware | Requirement |
 | ---: | --- | --- |
-| **10** | Standoffs connecting the Power Driver Board below the Main Board | **Each longer than 20 mm**; choose the exact length to clear components, sockets, Teensy headers, and cables. Match the thread size to the mounting hardware. |
+| **4** | 10 mm standoffs for the LED Sub-Board, with four 1 mm-thick washers | **11 mm total spacing**; nuts at the two lower positions and threaded standoffs at the two upper positions to allow Power Driver Board attachment. |
+| **10** | Standoffs connecting the Power Driver Board below the Main Board, components facing down | **Each longer than 20 mm**; choose the exact length to clear components, sockets, Teensy headers, and cables. Match the thread size to the mounting hardware. |
 
 ## Power and cables
 
