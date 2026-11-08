@@ -1,6 +1,6 @@
 # ARC-164 PCBs
 
-**Last updated: November 8, 2026 at 5:18 AM MST (America/Denver)**
+**Last updated: November 8, 2026 at 5:41 AM MST (America/Denver)**
 
 I’ve shared the first prototype versions of all three boards below. The downloads include the KiCad projects and the files you can send to a PCB manufacturer, along with the wiring and assembly notes I’m putting together as I build mine.
 
@@ -16,13 +16,13 @@ I’ve shared the first prototype versions of all three boards below. The downlo
 
 I’ve checked all three designs in KiCad: the board and schematic checks pass, with no unconnected items or mismatched connections. **I haven’t assembled and electrically tested them yet**, so I’m sharing them as prototypes. Please have a look at [what I still need to test](v1.0-Prototype/Docs/Known-Issues.md) before ordering. If you build a set, I’d love to hear how it goes and see your pictures in [Discussions](https://github.com/dgdimick/ARC-164-DCS-Display/discussions).
 
-## New display spacing — fit test pending
+## New display spacing and mounting fit
 
-I’ve adjusted my local LED Sub-Board for the **QBSLDIW301GR white displays**, with **six frequency digits spanning 46.5 mm** and **two channel digits spanning 15.3 mm**. The front faces measure **13.75 mm high**, and the display bodies extend **6 mm above the PCB**. **The new LED spacing still needs to be checked behind the faceplate.**
+I’ve adjusted my local LED Sub-Board for the **QBSLDIW301GR white displays**, with **six frequency digits spanning 46.5 mm** and **two channel digits spanning 15.3 mm**. The front faces measure **13.75 mm high**, and the display bodies extend **6 mm above the PCB**. **The 8 mm Sub-Board mounting stack has passed physical test fitting behind the faceplate.**
 
-I’ll print the new display-board mockup at **100% scale** and check both windows, mounting-hole alignment, height, and clearance around the controls and other boards. **I’ll wait to publish the STL until I’ve tested the fit.** The new spacing is a local revision and is not included in the Version 1.0 prototype downloads linked above. See my [current display plan](../README.md#seven-segment-display-plan).
+The new spacing is a local revision and is not included in the Version 1.0 prototype downloads linked above. See my [current display plan](../README.md#seven-segment-display-plan).
 
-**The display bodies extend 6 mm above the LED Sub-Board. I’m using 8 mm Main-Board-to-Sub-Board spacing, with a 20 mm screw, a 6 mm-thick nut and two 1 mm-thick washers at each of the four mounts, pending the fit test.** I’ll print the corrected 6 mm display mockup at **100% scale** and check it behind the faceplate before confirming the mounting stack or publishing the STL.
+**The 8 mm Sub-Board mounting stack passed my physical test fitting on November 8, 2026.** Each of the **four mounts** uses a **20 mm screw, a 6 mm-thick nut and two 1 mm-thick washers**. The display bodies extend **6 mm above the LED Sub-Board**. Assembled electrical testing remains to be done.
 
 ## Panel-to-Main-Board spacing
 
