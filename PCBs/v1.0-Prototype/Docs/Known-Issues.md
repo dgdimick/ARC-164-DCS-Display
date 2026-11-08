@@ -1,10 +1,10 @@
 # Known issues — Version 1.0 prototype
 
-**Last updated: November 8, 2026 at 6:27 AM MST (America/Denver)**
+**Last updated: November 8, 2026 at 7:28 AM MST (America/Denver)**
 
 1. **Physical/electrical validation:** These boards have not been built and electrically validated as a complete three-board assembly. Test power polarity/current, display segment order, switches, encoders, PWM dimming and actual cable continuity.
 2. **Stack height:** Display bodies extend **6 mm above the LED Sub-Board**. The Sub-Board mounts above Main at **four points**, each using a **20 mm screw, a 6 mm-thick nut and two 1 mm-thick washers**, giving **8 mm spacing**. **This Sub-Board mounting stack passed my physical test fitting on November 8, 2026**. Panel-to-Main spacing remains **18 mm**, using a **3 mm-thick nut plus a 15 mm standoff**. The Power Driver Board mounts below Main with its **components facing down**, using **10 standoffs, each longer than 20 mm**. Check the complete stack and cable clearances before assembly.
-**The 0.75 mm gaps between the LED digits are still awaiting the STL print and fit test behind the faceplate.** That spacing test is separate from the **8 mm mounting stack, which has passed test fitting**. I’ll print the new mockup at **100% scale**, with **6 mm-tall display bodies**, and keep the STL off GitHub until I’ve checked the fit.
+**Latest fit-test revision:** I moved the **six FREQ LEDs 1 mm right** and the **two upper channel LEDs 2 mm left** from the previous 0.75 mm-gap layout. Both groups retain **0.75 mm gaps**, and the display bodies remain **6 mm above the PCB**. **The new STL is still awaiting the 100% print and fit test behind the faceplate**, and I’ll keep it off GitHub until I’ve tested it. The **8 mm mounting stack has already passed test fitting**.
 
 3. **Cables:** Both 40-pin headers are unshrouded and can be swapped/reversed. Label and continuity-check them. Final short J10 cable and J21 cable/housing selection remain open.
 4. **Firmware:** No tested ARC-164 firmware release is included. Use the supplied GPIO/cable map and verify MAX7219 configuration before functional testing.
