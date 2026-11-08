@@ -1,6 +1,6 @@
 # Additional assembly parts
 
-**Last updated: November 8, 2026 at 1:42 AM MST (America/Denver)**
+**Last updated: November 8, 2026 at 1:54 AM MST (America/Denver)**
 
 The schematic BOMs list PCB components. Add the following sockets and module headers for assembly.
 
@@ -21,7 +21,11 @@ All of these parts are through-hole and can be hand soldered. The Teensy still n
 
 For **18 mm total panel-to-Main-Board spacing**, I use a **3 mm-thick nut plus a 15 mm standoff** at each mounting point. The 3 mm dimension describes the nut’s thickness; match the thread size to the mounting hardware.
 
-For **11 mm total Main-Board-to-LED-Sub-Board spacing**, I use a **10 mm standoff plus a 1 mm-thick washer** at each mounting point.
+The **LED Sub-Board mounts above the Main Board**, with its bottom facing the Main Board’s top. For **11 mm total Main-Board-to-LED-Sub-Board spacing**, I use a **10 mm standoff plus a 1 mm-thick washer** at each mounting point.
+
+| Quantity | Mounting hardware | Requirement |
+| ---: | --- | --- |
+| **10** | Standoffs connecting the Power Driver Board below the Main Board | **Each longer than 20 mm**; choose the exact length to clear components, sockets, Teensy headers, and cables. Match the thread size to the mounting hardware. |
 
 ## Power and cables
 
