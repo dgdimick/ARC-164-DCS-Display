@@ -1,6 +1,6 @@
 # ARC-164 three-board wiring — Version 1.0 prototype
 
-**Last updated: November 8, 2026 at 10:00 AM MST (America/Denver)**
+**Last updated: November 8, 2026 at 10:04 AM MST (America/Denver)**
 
 This supersedes the earlier two-board, 32-pin, direct-stacking and sub-board Channel-encoder instructions. These are prototype hardware files; assembled electrical operation and the complete mechanical stack have not been verified.
 
@@ -38,7 +38,7 @@ Each Main Board backlight branch is LED_5V -> 330 ohm resistor -> LED anode (pad
 
 **LED Sub-Board v1.1 has passed my 100% print and physical fit test behind the faceplate**, including the **0.75 mm LED gaps**, **6 mm display bodies**, and **8 mm mounting stack**. In the final adjustment, I moved the **channel LEDs 1 mm right** and the **FREQ LEDs 0.5 mm left** from the previous test layout. Each of the four mounts uses a **20 mm screw, a 6 mm-thick nut and two 1 mm washers**. **Assembled electrical testing remains to be done.**
 
-Use **18 mm total spacing between the panel and Main Board**, made up of a **3 mm-thick nut plus a 15 mm standoff** at each mounting point. The LED Sub-Board mounts above the Main Board: its bottom connects to the Main Board’s top. I use **four Sub-Board mounts**, each with a **20 mm screw, a 6 mm-thick nut, and two 1 mm-thick washers**, giving **8 mm spacing** between the Main Board and LED Sub-Board. Main-to-LED mounting-hole alignment is face-up, without mirroring. The Power Driver Board mounts below the Main Board, **components facing down**, using **10 standoffs, each longer than 20 mm**. Choose the exact length to clear IC sockets, Teensy socket/header height, jack and cables. Model placement does not establish installed socket height.
+I currently have **13.5 mm between the panel and Main Board**. I may use **14 mm** to let the LEDs sit slightly farther back from the glass. I’ll check the spacing when the manufactured PCBs arrive and add an extra spacer if needed. The LED Sub-Board mounts above the Main Board: its bottom connects to the Main Board’s top. I use **four Sub-Board mounts**, each with a **20 mm screw, a 6 mm-thick nut, and two 1 mm-thick washers**, giving **8 mm spacing** between the Main Board and LED Sub-Board. Main-to-LED mounting-hole alignment is face-up, without mirroring. The Power Driver Board mounts below the Main Board, **components facing down**, using **10 standoffs, each longer than 20 mm**. Choose the exact length to clear IC sockets, Teensy socket/header height, jack and cables. Model placement does not establish installed socket height.
 
 D17 was moved clear of the MAIN switch SW7 courtyard before the final Main Board reroute. All three boards now pass DRC with zero violations and no unconnected items. The saved component positions, outline and holes were preserved during routing. Physical assembly and complete stack-height checks are still required.
 

@@ -1,6 +1,6 @@
 # ARC-164 Version 1.0 prototype assembly
 
-**Last updated: November 8, 2026 at 10:00 AM MST (America/Denver)**
+**Last updated: November 8, 2026 at 10:04 AM MST (America/Denver)**
 
 
 I’ll post pictures of my build to help you follow the assembly steps.
@@ -17,7 +17,7 @@ I’ll post pictures of my build to help you follow the assembly steps.
 
 ### Panel-to-Main-Board mounting
 
-I use **18 mm total spacing between the panel and Main Board**. At each mounting point, use a **3 mm-thick nut plus a 15 mm standoff** to make that spacing. The 3 mm measurement is the nut’s thickness. Check the complete mounting stack, control alignment, and clearances before tightening the hardware.
+I currently have **13.5 mm between the panel and Main Board**. I may use **14 mm** to let the LEDs sit slightly farther back from the glass. I’ll check the spacing when the manufactured PCBs arrive and add an extra spacer if needed. Check the complete mounting stack, control alignment, and clearances before tightening the hardware.
 
 ### LED Sub-Board mounting
 

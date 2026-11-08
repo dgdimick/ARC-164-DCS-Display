@@ -1,6 +1,6 @@
 # ARC-164 PCBs
 
-**Last updated: November 8, 2026 at 10:00 AM MST (America/Denver)**
+**Last updated: November 8, 2026 at 10:04 AM MST (America/Denver)**
 
 I’ve shared the first prototype versions of all three boards below. The downloads include the KiCad projects and the files you can send to a PCB manufacturer, along with the wiring and assembly notes I’m putting together as I build mine.
 
@@ -24,7 +24,7 @@ I’ve checked all three designs in KiCad: the board and schematic checks pass, 
 
 ## Panel-to-Main-Board spacing
 
-I use **18 mm total spacing between the panel and Main Board**, made up of a **3 mm-thick nut plus a 15 mm standoff** at each mounting point. See the [assembly instructions](v1.0-Prototype/Docs/Assembly.md#panel-to-main-board-mounting) for the mounting notes.
+I currently have **13.5 mm between the panel and Main Board**. I may use **14 mm** to let the LEDs sit slightly farther back from the glass. I’ll check the spacing when the manufactured PCBs arrive and add an extra spacer if needed. See the [assembly instructions](v1.0-Prototype/Docs/Assembly.md#panel-to-main-board-mounting) for the mounting notes.
 
 The **LED Sub-Board mounts above the Main Board**, with its bottom connected to the Main Board’s top. The mounting stack gives **8 mm total spacing**.
 

@@ -1,6 +1,6 @@
 # ARC-164 LED Sub Board — Version 1.1
 
-**Last updated: November 8, 2026 at 10:00 AM MST (America/Denver)**
+**Last updated: November 8, 2026 at 10:04 AM MST (America/Denver)**
 
 **LED Sub-Board v1.1 has passed my 100% print and physical fit test behind the faceplate**, including the **0.75 mm LED gaps**, **6 mm display bodies**, and **8 mm mounting stack**. In the final adjustment, I moved the **channel LEDs 1 mm right** and the **FREQ LEDs 0.5 mm left** from the previous test layout. Each of the four mounts uses a **20 mm screw, a 6 mm-thick nut and two 1 mm washers**. **Assembled electrical testing remains to be done.**
 
@@ -17,7 +17,7 @@
 
 The board carries eight **QBSLDIW301GR white common-cathode digits**: six frequency digits spanning **49.35 mm** and two channel digits spanning **15.95 mm**, with **0.75 mm gaps**. Each display body measures **7.6 mm wide × 13.75 mm high × 6 mm deep**. I kept the J20 connector's distance from the board edge and centered it horizontally between the upper mounting holes.
 
-The Sub Board mounts above the Main Board. Panel-to-Main-Board spacing remains **18 mm**, using a **3 mm-thick nut and 15 mm standoff**. The Power Driver Board mounts below the Main Board, components facing down, on **10 standoffs longer than 20 mm**.
+The Sub Board mounts above the Main Board. I currently have **13.5 mm between the panel and Main Board**. I may use **14 mm** to let the LEDs sit slightly farther back from the glass. I’ll check the spacing when the manufactured PCBs arrive and add an extra spacer if needed. The Power Driver Board mounts below the Main Board, components facing down, on **10 standoffs longer than 20 mm**.
 
 Fresh KiCad checks report **zero DRC violations, zero unconnected items, zero schematic parity issues, and zero ERC violations under the saved project settings**. The reports list checks that remain disabled. Physical mockup fitting does not replace assembly and electrical testing. The bundled display STEP model is a simple measured-body clearance box.
 

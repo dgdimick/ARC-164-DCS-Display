@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 8, 2026 at 10:00 AM MST (America/Denver)**
+**Last updated: November 8, 2026 at 10:04 AM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -252,7 +252,7 @@ I’ll use **six white digits** to show a frequency such as **251.000**. The rev
 
 **LED Sub-Board v1.1 has passed my 100% print and physical fit test behind the faceplate**, including the **0.75 mm LED gaps**, **6 mm display bodies**, and **8 mm mounting stack**. In the final adjustment, I moved the **channel LEDs 1 mm right** and the **FREQ LEDs 0.5 mm left** from the previous test layout. Each of the four mounts uses a **20 mm screw, a 6 mm-thick nut and two 1 mm washers**. **Assembled electrical testing remains to be done.**
 
-The Version 1.1 LED Sub-Board spans both windows, with the digits soldered directly to it. The Main-to-LED-Sub-Board spacing is **8 mm**. Faceplate-to-Main-Board spacing is **18 mm**, using a **3 mm-thick nut plus a 15 mm standoff**. Check the actual display height, smoked-cover visibility, and complete stack fit during assembly. The LED Sub-Board mounts above the Main Board, with its bottom connected to the Main Board’s top. I use **four Sub-Board mounts**, each with a **20 mm screw, a 6 mm-thick nut, and two 1 mm-thick washers**, giving **8 mm spacing** between the Main Board and LED Sub-Board. The Power Driver Board mounts below the Main Board, **components facing down**, using **10 standoffs, each longer than 20 mm**; choose the exact length to clear components, sockets, Teensy headers, and cables.
+The Version 1.1 LED Sub-Board spans both windows, with the digits soldered directly to it. The Main-to-LED-Sub-Board spacing is **8 mm**. I currently have **13.5 mm between the panel and Main Board**. I may use **14 mm** to let the LEDs sit slightly farther back from the glass. I’ll check the spacing when the manufactured PCBs arrive and add an extra spacer if needed. Check the actual display height, smoked-cover visibility, and complete stack fit during assembly. The LED Sub-Board mounts above the Main Board, with its bottom connected to the Main Board’s top. I use **four Sub-Board mounts**, each with a **20 mm screw, a 6 mm-thick nut, and two 1 mm-thick washers**, giving **8 mm spacing** between the Main Board and LED Sub-Board. The Power Driver Board mounts below the Main Board, **components facing down**, using **10 standoffs, each longer than 20 mm**; choose the exact length to clear components, sockets, Teensy headers, and cables.
 
 ### Preset-channel display
 
