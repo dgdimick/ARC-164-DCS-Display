@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 8, 2026 at 7:34 AM MST (America/Denver)**
+**Last updated: November 8, 2026 at 7:40 AM MST (America/Denver)**
 <!-- Refresh this timestamp whenever this README changes; use the actual current America/Denver date and time with the correct MST/MDT abbreviation. -->
 
 <p align="center">
@@ -10,6 +10,8 @@
 *Panel reference photo: PC Flights.*
 
 I’m building an ARC-164 radio panel for my SIMPIT and sharing the files and what I learn along the way. I hope you’ll enjoy building one too, and perhaps help me make it better.
+
+I spend about **8 hours a day on my SIMPIT projects**, including working on the code, PCB design, assembly, and test fitting.
 
 ## Development update — November 7, 2026
 
