@@ -1,6 +1,6 @@
 # ARC-164 PCBs
 
-**Last updated: November 8, 2026 at 5:48 AM MST (America/Denver)**
+**Last updated: November 8, 2026 at 6:27 AM MST (America/Denver)**
 
 I’ve shared the first prototype versions of all three boards below. The downloads include the KiCad projects and the files you can send to a PCB manufacturer, along with the wiring and assembly notes I’m putting together as I build mine.
 
@@ -18,11 +18,11 @@ I’ve checked all three designs in KiCad: the board and schematic checks pass, 
 
 ## New display spacing and mounting fit
 
-I’ve adjusted my local LED Sub-Board for the **QBSLDIW301GR white displays**, with **six frequency digits spanning 48.1 mm** and **two channel digits spanning 15.7 mm**. The front faces measure **13.75 mm high**, and the display bodies extend **6 mm above the PCB**. **The 8 mm Sub-Board mounting stack has passed physical test fitting behind the faceplate.**
+I’ve adjusted my local LED Sub-Board for the **QBSLDIW301GR white displays**, with **six frequency digits spanning 49.35 mm** and **two channel digits spanning 15.95 mm**. The front faces measure **13.75 mm high**, and the display bodies extend **6 mm above the PCB**. **The 8 mm Sub-Board mounting stack has passed physical test fitting behind the faceplate.**
 
 The new spacing is a local revision and is not included in the Version 1.0 prototype downloads linked above. See my [current display plan](../README.md#seven-segment-display-plan).
 
-**The 8 mm Sub-Board mounting stack passed my physical test fitting on November 8, 2026.** Each of the **four mounts** uses a **20 mm screw, a 6 mm-thick nut and two 1 mm-thick washers**. The display bodies extend **6 mm above the LED Sub-Board**. **The 0.5 mm gaps between the LED digits are still awaiting the STL print and fit test behind the faceplate.** That spacing test is separate from the **8 mm mounting stack, which has passed test fitting**. I’ll print the new mockup at **100% scale**, with **6 mm-tall display bodies**, and keep the STL off GitHub until I’ve checked the fit. Assembled electrical testing remains to be done.
+**The 8 mm Sub-Board mounting stack passed my physical test fitting on November 8, 2026.** Each of the **four mounts** uses a **20 mm screw, a 6 mm-thick nut and two 1 mm-thick washers**. The display bodies extend **6 mm above the LED Sub-Board**. **The 0.75 mm gaps between the LED digits are still awaiting the STL print and fit test behind the faceplate.** That spacing test is separate from the **8 mm mounting stack, which has passed test fitting**. I’ll print the new mockup at **100% scale**, with **6 mm-tall display bodies**, and keep the STL off GitHub until I’ve checked the fit. Assembled electrical testing remains to be done.
 
 ## Panel-to-Main-Board spacing
 
