@@ -1,6 +1,6 @@
 # ARC-164 PCBs
 
-**Last updated: November 8, 2026 at 3:08 AM MST (America/Denver)**
+**Last updated: November 8, 2026 at 5:18 AM MST (America/Denver)**
 
 I’ve shared the first prototype versions of all three boards below. The downloads include the KiCad projects and the files you can send to a PCB manufacturer, along with the wiring and assembly notes I’m putting together as I build mine.
 
@@ -22,15 +22,15 @@ I’ve adjusted my local LED Sub-Board for the **QBSLDIW301GR white displays**, 
 
 I’ll print the new display-board mockup at **100% scale** and check both windows, mounting-hole alignment, height, and clearance around the controls and other boards. **I’ll wait to publish the STL until I’ve tested the fit.** The new spacing is a local revision and is not included in the Version 1.0 prototype downloads linked above. See my [current display plan](../README.md#seven-segment-display-plan).
 
-**The display bodies extend 6 mm above the LED Sub-Board. I’m keeping 11 mm Main-Board-to-Sub-Board spacing, using a 10 mm standoff plus a 1 mm-thick washer, pending the fit test.** I’ll print the corrected 6 mm display mockup at **100% scale** and check it behind the faceplate before confirming the mounting stack or publishing the STL.
+**The display bodies extend 6 mm above the LED Sub-Board. I’m using 8 mm Main-Board-to-Sub-Board spacing, with a 20 mm screw, a 6 mm-thick nut and two 1 mm-thick washers at each of the four mounts, pending the fit test.** I’ll print the corrected 6 mm display mockup at **100% scale** and check it behind the faceplate before confirming the mounting stack or publishing the STL.
 
 ## Panel-to-Main-Board spacing
 
 I use **18 mm total spacing between the panel and Main Board**, made up of a **3 mm-thick nut plus a 15 mm standoff** at each mounting point. See the [assembly instructions](v1.0-Prototype/Docs/Assembly.md#panel-to-main-board-mounting) for the mounting notes.
 
-The **LED Sub-Board mounts above the Main Board**, with its bottom connected to the Main Board’s top. I use **11 mm total spacing from the Main Board**, made up of a **10 mm standoff plus a 1 mm-thick washer** at each mounting point.
+The **LED Sub-Board mounts above the Main Board**, with its bottom connected to the Main Board’s top. The mounting stack gives **8 mm total spacing**.
 
-I use **four 10 mm standoffs with 1 mm-thick washers** to mount the Sub-Board, giving **11 mm spacing**. At the **two lower Sub-Board mounting positions, use nuts**; at the **two upper positions, use threaded standoffs to allow the Power Driver Board to attach**.
+I use **four Sub-Board mounts**, each with a **20 mm screw, a 6 mm-thick nut, and two 1 mm-thick washers**, giving **8 mm spacing** between the Main Board and LED Sub-Board.
 
 The **Power Driver Board mounts below the Main Board using 10 standoffs, each longer than 20 mm, with its components facing down**. The exact length can vary to clear components, sockets, Teensy headers, and cables.
 

@@ -1,6 +1,6 @@
 # Additional assembly parts
 
-**Last updated: November 8, 2026 at 3:08 AM MST (America/Denver)**
+**Last updated: November 8, 2026 at 5:18 AM MST (America/Denver)**
 
 The schematic BOMs list PCB components. Add the following sockets and module headers for assembly.
 
@@ -19,15 +19,17 @@ All of these parts are through-hole and can be hand soldered. The Teensy still n
 
 ## Panel mounting hardware
 
-**The display bodies extend 6 mm above the LED Sub-Board. I’m keeping 11 mm Main-Board-to-Sub-Board spacing, using a 10 mm standoff plus a 1 mm-thick washer, pending the fit test.** I’ll print the corrected 6 mm display mockup at **100% scale** and check it behind the faceplate before confirming the mounting stack or publishing the STL.
+**The display bodies extend 6 mm above the LED Sub-Board. I’m using 8 mm Main-Board-to-Sub-Board spacing, with a 20 mm screw, a 6 mm-thick nut and two 1 mm-thick washers at each of the four mounts, pending the fit test.** I’ll print the corrected 6 mm display mockup at **100% scale** and check it behind the faceplate before confirming the mounting stack or publishing the STL.
 
 For **18 mm total panel-to-Main-Board spacing**, I use a **3 mm-thick nut plus a 15 mm standoff** at each mounting point. The 3 mm dimension describes the nut’s thickness; match the thread size to the mounting hardware.
 
-The **LED Sub-Board mounts above the Main Board**, with its bottom facing the Main Board’s top. For **11 mm total Main-Board-to-LED-Sub-Board spacing**, I use a **10 mm standoff plus a 1 mm-thick washer** at each mounting point.
+The **LED Sub-Board mounts above the Main Board**, with its bottom facing the Main Board’s top. I use **four Sub-Board mounts**, each with a **20 mm screw, a 6 mm-thick nut, and two 1 mm-thick washers**, giving **8 mm spacing** between the Main Board and LED Sub-Board.
 
 | Quantity | Mounting hardware | Requirement |
 | ---: | --- | --- |
-| **4** | 10 mm standoffs for the LED Sub-Board, with four 1 mm-thick washers | **11 mm total spacing**; nuts at the two lower positions and threaded standoffs at the two upper positions to allow Power Driver Board attachment. |
+| **4** | 20 mm screws for the LED Sub-Board mounts | One per mount; match the thread size to the nuts. |
+| **4** | 6 mm-thick nuts for the LED Sub-Board mounts | One per mount; 6 mm is the thickness, not the thread diameter. |
+| **8** | 1 mm-thick washers for the LED Sub-Board mounts | Two per mount; nut plus washers gives **8 mm spacing**. |
 | **10** | Standoffs connecting the Power Driver Board below the Main Board, components facing down | **Each longer than 20 mm**; choose the exact length to clear components, sockets, Teensy headers, and cables. Match the thread size to the mounting hardware. |
 
 ## Power and cables
