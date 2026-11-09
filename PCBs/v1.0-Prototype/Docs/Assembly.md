@@ -1,8 +1,8 @@
 # ARC-164 Version 1.0 prototype assembly
 
-**Last updated: November 9, 2026 at 3:02 PM MST (America/Denver)**
+**Last updated: November 9, 2026 at 3:30 PM MST (America/Denver)**
 
-**Main Board v1.1 is published, but it will not work with any currently or previously published LED Sub Board.** I’ve resized the Main Board and am still working on its matching redesigned Sub Board. **The new Sub Board files and test STL remain unpublished until I finish the 100% print and fit test, including the J20 cable connector.** I’m keeping the tested LED positions and 0.75 mm gaps. Please wait for the matching Sub Board and confirmed assembly clearance before ordering a compatible set. Assembled electrical testing remains pending.
+**Main Board v1.1 is published, but it will not work with any currently or previously published LED Sub Board.** I’ve resized the Main Board and am still working on its matching redesigned Sub Board. **The matching new Sub Board files and STL will stay unpublished until I finish the 100% print and fit test and confirm both the channel LED alignment behind the faceplate and J20 connector/cable clearance with Main Board v1.1.** I’m keeping the frequency LED positions and **0.75 mm gaps** unchanged; the channel LEDs’ latest **1 mm move right** still needs its alignment check. Please wait for the matching Sub Board and confirmed assembly clearance before ordering a compatible set. Assembled electrical testing remains pending.
 
 
 I’ll post pictures of my build to help you follow the assembly steps.
@@ -23,7 +23,7 @@ I currently have **13.5 mm between the panel and Main Board**. I may use **14 mm
 
 ### LED Sub-Board mounting
 
-**The LED positions on the v1.1 mockup passed my 100% print and physical alignment test behind the faceplate**, including the **0.75 mm LED gaps**, **6 mm display bodies**, and **8 mm mounting stack**. In the final adjustment, I moved the **channel LEDs 1 mm right** and the **FREQ LEDs 0.5 mm left** from the previous test layout. Each of the four mounts uses a **20 mm screw, a 6 mm-thick nut and two 1 mm washers**. **Assembled electrical testing remains to be done.**
+**The earlier Sub Board mockup passed my 100% print and LED alignment test behind the faceplate**, including the **0.75 mm LED gaps**, **6 mm display bodies**, and **8 mm mounting stack**. In that earlier tested adjustment, I moved the **channel LEDs 1 mm right** and the **FREQ LEDs 0.5 mm left** from the previous test layout. Each of the four mounts uses a **20 mm screw, a 6 mm-thick nut and two 1 mm washers**. **Assembled electrical testing remains to be done.** **That result does not cover the latest resized Sub Board: I still need to check its channel LED alignment and J20 connector/cable clearance with Main Board v1.1 before publishing it.**
 
 The **LED Sub-Board mounts above the Main Board**, toward the panel. Its mounting hardware connects the **bottom of the Sub-Board to the top of the Main Board**. I use **four Sub-Board mounts**, each with a **20 mm screw, a 6 mm-thick nut, and two 1 mm-thick washers**, giving **8 mm spacing** between the Main Board and LED Sub-Board. Check display alignment behind both windows and clearance around the components before tightening the hardware.
 
