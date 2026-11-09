@@ -1,8 +1,8 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 8, 2026 at 12:03 PM MST (America/Denver)**
+**Last updated: November 9, 2026 at 2:59 PM MST (America/Denver)**
 
-**Main Board and LED Sub Board downloads are temporarily withdrawn; please don’t order these boards yet.** I’ve resized both boards to address the **J20 cable connector clearance**, keeping the tested **LED positions, 0.75 mm gaps and 6 mm display bodies unchanged**. Both new mockups are waiting on **100% print and fit testing together with the actual J20 cable connector**. I’ll provide replacement board files after checking the fit. The earlier LED alignment and **8 mm Sub Board mounting stack** passed their tests, but clearance of the resized assembly is not yet confirmed. The new Main Board and Sub Board STLs are staying off GitHub until I’ve tested them.
+**Main Board v1.1 is published, but it will not work with any currently or previously published LED Sub Board.** I’ve resized the Main Board and am still working on its matching redesigned Sub Board. **The new Sub Board files and test STL remain unpublished until I finish the 100% print and fit test, including the J20 cable connector.** I’m keeping the tested LED positions and 0.75 mm gaps. Please wait for the matching Sub Board and confirmed assembly clearance before ordering a compatible set. Assembled electrical testing remains pending.
 
 <p align="center">
   <img src="images/ARC-164_uhf_panel.jpg" width="500" alt="ARC-164 UHF radio panel reference photo">
@@ -14,13 +14,17 @@ I’m building an ARC-164 radio panel for my SIMPIT and sharing the files and wh
 
 I spend about **8 hours a day on my SIMPIT projects**, including working on the code, PCB design, assembly, and test fitting.
 
+## Development update — November 9, 2026
+
+I’ve published [Main Board v1.1](PCBs/v1.1/Main-Board/README.md), including the resized PCB, schematic, fabrication files and print mockup. **It will not work with any currently or previously published Sub Board.** I’m still working on the matching new Sub Board and checking its channel LED alignment and J20 cable clearance. Those files remain unpublished.
+
 ## Development update — November 8, 2026
 
 **The LED positions on the v1.1 mockup passed my 100% print and physical alignment test behind the faceplate**, including the **0.75 mm LED gaps**, **6 mm display bodies**, and **8 mm mounting stack**. In the final adjustment, I moved the **channel LEDs 1 mm right** and the **FREQ LEDs 0.5 mm left** from the previous test layout. Each of the four mounts uses a **20 mm screw, a 6 mm-thick nut and two 1 mm washers**. **Assembled electrical testing remains to be done.** [LED Sub Board status](PCBs/v1.1/LED-Subboard/README.md). The Main Board and Power Driver Board remain at v1.0 Prototype.
 
 ## Development update — November 7, 2026
 
-I initially published Version 1.0 prototypes of all three boards. The Main Board and LED Sub Board downloads are now withdrawn; see the [PCB download overview](PCBs/README.md) for individual board files and fabrication ZIPs. The Power Driver Board remains available, along with the [three-board wiring notes](PCBs/v1.0-Prototype/Docs/Wiring.md). Replacement Main Board and LED Sub Board files will follow after the new fit tests.
+I initially published Version 1.0 prototypes of all three boards. Main Board v1.1 is published, but the matching new Sub Board remains unpublished; see the [PCB download overview](PCBs/README.md) for individual board files and fabrication ZIPs. The Power Driver Board remains available, along with the [three-board wiring notes](PCBs/v1.0-Prototype/Docs/Wiring.md). The matching Sub Board files will follow after the new fit tests. Main Board v1.1 is incompatible with all previously published Sub Boards.
 
 I’ve checked the designs in KiCad, and **all three boards pass the design-rule and schematic electrical checks**, with no unconnected items or differences between the schematics and PCBs. The cable pinouts and all 19 backlight LED/resistor connections have been checked too.
 
@@ -216,13 +220,13 @@ This is a **four-direction switch with a center pushbutton and rotary encoder**.
 
 ## Things that need to be completed
 
-**Last updated: November 8, 2026 at 12:03 PM MST (America/Denver)**
+**Last updated: November 9, 2026 at 2:59 PM MST (America/Denver)**
 <!-- Refresh this section timestamp whenever the work list changes, using the actual America/Denver time and MST/MDT. -->
 
 This is my current work list for the hardware, firmware, testing, and build instructions.
 
 1. **Panel layout and parts:** Confirm dimensions, mounting clearances, controls, and the complete parts list. **TONE and SQL switches:** Select the exact parts and verify their mounting dimensions, required operation and travel, and clearances before finalizing the PCB. My purchased **QBSLDIW301GR white digits—six for frequency and two for channel—have passed the printed layout fit test**. The revised six-digit frequency layout is **49.35 mm wide × 13.75 mm high across the front face**, using **0.75 mm gaps**. The v1.1 mockup passed at 100% scale. Verify the prototype LED Sub-Board footprint and pinout against these displays before assembly. Check digit visibility and brightness through the smoked covers, pinout, mounting height, spacing, and clearance within the 53.5 × 17.5 mm frequency window and 22 × 17.5 mm preset window.
-2. **Resized boards and J20 fit test:** I’ve resized the Main Board and LED Sub Board while **keeping the tested LED positions unchanged**. Print both mockups at **100%** and test them together with the actual J20 cable connector before ordering. Both board downloads are withdrawn until I provide replacement files. The Power Driver Board remains available as a v1.0 prototype. Verify the manufactured boards, complete mechanical stack and sockets, connector/cable fit, control pin assignments and assembled electrical operation. The current design uses five FREQ encoders, MAIN/PRESET direct switch contacts without resistor ladders, and the documented Teensy GPIO map. Continue following up with PC Flights about the modified panel; revisit the frequency rotary-switch alternative after the ARC-186 and ARC-210 v2.0 projects.
+2. **Resized boards and J20 fit test:** I’ve resized the Main Board and LED Sub Board while **keeping the tested LED positions unchanged**. Print both mockups at **100%** and test them together with the actual J20 cable connector before ordering. Main Board v1.1 is now published; the matching Sub Board remains unpublished and needs further fit testing. The Power Driver Board remains available as a v1.0 prototype. Verify the manufactured boards, complete mechanical stack and sockets, connector/cable fit, control pin assignments and assembled electrical operation. The current design uses five FREQ encoders, MAIN/PRESET direct switch contacts without resistor ladders, and the documented Teensy GPIO map. Continue following up with PC Flights about the modified panel; revisit the frequency rotary-switch alternative after the ARC-186 and ARC-210 v2.0 projects.
 3. **Printed parts:** The **8 mm Sub-Board mounting stack has passed physical test fitting**, using a **20 mm screw, a 6 mm-thick nut and two 1 mm washers at each of four mounts**. The **v1.1 LED Sub-Board mockup passed at 100% scale**, with **0.75 mm gaps and 6 mm display bodies**. Continue designing and test-fitting the remaining knobs, brackets, and spacers with the selected hardware. Verify shaft engagement, knob retention, and clearances for those remaining parts.
 4. **DCS-BIOS mappings and any needed changes:** Check which inputs and display outputs are already available for this radio. Identify missing data, make any necessary export changes, and document them. Check the correct ARC-164 radio instance for each intended A-10 variant.
 5. **Firmware:** Write the control and display firmware and verify USB communication with DCS-BIOS. Implement DCS-BIOS-controlled MAX7219 display brightness and PWM panel backlighting, with separate brightness curves and off-state handling; see the [lighting design plan](#dcs-bios-display-brightness-and-panel-backlighting).

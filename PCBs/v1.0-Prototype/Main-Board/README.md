@@ -1,9 +1,7 @@
-# ARC-164 Main Board — downloads withdrawn
+# ARC-164 Main Board — current version 1.1
 
-**Last updated: November 8, 2026 at 12:03 PM MST (America/Denver)**
+**Last updated: November 9, 2026 at 2:59 PM MST (America/Denver)**
 
-**Main Board and LED Sub Board downloads are temporarily withdrawn; please don’t order these boards yet.** I’ve resized both boards to address the **J20 cable connector clearance**, keeping the tested **LED positions, 0.75 mm gaps and 6 mm display bodies unchanged**. Both new mockups are waiting on **100% print and fit testing together with the actual J20 cable connector**. I’ll provide replacement board files after checking the fit. The earlier LED alignment and **8 mm Sub Board mounting stack** passed their tests, but clearance of the resized assembly is not yet confirmed. The new Main Board and Sub Board STLs are staying off GitHub until I’ve tested them.
+**Main Board v1.1 is published, but it will not work with any currently or previously published LED Sub Board.** I’ve resized the Main Board and am still working on its matching redesigned Sub Board. **The new Sub Board files and test STL remain unpublished until I finish the 100% print and fit test, including the J20 cable connector.** I’m keeping the tested LED positions and 0.75 mm gaps. Please wait for the matching Sub Board and confirmed assembly clearance before ordering a compatible set. Assembled electrical testing remains pending.
 
-The earlier KiCad projects, Gerbers, schematics, BOMs and test STLs have been pulled from the current repository pending replacement. My local working files are preserved.
-
-[PCB status and available boards](../../README.md)
+[Main Board v1.1 downloads](../../v1.1/Main-Board/README.md). The withdrawn v1.0 files are not restored.
