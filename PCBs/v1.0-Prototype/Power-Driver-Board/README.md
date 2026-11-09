@@ -1,6 +1,8 @@
 # ARC-164 Power Driver Board — Version 1.0 Prototype
 
-**Last updated: November 9, 2026 at 3:02 PM MST (America/Denver)**
+**Last updated: November 9, 2026 at 4:41 PM MST (America/Denver)**
+
+The latest Sub Board mockup moves both channel LEDs **0.5 mm left from the previous mockup**, with the frequency LED positions, **0.75 mm gaps and 6 mm display bodies** unchanged. **The 100% print, channel LED alignment and J20 connector/cable-clearance checks with Main Board v1.1 are still pending before I publish the new Sub Board files or STL.**
 
 Untested prototype hardware revision; initial public revision dated November 7, 2026.
 
