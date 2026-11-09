@@ -1,6 +1,6 @@
 # ARC-164 PCBs
 
-**Last updated: November 9, 2026 at 3:02 PM MST (America/Denver)**
+**Last updated: November 9, 2026 at 3:28 PM MST (America/Denver)**
 
 **Main Board v1.1 is published, but it will not work with any currently or previously published LED Sub Board.** I’ve resized the Main Board and am still working on its matching redesigned Sub Board. **The new Sub Board files and test STL remain unpublished until I finish the 100% print and fit test, including the J20 cable connector.** I’m keeping the tested LED positions and 0.75 mm gaps. Please wait for the matching Sub Board and confirmed assembly clearance before ordering a compatible set. Assembled electrical testing remains pending.
 
@@ -20,9 +20,18 @@ I’ve checked all three designs in KiCad: the board and schematic checks pass, 
 
 ## Matching LED Sub Board — in development
 
-**The LED positions on the v1.1 mockup passed my 100% print and physical alignment test behind the faceplate**, including the **0.75 mm LED gaps**, **6 mm display bodies**, and **8 mm mounting stack**. In the final adjustment, I moved the **channel LEDs 1 mm right** and the **FREQ LEDs 0.5 mm left** from the previous test layout. Each of the four mounts uses a **20 mm screw, a 6 mm-thick nut and two 1 mm washers**. **Assembled electrical testing remains to be done.**
+I still need to **finish and test-fit the matching new Sub Board for Main Board v1.1** before publishing its files or STL:
 
-[LED Sub Board withdrawal and fit-test status](v1.1/LED-Subboard/README.md). The white displays use six frequency digits spanning **49.35 mm** and two channel digits spanning **15.95 mm**, with **13.75 mm front-face height**.
+- Print the latest Sub Board mockup at **100%** and fit it with **Main Board v1.1**.
+- Check the **channel LED alignment behind the faceplate** after the latest **1 mm move to the right**. Keep the frequency LED positions, **0.75 mm gaps and 6 mm display bodies** unchanged.
+- Fit the **actual J20 cable connector** and check the connector housing and cable clearance with both boards mounted together.
+- Confirm the fit before publishing the matching Sub Board. **Main Board v1.1 will not work with any older published Sub Board.**
+
+The earlier LED alignment mockup and **8 mm mounting stack** passed test fitting; **the latest resized Sub Board and J20 clearance test are still pending**. Each of the four mounts uses a **20 mm screw, a 6 mm-thick nut and two 1 mm washers**. Assembled electrical testing remains to be done.
+
+[Sub Board status](v1.1/LED-Subboard/README.md) · [Main project work list](../README.md#things-that-need-to-be-completed)
+
+The white displays use six frequency digits spanning **49.35 mm** and two channel digits spanning **15.95 mm**, with **13.75 mm front-face height**.
 
 ## Panel-to-Main-Board spacing
 
