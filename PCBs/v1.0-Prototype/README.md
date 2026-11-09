@@ -1,6 +1,6 @@
 # ARC-164 PCB Version 1.0 — Prototype
 
-**Last updated: November 9, 2026 at 2:59 PM MST (America/Denver)**
+**Last updated: November 9, 2026 at 3:02 PM MST (America/Denver)**
 
 **Main Board v1.1 is published, but it will not work with any currently or previously published LED Sub Board.** I’ve resized the Main Board and am still working on its matching redesigned Sub Board. **The new Sub Board files and test STL remain unpublished until I finish the 100% print and fit test, including the J20 cable connector.** I’m keeping the tested LED positions and 0.75 mm gaps. Please wait for the matching Sub Board and confirmed assembly clearance before ordering a compatible set. Assembled electrical testing remains pending.
 
@@ -8,7 +8,7 @@ Initial public three-board PCB prototype revision, November 7, 2026. These are u
 
 | Board | Source | Fabrication data | Schematic | BOM |
 | --- | --- | --- | --- | --- |
-| Main Board | Downloads withdrawn pending resized-board and J20 fit testing | — | — | — |
+| Main Board v1.0 | Withdrawn; [current Main Board v1.1](../v1.1/Main-Board/README.md) requires a new, unpublished Sub Board | — | — | — |
 | Power Driver Board | [KiCad project](Power-Driver-Board/Project/Power%20Driver%20Board.kicad_pro) | [Gerbers and drills](Power-Driver-Board/Manufacturing/) | [PDF](Power-Driver-Board/Schematics/Power-Driver-Board-v1.0-Prototype.pdf) | [CSV](Power-Driver-Board/Assembly/BOM.csv) |
 | LED Subboard | Downloads withdrawn pending resized-board and J20 fit testing | — | — | — |
 
@@ -24,7 +24,7 @@ Open the project in KiCad 10.0.7 or newer. Each project includes its used footpr
 
 ## Prototype limitations
 
-**All three boards now have zero DRC violations, zero unconnected items, and zero schematic parity issues; all three schematics pass ERC.** D17 was moved clear of SW7’s courtyard, and Main Board routing and both GND fills were rebuilt. Library warnings and D12 silkscreen clipping were corrected without moving components, outlines or holes.
+**At the original v1.0 release, all three boards had zero DRC violations, zero unconnected items, and zero schematic parity issues; all three schematics passed ERC.** These historical checks do not establish compatibility with Main Board v1.1 or validate the unfinished matching Sub Board. D17 was moved clear of SW7’s courtyard, and Main Board routing and both GND fills were rebuilt. Library warnings and D12 silkscreen clipping were corrected without moving components, outlines or holes.
 
 All manufactured-board electrical tests, actual cable/connector fit, socket/stack clearance and firmware integration remain to be performed. Review these limits before ordering. Use the supplied board version as a prototype baseline; this is not a production sign-off.
 

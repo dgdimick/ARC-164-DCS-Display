@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 9, 2026 at 2:59 PM MST (America/Denver)**
+**Last updated: November 9, 2026 at 3:02 PM MST (America/Denver)**
 
 **Main Board v1.1 is published, but it will not work with any currently or previously published LED Sub Board.** I’ve resized the Main Board and am still working on its matching redesigned Sub Board. **The new Sub Board files and test STL remain unpublished until I finish the 100% print and fit test, including the J20 cable connector.** I’m keeping the tested LED positions and 0.75 mm gaps. Please wait for the matching Sub Board and confirmed assembly clearance before ordering a compatible set. Assembled electrical testing remains pending.
 
@@ -20,7 +20,7 @@ I’ve published [Main Board v1.1](PCBs/v1.1/Main-Board/README.md), including th
 
 ## Development update — November 8, 2026
 
-**The LED positions on the v1.1 mockup passed my 100% print and physical alignment test behind the faceplate**, including the **0.75 mm LED gaps**, **6 mm display bodies**, and **8 mm mounting stack**. In the final adjustment, I moved the **channel LEDs 1 mm right** and the **FREQ LEDs 0.5 mm left** from the previous test layout. Each of the four mounts uses a **20 mm screw, a 6 mm-thick nut and two 1 mm washers**. **Assembled electrical testing remains to be done.** [LED Sub Board status](PCBs/v1.1/LED-Subboard/README.md). The Main Board and Power Driver Board remain at v1.0 Prototype.
+**The LED positions on the v1.1 mockup passed my 100% print and physical alignment test behind the faceplate**, including the **0.75 mm LED gaps**, **6 mm display bodies**, and **8 mm mounting stack**. In the final adjustment, I moved the **channel LEDs 1 mm right** and the **FREQ LEDs 0.5 mm left** from the previous test layout. Each of the four mounts uses a **20 mm screw, a 6 mm-thick nut and two 1 mm washers**. **Assembled electrical testing remains to be done.** [LED Sub Board status](PCBs/v1.1/LED-Subboard/README.md). This November 8 update describes the earlier layout. **Main Board v1.1 is now published, the Power Driver Board remains at v1.0 Prototype, and the matching new Sub Board is still being developed and is unpublished.**
 
 ## Development update — November 7, 2026
 
@@ -63,6 +63,8 @@ Click the image to view it full size.
 Click either image to view it full size.
 
 ## PCB Sub-Board images
+
+These images show the earlier Sub Board layout, which **does not work with Main Board v1.1**. I’m still developing and testing the matching replacement; its files are not published yet.
 
 ### Front of the PCB Sub-Board
 
@@ -220,14 +222,14 @@ This is a **four-direction switch with a center pushbutton and rotary encoder**.
 
 ## Things that need to be completed
 
-**Last updated: November 9, 2026 at 2:59 PM MST (America/Denver)**
+**Last updated: November 9, 2026 at 3:02 PM MST (America/Denver)**
 <!-- Refresh this section timestamp whenever the work list changes, using the actual America/Denver time and MST/MDT. -->
 
 This is my current work list for the hardware, firmware, testing, and build instructions.
 
 1. **Panel layout and parts:** Confirm dimensions, mounting clearances, controls, and the complete parts list. **TONE and SQL switches:** Select the exact parts and verify their mounting dimensions, required operation and travel, and clearances before finalizing the PCB. My purchased **QBSLDIW301GR white digits—six for frequency and two for channel—have passed the printed layout fit test**. The revised six-digit frequency layout is **49.35 mm wide × 13.75 mm high across the front face**, using **0.75 mm gaps**. The v1.1 mockup passed at 100% scale. Verify the prototype LED Sub-Board footprint and pinout against these displays before assembly. Check digit visibility and brightness through the smoked covers, pinout, mounting height, spacing, and clearance within the 53.5 × 17.5 mm frequency window and 22 × 17.5 mm preset window.
 2. **Resized boards and J20 fit test:** I’ve resized the Main Board and LED Sub Board while **keeping the tested LED positions unchanged**. Print both mockups at **100%** and test them together with the actual J20 cable connector before ordering. Main Board v1.1 is now published; the matching Sub Board remains unpublished and needs further fit testing. The Power Driver Board remains available as a v1.0 prototype. Verify the manufactured boards, complete mechanical stack and sockets, connector/cable fit, control pin assignments and assembled electrical operation. The current design uses five FREQ encoders, MAIN/PRESET direct switch contacts without resistor ladders, and the documented Teensy GPIO map. Continue following up with PC Flights about the modified panel; revisit the frequency rotary-switch alternative after the ARC-186 and ARC-210 v2.0 projects.
-3. **Printed parts:** The **8 mm Sub-Board mounting stack has passed physical test fitting**, using a **20 mm screw, a 6 mm-thick nut and two 1 mm washers at each of four mounts**. The **v1.1 LED Sub-Board mockup passed at 100% scale**, with **0.75 mm gaps and 6 mm display bodies**. Continue designing and test-fitting the remaining knobs, brackets, and spacers with the selected hardware. Verify shaft engagement, knob retention, and clearances for those remaining parts.
+3. **Printed parts:** The **8 mm Sub-Board mounting stack has passed physical test fitting**, using a **20 mm screw, a 6 mm-thick nut and two 1 mm washers at each of four mounts**. The **earlier LED alignment mockup passed at 100% scale**, with **0.75 mm gaps and 6 mm display bodies**. **The matching new Sub Board for Main Board v1.1 is still being developed; its latest 100% print and J20 cable-clearance fit test remain pending.** Continue designing and test-fitting the remaining knobs, brackets, and spacers with the selected hardware. Verify shaft engagement, knob retention, and clearances for those remaining parts.
 4. **DCS-BIOS mappings and any needed changes:** Check which inputs and display outputs are already available for this radio. Identify missing data, make any necessary export changes, and document them. Check the correct ARC-164 radio instance for each intended A-10 variant.
 5. **Firmware:** Write the control and display firmware and verify USB communication with DCS-BIOS. Implement DCS-BIOS-controlled MAX7219 display brightness and PWM panel backlighting, with separate brightness curves and off-state handling; see the [lighting design plan](#dcs-bios-display-brightness-and-panel-backlighting).
 6. **Bench and board testing:** Test the controls, displays, and power requirements together, then assemble and electrically test the manufactured boards.
@@ -257,7 +259,7 @@ I’ll use **six white digits** to show a frequency such as **251.000**. The rev
 
 **The LED positions on the v1.1 mockup passed my 100% print and physical alignment test behind the faceplate**, including the **0.75 mm LED gaps**, **6 mm display bodies**, and **8 mm mounting stack**. In the final adjustment, I moved the **channel LEDs 1 mm right** and the **FREQ LEDs 0.5 mm left** from the previous test layout. Each of the four mounts uses a **20 mm screw, a 6 mm-thick nut and two 1 mm washers**. **Assembled electrical testing remains to be done.**
 
-The Version 1.1 LED Sub-Board spans both windows, with the digits soldered directly to it. The Main-to-LED-Sub-Board spacing is **8 mm**. I currently have **13.5 mm between the panel and Main Board**. I may use **14 mm** to let the LEDs sit slightly farther back from the glass. I’ll check the spacing when the manufactured PCBs arrive and add an extra spacer if needed. Check the actual display height, smoked-cover visibility, and complete stack fit during assembly. The LED Sub-Board mounts above the Main Board, with its bottom connected to the Main Board’s top. I use **four Sub-Board mounts**, each with a **20 mm screw, a 6 mm-thick nut, and two 1 mm-thick washers**, giving **8 mm spacing** between the Main Board and LED Sub-Board. The Power Driver Board mounts below the Main Board, **components facing down**, using **10 standoffs, each longer than 20 mm**; choose the exact length to clear components, sockets, Teensy headers, and cables.
+The matching Sub Board I’m developing spans both windows, with the digits soldered directly to it. **It is not published yet, and none of the older Sub Boards will work with Main Board v1.1.** The Main-to-LED-Sub-Board spacing is **8 mm**. I currently have **13.5 mm between the panel and Main Board**. I may use **14 mm** to let the LEDs sit slightly farther back from the glass. I’ll check the spacing when the manufactured PCBs arrive and add an extra spacer if needed. Check the actual display height, smoked-cover visibility, and complete stack fit during assembly. The LED Sub-Board mounts above the Main Board, with its bottom connected to the Main Board’s top. I use **four Sub-Board mounts**, each with a **20 mm screw, a 6 mm-thick nut, and two 1 mm-thick washers**, giving **8 mm spacing** between the Main Board and LED Sub-Board. The Power Driver Board mounts below the Main Board, **components facing down**, using **10 standoffs, each longer than 20 mm**; choose the exact length to clear components, sockets, Teensy headers, and cables.
 
 ### Preset-channel display
 
@@ -312,6 +314,8 @@ I’ll post pictures of my build to help you follow the assembly steps.
 4. **Wire the switches.** For the wired TONE, SQL, LOAD, TEST DISPLAY, and STATUS switches, solder a **6-inch (approximately 15 cm) wire to each required switch contact** first. Before soldering, you may want to feed the wires through the corresponding switch holes to make routing easier. Then flip the Main Board over and solder the free ends into the matching **labeled switch solder pads**, checking the signal and GND connections. It is fine to make these switch-wire connections on the **back of the Main Board**.
 
 ### LED Sub-Board
+
+**Main Board v1.1 will not work with any older published Sub Board.** I’m still developing the matching new Sub Board; its files and STL remain unpublished while I check the channel LED alignment and J20 cable clearance. Please wait for the matching version before ordering or assembling a board set. These assembly steps are reference instructions; final connector placement and clearance will need to match the new Sub Board.
 
 1. **Solder the LED displays first.** Fit the displays on the **front of the Sub-Board**. Before soldering, check each display’s orientation and pin 1 against the PCB markings, and make sure the decimal points are in the correct position. Keep the displays seated evenly while soldering.
 2. **Solder the pin connector on the back.** After fitting the displays, install and solder the **J20 display-cable pin header on the back of the Sub-Board**, matching pin 1 to the PCB markings.

@@ -1,8 +1,10 @@
 # ARC-164 Power Driver Board — Version 1.0 Prototype
 
-**Last updated: November 8, 2026 at 2:12 AM MST (America/Denver)**
+**Last updated: November 9, 2026 at 3:02 PM MST (America/Denver)**
 
 Untested prototype hardware revision; initial public revision dated November 7, 2026.
+
+**Main Board v1.1 will not work with any older published Sub Board.** I’m still developing the matching new Sub Board; its files and STL remain unpublished while I check the channel LED alignment and J20 cable clearance. Please wait for the matching version before ordering or assembling a board set. See the [current PCB compatibility status](../../README.md).
 
 - Open [the KiCad project](Project/Power%20Driver%20Board.kicad_pro).
 - [Schematic PDF](Schematics/Power-Driver-Board-v1.0-Prototype.pdf)

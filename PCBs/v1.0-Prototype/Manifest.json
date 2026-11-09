@@ -9,7 +9,7 @@
   "geometry": "All saved component positions, outlines and holes preserved; Main Board routing and GND fills rebuilt after D17 was repositioned",
   "files_sha256": {
     "Docs/Additional-Assembly-Parts.md": "c0f108b98438504cb6542b193f43ac8eef66d46d2aed676e7ef5e483c6320e97",
-    "Docs/Assembly.md": "1ef57606a5b948e0f02f007cd6251d1cc354cd51e9ff625acb52e7aae7bb46ab",
+    "Docs/Assembly.md": "2b88c35d4c1b5646f756aa96c7f6e6435995e4cb5980025c38ccff6fff13d11c",
     "Docs/Connector-Pin-Comparison.csv": "9a3428649f07d6d7f0da7261688c85537252a908a13629454a66b324ebbd7aaf",
     "Docs/Electrical-Audit.json": "9041ed45b981920872827e4781c1adffd27db63a3d58c1346710083ce8f83114",
     "Docs/Geometry-Preservation.json": "a1d9240f0c5c6f2a25a59f85914d9fe0337f2ba6d8b35663158a092ce03b315e",
@@ -73,10 +73,10 @@
     "Power-Driver-Board/Project/Power Driver Board.kicad_sch": "39c878a78c88984dd7d7ef4badabcc8153f5178247f64c60562a9b53a9c493bb",
     "Power-Driver-Board/Project/sym-lib-table": "cd332ba11900656d9785e63f21448e5c72185bb56bfdd2892cdb659beb8b9dc9",
     "Power-Driver-Board/Project/teensy.kicad_sym": "c956221cf09325afa76efd30a3310ec5fc3a8e5cd4b6d546be59d9b0351a4f6d",
-    "Power-Driver-Board/README.md": "096bb2d7e17671f30039f27c74e366924399ab9b96ad0d2f5beda615a6f30fd0",
+    "Power-Driver-Board/README.md": "0edfa7af1be11ecdc5b1521c752c759e0b11de2351748eae50f4a7ead5841e5c",
     "Power-Driver-Board/Schematics/Power-Driver-Board-v1.0-Prototype.pdf": "cf0cefbe6026528e15d9ade86d7d9868886293da6146b8b33bb38e8ea654fac6",
-    "README.md": "8653e783a565991ec7c0ecef55b153338ae814bcdc289281174b7778c23443e5",
-    "Release-Notes.md": "e811de12541b20584cc7283d905c49f369645ef1fbaca622bf55a5a958922baf"
+    "README.md": "db254019786f67ad11984b631580a351bf8b523ed5d3727e2915d94d83601cab",
+    "Release-Notes.md": "1d1501e339c413b76df4d5637c57e8da0e55c0d385d35512bfe74d0b4f2ea87c"
   },
   "withdrawn_boards": [
     "Main Board",
