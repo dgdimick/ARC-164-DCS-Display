@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 9, 2026 at 10:23 PM MST (America/Denver)**
+**Last updated: November 9, 2026 at 10:41 PM MST (America/Denver)**
 
 **Main Board v1.2 is published, but it will not work with any currently or previously published LED Sub Board.** I’ve resized the Main Board and am still working on its matching redesigned Sub Board. **The matching new Sub Board files and STL will stay unpublished until I finish the 100% print and fit test and confirm both the channel LED alignment behind the faceplate and J20 connector/cable clearance with Main Board v1.2.** The latest adjustment moves the **channel LEDs up 0.5 mm** and **J20 up 2 mm total across the last two moves**. The channel LEDs retain their previous **0.5 mm leftward adjustment**; the frequency LED positions, **0.75 mm gaps and 6 mm display bodies** are unchanged. **The new Sub Board is waiting on the 100% print, channel LED alignment and J20 clearance checks before publishing.** Please wait for the matching Sub Board and confirmed assembly clearance before ordering a compatible set. Assembled electrical testing remains pending.
 
@@ -82,7 +82,7 @@ Click either image to view it full size.
 
 **November 9 follow-up:** [PC Flights](https://pcflights.com/) has replied to my request about making the ARC-164 panel with larger holes available to other builders. **They’ll make it on request, but don’t plan to list it on their website for now**, since I’m the first person to ask for these changes. If you want this version, **contact PC Flights and ask for the modified ARC-164 panel with larger holes instead of the default panel**.
 
-I’ll continue building the rotary-encoder version of the ARC-164. I’ll revisit the rotary-switch version later, after completing the ARC-186 and ARC-210 v2.0 projects. **I’ll wait to buy the modified panel until I’m ready to work on ARC-164 Version 2. That’s still off in the future, with no release date planned.**
+I’ll continue building the rotary-encoder version of the ARC-164. The rotary-switch version can wait while I finish the ARC-164 PCBs and return to ARC-210 testing. **I’ll wait to buy the modified panel until I’m ready to work on ARC-164 Version 2. That’s still off in the future, with no release date planned.**
 
 ## Development update — November 4, 2026
 
@@ -94,11 +94,11 @@ This would let me revisit frequency rotary switches using the [earlier staggered
 
 **November 6 follow-up:** PC Flights confirmed they could make the requested changes and supplied the quote above. **Their November 9 reply confirms availability on request, without a website listing for now.** Final dimensions and mechanical fit still need checking. The current frequency-encoder design remains my working baseline.
 
-**The rotary-switch alternative is deferred until after the ARC-186 and ARC-210 v2.0 projects. I’ll continue building the frequency-encoder version now, including its LED display.** I’ll revisit the modified panel, switch selection, and parts list when I return to the rotary-switch version.
+**The rotary-switch alternative is deferred. My priority is to finish the current ARC-164 PCBs, then take a break from design work and return to ARC-210 testing.** I’ll revisit the modified panel, switch selection, and parts list when I return to the rotary-switch version.
 
 ## Current development order
 
-For these two radio panels, I plan to build and test the **ARC-164**, followed by the **ARC-186**, then investigate additional aircraft support with matching physical radio panels.
+I’ll **finish the ARC-164 PCBs**, then **take a break from design work and go back to testing the ARC-210**. **The ARC-186 and Version 2 plans can wait.** I haven’t set a date to return to those designs or additional aircraft support.
 
 **This order may change based on user feedback and interest.** These are plans, not fixed release dates.
 
@@ -145,7 +145,7 @@ I’m keeping the extra displays I bought as spares, since returning them would 
 
 ## Order sheet — rotary controls and LED digits
 
-**Current build: rotary encoders.** I’ll continue building the encoder version while waiting for PC Flights’ reply about a stocked modified panel. The rotary-switch alternative is deferred until after the ARC-186 and ARC-210 v2.0 projects. The order sheet below is for the encoder version; quantities and fit still need final checks before purchasing.
+**Current build: rotary encoders.** I’ll finish the current ARC-164 PCBs, then take a break from design work and return to testing the ARC-210. The ARC-186 and Version 2 rotary-switch plans are deferred; PC Flights has confirmed the larger-hole panel is available on request when I’m ready for it. The order sheet below is for the encoder version; quantities and fit still need final checks before purchasing.
 
 This is my order sheet for **one ARC-164 panel**, updated **November 4, 2026**. I’ll buy the **30 mm encoders and SC36-11SURKWA LED digits from Mouser**. The MAIN and PRESET switches remain on the DigiKey list. These are full build quantities; I’ll deduct parts I already have before ordering.
 
@@ -224,13 +224,13 @@ This is a **four-direction switch with a center pushbutton and rotary encoder**.
 
 ## Things that need to be completed
 
-**Last updated: November 9, 2026 at 9:52 PM MST (America/Denver)**
+**Last updated: November 9, 2026 at 10:41 PM MST (America/Denver)**
 <!-- Refresh this section timestamp whenever the work list changes, using the actual America/Denver time and MST/MDT. -->
 
 This is my current work list for the hardware, firmware, testing, and build instructions.
 
 1. **Panel layout and parts:** Confirm dimensions, mounting clearances, controls, and the complete parts list. **TONE and SQL switches:** Select the exact parts and verify their mounting dimensions, required operation and travel, and clearances before finalizing the PCB. My purchased **QBSLDIW301GR white digits—six for frequency and two for channel—have passed the printed layout fit test**. The revised six-digit frequency layout is **49.35 mm wide × 13.75 mm high across the front face**, using **0.75 mm gaps**. The earlier LED layout mockup passed at 100% scale; the matching new Sub Board still needs **channel LED alignment and J20 clearance checks before publication**. Verify the prototype LED Sub-Board footprint and pinout against these displays before assembly. Check digit visibility and brightness through the smoked covers, pinout, mounting height, spacing, and clearance within the 53.5 × 17.5 mm frequency window and 22 × 17.5 mm preset window.
-2. **Finish and test-fit the matching Sub Board for Main Board v1.2:** I ran out of filament while printing the new Sub Board mockup, so its fit test is still pending. I’ll reprint it at **100%** after choosing the best PLA temperature from my temperature tower, then check the **channel LED alignment and J20 connector/cable clearance with Main Board v1.2**. The new Sub Board files and STL will stay unpublished until those checks pass. I still need to finish the matching new Sub Board, print its mockup at **100%**, and test it with **Main Board v1.2 and the actual J20 cable connector**. Check the **channel LED alignment behind the faceplate** after moving the channel LEDs **up 0.5 mm**, retaining their earlier **0.5 mm leftward adjustment**. Confirm **J20 connector and cable clearance** after moving J20 **up 2 mm total across the last two moves**, with both boards mounted together. Keep the frequency LED positions, **0.75 mm gaps and 6 mm display bodies** unchanged. **The new Sub Board files and STL will stay unpublished until I’ve checked the fit. Main Board v1.2 will not work with any older published Sub Board.** The Power Driver Board remains available as a v1.0 prototype. Verify the manufactured boards, complete mechanical stack and sockets, connector/cable fit, control pin assignments and assembled electrical operation. The current design uses five FREQ encoders, MAIN/PRESET direct switch contacts without resistor ladders, and the documented Teensy GPIO map. Continue following up with PC Flights about the modified panel; revisit the frequency rotary-switch alternative after the ARC-186 and ARC-210 v2.0 projects.
+2. **Finish and test-fit the matching Sub Board for Main Board v1.2:** I ran out of filament while printing the new Sub Board mockup, so its fit test is still pending. I’ll reprint it at **100%** after choosing the best PLA temperature from my temperature tower, then check the **channel LED alignment and J20 connector/cable clearance with Main Board v1.2**. The new Sub Board files and STL will stay unpublished until those checks pass. I still need to finish the matching new Sub Board, print its mockup at **100%**, and test it with **Main Board v1.2 and the actual J20 cable connector**. Check the **channel LED alignment behind the faceplate** after moving the channel LEDs **up 0.5 mm**, retaining their earlier **0.5 mm leftward adjustment**. Confirm **J20 connector and cable clearance** after moving J20 **up 2 mm total across the last two moves**, with both boards mounted together. Keep the frequency LED positions, **0.75 mm gaps and 6 mm display bodies** unchanged. **The new Sub Board files and STL will stay unpublished until I’ve checked the fit. Main Board v1.2 will not work with any older published Sub Board.** The Power Driver Board remains available as a v1.0 prototype. Verify the manufactured boards, complete mechanical stack and sockets, connector/cable fit, control pin assignments and assembled electrical operation. The current design uses five FREQ encoders, MAIN/PRESET direct switch contacts without resistor ladders, and the documented Teensy GPIO map. Finish the current ARC-164 PCBs, then take a break from design work and return to testing the ARC-210. The ARC-186 and Version 2 plans can wait.
 3. **Printed parts:** The **8 mm Sub-Board mounting stack has passed physical test fitting**, using a **20 mm screw, a 6 mm-thick nut and two 1 mm washers at each of four mounts**. The **earlier LED alignment mockup passed at 100% scale**, with **0.75 mm gaps and 6 mm display bodies**. **The matching new Sub Board for Main Board v1.2 is still being developed. Its latest 100% print, channel LED alignment and J20 connector/cable-clearance checks remain pending before publication.** Continue designing and test-fitting the remaining knobs, brackets, and spacers with the selected hardware. Verify shaft engagement, knob retention, and clearances for those remaining parts.
 4. **DCS-BIOS mappings and any needed changes:** Check which inputs and display outputs are already available for this radio. Identify missing data, make any necessary export changes, and document them. Check the correct ARC-164 radio instance for each intended A-10 variant.
 5. **Firmware:** Write the control and display firmware and verify USB communication with DCS-BIOS. Implement DCS-BIOS-controlled MAX7219 display brightness and PWM panel backlighting, with separate brightness curves and off-state handling; see the [lighting design plan](#dcs-bios-display-brightness-and-panel-backlighting).
@@ -284,7 +284,7 @@ This is an approved design requirement; the lighting schematic, PCB layout, and 
 
 ## Frequency controls
 
-**The current design uses rotary encoders for all five frequency controls.** I’m also investigating a rotary-switch alternative after asking PC Flights about enlarged FREQ holes in both panel layers and anti-rotation slots in the clear backing panel. See the [November 6 development update](#development-update--november-6-2026) for PC Flights’ quote and my request for a stocked option. **I’ll revisit the rotary-switch version after completing the ARC-186 and ARC-210 v2.0 projects.** It will still need further mechanical and electrical design and testing.
+**The current design uses rotary encoders for all five frequency controls.** I’m also investigating a rotary-switch alternative after asking PC Flights about enlarged FREQ holes in both panel layers and anti-rotation slots in the clear backing panel. See the [November 6 development update](#development-update--november-6-2026) for PC Flights’ quote and their reply confirming availability on request. **The rotary-switch Version 2 is deferred while I finish the ARC-164 PCBs and return to ARC-210 testing; I haven’t set a date to resume it.** It will still need further mechanical and electrical design and testing.
 
 I originally planned to use frequency rotary switches, but I’ve restored my original ARC-164 encoder KiCad project and will check its fit, clearances, and wiring before continuing the design. The **A11015RNCQ switches were the wrong parts for the ARC-164**. I’ve requested cancellation from DigiKey; **if the order is not canceled, I’ll keep them as parts for ARC-210 V2**.
 
