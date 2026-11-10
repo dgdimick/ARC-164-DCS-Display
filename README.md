@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 9, 2026 at 9:42 PM MST (America/Denver)**
+**Last updated: November 9, 2026 at 9:52 PM MST (America/Denver)**
 
 **Main Board v1.2 is published, but it will not work with any currently or previously published LED Sub Board.** I’ve resized the Main Board and am still working on its matching redesigned Sub Board. **The matching new Sub Board files and STL will stay unpublished until I finish the 100% print and fit test and confirm both the channel LED alignment behind the faceplate and J20 connector/cable clearance with Main Board v1.2.** The latest adjustment moves the **channel LEDs up 0.5 mm** and **J20 up 2 mm total across the last two moves**. The channel LEDs retain their previous **0.5 mm leftward adjustment**; the frequency LED positions, **0.75 mm gaps and 6 mm display bodies** are unchanged. **The new Sub Board is waiting on the 100% print, channel LED alignment and J20 clearance checks before publishing.** Please wait for the matching Sub Board and confirmed assembly clearance before ordering a compatible set. Assembled electrical testing remains pending.
 
@@ -222,7 +222,7 @@ This is a **four-direction switch with a center pushbutton and rotary encoder**.
 
 ## Things that need to be completed
 
-**Last updated: November 9, 2026 at 9:27 PM MST (America/Denver)**
+**Last updated: November 9, 2026 at 9:52 PM MST (America/Denver)**
 <!-- Refresh this section timestamp whenever the work list changes, using the actual America/Denver time and MST/MDT. -->
 
 This is my current work list for the hardware, firmware, testing, and build instructions.
@@ -237,6 +237,7 @@ This is my current work list for the hardware, firmware, testing, and build inst
 8. **Testing in DCS:** Check control operation, display updates, startup behavior, reconnection, and extended reliability with the intended aircraft and the other radio panels connected.
 9. **Documentation:** Publish assembly instructions, wiring diagrams, final parts and print quantities, PCB ordering files, firmware loading steps, DCS-BIOS setup requirements, and troubleshooting notes.
 10. **Assembly pictures:** During assembly, take clear pictures of component placement, soldering, wiring, and mounting, including both sides of each PCB with the silkscreen markings visible. Add the pictures to the assembly instructions so other builders can follow along.
+11. **USB-C adapter testing:** I still need to test the planned [Veeloon Micro-USB male to USB-C female adapter](https://www.amazon.com/dp/B0G5YZJLVZ?th=1) for **programming the Teensy, DCS-BIOS communication, and reliable operation**. Check reconnection and extended use before recommending it as tested.
 
 
 ## Controller choice — Teensy 4.1
