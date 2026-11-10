@@ -1,6 +1,6 @@
 # ARC-164 Main Board — Version 1.1
 
-**Last updated: November 9, 2026 at 5:34 PM MST (America/Denver)**
+**Last updated: November 9, 2026 at 6:02 PM MST (America/Denver)**
 
 **Main Board v1.1 is published, but it will not work with any currently or previously published LED Sub Board.** I’ve resized the Main Board and am still working on its matching redesigned Sub Board. **The matching new Sub Board files and STL will stay unpublished until I finish the 100% print and fit test and confirm both the channel LED alignment behind the faceplate and J20 connector/cable clearance with Main Board v1.1.** The latest adjustment moves the **channel LEDs up 0.5 mm** and **J20 up 2 mm total across the last two moves**. The channel LEDs retain their earlier **0.5 mm leftward adjustment**; the frequency LED positions, **0.75 mm gaps and 6 mm display bodies** are unchanged. **The 100% print, channel LED alignment and J20 connector/cable-clearance checks remain pending before publication.** Please wait for the matching Sub Board and confirmed assembly clearance before ordering a compatible set. Assembled electrical testing remains pending.
 
@@ -15,6 +15,8 @@
 - [DRC and schematic parity report](Checks/DRC.rpt) · [ERC report](Checks/ERC.rpt)
 
 I’ve resized this Main Board and moved the Sub Board mounting holes to match the new layout. The silkscreen and PCB/schematic revision fields identify **v1.1**. This release contains only the Main Board; it does not include the unfinished matching Sub Board.
+
+I placed **J10 slightly off-center on Main Board v1.1** to leave room in case I need to make changes later.
 
 Fresh KiCad checks report **zero DRC violations, zero unconnected items, zero schematic parity issues and zero ERC violations under the saved project settings**. Disabled checks are listed in the reports. These checks do not prove physical cable clearance or assembled electrical operation. The two 40-pin interfaces use cables, not direct stacking connectors.
 
