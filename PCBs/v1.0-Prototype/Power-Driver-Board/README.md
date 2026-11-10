@@ -1,12 +1,12 @@
 # ARC-164 Power Driver Board — Version 1.0 Prototype
 
-**Last updated: November 9, 2026 at 5:34 PM MST (America/Denver)**
+**Last updated: November 9, 2026 at 6:23 PM MST (America/Denver)**
 
-The latest Sub Board mockup moves both channel LEDs **up 0.5 mm** and J20 **up 2 mm total across the last two moves**. The earlier **0.5 mm leftward channel adjustment** is retained; the frequency LED positions, **0.75 mm gaps and 6 mm display bodies** are unchanged. **The 100% print, channel LED alignment and J20 connector/cable-clearance checks with Main Board v1.1 are still pending before I publish the new Sub Board files or STL.**
+The latest Sub Board mockup moves both channel LEDs **up 0.5 mm** and J20 **up 2 mm total across the last two moves**. The earlier **0.5 mm leftward channel adjustment** is retained; the frequency LED positions, **0.75 mm gaps and 6 mm display bodies** are unchanged. **The 100% print, channel LED alignment and J20 connector/cable-clearance checks with Main Board v1.2 are still pending before I publish the new Sub Board files or STL.**
 
 Untested prototype hardware revision; initial public revision dated November 7, 2026.
 
-**Main Board v1.1 will not work with any older published Sub Board.** I’m still developing the matching new Sub Board; its files and STL remain unpublished while I check the channel LED alignment and J20 cable clearance. Please wait for the matching version before ordering or assembling a board set. See the [current PCB compatibility status](../../README.md).
+**Main Board v1.2 will not work with any older published Sub Board.** I’m still developing the matching new Sub Board; its files and STL remain unpublished while I check the channel LED alignment and J20 cable clearance. Please wait for the matching version before ordering or assembling a board set. See the [current PCB compatibility status](../../README.md).
 
 - Open [the KiCad project](Project/Power%20Driver%20Board.kicad_pro).
 - [Schematic PDF](Schematics/Power-Driver-Board-v1.0-Prototype.pdf)

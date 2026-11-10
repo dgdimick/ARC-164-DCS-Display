@@ -1,14 +1,14 @@
 # ARC-164 PCB Version 1.0 — Prototype
 
-**Last updated: November 9, 2026 at 5:34 PM MST (America/Denver)**
+**Last updated: November 9, 2026 at 6:23 PM MST (America/Denver)**
 
-**Main Board v1.1 is published, but it will not work with any currently or previously published LED Sub Board.** I’ve resized the Main Board and am still working on its matching redesigned Sub Board. **The matching new Sub Board files and STL will stay unpublished until I finish the 100% print and fit test and confirm both the channel LED alignment behind the faceplate and J20 connector/cable clearance with Main Board v1.1.** The latest adjustment moves the **channel LEDs up 0.5 mm** and **J20 up 2 mm total across the last two moves**. The channel LEDs retain their earlier **0.5 mm leftward adjustment**; the frequency LED positions, **0.75 mm gaps and 6 mm display bodies** are unchanged. **The 100% print, channel LED alignment and J20 connector/cable-clearance checks remain pending before publication.** Please wait for the matching Sub Board and confirmed assembly clearance before ordering a compatible set. Assembled electrical testing remains pending.
+**Main Board v1.2 is published, but it will not work with any currently or previously published LED Sub Board.** I’ve resized the Main Board and am still working on its matching redesigned Sub Board. **The matching new Sub Board files and STL will stay unpublished until I finish the 100% print and fit test and confirm both the channel LED alignment behind the faceplate and J20 connector/cable clearance with Main Board v1.2.** The latest adjustment moves the **channel LEDs up 0.5 mm** and **J20 up 2 mm total across the last two moves**. The channel LEDs retain their earlier **0.5 mm leftward adjustment**; the frequency LED positions, **0.75 mm gaps and 6 mm display bodies** are unchanged. **The 100% print, channel LED alignment and J20 connector/cable-clearance checks remain pending before publication.** Please wait for the matching Sub Board and confirmed assembly clearance before ordering a compatible set. Assembled electrical testing remains pending.
 
 Initial public three-board PCB prototype revision, November 7, 2026. These are untested prototypes, not assembled or production-validated hardware. [GitHub prototype release](https://github.com/dgdimick/ARC-164-DCS-Display/releases/tag/pcb-v1.0-prototype).
 
 | Board | Source | Fabrication data | Schematic | BOM |
 | --- | --- | --- | --- | --- |
-| Main Board v1.0 | Withdrawn; [current Main Board v1.1](../v1.1/Main-Board/README.md) requires a new, unpublished Sub Board | — | — | — |
+| Main Board v1.0 | Withdrawn; [current Main Board v1.2](../v1.2/Main-Board/README.md) requires a new, unpublished Sub Board | — | — | — |
 | Power Driver Board | [KiCad project](Power-Driver-Board/Project/Power%20Driver%20Board.kicad_pro) | [Gerbers and drills](Power-Driver-Board/Manufacturing/) | [PDF](Power-Driver-Board/Schematics/Power-Driver-Board-v1.0-Prototype.pdf) | [CSV](Power-Driver-Board/Assembly/BOM.csv) |
 | LED Subboard | Downloads withdrawn pending resized-board and J20 fit testing | — | — | — |
 
@@ -24,7 +24,7 @@ Open the project in KiCad 10.0.7 or newer. Each project includes its used footpr
 
 ## Prototype limitations
 
-**At the original v1.0 release, all three boards had zero DRC violations, zero unconnected items, and zero schematic parity issues; all three schematics passed ERC.** These historical checks do not establish compatibility with Main Board v1.1 or validate the unfinished matching Sub Board. D17 was moved clear of SW7’s courtyard, and Main Board routing and both GND fills were rebuilt. Library warnings and D12 silkscreen clipping were corrected without moving components, outlines or holes.
+**At the original v1.0 release, all three boards had zero DRC violations, zero unconnected items, and zero schematic parity issues; all three schematics passed ERC.** These historical checks do not establish compatibility with Main Board v1.2 or validate the unfinished matching Sub Board. D17 was moved clear of SW7’s courtyard, and Main Board routing and both GND fills were rebuilt. Library warnings and D12 silkscreen clipping were corrected without moving components, outlines or holes.
 
 All manufactured-board electrical tests, actual cable/connector fit, socket/stack clearance and firmware integration remain to be performed. Review these limits before ordering. Use the supplied board version as a prototype baseline; this is not a production sign-off.
 
