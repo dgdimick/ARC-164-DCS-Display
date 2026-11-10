@@ -1,6 +1,6 @@
 # ARC-164 PCBs
 
-**Last updated: November 9, 2026 at 6:23 PM MST (America/Denver)**
+**Last updated: November 9, 2026 at 9:27 PM MST (America/Denver)**
 
 **Main Board v1.2 is published, but it will not work with any currently or previously published LED Sub Board.** I’ve resized the Main Board and am still working on its matching redesigned Sub Board. **The matching new Sub Board files and STL will stay unpublished until I finish the 100% print and fit test and confirm both the channel LED alignment behind the faceplate and J20 connector/cable clearance with Main Board v1.2.** The latest adjustment moves the **channel LEDs up 0.5 mm** and **J20 up 2 mm total across the last two moves**. The channel LEDs retain their previous **0.5 mm leftward adjustment**; the frequency LED positions, **0.75 mm gaps and 6 mm display bodies** are unchanged. **The new Sub Board is waiting on the 100% print, channel LED alignment and J20 clearance checks before publishing.** Please wait for the matching Sub Board and confirmed assembly clearance before ordering a compatible set. Assembled electrical testing remains pending.
 
@@ -19,6 +19,8 @@ The available downloads are **Main Board v1.2** and **Power Driver Board v1.0 Pr
 I’ve checked all three designs in KiCad: the board and schematic checks pass, with no unconnected items or mismatched connections. **I haven’t assembled and electrically tested them yet**, so I’m sharing them as prototypes. Please have a look at [what I still need to test](v1.0-Prototype/Docs/Known-Issues.md) before ordering. If you build a set, I’d love to hear how it goes and see your pictures in [Discussions](https://github.com/dgdimick/ARC-164-DCS-Display/discussions).
 
 ## Matching LED Sub Board — in development
+
+I ran out of filament while printing the new Sub Board mockup, so its fit test is still pending. I’ll reprint it at **100%** after choosing the best PLA temperature from my temperature tower, then check the **channel LED alignment and J20 connector/cable clearance with Main Board v1.2**. The new Sub Board files and STL will stay unpublished until those checks pass.
 
 I still need to **finish and test-fit the matching new Sub Board for Main Board v1.2** before publishing its files or STL:
 
