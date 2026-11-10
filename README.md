@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 9, 2026 at 9:54 PM MST (America/Denver)**
+**Last updated: November 9, 2026 at 9:55 PM MST (America/Denver)**
 
 **Main Board v1.2 is published, but it will not work with any currently or previously published LED Sub Board.** I’ve resized the Main Board and am still working on its matching redesigned Sub Board. **The matching new Sub Board files and STL will stay unpublished until I finish the 100% print and fit test and confirm both the channel LED alignment behind the faceplate and J20 connector/cable clearance with Main Board v1.2.** The latest adjustment moves the **channel LEDs up 0.5 mm** and **J20 up 2 mm total across the last two moves**. The channel LEDs retain their previous **0.5 mm leftward adjustment**; the frequency LED positions, **0.75 mm gaps and 6 mm display bodies** are unchanged. **The new Sub Board is waiting on the 100% print, channel LED alignment and J20 clearance checks before publishing.** Please wait for the matching Sub Board and confirmed assembly clearance before ordering a compatible set. Assembled electrical testing remains pending.
 
@@ -82,7 +82,7 @@ Click either image to view it full size.
 
 **November 9 follow-up:** [PC Flights](https://pcflights.com/) has replied to my request about making the ARC-164 panel with larger holes available to other builders. **They’ll make it on request, but don’t plan to list it on their website for now**, since I’m the first person to ask for these changes. If you want this version, **contact PC Flights and ask for the modified ARC-164 panel with larger holes instead of the default panel**.
 
-I’ll continue building the rotary-encoder version of the ARC-164. I’ll revisit the rotary-switch version later, after completing the ARC-186 and ARC-210 v2.0 projects.
+I’ll continue building the rotary-encoder version of the ARC-164. I’ll revisit the rotary-switch version later, after completing the ARC-186 and ARC-210 v2.0 projects. **I’ll wait to buy the modified panel until I’m ready to work on ARC-164 Version 2. That’s still off in the future, with no release date planned.**
 
 ## Development update — November 4, 2026
 
