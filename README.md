@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 9, 2026 at 9:52 PM MST (America/Denver)**
+**Last updated: November 9, 2026 at 9:54 PM MST (America/Denver)**
 
 **Main Board v1.2 is published, but it will not work with any currently or previously published LED Sub Board.** I’ve resized the Main Board and am still working on its matching redesigned Sub Board. **The matching new Sub Board files and STL will stay unpublished until I finish the 100% print and fit test and confirm both the channel LED alignment behind the faceplate and J20 connector/cable clearance with Main Board v1.2.** The latest adjustment moves the **channel LEDs up 0.5 mm** and **J20 up 2 mm total across the last two moves**. The channel LEDs retain their previous **0.5 mm leftward adjustment**; the frequency LED positions, **0.75 mm gaps and 6 mm display bodies** are unchanged. **The new Sub Board is waiting on the 100% print, channel LED alignment and J20 clearance checks before publishing.** Please wait for the matching Sub Board and confirmed assembly clearance before ordering a compatible set. Assembled electrical testing remains pending.
 
@@ -80,7 +80,9 @@ Click either image to view it full size.
 
 **PC Flights confirmed they can make the modified ARC-164 panel for US$57 plus a US$20 custom-order fee—US$77 total before any shipping or other charges.** This is their quote for the requested panel changes; I haven’t placed the custom order yet.
 
-I’ve asked whether they would make the modified panel a **stocked option for other builders**, so people following this project could buy it without arranging a special order. I’d be happy to buy one and build with it. **A stocked option has not been confirmed; I’m waiting for their reply.** **While I wait for their reply, I’ll continue building the rotary-encoder version of the ARC-164. I’ll revisit the rotary-switch version later, after completing the ARC-186 and ARC-210 v2.0 projects.**
+**November 9 follow-up:** [PC Flights](https://pcflights.com/) has replied to my request about making the ARC-164 panel with larger holes available to other builders. **They’ll make it on request, but don’t plan to list it on their website for now**, since I’m the first person to ask for these changes. If you want this version, **contact PC Flights and ask for the modified ARC-164 panel with larger holes instead of the default panel**.
+
+I’ll continue building the rotary-encoder version of the ARC-164. I’ll revisit the rotary-switch version later, after completing the ARC-186 and ARC-210 v2.0 projects.
 
 ## Development update — November 4, 2026
 
@@ -90,7 +92,7 @@ I also requested **anti-rotation slots in the clear backing panel** and supplied
 
 This would let me revisit frequency rotary switches using the [earlier staggered mounting concept](https://github.com/dgdimick/ARC-164-DCS-Display/blob/394ed3a46d2bc5caa23bab62e20b150761d81306/images/ARC-164_Staggered_PCB_Mount_Concept.png): **two PCBs total for the frequency controls, one carrying the two-switch group and the other carrying the three-switch group**. The picture is historical; its shaft-length labels are not final production dimensions.
 
-**November 6 follow-up:** PC Flights has confirmed they can make the requested changes and supplied the quote above. Stocked availability, final dimensions, and mechanical fit still need confirmation. The current frequency-encoder design remains the working baseline while I investigate this option.
+**November 6 follow-up:** PC Flights confirmed they could make the requested changes and supplied the quote above. **Their November 9 reply confirms availability on request, without a website listing for now.** Final dimensions and mechanical fit still need checking. The current frequency-encoder design remains my working baseline.
 
 **The rotary-switch alternative is deferred until after the ARC-186 and ARC-210 v2.0 projects. I’ll continue building the frequency-encoder version now, including its LED display.** I’ll revisit the modified panel, switch selection, and parts list when I return to the rotary-switch version.
 
