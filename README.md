@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 9, 2026 at 9:55 PM MST (America/Denver)**
+**Last updated: November 9, 2026 at 10:23 PM MST (America/Denver)**
 
 **Main Board v1.2 is published, but it will not work with any currently or previously published LED Sub Board.** I’ve resized the Main Board and am still working on its matching redesigned Sub Board. **The matching new Sub Board files and STL will stay unpublished until I finish the 100% print and fit test and confirm both the channel LED alignment behind the faceplate and J20 connector/cable clearance with Main Board v1.2.** The latest adjustment moves the **channel LEDs up 0.5 mm** and **J20 up 2 mm total across the last two moves**. The channel LEDs retain their previous **0.5 mm leftward adjustment**; the frequency LED positions, **0.75 mm gaps and 6 mm display bodies** are unchanged. **The new Sub Board is waiting on the 100% print, channel LED alignment and J20 clearance checks before publishing.** Please wait for the matching Sub Board and confirmed assembly clearance before ordering a compatible set. Assembled electrical testing remains pending.
 
@@ -383,7 +383,7 @@ I’ll need to check the DCS-BIOS controls, displays, and operating modes for ea
 
 - [A-10-Sim repository](https://github.com/dgdimick/A-10-Sim) — my collection of A-10C II cockpit panel projects.
 - [ARC-210 radio panel](https://github.com/dgdimick/ARC-210-DCS-Display) — my other radio panel project.
-- [ARC-186 COMM-VHF radio panel](https://github.com/dgdimick/ARC-186-DCS-Display) — my planned VHF panel with its own Teensy 4.1 and USB connection.
+- [ARC-186 COMM-VHF radio panel](https://github.com/dgdimick/ARC-186-DCS-Display) — I’m keeping my **existing panel with its smaller holes**, rather than buying a replacement with larger holes. I’m considering a **multilevel rotary-switch setup**, with switches and PCBs mounted at different depths. **Shaft/bushing fit, shaft reach, knob fit and clearances still need checking before I finalize the layout.** This is a tentative mounting plan. The panel will have its own USB connection to DCS-BIOS; see its README for the current controller plan.
 
 ## A central directory for SIMPIT builders
 
