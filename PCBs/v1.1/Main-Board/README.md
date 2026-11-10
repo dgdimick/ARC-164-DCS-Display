@@ -1,8 +1,8 @@
 # ARC-164 Main Board — Version 1.1
 
-**Last updated: November 9, 2026 at 4:41 PM MST (America/Denver)**
+**Last updated: November 9, 2026 at 5:34 PM MST (America/Denver)**
 
-**Main Board v1.1 is published, but it will not work with any currently or previously published LED Sub Board.** I’ve resized the Main Board and am still working on its matching redesigned Sub Board. **The matching new Sub Board files and STL will stay unpublished until I finish the 100% print and fit test and confirm both the channel LED alignment behind the faceplate and J20 connector/cable clearance with Main Board v1.1.** I’m keeping the frequency LED positions and **0.75 mm gaps** unchanged; the channel LEDs’ latest **0.5 mm move left from the previous mockup** still needs its alignment check. **The 100% print, channel LED alignment and J20 connector/cable-clearance checks remain pending before publication.** Please wait for the matching Sub Board and confirmed assembly clearance before ordering a compatible set. Assembled electrical testing remains pending.
+**Main Board v1.1 is published, but it will not work with any currently or previously published LED Sub Board.** I’ve resized the Main Board and am still working on its matching redesigned Sub Board. **The matching new Sub Board files and STL will stay unpublished until I finish the 100% print and fit test and confirm both the channel LED alignment behind the faceplate and J20 connector/cable clearance with Main Board v1.1.** The latest adjustment moves the **channel LEDs up 0.5 mm** and **J20 up 2 mm total across the last two moves**. The channel LEDs retain their earlier **0.5 mm leftward adjustment**; the frequency LED positions, **0.75 mm gaps and 6 mm display bodies** are unchanged. **The 100% print, channel LED alignment and J20 connector/cable-clearance checks remain pending before publication.** Please wait for the matching Sub Board and confirmed assembly clearance before ordering a compatible set. Assembled electrical testing remains pending.
 
 ## Downloads
 
@@ -20,7 +20,7 @@ Fresh KiCad checks report **zero DRC violations, zero unconnected items, zero sc
 
 ## Mounting and compatibility
 
-**Do not combine Main Board v1.1 with any older published Sub Board.** I’m still checking the matching resized Sub Board and actual J20 cable connector together. The latest Sub Board mockup moves both channel LEDs **0.5 mm left from the previous mockup**, with the frequency LED positions, **0.75 mm gaps and 6 mm display bodies** unchanged. **The 100% print, channel LED alignment and J20 connector/cable-clearance checks with Main Board v1.1 are still pending before I publish the new Sub Board files or STL.** It is not part of this download.
+**Do not combine Main Board v1.1 with any older published Sub Board.** I’m still checking the matching resized Sub Board and actual J20 cable connector together. The latest Sub Board mockup moves both channel LEDs **up 0.5 mm** and J20 **up 2 mm total across the last two moves**. The earlier **0.5 mm leftward channel adjustment** is retained; the frequency LED positions, **0.75 mm gaps and 6 mm display bodies** are unchanged. **The 100% print, channel LED alignment and J20 connector/cable-clearance checks with Main Board v1.1 are still pending before I publish the new Sub Board files or STL.** It is not part of this download.
 
 The previously tested Sub Board mounting stack is **8 mm**: each of four mounts uses a **20 mm screw, 6 mm-thick nut and two 1 mm washers**. Panel-to-Main-Board spacing is currently **13.5 mm**; I may use **14 mm** to recess the displays slightly from the glass, subject to the real PCB fit. The Power Driver Board remains at v1.0 Prototype and mounts below Main, components facing down, on **10 standoffs longer than 20 mm**.
 
