@@ -1,6 +1,6 @@
 # ARC-164 Main Board — Version 1.2
 
-**Last updated: November 10, 2026 at 5:45 PM MST (America/Denver)**
+**Last updated: November 10, 2026 at 6:08 PM MST (America/Denver)**
 
 **LED Sub Board v1.2 is now published for Main Board v1.2.** I printed the latest mockup at **100%** and it passed the fit test, including **frequency and channel LED alignment and J20 connector/cable clearance**. The final layout keeps the **FREQ LEDs up 0.5 mm**, the **channel LEDs up 0.5 mm with their earlier 0.5 mm leftward adjustment**, and **J20 up 2 mm total** from the previous mounting position. The **0.75 mm gaps, 6 mm display bodies and tested 8 mm mounting stack** remain unchanged. **Use Main Board v1.2 with LED Sub Board v1.2; older Sub Boards do not match this Main Board. Assembled electrical testing is still pending.**
 
@@ -27,6 +27,24 @@ Fresh KiCad checks report **zero DRC violations, zero unconnected items, zero sc
 The previously tested Sub Board mounting stack is **8 mm**: each of four mounts uses a **20 mm screw, 6 mm-thick nut and two 1 mm washers**. Panel-to-Main-Board spacing is currently **13.5 mm**; I may use **14 mm** to recess the displays slightly from the glass, subject to the real PCB fit. The Power Driver Board remains at v1.0 Prototype and mounts below Main, components facing down, on **10 standoffs longer than 20 mm**.
 
 [Assembly notes](../../v1.0-Prototype/Docs/Assembly.md) · [Wiring and pinouts](../../v1.0-Prototype/Docs/Wiring.md)
+
+## MAIN and PRESET wiring
+
+I wire each MAIN (SW7) and PRESET (SW8) contact directly to its own Teensy GPIO input through J10.
+Both switch commons connect to ground. The selected contact pulls its input low when the Teensy
+internal pull-up is enabled. This circuit uses no resistor ladders.
+
+| Switch contact | J10 pin on both boards | Teensy GPIO |
+| --- | ---: | ---: |
+| MAIN position 1 | 20 | 18 |
+| MAIN position 2 | 21 | 19 |
+| MAIN position 3 | 22 | 20 |
+| MAIN position 4 | 23 | 21 |
+| PRESET position 1 | 24 | 22 |
+| PRESET position 2 | 25 | 23 |
+| PRESET position 3 | 26 | 24 |
+
+The GPIO column uses the pin numbers printed on the Teensy. Assembled electrical testing is still pending.
 
 ## Version history
 
