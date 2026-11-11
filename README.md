@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 10, 2026 at 7:33 PM MST (America/Denver)**
+**Last updated: November 10, 2026 at 7:38 PM MST (America/Denver)**
 
 <p align="center">
   <img src="images/ARC-164_uhf_panel.jpg" width="500" alt="ARC-164 UHF radio panel reference photo">
@@ -186,7 +186,7 @@ This is a **four-direction switch with a center pushbutton and rotary encoder**.
 
 ## Things that need to be completed
 
-**Last updated: November 10, 2026 at 7:33 PM MST (America/Denver)**
+**Last updated: November 10, 2026 at 7:38 PM MST (America/Denver)**
 <!-- Refresh this section timestamp whenever the work list changes, using the actual America/Denver time and MST/MDT. -->
 
 This is my current work list for the hardware, firmware, testing, and build instructions.
@@ -197,7 +197,7 @@ This is my current work list for the hardware, firmware, testing, and build inst
 4. **DCS-BIOS mappings and any needed changes:** Check which inputs and display outputs are already available for this radio. Identify missing data, make any necessary export changes, and document them. Check the correct ARC-164 radio instance for each intended A-10 variant.
 5. **Firmware:** Write the control and display firmware and verify USB communication with DCS-BIOS. Implement DCS-BIOS-controlled MAX7219 display brightness and PWM panel backlighting, with separate brightness curves and off-state handling; see the [lighting design plan](#dcs-bios-display-brightness-and-panel-backlighting).
 6. **Bench and board testing:** Test the controls, displays, and power requirements together, then assemble and electrically test the manufactured boards.
-7. **Dual ARC-164 support:** For aircraft with two ARC-164 radios, such as the A-10C, I’ll add a firmware setting that lets each physical panel operate as **Radio 1 or Radio 2**. I’ll verify the DCS-BIOS mappings for both radio instances and test both panels together.
+7. **Dual ARC-164 support:** For aircraft with two ARC-164 radios, such as the A-10C, I’ll provide two separate HEX files, one for **Radio 1** and one for **Radio 2**. Load the HEX file that matches the radio you want each physical panel to control. I’ll verify the DCS-BIOS mappings for both radio instances and test both panels together.
 8. **Testing in DCS:** Check control operation, display updates, startup behavior, reconnection, and extended reliability with the intended aircraft and the other radio panels connected.
 9. **Documentation:** Publish assembly instructions, wiring diagrams, final parts and print quantities, PCB ordering files, firmware loading steps, DCS-BIOS setup requirements, and troubleshooting notes.
 10. **Assembly pictures:** During assembly, take clear pictures of component placement, soldering, wiring, and mounting, including both sides of each PCB with the silkscreen markings visible. Add the pictures to the assembly instructions so other builders can follow along.
