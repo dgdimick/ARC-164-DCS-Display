@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 10, 2026 at 7:55 PM MST (America/Denver)**
+**Last updated: November 10, 2026 at 8:01 PM MST (America/Denver)**
 
 <p align="center">
   <img src="images/ARC-164_uhf_panel.jpg" width="500" alt="ARC-164 UHF radio panel reference photo">
@@ -186,7 +186,7 @@ This is a **four-direction switch with a center pushbutton and rotary encoder**.
 
 ## Things that need to be completed
 
-**Last updated: November 10, 2026 at 7:42 PM MST (America/Denver)**
+**Last updated: November 10, 2026 at 8:01 PM MST (America/Denver)**
 <!-- Refresh this section timestamp whenever the work list changes, using the actual America/Denver time and MST/MDT. -->
 
 This is my current work list for the hardware, firmware, testing, and build instructions.
@@ -202,6 +202,7 @@ This is my current work list for the hardware, firmware, testing, and build inst
 9. **Documentation:** Publish assembly instructions, wiring diagrams, final parts and print quantities, PCB ordering files, firmware loading steps, DCS-BIOS setup requirements, and troubleshooting notes.
 10. **Assembly pictures:** During assembly, take clear pictures of component placement, soldering, wiring, and mounting, including both sides of each PCB with the silkscreen markings visible. Add the pictures to the assembly instructions so other builders can follow along.
 11. **USB-C adapter testing:** I confirmed DCSBridge panel control and Teensy programming on my ARC-210. I still need to check live DCS operation and reliable reconnection after unplugging the adapter.
+12. **USB identification:** Verify the USB product names **ARC-164 Radio 1** and **ARC-164 Radio 2** with their respective HEX files. Test and document how to give each panel a matching Windows Ports label with administrator permissions. [ARC-210 Windows naming example](https://github.com/dgdimick/ARC-210-DCS-Display#arc-210-usb-name-in-windows).
 
 
 ## Controller choice — Teensy 4.1
