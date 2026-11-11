@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 10, 2026 at 7:42 PM MST (America/Denver)**
+**Last updated: November 10, 2026 at 7:55 PM MST (America/Denver)**
 
 <p align="center">
   <img src="images/ARC-164_uhf_panel.jpg" width="500" alt="ARC-164 UHF radio panel reference photo">
@@ -237,7 +237,7 @@ The Power Driver Board carries both MAX7219 drivers and a 74AHCT125 buffer for t
 I’ll have **DCS-BIOS control both the seven-segment display brightness and the panel backlighting**. For the A-10C/A-10C II, the initial mapping is the exported **`INT_CONSOLE_L_BRIGHT` (Console Light Brightness)** value from the [DCS-BIOS A-10C module](https://github.com/DCS-Skunkworks/dcs-bios/blob/main/Scripts/DCS-BIOS/lib/modules/aircraft_modules/A-10C.lua). I still need to verify its behavior in DCS, including aircraft electrical power and lighting-off conditions.
 
 - **Display brightness:** The Teensy will set the intensity registers on both MAX7219 drivers. Each driver has 16 intensity levels; firmware will use shutdown for a fully dark display. Both display windows will follow the cockpit lighting level, with a separately adjustable display brightness curve.
-- **Panel backlighting:** Version 1.0 uses **Teensy GPIO 9**, buffered to 5 V through U13, to drive Q1’s gate through its resistor and pull-down circuit. Q1 switches the return for **19 green Main Board LEDs**, each with its own **330 Ω resistor**. LED current comes from the external supply; firmware will use a separate backlight brightness curve.
+- **Panel backlighting:** The **IRLZ44N MOSFET (Q1)** on the **Power Driver Board** dims the **19 green Main Board LEDs** by switching their return through **J21 pin 2**. The Teensy sends PWM from **GPIO 9** through U13, which buffers the signal to 5 V before it reaches Q1. Each LED has its own **330 Ω resistor**, and LED current comes from the external 5 V supply. Firmware will use a separate backlight brightness curve.
 - **Power and connections:** The **Power Driver Board** accepts externally regulated 5 V at J11 and carries the Teensy, MAX7219 drivers, 74AHCT125 buffer, current-setting/decoupling parts, and backlight MOSFET. **J10** connects the Main Board controls, **J20** connects the LED Sub-Board, and **J21** supplies the Main Board backlights. Grounds are shared; external 5 V is isolated from Teensy VIN/VUSB, and the Teensy remains USB powered. The board does not regulate a higher input voltage down to 5 V.
 - **Light shielding:** I’ll design a 3D-printed opaque light shield around the display windows to prevent panel-backlight spill from washing out the seven-segment displays.
 - **Startup and testing:** Firmware will start with both lighting outputs off until initialized. I still need to finalize the GPIO, MOSFET, LED quantities, resistor values, connectors, power budget, DCS mapping, and connection-loss behavior, then test dimming, flicker, heat, and light leakage.
