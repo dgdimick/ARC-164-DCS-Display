@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 10, 2026 at 6:01 PM MST (America/Denver)**
+**Last updated: November 10, 2026 at 6:06 PM MST (America/Denver)**
 
 **LED Sub Board v1.2 is now published for Main Board v1.2.** I printed the latest mockup at **100%** and it passed the fit test, including **frequency and channel LED alignment and J20 connector/cable clearance**. The final layout keeps the **FREQ LEDs up 0.5 mm**, the **channel LEDs up 0.5 mm with their earlier 0.5 mm leftward adjustment**, and **J20 up 2 mm total** from the previous mounting position. The **0.75 mm gaps, 6 mm display bodies and tested 8 mm mounting stack** remain unchanged. **Use Main Board v1.2 with LED Sub Board v1.2; older Sub Boards do not match this Main Board. Assembled electrical testing is still pending.**
 
@@ -337,7 +337,13 @@ I use **10 mm and 13 mm deep-well sockets** to tighten the **mounting nuts on th
 
 I plan to use **two C&K A12505RNCQ rotary switches**, one for MAIN and one for PRESET. These are eight-position switches with the shorter **12.7 mm (0.5-inch) flatted actuator**, **PCB through-hole terminals**, and **45° indexing**. See the [C&K A Series datasheet](https://www.ck-components.com/media/1349/arotary.pdf).
 
-Version 1.0 mounts **both switches directly on the Main PCB and reads their contacts directly through J10, without resistor ladders**. I’ll secure MAIN and PRESET mechanically using their **threaded bushings, mounting nuts, and anti-rotation alignment holes**. The **PCB pins will provide the electrical connections**, rather than serving as the primary mechanical support. I’ll check the mounting stack and board spacing so tightening the nuts does not strain the pins or bend the Main PCB. This will avoid separate rotary-switch PCBs and the wiring between those boards and the Main PCB. I’ll use the ARC-210 switch circuit and footprint as a starting point, then check the pin assignments, component placement, and analog readings for this layout.
+I mount both switches directly on the Main Board. Each switch position connects through **J10** to its own
+**Teensy GPIO input** on the Power Driver Board: **four inputs for MAIN and three for PRESET**. Both switch
+commons connect to ground. This wiring uses **no resistor ladders**.
+
+I secure MAIN and PRESET with their threaded bushings, mounting nuts, and anti-rotation alignment holes.
+The PCB pins make the electrical connections. I still need to check the mounting stack and board spacing
+so tightening the nuts does not strain the pins or bend the Main Board.
 
 | Control | Part number | Stop-ring setting | Total travel |
 | --- | --- | --- | --- |
