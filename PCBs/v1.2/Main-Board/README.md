@@ -1,8 +1,8 @@
 # ARC-164 Main Board — Version 1.2
 
-**Last updated: November 9, 2026 at 6:23 PM MST (America/Denver)**
+**Last updated: November 10, 2026 at 5:45 PM MST (America/Denver)**
 
-**Main Board v1.2 is published, but it will not work with any currently or previously published LED Sub Board.** I’ve resized the Main Board and am still working on its matching redesigned Sub Board. **The matching new Sub Board files and STL will stay unpublished until I finish the 100% print and fit test and confirm both the channel LED alignment behind the faceplate and J20 connector/cable clearance with Main Board v1.2.** The latest adjustment moves the **channel LEDs up 0.5 mm** and **J20 up 2 mm total across the last two moves**. The channel LEDs retain their earlier **0.5 mm leftward adjustment**; the frequency LED positions, **0.75 mm gaps and 6 mm display bodies** are unchanged. **The 100% print, channel LED alignment and J20 connector/cable-clearance checks remain pending before publication.** Please wait for the matching Sub Board and confirmed assembly clearance before ordering a compatible set. Assembled electrical testing remains pending.
+**LED Sub Board v1.2 is now published for Main Board v1.2.** I printed the latest mockup at **100%** and it passed the fit test, including **frequency and channel LED alignment and J20 connector/cable clearance**. The final layout keeps the **FREQ LEDs up 0.5 mm**, the **channel LEDs up 0.5 mm with their earlier 0.5 mm leftward adjustment**, and **J20 up 2 mm total** from the previous mounting position. The **0.75 mm gaps, 6 mm display bodies and tested 8 mm mounting stack** remain unchanged. **Use Main Board v1.2 with LED Sub Board v1.2; older Sub Boards do not match this Main Board. Assembled electrical testing is still pending.**
 
 ## Downloads
 
@@ -22,7 +22,7 @@ Fresh KiCad checks report **zero DRC violations, zero unconnected items, zero sc
 
 ## Mounting and compatibility
 
-**Do not combine Main Board v1.2 with any older published Sub Board.** I’m still checking the matching resized Sub Board and actual J20 cable connector together. The latest Sub Board mockup moves both channel LEDs **up 0.5 mm** and J20 **up 2 mm total across the last two moves**. The earlier **0.5 mm leftward channel adjustment** is retained; the frequency LED positions, **0.75 mm gaps and 6 mm display bodies** are unchanged. **The 100% print, channel LED alignment and J20 connector/cable-clearance checks with Main Board v1.2 are still pending before I publish the new Sub Board files or STL.** It is not part of this download.
+**Use Main Board v1.2 with the matching LED Sub Board v1.2.** The latest Sub Board mockup passed my **100% print and fit test on November 10, 2026**, including LED alignment and J20 connector/cable clearance. Older Sub Boards do not match Main Board v1.2. Assembled electrical testing remains pending. [Sub Board v1.2 downloads](../LED-Subboard/README.md).
 
 The previously tested Sub Board mounting stack is **8 mm**: each of four mounts uses a **20 mm screw, 6 mm-thick nut and two 1 mm washers**. Panel-to-Main-Board spacing is currently **13.5 mm**; I may use **14 mm** to recess the displays slightly from the glass, subject to the real PCB fit. The Power Driver Board remains at v1.0 Prototype and mounts below Main, components facing down, on **10 standoffs longer than 20 mm**.
 
@@ -30,7 +30,7 @@ The previously tested Sub Board mounting stack is **8 mm**: each of four mounts 
 
 ## Version history
 
-- **1.2 — November 9, 2026:** New J10 position, aligned SW12/SW13 solder pads, updated routing and ground fills, and v1.2 PCB/schematic revision markings. The matching new Sub Board remains unpublished; assembled electrical testing is pending.
+- **1.2 — November 9, 2026:** New J10 position, aligned SW12/SW13 solder pads, updated routing and ground fills, and v1.2 PCB/schematic revision markings. The matching Sub Board was not yet published at this release; it was published as v1.2 on November 10 after the physical fit test. Assembled electrical testing remains pending.
 - [1.1 — November 9, 2026](../../v1.1/Main-Board/README.md): Resized Main Board and updated mounting holes; superseded by v1.2.
 - **1.0 Prototype — November 7, 2026:** Initial publication, subsequently withdrawn.
 

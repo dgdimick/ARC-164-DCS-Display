@@ -1,9 +1,9 @@
 # ARC-164 LED Sub Board — downloads withdrawn
 
-**Last updated: November 9, 2026 at 6:23 PM MST (America/Denver)**
+**Last updated: November 10, 2026 at 5:45 PM MST (America/Denver)**
 
-**Main Board v1.2 is published, but it will not work with any currently or previously published LED Sub Board.** I’ve resized the Main Board and am still working on its matching redesigned Sub Board. **The matching new Sub Board files and STL will stay unpublished until I finish the 100% print and fit test and confirm both the channel LED alignment behind the faceplate and J20 connector/cable clearance with Main Board v1.2.** The latest adjustment moves the **channel LEDs up 0.5 mm** and **J20 up 2 mm total across the last two moves**. The channel LEDs retain their earlier **0.5 mm leftward adjustment**; the frequency LED positions, **0.75 mm gaps and 6 mm display bodies** are unchanged. **The 100% print, channel LED alignment and J20 connector/cable-clearance checks remain pending before publication.** Please wait for the matching Sub Board and confirmed assembly clearance before ordering a compatible set. Assembled electrical testing remains pending.
+**LED Sub Board v1.2 is now published for Main Board v1.2.** I printed the latest mockup at **100%** and it passed the fit test, including **frequency and channel LED alignment and J20 connector/cable clearance**. The final layout keeps the **FREQ LEDs up 0.5 mm**, the **channel LEDs up 0.5 mm with their earlier 0.5 mm leftward adjustment**, and **J20 up 2 mm total** from the previous mounting position. The **0.75 mm gaps, 6 mm display bodies and tested 8 mm mounting stack** remain unchanged. **Use Main Board v1.2 with LED Sub Board v1.2; older Sub Boards do not match this Main Board. Assembled electrical testing is still pending.**
 
-The earlier KiCad projects, Gerbers, schematics, BOMs and test STLs have been pulled from the current repository pending replacement. My local working files are preserved.
+The older files remain withdrawn. Use [Sub Board v1.2](../../v1.2/LED-Subboard/README.md), which matches Main Board v1.2 and has passed physical mockup fitting.
 
 [PCB status and available boards](../../README.md)

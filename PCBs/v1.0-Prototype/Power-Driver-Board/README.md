@@ -1,12 +1,12 @@
 # ARC-164 Power Driver Board — Version 1.0 Prototype
 
-**Last updated: November 9, 2026 at 6:23 PM MST (America/Denver)**
+**Last updated: November 10, 2026 at 5:45 PM MST (America/Denver)**
 
-The latest Sub Board mockup moves both channel LEDs **up 0.5 mm** and J20 **up 2 mm total across the last two moves**. The earlier **0.5 mm leftward channel adjustment** is retained; the frequency LED positions, **0.75 mm gaps and 6 mm display bodies** are unchanged. **The 100% print, channel LED alignment and J20 connector/cable-clearance checks with Main Board v1.2 are still pending before I publish the new Sub Board files or STL.**
+**LED Sub Board v1.2 is now published for Main Board v1.2.** I printed the latest mockup at **100%** and it passed the fit test, including **frequency and channel LED alignment and J20 connector/cable clearance**. The final layout keeps the **FREQ LEDs up 0.5 mm**, the **channel LEDs up 0.5 mm with their earlier 0.5 mm leftward adjustment**, and **J20 up 2 mm total** from the previous mounting position. The **0.75 mm gaps, 6 mm display bodies and tested 8 mm mounting stack** remain unchanged. **Use Main Board v1.2 with LED Sub Board v1.2; older Sub Boards do not match this Main Board. Assembled electrical testing is still pending.**
 
 Untested prototype hardware revision; initial public revision dated November 7, 2026.
 
-**Main Board v1.2 will not work with any older published Sub Board.** I’m still developing the matching new Sub Board; its files and STL remain unpublished while I check the channel LED alignment and J20 cable clearance. Please wait for the matching version before ordering or assembling a board set. See the [current PCB compatibility status](../../README.md).
+**Use Main Board v1.2 with the matching LED Sub Board v1.2.** The latest Sub Board mockup passed my **100% print and fit test on November 10, 2026**, including LED alignment and J20 connector/cable clearance. Older Sub Boards do not match Main Board v1.2. Assembled electrical testing remains pending.
 
 - Open [the KiCad project](Project/Power%20Driver%20Board.kicad_pro).
 - [Schematic PDF](Schematics/Power-Driver-Board-v1.0-Prototype.pdf)
