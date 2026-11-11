@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 10, 2026 at 8:18 PM MST (America/Denver)**
+**Last updated: November 10, 2026 at 8:21 PM MST (America/Denver)**
 
 <p align="center">
   <img src="images/ARC-164_uhf_panel.jpg" width="500" alt="ARC-164 UHF radio panel reference photo">
@@ -330,6 +330,8 @@ I plan to use this [Veeloon Micro-USB male to USB-C female adapter cable](https:
 ## DCS-BIOS
 
 I use [DCS-Skunkworks DCS-BIOS](https://github.com/DCS-Skunkworks/dcs-bios) to exchange control and display information with DCS, and [TekConnect](https://github.com/tekcreations/TekConnect) to manage my USB connections.
+
+I plan for the Radio 1 HEX to report **ARC-164-1** and the Radio 2 HEX to report **ARC-164-2** as the USB product name, visible under **Device Manager → Properties → Details → Bus reported device description**. These names still need firmware implementation and testing. Windows may show **USB Serial Device (COMx)** in the Ports list. Renaming that label through the Windows registry is **optional**, and the panel can be programmed and used with DCS-BIOS with the default label. Select the assigned COM port in TekConnect. If you move the panel to another computer, check its assigned port and select it there too. [See the optional Windows naming example](https://github.com/dgdimick/ARC-210-DCS-Display#arc-210-usb-name-in-windows).
 
 ARC-164 firmware, radio mappings, setup instructions, and any required export changes still need to be developed and tested. I’ll document the steps here as they become available.
 
