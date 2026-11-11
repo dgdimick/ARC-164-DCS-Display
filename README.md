@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 10, 2026 at 8:01 PM MST (America/Denver)**
+**Last updated: November 10, 2026 at 8:18 PM MST (America/Denver)**
 
 <p align="center">
   <img src="images/ARC-164_uhf_panel.jpg" width="500" alt="ARC-164 UHF radio panel reference photo">
@@ -186,7 +186,7 @@ This is a **four-direction switch with a center pushbutton and rotary encoder**.
 
 ## Things that need to be completed
 
-**Last updated: November 10, 2026 at 8:01 PM MST (America/Denver)**
+**Last updated: November 10, 2026 at 8:18 PM MST (America/Denver)**
 <!-- Refresh this section timestamp whenever the work list changes, using the actual America/Denver time and MST/MDT. -->
 
 This is my current work list for the hardware, firmware, testing, and build instructions.
@@ -197,12 +197,12 @@ This is my current work list for the hardware, firmware, testing, and build inst
 4. **DCS-BIOS mappings and any needed changes:** Check which inputs and display outputs are already available for this radio. Identify missing data, make any necessary export changes, and document them. Check the correct ARC-164 radio instance for each intended A-10 variant.
 5. **Firmware:** Write the control and display firmware and verify USB communication with DCS-BIOS. Implement DCS-BIOS-controlled MAX7219 display brightness and PWM panel backlighting, with separate brightness curves and off-state handling; see the [lighting design plan](#dcs-bios-display-brightness-and-panel-backlighting).
 6. **Bench and board testing:** Test the controls, displays, and power requirements together, then assemble and electrically test the manufactured boards.
-7. **Dual ARC-164 support:** For aircraft with two ARC-164 radios, such as the A-10C, I’ll provide two separate HEX files, one for **Radio 1** and one for **Radio 2**. Load the HEX file that matches the radio you want each physical panel to control. The Teensy will report **ARC-164 Radio 1** or **ARC-164 Radio 2** as its USB product name, depending on the HEX file you load. Windows may still show a generic COM-port label in Device Manager. I’ll verify the DCS-BIOS mappings for both radio instances and test both panels together.
+7. **Dual ARC-164 support:** For aircraft with two ARC-164 radios, such as the A-10C, I’ll provide two separate HEX files, one for **Radio 1** and one for **Radio 2**. Load the HEX file that matches the radio you want each physical panel to control. The Teensy will report **ARC-164-1** or **ARC-164-2** as its USB product name in **Device Manager → Properties → Details → Bus reported device description**, depending on the HEX file you load. Windows may still show a generic COM-port label in Device Manager. I’ll verify the DCS-BIOS mappings for both radio instances and test both panels together.
 8. **Testing in DCS:** Check control operation, display updates, startup behavior, reconnection, and extended reliability with the intended aircraft and the other radio panels connected.
 9. **Documentation:** Publish assembly instructions, wiring diagrams, final parts and print quantities, PCB ordering files, firmware loading steps, DCS-BIOS setup requirements, and troubleshooting notes.
 10. **Assembly pictures:** During assembly, take clear pictures of component placement, soldering, wiring, and mounting, including both sides of each PCB with the silkscreen markings visible. Add the pictures to the assembly instructions so other builders can follow along.
 11. **USB-C adapter testing:** I confirmed DCSBridge panel control and Teensy programming on my ARC-210. I still need to check live DCS operation and reliable reconnection after unplugging the adapter.
-12. **USB identification:** Verify the USB product names **ARC-164 Radio 1** and **ARC-164 Radio 2** with their respective HEX files. Test and document how to give each panel a matching Windows Ports label with administrator permissions. [ARC-210 Windows naming example](https://github.com/dgdimick/ARC-210-DCS-Display#arc-210-usb-name-in-windows).
+12. **USB identification:** Verify the USB product names **ARC-164-1** and **ARC-164-2** with their respective HEX files. Test and document the optional Windows Ports label change using administrator permissions. The panel can be programmed and used with DCS-BIOS without that registry change. [ARC-210 Windows naming example](https://github.com/dgdimick/ARC-210-DCS-Display#arc-210-usb-name-in-windows).
 
 
 ## Controller choice — Teensy 4.1
