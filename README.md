@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 10, 2026 at 5:45 PM MST (America/Denver)**
+**Last updated: November 10, 2026 at 6:01 PM MST (America/Denver)**
 
 **LED Sub Board v1.2 is now published for Main Board v1.2.** I printed the latest mockup at **100%** and it passed the fit test, including **frequency and channel LED alignment and J20 connector/cable clearance**. The final layout keeps the **FREQ LEDs up 0.5 mm**, the **channel LEDs up 0.5 mm with their earlier 0.5 mm leftward adjustment**, and **J20 up 2 mm total** from the previous mounting position. The **0.75 mm gaps, 6 mm display bodies and tested 8 mm mounting stack** remain unchanged. **Use Main Board v1.2 with LED Sub Board v1.2; older Sub Boards do not match this Main Board. Assembled electrical testing is still pending.**
 
@@ -28,7 +28,7 @@ I’ve published [Main Board v1.2](PCBs/v1.2/Main-Board/README.md) with **J10 at
 
 ## Development update — November 7, 2026
 
-I initially published Version 1.0 prototypes of all three boards. The matched **Main Board v1.2 and LED Sub Board v1.2** are published; see the [PCB download overview](PCBs/README.md) for individual board files and fabrication ZIPs. The Power Driver Board remains available, along with the [three-board wiring notes](PCBs/v1.0-Prototype/Docs/Wiring.md). The Sub Board v1.2 mockup has passed the **100% print, LED alignment and J20 connector/cable-clearance checks**. Main Board v1.2 is incompatible with all previously published Sub Boards.
+I initially published Version 1.0 prototypes of all three boards. The matched **Main Board v1.2 and LED Sub Board v1.2** are published; see the [PCB download overview](PCBs/README.md) for individual board files and fabrication ZIPs. The Power Driver Board remains available, along with the [three-board wiring notes](PCBs/v1.0-Prototype/Docs/Wiring.md). The Sub Board v1.2 mockup has passed the **100% print, LED alignment and J20 connector/cable-clearance checks**. **Main Board v1.2 matches the published Sub Board v1.2, which passed the 100% printed fit test. Older Sub Board v1.0/v1.1 layouts do not match it; assembled electrical testing remains pending.**
 
 I’ve checked the designs in KiCad, and **all three boards pass the design-rule and schematic electrical checks**, with no unconnected items or differences between the schematics and PCBs. The cable pinouts and all 19 backlight LED/resistor connections have been checked too.
 
