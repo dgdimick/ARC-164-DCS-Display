@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 11, 2026 at 9:21 PM MST (America/Denver)**
+**Last updated: November 11, 2026 at 10:50 PM MST (America/Denver)**
 
 <p align="center">
   <img src="images/ARC-164_uhf_panel.jpg" width="500" alt="ARC-164 UHF radio panel reference photo">
@@ -188,16 +188,18 @@ This is a **four-direction switch with a center pushbutton and rotary encoder**.
 
 Use a **0.20 mm or finer layer height**. Print the knobs **without supports** in their intended orientation.
 
+The rotary encoder shaft adapters will be hidden. Black filament is preferred if you have it available.
+
 ## Things that need to be completed
 
-**Last updated: November 10, 2026 at 8:18 PM MST (America/Denver)**
+**Last updated: November 11, 2026 at 10:50 PM MST (America/Denver)**
 <!-- Refresh this section timestamp whenever the work list changes, using the actual America/Denver time and MST/MDT. -->
 
 This is my current work list for the hardware, firmware, testing, and build instructions.
 
 1. **Panel layout and parts:** Confirm dimensions, mounting clearances, controls, and the complete parts list. **TONE and SQL switches:** Select the exact parts and verify their mounting dimensions, required operation and travel, and clearances before finalizing the PCB. My purchased **QBSLDIW301GR white digits—six for frequency and two for channel—have passed the printed layout fit test**. The revised six-digit frequency layout is **49.35 mm wide × 13.75 mm high across the front face**, using **0.75 mm gaps**. The earlier LED layout mockup passed at 100% scale; the matching **Sub Board v1.2 has now passed its latest frequency/channel LED alignment and J20 clearance fit checks and is published**. Verify the prototype LED Sub-Board footprint and pinout against these displays before assembly. Check digit visibility and brightness through the smoked covers, pinout, mounting height, spacing, and clearance within the 53.5 × 17.5 mm frequency window and 22 × 17.5 mm preset window.
 2. **Assemble and electrically test the matched v1.2 boards:** The **LED Sub Board v1.2 mockup passed its 100% print and fit test on November 10, 2026**, including frequency/channel LED alignment and J20 connector/cable clearance with Main Board v1.2. Both boards are published. Verify the manufactured boards, connector/cable fit, power, display pinout, controls and assembled electrical operation before calling the complete panel tested. Keep the current frequency-encoder design; I’ll finish these PCBs and return to ARC-210 testing before revisiting ARC-186 or Version 2.
-3. **Printed parts:** The **8 mm Sub Board mounting stack** and **latest v1.2 display-board mockup** have passed physical fit testing at **100% scale**, including both display windows and J20 clearance. Continue designing and test-fitting the remaining knobs, brackets and spacers; verify shaft engagement, knob retention and their clearances.
+3. **Printed parts:** The **8 mm Sub Board mounting stack** and **latest v1.2 display-board mockup** have passed physical fit testing at **100% scale**, including both display windows and J20 clearance. Continue designing and test-fitting the remaining knobs, brackets and spacers; verify shaft engagement, knob retention and their clearances. Design and test-fit shaft adapters for the rotary encoders.
 4. **DCS-BIOS mappings and any needed changes:** Check which inputs and display outputs are already available for this radio. Identify missing data, make any necessary export changes, and document them. Check the correct ARC-164 radio instance for each intended A-10 variant.
 5. **Firmware:** Write the control and display firmware and verify USB communication with DCS-BIOS. Implement DCS-BIOS-controlled MAX7219 display brightness and PWM panel backlighting, with separate brightness curves and off-state handling; see the [lighting design plan](#dcs-bios-display-brightness-and-panel-backlighting).
 6. **Bench and board testing:** Test the controls, displays, and power requirements together, then assemble and electrically test the manufactured boards.
