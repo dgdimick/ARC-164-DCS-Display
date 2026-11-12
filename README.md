@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 10, 2026 at 8:21 PM MST (America/Denver)**
+**Last updated: November 11, 2026 at 9:21 PM MST (America/Denver)**
 
 <p align="center">
   <img src="images/ARC-164_uhf_panel.jpg" width="500" alt="ARC-164 UHF radio panel reference photo">
@@ -183,6 +183,10 @@ I’ll add this part to the same Mouser order as the ARC-164 encoders. It is for
 | 1 | Emergency pitch/roll trim directional switch | Alps Alpine RKJXT1F42001 | [688-RKJXT1F42001](https://www.mouser.com/en/ProductDetail/Alps-Alpine/RKJXT1F42001?qs=6EGMNY9ZYDTsBzSTrhiL0w%3D%3D) | Confirm USD price in cart |
 
 This is a **four-direction switch with a center pushbutton and rotary encoder**. I plan to use its four directions for emergency pitch and roll trim; the center pushbutton and rotary encoder will remain unused. Physical mounting, knob fit, and operating feel still need checking. Its cost is **not included in the $55.81 ARC-164 subtotal** above.
+
+## 3D print settings
+
+Use a **0.20 mm or finer layer height**. Print the knobs **without supports** in their intended orientation.
 
 ## Things that need to be completed
 
