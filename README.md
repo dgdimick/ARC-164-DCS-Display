@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 11, 2026 at 10:50 PM MST (America/Denver)**
+**Last updated: November 12, 2026 at 3:11 AM MST (America/Denver)**
 
 <p align="center">
   <img src="images/ARC-164_uhf_panel.jpg" width="500" alt="ARC-164 UHF radio panel reference photo">
@@ -189,6 +189,10 @@ This is a **four-direction switch with a center pushbutton and rotary encoder**.
 Use a **0.20 mm or finer layer height**. Print the knobs **without supports** in their intended orientation.
 
 The rotary encoder shaft adapters will be hidden. Black filament is preferred if you have it available.
+
+## Free 3D-printed parts
+
+If you don’t have a 3D printer, I’m happy to help with the ARC-164. Once the printed parts are finalized, I’ll print a set for you for free. Just cover shipping. I’m still designing and test-fitting some of the printed parts. If you’re planning a build, [get in touch in Discussions](https://github.com/dgdimick/ARC-164-DCS-Display/discussions) to check availability.
 
 ## Things that need to be completed
 
