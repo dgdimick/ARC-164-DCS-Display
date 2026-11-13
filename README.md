@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 12, 2026 at 3:12 AM MST (America/Denver)**
+**Last updated: November 12, 2026 at 8:40 PM MST (America/Denver)**
 
 <p align="center">
   <img src="images/ARC-164_uhf_panel.jpg" width="500" alt="ARC-164 UHF radio panel reference photo">
@@ -276,6 +276,8 @@ I plan to use a **spring-loaded momentary toggle for TONE**: hold it to activate
 For **STATUS**, I plan to use a **normally open momentary pushbutton, not a light**. The contacts close while the button is pressed and open again when it is released.
 
 ## Assembly instructions
+
+**New to soldering?** There are plenty of YouTube videos that show how to solder through-hole parts. A soldering practice kit is also a great way to get comfortable with the iron before you start on the radio boards. [Find soldering practice kits on Amazon](https://www.amazon.com/s?k=learn+soldering).
 
 I’ll post pictures of my build to help you follow the assembly steps.
 
