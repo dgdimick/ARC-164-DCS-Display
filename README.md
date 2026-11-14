@@ -1,6 +1,8 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 12, 2026 at 8:40 PM MST (America/Denver)**
+**Last updated: November 13, 2026 at 11:33 PM MST (America/Denver)**
+
+**[Windows COM port tools](Tools/README.md)** — Download the scripts to rename a COM port in Device Manager or restore its previous display name.
 
 <p align="center">
   <img src="images/ARC-164_uhf_panel.jpg" width="500" alt="ARC-164 UHF radio panel reference photo">
