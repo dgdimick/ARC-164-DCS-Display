@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 14, 2026 at 12:16 AM MST (America/Denver)**
+**Last updated: November 14, 2026 at 2:04 AM MST (America/Denver)**
 
 **[Windows COM port tools](Tools/README.md)** — Download the scripts to rename a COM port in Device Manager or restore its previous display name.
 
@@ -13,6 +13,10 @@
 I’m building an ARC-164 radio panel for my SIMPIT and sharing the files and what I learn along the way. I hope you’ll enjoy building one too, and perhaps help me make it better.
 
 I spend about **8 hours a day on my SIMPIT projects**, including working on the code, PCB design, assembly, and test fitting.
+
+## Development update — November 14, 2026
+
+I finished all three ARC-164 PCB designs and published them as prototypes. The set includes **Main Board v1.2**, **LED Sub Board v1.2**, and **Power Driver Board v1.0**. Next I’ll assemble the manufactured boards and test them electrically. [View the PCB files and downloads](PCBs/README.md).
 
 ## Development update — November 10, 2026
 
