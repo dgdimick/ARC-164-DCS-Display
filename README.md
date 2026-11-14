@@ -1,6 +1,6 @@
 # ARC-164 Radio Panel for DCS
 
-**Last updated: November 14, 2026 at 12:05 AM MST (America/Denver)**
+**Last updated: November 14, 2026 at 12:16 AM MST (America/Denver)**
 
 **[Windows COM port tools](Tools/README.md)** — Download the scripts to rename a COM port in Device Manager or restore its previous display name.
 
