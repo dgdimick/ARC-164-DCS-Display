@@ -1,5 +1,7 @@
 # ARC-164 Radio Panel for DCS
 
+**Project on hold.** I’m putting the ARC-164 on hold until I get the modified panel from PC Flights. I’ll be working on the [ARC-210](https://github.com/dgdimick/ARC-210-DCS-Display) in the meantime.
+
 **Last updated: November 14, 2026 at 2:04 AM MST (America/Denver)**
 
 **[Windows COM port tools](Tools/README.md)** — Download the scripts to rename a COM port in Device Manager or restore its previous display name.
