@@ -1,8 +1,8 @@
 # ARC-164 Radio Panel for DCS
 
-**Project on hold.** I’m putting the ARC-164 on hold until I get the modified panel from PC Flights. I’ll be working on the [ARC-210](https://github.com/dgdimick/ARC-210-DCS-Display) in the meantime.
+**Project on hold.** I’ll be working on the ARC-210 while the ARC-164 is on hold. [Read the November 16 update](#development-update--november-16-2026).
 
-**Last updated: November 14, 2026 at 2:04 AM MST (America/Denver)**
+**Last updated: November 16, 2026**
 
 **[Windows COM port tools](Tools/README.md)** — Download the scripts to rename a COM port in Device Manager or restore its previous display name.
 
@@ -15,6 +15,10 @@
 I’m building an ARC-164 radio panel for my SIMPIT and sharing the files and what I learn along the way. I hope you’ll enjoy building one too, and perhaps help me make it better.
 
 I spend about **8 hours a day on my SIMPIT projects**, including working on the code, PCB design, assembly, and test fitting.
+
+## Development update — November 16, 2026
+
+The ARC-164 PCB design is pretty much done. Funds are a little tight right now, so I’m going to hold off on ordering the boards until after the first of the year. In the meantime, I’ll focus on finishing the ARC-210, then come back to the ARC-164 and start building and testing it. [ARC-210 project](https://github.com/dgdimick/ARC-210-DCS-Display)
 
 ## Development update — November 14, 2026
 
