@@ -2,7 +2,7 @@
 
 **Project on hold.** I’ll be working on the ARC-210 while the ARC-164 is on hold. [Read the November 16 update](#development-update--november-16-2026).
 
-**Last updated: November 16, 2026**
+**Last updated: November 18, 2026 at 10:33 AM MST (America/Denver)**
 
 **[Windows COM port tools](Tools/README.md)** — Download the scripts to rename a COM port in Device Manager or restore its previous display name.
 
@@ -89,6 +89,88 @@ Once I’ve finished the radio panels, I plan to build other panels for my SIMPI
 While I could use surface-mount (SMD) parts to make the boards smaller, I plan to use through-hole components to make the project easier for everyone to build and solder with basic tools.
 
 I’ve linked the parts I’m designing around so you can find the same sizes and pin spacing without having to hunt through listings. You’re welcome to use other suppliers—I buy some parts from Amazon myself. Just compare the dimensions and pin spacing before ordering a substitute so it will fit the PCB.
+
+## Complete-build cost estimate — November 18, 2026
+
+I’m budgeting **about $460**, with a planning range of **$400–$510**, to buy the parts for **one hand-assembled ARC-164 panel**. The calculated range is **$400.94–$510.94**. This includes a **$70 PC Flights panel**, the external 5 V supply, cables, mounting hardware, printed-part material, and **five of each of the three PCBs**.
+
+This budget is for the **current encoder build: Main Board v1.2, LED Sub-Board v1.2, and Power Driver Board v1.0 Prototype**. It uses **eight QBSLDIW301GR white digits**, not the red digits in the older order sheet below. Buying ten white digits at the listed quantity-ten price is cheaper than buying eight individually, so the budget includes two spare digits.
+
+### What I checked and what remains estimated
+
+- **Verified design quantities:** I checked the published board BOMs, assembly notes, and KiCad board dimensions. Manufactured-board electrical testing is still pending.
+- **Checked supplier listings:** The named component prices below were checked against supplier product listings on November 18, 2026. Web listings can be cached; these are **listed prices, not guaranteed live cart prices, paid invoices, or promises of stock**. Shipping, tax and tariffs are separate unless stated.
+- **Checked PCB calculator estimates:** JLCPCB displayed the batch fabrication prices below for the entered specifications. No Gerbers were uploaded for this estimate; file review, promotion eligibility and final checkout charges remain unverified.
+- **Budget allowances:** Remaining switches, small parts, hardware, delivery and taxes are allowances. Exact TONE/SQL switches, the short J10 control cable, J21 cable/housing and final mounting hardware still need selection or fit checks. I have not priced those as confirmed purchases.
+
+| Category | Basis | Cost (USD) |
+| --- | --- | ---: |
+| PC Flights panel | My supplied rounded panel cost; treated as including its delivery | $70.00 |
+| Teensy, seven encoders, two rotary switches, display digits | Checked supplier listings; includes ten white digits, eight used | $90.24 |
+| Display drivers, backlight LEDs, sockets, headers, power supply/jack and display cable | Checked supplier listings; details below | $90.70 |
+| Remaining switches, passives, cables, wiring, mounting hardware and printed parts | **Allowance**, not a firm parts quote | $62–$122 |
+| Five Main Boards + five Power Driver Boards + five LED Sub-Boards | Checked JLCPCB calculator estimates, before delivery | $28.00 |
+| Combined PCB and component shipping | **Allowance** for delivery to ZIP 87547; not a confirmed address-specific rate | $40–$65 |
+| Tax, tariffs and import charges | **Allowance**; actual charges could exceed this | $20–$45 |
+| **Total shopping budget** | **Mixed listed prices and allowances—not a checkout quote** | **$400.94–$510.94** |
+
+### Checked component listings
+
+| Part | Purchase quantity | Listed unit price (USD) | Extended cost (USD) |
+| --- | ---: | ---: | ---: |
+| [Teensy 4.1, without headers](https://www.sparkfun.com/teensy-4-1.html) | 1 | $31.50 | $31.50 |
+| [PEC11R-4230F-S0024 encoders, 30 mm shaft](https://www.mouser.com/en/ProductDetail/Bourns/PEC11R-4230F-S0024?qs=Zq5ylnUbLm6MC5h%2FLr6Brg%3D%3D) | 7 | $2.07 | $14.49 |
+| [A12505RNCQ MAIN/PRESET switches](https://www.digikey.com/en/products/detail/c-k/A12505RNCQ/2043159) | 2 | $13.41 | $26.82 |
+| [QBSLDIW301GR white digits](https://www.digikey.com/en/products/detail/qt-brightek-qtb/QBSLDIW301GR/22077720) | 10 | $1.743 | $17.43 |
+| [WP710A10SGD backlight LEDs](https://www.mouser.com/en/ProductDetail/Kingbright/WP710A10SGD?qs=jBF9H7RTBaS5vBvRdVQZww%3D%3D) | 20; 19 used | $0.187 | $3.74 |
+| [MAX7219CNG+ genuine DIP-24 display drivers](https://www.mouser.com/en/ProductDetail/Analog-Devices-Maxim-Integrated/MAX7219CNG%2B?qs=1THa7WoU59Gme2Z0GeVXUQ%3D%3D) | 2 | $23.65 | $47.30 |
+| [SN74AHCT125N DIP-14 buffer](https://www.mouser.com/en/ProductDetail/Texas-Instruments/SN74AHCT125N?qs=1wQRf3HkBjyxwrHMwAiMfw%3D%3D) | 1 | $0.95 | $0.95 |
+| [IRLZ44NPBF MOSFET](https://www.mouser.com/en/ProductDetail/Infineon-Technologies/IRLZ44NPBF?qs=9%252BKlkBgLFf15OZZk%252BD0ibg%3D%3D) | 1 | $1.80 | $1.80 |
+| [TE 1-2199298-8 DIP-24 sockets](https://www.mouser.com/ProductDetail/TE-Connectivity/1-2199298-8?qs=fK8dlpkaUMsSY7Gqcrol0Q%3D%3D) | 2 | $0.69 | $1.38 |
+| [TE 1-2199298-3 DIP-14 socket](https://www.digikey.com/en/products/detail/te-connectivity-amp-connectors/1-2199298-3/5022040) | 1 | $0.28 | $0.28 |
+| [Samtec TSW-120-07-L-D 40-pin headers](https://www.mouser.com/en/ProductDetail/Samtec/TSW-120-07-L-D?qs=rU5fayqh%252BE1YSi%252BSoApxaA%3D%3D) | 4 | $2.60 | $10.40 |
+| [Samtec TSW-124-07-T-S Teensy male headers](https://www.mouser.com/en/ProductDetail/Samtec/TSW-124-07-T-S?qs=rU5fayqh%252BE26VY6qw728rQ%3D%3D) | 2 | $1.38 | $2.76 |
+| [Samtec SSW-124-01-T-S Teensy sockets](https://www.mouser.com/en/ProductDetail/Samtec/SSW-124-01-T-S?qs=iT52DjcXudvCUishYlzKnw%3D%3D) | 2 | $2.05 | $4.10 |
+| [Same Sky PJ-102AH power jack](https://www.mouser.com/en/c/connectors/power-connectors/dc-power-connectors/?inside+contact+diameter=2+mm&mounting+angle=Right+Angle&product=Jacks) | 1 | $0.77 | $0.77 |
+| [MEAN WELL GST25A05-P1J, regulated 5 V/4 A adapter](https://www.mouser.com/en/ProductDetail/MEAN-WELL/GST25A05-P1J?mgh=1&qs=drgMNd%252BkGPOX8brSXUPVtQ%3D%3D) | 1 | $14.27 | $14.27 |
+| [Adafruit 1988 40-pin display cable](https://www.adafruit.com/product/1988) | 1 | $2.95 | $2.95 |
+| **Component subtotal, excluding panel and allowances** | | | **$180.94** |
+
+The MAX7219 listing showed stock alongside a restricted-availability notice. **Confirm actual availability before ordering.** Some component listings also flag possible US tariffs; these have not been added individually to the listed prices.
+
+### PCB fabrication estimate
+
+These are **separate designs**, each ordered as a batch of five. The dimensions were rounded upward from the published KiCad boards.
+
+| Board | Version | Quoted size (mm) | Batch quantity | Fabrication estimate (USD) |
+| --- | --- | --- | ---: | ---: |
+| Main Board | 1.2 | 141.06 × 117.86 | 5 | $12.00 |
+| Power Driver Board | 1.0 Prototype | 141.06 × 117.86 | 5 | $12.00 |
+| LED Sub-Board | 1.2 | 83.80 × 55.36 | 5 | $4.00 |
+| **Total before shipping** | | | **15 boards / five complete sets** | **$28.00** |
+
+[JLCPCB calculator](https://jlcpcb.com/quote), checked November 18, 2026: **two layers, FR-4, 1.6 mm thickness, green solder mask, white silkscreen, 1 oz copper, HASL with lead, and standard build time**. No assembly or stencil is included. The $4 LED-board quote is promotional and subject to final cart eligibility. My $25–$40 PCB-shipping allowance is **not** a combined-cart quote.
+
+### Allowances still to confirm
+
+| Remaining item | Budget allowance (USD) |
+| --- | ---: |
+| 27 resistors and five capacitors, with small spare quantities | $3–$6 |
+| Two J21 three-pin headers and matching backlight cable | $2–$5 |
+| Short 40-pin female-to-female J10 control cable | $4–$8 |
+| TONE, SQL, STATUS and TEST DISPLAY switches, plus LOAD reed switch/magnet | $18–$35 |
+| USB data cable and IEC C13 mains cord | $10–$16 |
+| Standoffs, screws, nuts and washers | $15–$30 |
+| Material for printed knobs, spacers and mounts | $5–$12 |
+| Hookup wire, heat shrink and small assembly consumables | $5–$10 |
+| **Remaining-parts allowance** | **$62–$122** |
+
+Delivery allowances are **$25–$40 for the PCB shipment** and **$15–$25 for consolidated component orders**. Tax/tariff/import allowance is **$20–$45**. These are planning figures and may change at checkout.
+
+**This is a buy-from-scratch budget, not my remaining balance to spend.** I need to deduct suitable parts already on hand after checking inventory. It excludes earlier wrong-part purchases, tools, my labor, buying a printer, whole new filament spools or paint kits, commercial printing/enclosure services, and replacement boards if a revision is needed. Printed-part costs assume I use my own printer.
+
+The first purchase includes **four spare PCB sets** and **two spare white digits**. Allocating only the boards and digits used by one panel reduces the material allocation by about **$25.89**, but does not reduce the initial checkout spend. I have kept the historical purchase ledger and earlier order sheet below separate from this current-build budget.
+
 
 ## Recorded component costs
 
